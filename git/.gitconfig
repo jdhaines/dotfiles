@@ -1,0 +1,21 @@
+[user]
+    name = Josh Haines
+    email = Josh@JoshHaines.com
+[core]
+    excludesfiles = ~/.gitignore_global
+    editor = nvim
+[pull]
+    rebase = true
+[commit]
+    gpgsign = true
+[init]
+    defaultBranch = main
+[fetch]
+    prune = true
+[diff]
+    colorMoved = zebra
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
