@@ -24,6 +24,7 @@ nix-env -iA \
   nixpkgs.nodejs \
   nixpkgs.python3 \
   nixpkgs.fish \
+  nixpkgs.xclip \
 
 # home pc pkgs
 
