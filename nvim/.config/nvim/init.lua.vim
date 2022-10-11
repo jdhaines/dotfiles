@@ -9,6 +9,7 @@ vim.o.scrolloff = 10
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
+vim.wo.relativenumber = true
 
 -- Variables - Local to Buffer
 vim.bo.expandtab = true
@@ -57,7 +58,7 @@ return require('packer').startup(function(use)
   -- onedark color schemes
   use {'navarasu/onedark.nvim', config = function ()
     require('onedark').setup {
-      style = 'warmer' -- dark, darker, cool, deep, warm, warmer, light
+      style = 'dark' -- dark, darker, cool, deep, warm, warmer, light
     }
     require('onedark').load()
   end,

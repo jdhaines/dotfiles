@@ -43,3 +43,8 @@ if empty(glob(s:ginit_path))
     call WriteGUISettings()
 endif
 
+" Auto update packager if we change the config file
+augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost plugins.lua source <init.lua> | PackerCompile
+augroup end

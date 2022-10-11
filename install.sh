@@ -25,6 +25,7 @@ nix-env -iA \
   nixpkgs.python3 \
   nixpkgs.fish \
   nixpkgs.xclip \
+  nixpkgs.alacritty \
 
 # home pc pkgs
 
@@ -60,7 +61,7 @@ command -v fish | sudo tee -a /etc/shells
 sudo chsh -s $(which fish) $USER
 
 # install neovim plugins
-nvim --headless +PlugInstall +qall
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # Set up SSH
 if ! [ -f "$SSH_DIR/id_rsa" ]; then
@@ -74,3 +75,10 @@ if ! [ -f "$SSH_DIR/id_rsa" ]; then
 
     chmod 600 "$SSH_DIR/authorized_keys"
 fi
+
+# install i3
+sudo apt install -y i3
+sudo dpkg-reconfigure i3
+
+
+
