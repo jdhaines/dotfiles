@@ -28,7 +28,7 @@ nix-env -iA \
   nixpkgs.alacritty \
 
 # to fix bug with locale for rofi
-set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
+# set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
 
 # home pc pkgs
 
