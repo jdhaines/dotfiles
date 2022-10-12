@@ -26,7 +26,6 @@ nix-env -iA \
   nixpkgs.fish \
   nixpkgs.xclip \
   nixpkgs.alacritty \
-  nixpkgs.picom \
   nixpkgs.feh \
 
 # to fix bug with locale for rofi
@@ -65,6 +64,7 @@ stow rofi
 # Fonts
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Jet Brains Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
+fc-cache -f -v # rebuild font cache
 
 # add fish as a login shell
 command -v fish | sudo tee -a /etc/shells
@@ -93,7 +93,7 @@ sudo apt install -y i3
 sudo dpkg-reconfigure i3
 
 # install rofi
-sudo apt install -y rofi
+sudo apt install -y rofi picom
 
 # install alacritty
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update

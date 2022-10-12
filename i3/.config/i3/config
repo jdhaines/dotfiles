@@ -25,8 +25,8 @@ font Jet Brains Mono for Powerline Nerd Font Complete 16
 exec --no-startup-id dex --autostart --environment i3
 
 # Picom
-exec_always --no-startup-id picom -b
-
+exec_always --no-startup-id "picom --config $HOME/.config/picom/picom.conf -b"
+exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/dots.png
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -155,7 +155,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
