@@ -80,5 +80,10 @@ fi
 sudo apt install -y i3
 sudo dpkg-reconfigure i3
 
+# install alacritty
+nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
+nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
 
+# run alacritty through nixGL
+nixGL alacrittyy
 
