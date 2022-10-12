@@ -85,7 +85,7 @@ sudo apt install -y i3
 sudo dpkg-reconfigure i3
 
 # install rofi
-sudo apt install rofi
+sudo apt install -y rofi
 
 # install alacritty
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
