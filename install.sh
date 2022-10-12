@@ -49,6 +49,7 @@ stow fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
 
 # Stow Dotfiles
+stow i3 nvim git
 
 # Fonts
 mkdir -p ~/.local/share/fonts
