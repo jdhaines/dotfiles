@@ -26,6 +26,8 @@ nix-env -iA \
   nixpkgs.fish \
   nixpkgs.xclip \
   nixpkgs.alacritty \
+  nixpkgs.picom \
+  nixpkgs.feh \
 
 # to fix bug with locale for rofi
 # set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
@@ -52,7 +54,13 @@ stow fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
 
 # Stow Dotfiles
-stow i3 nvim git
+stow alacritty
+stow git
+stow i3
+stow nvim
+stow picom
+stow profile
+stow rofi
 
 # Fonts
 mkdir -p ~/.local/share/fonts

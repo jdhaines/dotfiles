@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
     }
     require('onedark').load()
   end,
+
+  -- vim be good games
+  use 'ThePrimeagen/vim-be-good'
 }
   
   -- Automatically set up configuration after cloning packer.nvim

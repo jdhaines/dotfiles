@@ -24,6 +24,9 @@ font Jet Brains Mono for Powerline Nerd Font Complete 16
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Picom
+exec_always --no-startup-id picom -b
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
