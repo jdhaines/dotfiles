@@ -26,7 +26,6 @@ nix-env -iA \
   nixpkgs.fish \
   nixpkgs.xclip \
   nixpkgs.alacritty \
-  nixpkgs.rofi \
 
 # to fix bug with locale for rofi
 set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
@@ -84,6 +83,9 @@ fi
 # install i3
 sudo apt install -y i3
 sudo dpkg-reconfigure i3
+
+# install rofi
+sudo apt install rofi
 
 # install alacritty
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
