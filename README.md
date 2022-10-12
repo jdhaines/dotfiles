@@ -12,8 +12,10 @@ git clone https://github.com/jdhaines/dotfiles.git $HOME/.dotfiles
 # run the install script
 ./.dotfiles/install.sh
 
-# It will hang after some packer actions.  Kill it and run the script again and it should proceed
-./.dotfiles/install.sh
+# restart
+shutdown -r now
+
+# When you log back in, select i3 as the desktop manager
 ```
 
 ## Config
@@ -26,3 +28,14 @@ git clone https://github.com/jdhaines/dotfiles.git $HOME/.dotfiles
 **Neovim**
 
 Things should set up correctly automatically.  You might need to run neovim twice in case of error.  While in neovim the command `:PlugSync` and/or `:PlugCompile` may be helpful.
+
+**Rofi**
+- Win key should open rofi launcher
+
+**i3**
+- Win-h/j/k/l select windows
+- Win-Shift-h/j/k/l move windows
+- Win-e toggle layout
+- Win-shift-q close window
+- Win-enter open terminal (alacritty)
+
