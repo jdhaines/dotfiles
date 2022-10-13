@@ -5,6 +5,7 @@
 -- Variables - Global
 vim.o.scrolloff = 10
 vim.g.mapleader = " "
+vim.opt.termguicolors = true
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
@@ -71,7 +72,7 @@ return require('packer').startup(function(use)
   use 'fedepujol/move.nvim' 
   
   -- onedark color schemes
-  use {'navarasu/onedark.nvim', config = function ()
+  use {'navarasu/onedark.nvim', config = function()
     require('onedark').setup {
       style = 'dark' -- dark, darker, cool, deep, warm, warmer, light
     }
@@ -92,7 +93,9 @@ return require('packer').startup(function(use)
   end
   }
 
-
+  -- nvim-colorizer
+  use 'norcalli/nvim-colorizer.lua'
+  require'colorizer'.setup()
   
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
