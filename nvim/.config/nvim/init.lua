@@ -4,6 +4,7 @@
 
 -- Variables - Global
 vim.o.scrolloff = 10
+vim.g.mapleader = " "
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
@@ -36,6 +37,15 @@ keymap('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
 -- jj works like esc
 keymap('i', 'jj', '<Esc>', opts)
 
+-- hop keybindings
+keymap('n', '<Leader><Leader>b', '<cmd>HopWordBC<CR>', opts)
+keymap('n', '<Leader><Leader>w', '<cmd>HopWordAC<CR>', opts)
+keymap('v', '<Leader><Leader>b', '<cmd>HopWordBC<CR>', opts)
+keymap('v', '<Leader><Leader>w', '<cmd>HopWordAC<CR>', opts)
+keymap('n', 's', '<cmd>HopChar2AC<CR>', opts)
+keymap('n', 'S', '<cmd>HopChar2BC<CR>', opts)
+keymap('v', 's', '<cmd>HopChar2AC<CR>', opts)
+keymap('v', 'S', '<cmd>HopChar2BC<CR>', opts)
 
 ----
 -- Install & Configure Packer Plugin Manager
@@ -67,10 +77,22 @@ return require('packer').startup(function(use)
     }
     require('onedark').load()
   end,
+  }
 
   -- vim be good games
   use 'ThePrimeagen/vim-be-good'
-}
+
+  -- hop (easy-motion & sneak)
+  use {
+  'phaazon/hop.nvim',
+  branch = 'v2', -- optional but strongly recommended
+  config = function()
+    -- you can configure Hop the way you like here; see :h hop-config
+    require'hop'.setup() 
+  end
+  }
+
+
   
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
