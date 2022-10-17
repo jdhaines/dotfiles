@@ -24,6 +24,7 @@ shutdown -r now
 |---|---|
 |`xrandr --output Virtual-1 --mode 2560x1600`|Set the resolution on a VM to 2560x1600|
 |`xset r rate 350 90`|Fix keyboard repeat rates|
+|`sudo apt install spice-vdagent`|If on boxes vm, use this to get proper resolutions|
 
 ## Config
 
