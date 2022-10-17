@@ -35,6 +35,7 @@ python -m pip install --upgrade pip
 
 # install psutils for bumblebee-status bar on i3
 python -m pip install psutil
+python -m pip install pygit2
 
 # to fix bug with locale for rofi
 # set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
