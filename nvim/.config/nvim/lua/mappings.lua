@@ -30,7 +30,8 @@ local opts = { noremap = true, silent = true }
 keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", opts)
 
 --Remap space as leader key
-keymap({ "n", "v" }, "<Space>", "<Nop>", opts)
+keymap("n", "<Space>", "<Nop>", opts)
+keymap("v", "<Space>", "<Nop>", opts)
 
 -- Alt j & k move lines and blocks
 keymap('n', '<A-j>', ':MoveLine(1)<CR>', opts)
