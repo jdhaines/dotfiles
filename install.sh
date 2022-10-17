@@ -116,4 +116,4 @@ export LC_ALL="en_US.UTF-8"
 sudo dpkg-reconfigure locales
 
 # finishing up neovim setup
-nvim --headless +PlugInstall +qall
+nvim --headless +PackerSync +qall
