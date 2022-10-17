@@ -28,6 +28,7 @@ nix-env -iA \
   nixpkgs.alacritty \
   nixpkgs.feh \
   nixpkgs.xcwd \
+  nixpkgs.ripgrep \
 
 # install pip
 python -m ensurepip --upgrade
@@ -114,5 +115,5 @@ export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 sudo dpkg-reconfigure locales
 
-# install neovim plugins
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+# finishing up neovim setup
+nvim --headless +PlugInstall +qall
