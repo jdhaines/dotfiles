@@ -18,6 +18,13 @@ shutdown -r now
 # When you log back in, select i3 as the desktop manager
 ```
 
+**Helpful Commands**
+
+|Command|Notes|
+|---|---|
+|`xrandr --output Virtual-1 --mode 2560x1600`|Set the resolution on a VM to 2560x1600|
+|`xset r rate 350 90`|Fix keyboard repeat rates|
+
 ## Config
 
 **Fish Config**
@@ -38,4 +45,3 @@ Things should set up correctly automatically.  You might need to run neovim twic
 - Win-e toggle layout
 - Win-shift-q close window
 - Win-enter open terminal (alacritty)
-
