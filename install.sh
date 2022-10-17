@@ -118,3 +118,6 @@ sudo dpkg-reconfigure locales
 
 # finishing up neovim setup
 nvim --headless +PackerSync +qall
+
+# set keyboard repeat rate
+xset r rate 350 90
