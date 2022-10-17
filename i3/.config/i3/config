@@ -49,7 +49,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec nixGL alacritty #libi3-sensible-terminal
+bindsym $mod+Return exec nixGL alacritty --config-file $HOME/.config/alacritty/alacritty.yaml
 
 # kill focused window
 bindsym $mod+c kill
@@ -188,5 +188,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   position top
-  status_command i3status
+  font pango: JetBrainsMono Nerd Font Mono 10
+  # status_command i3status
+  # status_command ~/.dotfiles/bumblebee-status/bumblebee-status -m cpu memory battery time pasink pasource -p time.format="%H:%M" -t onedark-powerline
+  status_command python3 ~/.config/i3/bumblebee-status/bumblebee-status -m cpu memory battery disk git pasink pasource -p time.format="%H:%M" -t onedark-powerline
 }

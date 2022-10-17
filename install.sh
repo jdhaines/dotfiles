@@ -27,6 +27,14 @@ nix-env -iA \
   nixpkgs.xclip \
   nixpkgs.alacritty \
   nixpkgs.feh \
+  nixpkgs.xcwd \
+
+# install pip
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+
+# install psutils for bumblebee-status bar on i3
+python -m pip install psutil
 
 # to fix bug with locale for rofi
 # set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
@@ -88,6 +96,9 @@ if ! [ -f "$SSH_DIR/id_rsa" ]; then
     chmod 600 "$SSH_DIR/authorized_keys"
 fi
 
+# Install Bumblebee-status bar for i3
+npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
+
 # install i3
 sudo apt install -y i3
 sudo dpkg-reconfigure i3
@@ -100,4 +111,8 @@ nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && n
 nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
 # run alacritty through nixGL like `nixGL alacritty
 
+# Reconfigure Locales
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+sudo dpkg-reconfigure locales
 

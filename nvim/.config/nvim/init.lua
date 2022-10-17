@@ -94,8 +94,59 @@ return require('packer').startup(function(use)
   }
 
   -- nvim-colorizer
-  use 'norcalli/nvim-colorizer.lua'
-  require'colorizer'.setup()
+  -- use 'norcalli/nvim-colorizer.lua'
+  -- require'colorizer'.setup()
+-- 
+  -- -- lualine
+  -- use { 'nvim-lualine/lualine.nvim',
+    -- requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    -- config = function()
+      -- require('lualine').setup({
+	-- options = {
+	  -- icons_enabled = true,
+	  -- theme = 'onedark',
+        -- }
+      -- })
+    -- end,
+  -- }
+
+  -- Staline & Stabline
+  use{ 'tamton-aquib/staline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  }
+  require('staline').setup({
+    sections = {
+      left = {
+        ' ', 'right_sep_double', '-mode', 'left_sep_double', ' ',
+        'right_sep', '-file_name', 'left_sep', ' ',
+        'right_sep_double', '-branch', 'left_sep_double', ' ',
+      },
+      mid  = {'lsp'},
+      right= {
+        'right_sep', '-cool_symbol', 'left_sep', ' ',
+        'right_sep', '- ', '-lsp_name', '- ', 'left_sep',
+        'right_sep_double', '-line_column', 'left_sep_double', ' ',
+      }
+    },
+    defaults={
+      fg = "#111111",
+      cool_symbol = "  ",
+      left_separator = "",
+      right_separator = "",
+      -- line_column = "%l:%c [%L]",
+      true_colors = true,
+      line_column = "[%l:%c] 並%p%% "
+      -- font_active = "bold"
+    },
+    mode_colors = {
+      n  = "#EBBF6F",
+      i  = "#F95B6E",
+      ic = "#CF6FDF",
+      c  = "#2B848F",
+      v  = "#4096D0"       -- etc
+    }
+  })
+  require('stabline').setup()
   
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
