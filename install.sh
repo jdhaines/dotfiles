@@ -81,9 +81,6 @@ command -v fish | sudo tee -a /etc/shells
 # use fish as default shell
 sudo chsh -s $(which fish) $USER
 
-# install neovim plugins
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
 # Set up SSH
 if ! [ -f "$SSH_DIR/id_rsa" ]; then
     mkdir -p "$SSH_DIR"
@@ -117,3 +114,5 @@ export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 sudo dpkg-reconfigure locales
 
+# install neovim plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
