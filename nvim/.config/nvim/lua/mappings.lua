@@ -48,9 +48,9 @@ keymap('i', 'jj', '<Esc>', opts)
 
 -- hop keybindings
 -- keymap('n', '<Leader><Leader>b', '<cmd>HopWordBC<CR>', opts)
-keymap('n', '<Leader><Leader>w', '<cmd>HopWordMW<CR>', opts)
+keymap('n', '<Leader>w', '<cmd>HopWordMW<CR>', opts)
 -- keymap('v', '<Leader><Leader>b', '<cmd>HopWordBC<CR>', opts)
-keymap('v', '<Leader><Leader>w', '<cmd>HopWordMW<CR>', opts)
+keymap('v', '<Leader>w', '<cmd>HopWordMW<CR>', opts)
 -- keymap('n', 's', '<cmd>HopChar2AC<CR>', opts)
 -- keymap('n', 'S', '<cmd>HopChar2BC<CR>', opts)
 -- keymap('v', 's', '<cmd>HopChar2AC<CR>', opts)
