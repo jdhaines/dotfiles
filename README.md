@@ -28,21 +28,41 @@ shutdown -r now
 
 ## Config
 
-**Fish Config**
+### Fish Config
 
 - Alias `vim` -> `nvim`
 - Alias `vi` -> `nvim`
 
-**Neovim**
+### Neovim
 
-Things should set up correctly automatically.  You might need to run neovim twice in case of error.  While in neovim the command `:PlugSync` and/or `:PlugCompile` may be helpful.
+Things should set up correctly automatically.  You might need to run neovim twice in case of error.  While in neovim the command `:PackerSync` and/or `:PackerCompile` may be helpful.
 
-**Rofi**
+|Command|Notes|
+|---|---|
+|`:PackerInstall`|Install current plugins list|
+|`:PackerSync`|Similar to above|
+|`:LspInstall`|Install a new lsp server|
+|`:LspInstallInfo`|Details on currently installed language servers|
+|`:LspInfo`|Current file and LSP information|
+
+|Key|Function|
+|---|---|
+|`Space+w`|Activate hop, type next two characters to hop|
+|`Ctrl+P`|List completions|
+|`Tab/Shift + Tab`|Move through completions, Enter to Select|
+|`zM/zR`|Fold/Unfold All|
+|`zm/zr`|Fold/Unfold One|
+|`zM`|Fold All|
+|`zo/zc`|Open and Close a Fold|
+
+
+### Rofi
 - Win key should open rofi launcher
 
-**i3**
+### i3
 - Win-h/j/k/l select windows
 - Win-Shift-h/j/k/l move windows
 - Win-e toggle layout
 - Win-shift-q close window
 - Win-enter open terminal (alacritty)
+

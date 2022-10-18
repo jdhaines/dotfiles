@@ -6,6 +6,7 @@
 vim.o.scrolloff = 10
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
+vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
@@ -55,3 +56,16 @@ keymap('v', '<Leader>w', '<cmd>HopWordMW<CR>', opts)
 -- keymap('n', 'S', '<cmd>HopChar2BC<CR>', opts)
 -- keymap('v', 's', '<cmd>HopChar2AC<CR>', opts)
 -- keymap('v', 'S', '<cmd>HopChar2BC<CR>', opts)
+
+-- LSP Keybindings
+keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', opts)
+keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>', opts)
+keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', opts)
+keymap('n', 'gw', ':lua vim.lsp.buf.document_symbol()<cr>', opts)
+keymap('n', 'gw', ':lua vim.lsp.buf.workspace_symbol()<cr>', opts)
+keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', opts)
+keymap('n', 'gt', ':lua vim.lsp.buf.type_definition()<cr>', opts)
+keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', opts)
+keymap('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<cr>', opts)
+keymap('n', '<leader>af', ':lua vim.lsp.buf.code_action()<cr>', opts)
+keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', opts)

@@ -172,51 +172,58 @@ require'nvim-treesitter.configs'.setup {
     },
     highlight = { -- enable highlighting
     enable = true,
-    },
-    indent = {
-        enable = true, -- default is disabled anyways
-    }
-  }
+},
+indent = {
+    enable = true, -- default is disabled anyways
+}
+}
 
-   -- LSP Config
-   use 'williamboman/nvim-lsp-installer'
-   require("nvim-lsp-installer").setup({
-     automatic_installation = true,
-     ui = {
-       icons = {
-         server_installed = "✓",
-         server_pending = "➜",
-         server_uninstalled = "✗",
-       }
-     }
-   })
- 
-   use 'neovim/nvim-lspconfig'
-   require'lspconfig'.sumneko_lua.setup{
-    require'lspconfig'.sumneko_lua.setup{
-        settings = {
-          Lua = {
+-- LSP Config
+use 'williamboman/nvim-lsp-installer'
+require("nvim-lsp-installer").setup({
+    automatic_installation = true,
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗",
+        }
+    }
+})
+
+use 'neovim/nvim-lspconfig'
+require'lspconfig'.sumneko_lua.setup{
+    settings = {
+        Lua = {
             runtime = {
-              -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-              version = 'LuaJIT',
+                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                version = 'LuaJIT',
             },
             diagnostics = {
-              -- Get the language server to recognize the `vim` global
-              globals = {'vim'},
+                -- Get the language server to recognize the `vim` global
+                globals = {'vim'},
             },
             workspace = {
-              -- Make the server aware of Neovim runtime files
-              library = vim.api.nvim_get_runtime_file("", true),
+                -- Make the server aware of Neovim runtime files
+                library = vim.api.nvim_get_runtime_file("", true),
             },
             -- Do not send telemetry data containing a randomized but unique identifier
             telemetry = {
-              enable = false,
+                enable = false,
             },
-          },
         },
-      }  
-   }
- 
+    },
+}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tailwindcss.setup{}
+
+-- Completions
+use 'hrsh7th/cmp-nvim-lsp'
+use 'hrsh7th/cmp-buffer'
+use 'hrsh7th/cmp-path'
+use 'hrsh7th/cmp-cmdline'
+use 'hrsh7th/nvim-cmp'
+
 
 -- ### All Plugins Above This Line ### --
 -- Automatically set up configuration after cloning packer.nvim
@@ -224,3 +231,61 @@ if packer_bootstrap then
     require('packer').sync()
 end
 end)
+
+-- CMP config
+
+local cmp = require('cmp')
+
+local select_opts = {behavior = cmp.SelectBehavior.Select}
+
+cmp.setup({
+    sources = {
+        {name = 'path'},
+        {name = 'nvim_lsp', keyword_length = 3},
+        {name = 'buffer', keyword_length = 3},
+    },
+    window = {
+        documentation = cmp.config.window.bordered()
+    },
+    formatting = {
+        fields = {'menu', 'abbr', 'kind'},
+        format = function(entry, item)
+            local menu_icon = {
+                nvim_lsp = 'λ',
+                buffer = 'Ω',
+                path = '🖫',
+            }
+            
+            item.menu = menu_icon[entry.source.name]
+            return item
+        end,
+    },
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
+        ['<Down>'] = cmp.mapping.select_next_item(select_opts),
+        ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
+        ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            local col = vim.fn.col('.') - 1
+            if cmp.visible() then
+                cmp.select_next_item(select_opts)
+            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+                fallback()
+            else
+                cmp.complete()
+            end
+        end, {'i', 's'}),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item(select_opts)
+            else
+                fallback()
+            end
+        end, {'i', 's'}),
+    }
+})
