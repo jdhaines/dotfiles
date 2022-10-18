@@ -70,8 +70,8 @@ packer.startup(function(use)
   }
 
   -- nvim-colorizer
-  -- use 'norcalli/nvim-colorizer.lua'
-  -- require'colorizer'.setup()
+  use 'norcalli/nvim-colorizer.lua'
+  require'colorizer'.setup()
 -- 
   -- -- lualine
   -- use { 'nvim-lualine/lualine.nvim',
