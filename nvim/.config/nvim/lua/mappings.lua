@@ -7,6 +7,8 @@ vim.o.scrolloff = 10
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
@@ -69,3 +71,7 @@ keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', opts)
 keymap('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<cr>', opts)
 keymap('n', '<leader>af', ':lua vim.lsp.buf.code_action()<cr>', opts)
 keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', opts)
+
+-- nvim-tree Keybindings
+keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
+keymap('v', '<leader>e', ':NvimTreeToggle<cr>', opts)
