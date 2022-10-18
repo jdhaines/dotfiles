@@ -20,12 +20,9 @@ abbr -a -g dc docker-compose
 # bare git directory at $HOME/dotfiles - use config instead of git
 alias config='/usr/bin/git --git-dir=/home/josh/dotfiles --work-tree=/home/josh'
 
-# logseq
 alias logseq='/home/josh/.local/bin/Logseq* &'
 alias sls='cd /home/josh/git/sfknowledge && git add . && git commit -m "docs(updates): auto update content" && git pull && git push'
 alias vim=nvim
 alias vi=nvim
-
-# BSDSERVER
 alias sshb='ssh -p 8443 josh@192.168.180.144'
-
+alias cat=bat

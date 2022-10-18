@@ -29,6 +29,8 @@ nix-env -iA \
   nixpkgs.feh \
   nixpkgs.xcwd \
   nixpkgs.ripgrep \
+  nixpkgs.jq \
+  nxpkgs.bat \
 
 # install pip
 python -m ensurepip --upgrade
@@ -115,6 +117,17 @@ nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desi
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 sudo dpkg-reconfigure locales
+
+# Install tree-sitter-cli
+curl https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \                                                                                                ⬢ 18.9.1
+            | grep "browser_download_url.*linux-x64.gz" \
+            | cut -d : -f 2,3 \
+            | tr -d \" \
+            | wget -qi -
+gzip -d tree-sitter-linux-x64.gz
+chmod +x tree-sitter-linux-x64
+mv tree-sitter-linux-x64 ~/.local/bin/
+mv ~/.local/bin/tree-sitter-linux-x64 tree-sitter
 
 # finishing up neovim setup
 nvim --headless +PackerSync +qall
