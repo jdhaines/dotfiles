@@ -129,8 +129,7 @@ curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \
   | wget -qi -
 gzip -d tree-sitter-linux-x64.gz
 chmod +x tree-sitter-linux-x64
-mv tree-sitter-linux-x64 ~/.local/bin/
-mv ~/.local/bin/tree-sitter-linux-x64 tree-sitter
+mv tree-sitter-linux-x64 ~/.local/bin/tree-sitter
 
 # finishing up neovim setup
 nvim --headless +PackerSync +qall
