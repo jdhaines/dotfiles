@@ -29,8 +29,7 @@ nix-env -iA \
   nixpkgs.feh \
   nixpkgs.xcwd \
   nixpkgs.ripgrep \
-  nixpkgs.jq \
-  nxpkgs.bat \
+  nixpkgs.jq 
 
 # stow Dotfiles
 cd .dotfiles
