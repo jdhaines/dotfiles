@@ -121,11 +121,11 @@ export LC_ALL="en_US.UTF-8"
 sudo dpkg-reconfigure locales
 
 # Install tree-sitter-cli
-curl https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \                                                                                                ⬢ 18.9.1
-            | grep "browser_download_url.*linux-x64.gz" \
-            | cut -d : -f 2,3 \
-            | tr -d \" \
-            | wget -qi -
+curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \
+  | grep "browser_download_url.*linux-x64.gz" \
+  | cut -d : -f 2,3 \
+  | tr -d \" \
+  | wget -qi -
 gzip -d tree-sitter-linux-x64.gz
 chmod +x tree-sitter-linux-x64
 mv tree-sitter-linux-x64 ~/.local/bin/
