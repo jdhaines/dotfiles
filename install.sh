@@ -23,7 +23,7 @@ nix-env -iA \
   nixpkgs.vlc \
   nixpkgs.nodejs \
   nixpkgs.python3 \
-  nixpkgs.fish \
+  # nixpkgs.fish \
   nixpkgs.xclip \
   nixpkgs.alacritty \
   nixpkgs.feh \
@@ -55,13 +55,15 @@ python -m pip install pygit2
 # nixpkgs.insomnia \
 
 # Install Fisher & Configure Fish
+stow fish
+nix-env -iA nixpkgs.fish
 # source /dev/stdin <<< "$(curl -sL https://git.io/fisher)"
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install rkbk60/onedark-fish"
 rm -f $HOME/.config/fish/conf.d/omf.fish
 rm -f $HOME/.config/fish/config.fish
-stow fish
+# stow fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
 
 # Stow Dotfiles
