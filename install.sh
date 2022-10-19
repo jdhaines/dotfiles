@@ -119,6 +119,7 @@ nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desi
 # Reconfigure Locales
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 sudo dpkg-reconfigure locales
 
 # Install tree-sitter-cli
@@ -129,7 +130,8 @@ curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \
   | wget -qi -
 gzip -d tree-sitter-linux-x64.gz
 chmod +x tree-sitter-linux-x64
-mv tree-sitter-linux-x64 ~/.local/bin/tree-sitter
+mv tree-sitter-linux-x64 ~/.local/bin/
+
 
 # finishing up neovim setup
 nvim --headless +PackerSync +qall
