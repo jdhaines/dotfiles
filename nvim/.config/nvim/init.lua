@@ -7,3 +7,4 @@ require("options")
 require("autocmd")
 -- Plugin management via Packer
 require("plugins")
+
