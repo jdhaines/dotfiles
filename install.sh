@@ -10,12 +10,23 @@ curl -L https://nixos.org/nix/install | sh
 # allow chrome install
 export NIXPKGS_ALLOW_UNFREE=1
 
+# stow Dotfiles
+
+stow -d ~/.dotfiles alacritty
+stow -d ~/.dotfiles git
+stow -d ~/.dotfiles i3
+stow -d ~/.dotfiles nvim
+stow -d ~/.dotfiles picom
+stow -d ~/.dotfiles profile
+stow -d ~/.dotfiles rofi
+stow -d ~/.dotfiles fish
+
 # install packages
 nix-env -iA \
   nixpkgs.git \
   nixpkgs.neovim \
   nixpkgs.yarn \
-  nixpkgs.stow \
+  nixpkgs.stow -d ~/.dotfiles \
   nixpkgs.gcc \
   nixpkgs.bat \
   nixpkgs.gnumake \
@@ -23,7 +34,7 @@ nix-env -iA \
   nixpkgs.vlc \
   nixpkgs.nodejs \
   nixpkgs.python3 \
-  # nixpkgs.fish \
+  nixpkgs.fish \
   nixpkgs.xclip \
   nixpkgs.alacritty \
   nixpkgs.feh \
@@ -55,25 +66,16 @@ python -m pip install pygit2
 # nixpkgs.insomnia \
 
 # Install Fisher & Configure Fish
-stow fish
-nix-env -iA nixpkgs.fish
 # source /dev/stdin <<< "$(curl -sL https://git.io/fisher)"
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install rkbk60/onedark-fish"
 rm -f $HOME/.config/fish/conf.d/omf.fish
 rm -f $HOME/.config/fish/config.fish
-# stow fish
+# stow -d ~/.dotfiles fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
 
-# Stow Dotfiles
-stow alacritty
-stow git
-stow i3
-stow nvim
-stow picom
-stow profile
-stow rofi
+
 
 # Fonts
 mkdir -p ~/.local/share/fonts
