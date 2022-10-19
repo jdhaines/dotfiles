@@ -1,110 +1,81 @@
-----
--- Install & Configure Packer Plugin Manager
-----
+vim.cmd([[
+augroup packer_user_config
+autocmd!
+autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+augroup end
+]])
 
-local settings = require("user-conf")
 local fn = vim.fn
-
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  })
+end
+vim.api.nvim_command("packadd packer.nvim")
 -- returns the require for use in `config` parameter of packer's use
 -- expects the name of the config file
-local function get_config(name)
-    return string.format('require("config/%s")', name)
+function get_setup(name)
+  return string.format('require("setup/%s")', name)
 end
 
--- bootstrap packer if not installed
-if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({
-        "git",
-        "clone",
-        "https://github.com/wbthomason/packer.nvim",
-        install_path,
-    })
-    print("Installing packer...")
-    vim.api.nvim_command("packadd packer.nvim")
-end
-
--- initialize and configure packer
-local packer = require("packer")
-
-packer.init({
-    enable = true, -- enable profiling via :PackerCompile profile=true
-    threshold = 0, -- the amount in ms that a plugins load time must be over for it to be included in the profile
-    max_jobs = 20, -- Limit the number of simultaneous jobs. nil means no limit. Set to 20 in order to prevent PackerSync form being "stuck" -> https://github.com/wbthomason/packer.nvim/issues/746
-    -- Have packer use a popup window
-    display = {
-        open_fn = function()
-            return require("packer.util").float({ border = "rounded" })
-        end,
-    },
-})
-
-packer.startup(function(use)
-    
+return require("packer").startup({
+  function(use)
     use 'wbthomason/packer.nvim'
-    
+
     -- allow block movement with alt keys
-    use 'fedepujol/move.nvim' 
-    
+    use 'fedepujol/move.nvim'
+
     -- onedark color schemes
-    use {'navarasu/onedark.nvim', config = function()
-        require('onedark').setup {
-            style = 'dark' -- dark, darker, cool, deep, warm, warmer, light
-        }
-        require('onedark').load()
+    use { 'navarasu/onedark.nvim', config = function()
+      require('onedark').setup {
+        style = 'dark' -- dark, darker, cool, deep, warm, warmer, light
+      }
+      require('onedark').load()
     end,
-}
+    }
 
--- vim be good games
-use 'ThePrimeagen/vim-be-good'
+    -- vim be good games
+    use 'ThePrimeagen/vim-be-good'
 
--- hop (easy-motion & sneak)
-use {
-    'phaazon/hop.nvim',
-    branch = 'v2', -- optional but strongly recommended
-    config = function()
+    -- hop (easy-motion & sneak)
+    use {
+      'phaazon/hop.nvim',
+      branch = 'v2', -- optional but strongly recommended
+      config = function()
         -- you can configure Hop the way you like here; see :h hop-config
-        require'hop'.setup() 
-    end
-}
+        require 'hop'.setup()
+      end
+    }
 
--- nvim-colorizer
-use 'norcalli/nvim-colorizer.lua'
-require'colorizer'.setup()
--- 
--- -- lualine
--- use { 'nvim-lualine/lualine.nvim',
--- requires = { 'kyazdani42/nvim-web-devicons', opt = true },
--- config = function()
--- require('lualine').setup({
--- options = {
--- icons_enabled = true,
--- theme = 'onedark',
--- }
--- })
--- end,
--- }
+    -- nvim-colorizer
+    use 'norcalli/nvim-colorizer.lua'
+    require 'colorizer'.setup()
 
--- Staline & Stabline
-use{ 'tamton-aquib/staline.nvim',
-requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-}
-require('staline').setup({
-    sections = {
-        left = {
-            ' ', 'right_sep_double', '-mode', 'left_sep_double', ' ',
-            'right_sep', '-file_name', 'left_sep', ' ',
-            'right_sep_double', '-branch', 'left_sep_double', ' ',
+    -- Staline & Stabline
+    use { 'tamton-aquib/staline.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    }
+    require('staline').setup({
+      sections = {
+        left  = {
+          ' ', 'right_sep_double', '-mode', 'left_sep_double', ' ',
+          'right_sep', '-file_name', 'left_sep', ' ',
+          'right_sep_double', '-branch', 'left_sep_double', ' ',
         },
-        mid  = {'lsp'},
-        right= {
-            'right_sep', '-cool_symbol', 'left_sep', ' ',
-            'right_sep', '- ', '-lsp_name', '- ', 'left_sep',
-            'right_sep_double', '-line_column', 'left_sep_double', ' ',
+        mid   = { 'lsp' },
+        right = {
+          'right_sep', '-cool_symbol', 'left_sep', ' ',
+          'right_sep', '- ', '-lsp_name', '- ', 'left_sep',
+          'right_sep_double', '-line_column', 'left_sep_double', ' ',
         }
-    },
-    defaults={
+      },
+      defaults = {
         fg = "#111111",
         cool_symbol = "  ",
         left_separator = "",
@@ -113,24 +84,24 @@ require('staline').setup({
         true_colors = true,
         line_column = "[%l:%c] 並%p%% "
         -- font_active = "bold"
-    },
-    mode_colors = {
+      },
+      mode_colors = {
         n  = "#EBBF6F",
         i  = "#F95B6E",
         ic = "#CF6FDF",
         c  = "#2B848F",
-        v  = "#4096D0"       -- etc
-    }
-})
-require('stabline').setup()
+        v  = "#4096D0" -- etc
+      }
+    })
+    require('stabline').setup()
 
--- IDE (Treesitter)
-use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-}
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {
+    -- IDE (Treesitter)
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+    require 'nvim-treesitter.configs'.setup {
+      ensure_installed = {
         "bash",
         "comment",
         "css",
@@ -169,71 +140,74 @@ require'nvim-treesitter.configs'.setup {
         "vim",
         "vue",
         "yaml"
-    },
-    highlight = { -- enable highlighting
-    enable = true,
-},
-indent = {
-    enable = true, -- default is disabled anyways
-}
-}
-
--- LSP Config
-use 'williamboman/nvim-lsp-installer'
-require("nvim-lsp-installer").setup({
-    automatic_installation = true,
-    ui = {
-        icons = {
-            server_installed = "✓",
-            server_pending = "➜",
-            server_uninstalled = "✗",
-        }
+      },
+      highlight = { -- enable highlighting
+        enable = true,
+      },
+      indent = {
+        enable = true, -- default is disabled anyways
+      }
     }
-})
 
-use 'neovim/nvim-lspconfig'
-require'lspconfig'.sumneko_lua.setup{
-    settings = {
+    -- LSP Config
+    use {
+      'williamboman/nvim-lsp-installer',
+      'neovim/nvim-lspconfig'
+    }
+    require("nvim-lsp-installer").setup({
+      automatic_installation = true,
+      ui = {
+        icons = {
+          server_installed = "✓",
+          server_pending = "➜",
+          server_uninstalled = "✗",
+        }
+      }
+    })
+
+    require 'lspconfig'.sumneko_lua.setup {
+      settings = {
         Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = vim.api.nvim_get_runtime_file("", true),
-            },
-            -- Do not send telemetry data containing a randomized but unique identifier
-            telemetry = {
-                enable = false,
-            },
+          runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT',
+          },
+          diagnostics = {
+            -- Get the language server to recognize the `vim` global
+            globals = { 'vim' },
+          },
+          workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+          -- Do not send telemetry data containing a randomized but unique identifier
+          telemetry = {
+            enable = false,
+          },
         },
-    },
-}
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.tailwindcss.setup{}
+      },
+    }
+    require 'lspconfig'.tsserver.setup {}
+    require 'lspconfig'.tailwindcss.setup {}
 
--- Completions
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-buffer'
-use 'hrsh7th/cmp-path'
-use 'hrsh7th/cmp-cmdline'
-use 'hrsh7th/nvim-cmp'
+    -- Completions
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/nvim-cmp'
 
--- nvim-tree
-use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-  require("nvim-tree").setup({
-    auto_reload_on_write = true,
+    -- nvim-tree
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+    require("nvim-tree").setup({
+      auto_reload_on_write = true,
       create_in_closed_folder = false,
       disable_netrw = false,
       hijack_cursor = false,
@@ -438,69 +412,21 @@ use {
           watcher = false,
         },
       },
-  })
+    })
 
--- ### All Plugins Above This Line ### --
--- Automatically set up configuration after cloning packer.nvim
-if packer_bootstrap then
-    require('packer').sync()
-end
-end)
+    -- ### All Plugins Above This Line ### --
 
--- CMP config
-
-local cmp = require('cmp')
-
-local select_opts = {behavior = cmp.SelectBehavior.Select}
-
-cmp.setup({
-    sources = {
-        {name = 'path'},
-        {name = 'nvim_lsp', keyword_length = 3},
-        {name = 'buffer', keyword_length = 3},
+    if packer_bootstrap then
+      require("packer").sync()
+    end
+  end,
+  config = {
+    display = {
+      open_fn = require("packer.util").float,
     },
-    window = {
-        documentation = cmp.config.window.bordered()
+    profile = {
+      enable = true,
+      threshold = 1, -- the amount in ms that a plugins load time must be over for it to be included in the profile
     },
-    formatting = {
-        fields = {'menu', 'abbr', 'kind'},
-        format = function(entry, item)
-            local menu_icon = {
-                nvim_lsp = 'λ',
-                buffer = 'Ω',
-                path = '🖫',
-            }
-            
-            item.menu = menu_icon[entry.source.name]
-            return item
-        end,
-    },
-    mapping = {
-        ['<CR>'] = cmp.mapping.confirm({select = false}),
-        ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
-        ['<Down>'] = cmp.mapping.select_next_item(select_opts),
-        ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
-        ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
-        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({select = false}),
-        ['<Tab>'] = cmp.mapping(function(fallback)
-            local col = vim.fn.col('.') - 1
-            if cmp.visible() then
-                cmp.select_next_item(select_opts)
-            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-                fallback()
-            else
-                cmp.complete()
-            end
-        end, {'i', 's'}),
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_prev_item(select_opts)
-            else
-                fallback()
-            end
-        end, {'i', 's'}),
-    }
+  },
 })
