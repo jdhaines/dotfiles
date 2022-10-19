@@ -11,7 +11,7 @@ curl -L https://nixos.org/nix/install | sh
 export NIXPKGS_ALLOW_UNFREE=1
 
 # stow Dotfiles
-
+nix-env -iA nixpkgs.stow
 stow -d ~/.dotfiles alacritty
 stow -d ~/.dotfiles git
 stow -d ~/.dotfiles i3
@@ -25,7 +25,7 @@ nix-env -iA \
   nixpkgs.git \
   nixpkgs.neovim \
   nixpkgs.yarn \
-  nixpkgs.stow -d ~/.dotfiles \
+  # nixpkgs.stow \
   nixpkgs.gcc \
   nixpkgs.bat \
   nixpkgs.gnumake \
