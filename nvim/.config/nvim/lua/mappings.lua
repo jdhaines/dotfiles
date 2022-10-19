@@ -75,3 +75,8 @@ keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', opts)
 -- nvim-tree Keybindings
 keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
 keymap('v', '<leader>e', ':NvimTreeToggle<cr>', opts)
+
+-- Telescope Keybindings
+keymap ('n', '<leader>f', ':Telescope find_files<cr>', opts)
+keymap ('n', '<leader>g', ':Telescope live_grep<cr>', opts)
+keymap ('n', '<leader>c', ':Telescope git_commits<cr>', opts)

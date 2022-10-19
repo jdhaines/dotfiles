@@ -414,6 +414,12 @@ return require("packer").startup({
       },
     })
 
+    -- telescope
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
     -- ### All Plugins Above This Line ### --
 
     if packer_bootstrap then
