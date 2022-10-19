@@ -10,22 +10,12 @@ curl -L https://nixos.org/nix/install | sh
 # allow chrome install
 export NIXPKGS_ALLOW_UNFREE=1
 
-# stow Dotfiles
-nix-env -iA nixpkgs.stow
-stow -d ~/.dotfiles alacritty
-stow -d ~/.dotfiles git
-stow -d ~/.dotfiles i3
-stow -d ~/.dotfiles nvim
-stow -d ~/.dotfiles picom
-stow -d ~/.dotfiles profile
-stow -d ~/.dotfiles rofi
-
 # install packages
 nix-env -iA \
   nixpkgs.git \
   nixpkgs.neovim \
   nixpkgs.yarn \
-  # nixpkgs.stow \
+  nixpkgs.stow \
   nixpkgs.gcc \
   nixpkgs.bat \
   nixpkgs.gnumake \
@@ -41,6 +31,17 @@ nix-env -iA \
   nixpkgs.ripgrep \
   nixpkgs.jq \
   nxpkgs.bat \
+
+# stow Dotfiles
+cd .dotfiles
+stow alacritty
+stow git
+stow i3
+stow nvim
+stow picom
+stow profile
+stow rofi
+cd ~
 
 # install pip
 python -m ensurepip --upgrade
@@ -71,10 +72,11 @@ fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install rkbk60/onedark-fish"
 rm -f $HOME/.config/fish/conf.d/omf.fish
 rm -f $HOME/.config/fish/config.fish
-# stow -d ~/.dotfiles fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
-stow -d ~/.dotfiles fish
+cd ~/.dotfiles
+stow fish
+cd ~
 
 # Fonts
 mkdir -p ~/.local/share/fonts
@@ -130,8 +132,8 @@ curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \
   | wget -qi -
 gzip -d tree-sitter-linux-x64.gz
 chmod +x tree-sitter-linux-x64
-mv tree-sitter-linux-x64 ~/usr/local/bin/tree-sitter
-
+mv tree-sitter-linux-x64 tree-sitter
+sudo mv tree-sitter /usr/local/bin
 
 # finishing up neovim setup
 nvim --headless +PackerSync +qall

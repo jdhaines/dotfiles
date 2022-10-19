@@ -30,8 +30,6 @@ shutdown -r now
 
 ### Fish Config
 
-- Alias `vim` -> `nvim`
-- Alias `vi` -> `nvim`
 
 ### Neovim
 
