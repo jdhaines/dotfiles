@@ -19,7 +19,6 @@ stow -d ~/.dotfiles nvim
 stow -d ~/.dotfiles picom
 stow -d ~/.dotfiles profile
 stow -d ~/.dotfiles rofi
-stow -d ~/.dotfiles fish
 
 # install packages
 nix-env -iA \
@@ -74,8 +73,8 @@ rm -f $HOME/.config/fish/conf.d/omf.fish
 rm -f $HOME/.config/fish/config.fish
 # stow -d ~/.dotfiles fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
-
-
+rm -rf ~/.config/fish
+stow -d ~/.dotfiles fish
 
 # Fonts
 mkdir -p ~/.local/share/fonts
