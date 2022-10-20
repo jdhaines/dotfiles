@@ -105,12 +105,25 @@ fi
 # Install Bumblebee-status bar for i3
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
-# install i3
-sudo apt install -y i3
-sudo dpkg-reconfigure i3
+find "/etc/arch-release"
 
-# install rofi
-sudo apt install -y rofi picom
+if [$? -eq 0]
+then
+  # inside arch
+  # install i3
+  sudo pacman -S --noconfirm i3-wm
+  sudo pacman -S --noconfirm rofi picom
+
+  # install rofi
+else
+  # inside ubuntu
+  # install i3
+  sudo apt install -y i3
+  sudo dpkg-reconfigure i3
+
+  # install rofi
+  sudo apt install -y rofi picom
+fi
 
 # install alacritty
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
