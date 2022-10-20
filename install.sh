@@ -109,8 +109,7 @@ npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
 find "/etc/arch-release"
 
-if [ $? -eq 0 ]
-then
+if [ $? -eq 0 ]; then
   # inside arch
   echo "in arch"
   # install i3
