@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # GLOBALS
 SSH_DIR="$HOME/.ssh"
 
@@ -107,7 +109,7 @@ npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
 find "/etc/arch-release"
 
-if [$? -eq 0]
+if [ $? -eq 0 ]
 then
   # inside arch
   echo "in arch"
