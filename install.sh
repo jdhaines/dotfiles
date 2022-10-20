@@ -110,6 +110,7 @@ find "/etc/arch-release"
 if [$? -eq 0]
 then
   # inside arch
+  echo "in arch"
   # install i3
   sudo pacman -S --noconfirm i3-wm
   sudo pacman -S --noconfirm rofi picom
@@ -117,6 +118,7 @@ then
   # install rofi
 else
   # inside ubuntu
+  echo "not in arch"
   # install i3
   sudo apt install -y i3
   sudo dpkg-reconfigure i3
