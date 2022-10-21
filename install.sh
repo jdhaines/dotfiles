@@ -31,7 +31,9 @@ nix-env -iA \
   nixpkgs.feh \
   nixpkgs.xcwd \
   nixpkgs.ripgrep \
-  nixpkgs.jq 
+  nixpkgs.jq \
+  nixos.rclone \
+  nixpkgs.rclone-browser
 
 # stow Dotfiles
 cd .dotfiles
