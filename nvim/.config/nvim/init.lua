@@ -25,6 +25,7 @@ require('slowly').setup({
     { url = 'https://github.com/nvim-telescope/telescope.nvim', start = true },
     { url = 'https://github.com/nvim-lua/plenary.nvim', start = true },
     { url = 'https://github.com/ahmedkhalf/project.nvim', start = true },
+    { url = 'https://github.com/lewis6991/gitsigns.nvim', start = true, checkout = 'release' },
   }
 })
 
@@ -45,3 +46,4 @@ require("plugins.cmp")
 require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.project")
+require("plugins.gitsigns")
