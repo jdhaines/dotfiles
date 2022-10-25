@@ -1,66 +1,47 @@
--- References to ./lua/
--- Vim mappings, see lua/config/which.lua for more mappings
-require("mappings")
--- All non plugin related (vim) options
-require("options")
--- Vim autocommands/autogroups
-require("autocmd")
--- Plugin management via Packer
-require("plugins")
-
--- Completion Config
-local cmp = require('cmp')
-
-local select_opts = { behavior = cmp.SelectBehavior.Select }
-
-cmp.setup({
-  sources = {
-    { name = 'path' },
-    { name = 'nvim_lsp', keyword_length = 3 },
-    { name = 'buffer', keyword_length = 3 },
+require('slowly').setup({
+  disabled_builtins = {
+    'netrw',
+    'netrwPlugin',
+    'netrwSettings',
+    'netrwFileHandlers'
   },
-  window = {
-    documentation = cmp.config.window.bordered()
-  },
-  formatting = {
-    fields = { 'menu', 'abbr', 'kind' },
-    format = function(entry, item)
-      local menu_icon = {
-        nvim_lsp = 'λ',
-        buffer = 'Ω',
-        path = '🖫',
-      }
-
-      item.menu = menu_icon[entry.source.name]
-      return item
-    end,
-  },
-  mapping = {
-    ['<CR>'] = cmp.mapping.confirm({ select = false }),
-    ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
-    ['<Down>'] = cmp.mapping.select_next_item(select_opts),
-    ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
-    ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
-    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-e>'] = cmp.mapping.abort(),
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      local col = vim.fn.col('.') - 1
-      if cmp.visible() then
-        cmp.select_next_item(select_opts)
-      elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        fallback()
-      else
-        cmp.complete()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item(select_opts)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
+  plugins = {
+    { url = 'https://github.com/olimorris/onedarkpro.nvim', start = true },
+    { url = 'https://github.com/ThePrimeagen/vim-be-good', start = true },
+    { url = 'https://github.com/phaazon/hop.nvim', start = true, checkout = 'v2' },
+    { url = 'https://github.com/norcalli/nvim-colorizer.lua', start = true },
+    { url = 'https://github.com/kyazdani42/nvim-web-devicons', start = true },
+    { url = 'https://github.com/tamton-aquib/staline.nvim', start = true },
+    { url = 'https://github.com/nvim-treesitter/nvim-treesitter', start = true },
+    { url = 'https://github.com/williamboman/nvim-lsp-installer', start = true },
+    { url = 'https://github.com/neovim/nvim-lspconfig', start = true },
+    { url = 'https://github.com/hrsh7th/cmp-nvim-lsp', start = true },
+    { url = 'https://github.com/hrsh7th/cmp-buffer', start = true },
+    { url = 'https://github.com/hrsh7th/cmp-path', start = true },
+    { url = 'https://github.com/hrsh7th/cmp-cmdline', start = true },
+    { url = 'https://github.com/hrsh7th/cmp-nvim-lua', start = true },
+    { url = 'https://github.com/hrsh7th/nvim-cmp', start = true },
+    { url = 'https://github.com/nvim-tree/nvim-tree.lua', start = true, checkout = 'nightly' },
+    { url = 'https://github.com/nvim-telescope/telescope.nvim', start = true },
+    { url = 'https://github.com/nvim-lua/plenary.nvim', start = true },
+    { url = 'https://github.com/ahmedkhalf/project.nvim', start = true },
   }
 })
 
+-- Vim mappings, see lua/config/which.lua for more mappings
+require("mappings")
+
+-- All non plugin related (vim) options
+require("options")
+
+-- Plugins
+require("plugins.onedarkpro")
+require("plugins.hop")
+require("plugins.colorizer")
+require("plugins.staline")
+require("plugins.treesitter")
+require("plugins.lsp")
+require("plugins.cmp")
+require("plugins.nvim-tree")
+require("plugins.telescope")
+require("plugins.project")
