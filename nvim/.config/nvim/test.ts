@@ -11,4 +11,3 @@ const bob:TestItem = {
 }
 
 console.log('Bob: ', bob)
-

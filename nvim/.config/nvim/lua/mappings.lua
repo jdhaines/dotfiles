@@ -6,9 +6,11 @@
 vim.o.scrolloff = 10
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.splitbelow = true
+vim.g.splitright = true
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
@@ -39,12 +41,12 @@ keymap("v", "<Space>", "<Nop>", opts)
 -- Alt j & k move lines and blocks
 keymap('n', '<A-j>', ':MoveLine(1)<CR>', opts)
 keymap('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
-  --keymap('n', '<A-h>', ':MoveHChar(-1)<CR>', opts) -- don't want horizontal movement
-  --keymap('n', '<A-l>', ':MoveHChar(1)<CR>', opts) -- don't want horizontal movement
+--keymap('n', '<A-h>', ':MoveHChar(-1)<CR>', opts) -- don't want horizontal movement
+--keymap('n', '<A-l>', ':MoveHChar(1)<CR>', opts) -- don't want horizontal movement
 keymap('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
 keymap('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
-  --keymap('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts) -- don't want horizontal movement
-  --keymap('v', '<A-l>', ':MoveHBlock(1)<CR>', opts) -- don't want horizontal movement
+--keymap('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts) -- don't want horizontal movement
+--keymap('v', '<A-l>', ':MoveHBlock(1)<CR>', opts) -- don't want horizontal movement
 
 -- jj works like esc
 keymap('i', 'jj', '<Esc>', opts)
@@ -77,6 +79,6 @@ keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
 keymap('v', '<leader>e', ':NvimTreeToggle<cr>', opts)
 
 -- Telescope Keybindings
-keymap ('n', '<leader>f', ':Telescope find_files<cr>', opts)
-keymap ('n', '<leader>g', ':Telescope live_grep<cr>', opts)
-keymap ('n', '<leader>c', ':Telescope git_commits<cr>', opts)
+keymap('n', '<leader>f', ':Telescope find_files<cr>', opts)
+keymap('n', '<leader>g', ':Telescope live_grep<cr>', opts)
+keymap('n', '<leader>c', ':Telescope git_commits<cr>', opts)
