@@ -22,15 +22,18 @@ sudo apt install ./nvim-linux64.deb
 # Install wget & curl to help with later installs
 sudo apt install -y wget curl
 
+# Instally Yarn Classic
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
 # Add Repos
-sudo apt-add-repository ppa:fish-shell/release-3 # fish
+sudo apt-add-repository -y ppa:fish-shell/release-3 # fish
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - # node
 
 # Install Packages with apt
 sudo apt update
 sudo apt install -y \
   stow \
-  node-yarnpkg \
   git \
   build-essential \
   bat \
@@ -47,7 +50,7 @@ sudo apt install -y \
   xcwd \
   jq \
   rclone \
-  rclone-browser \
+  rclone-browser
 
 # reconfigure i3 ??
 sudo dpkg-reconfigure i3
