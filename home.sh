@@ -130,10 +130,10 @@ fi
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
 # Reconfigure Locales
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
-sudo dpkg-reconfigure locales
+# export LANGUAGE="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
+# export LANG="en_US.UTF-8"
+# sudo dpkg-reconfigure locales
 
 # Install tree-sitter-cli
 curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \
