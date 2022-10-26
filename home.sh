@@ -29,7 +29,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 # Add Repos
 sudo apt-add-repository -y ppa:fish-shell/release-3 # fish
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - # node
-sudo add-apt-repository ppa:kdenlive/kdenlive-stable  # kdenlive
+sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable  # kdenlive
 
 # Install Packages with apt
 sudo apt update

@@ -28,6 +28,7 @@ require('slowly').setup({
     { url = 'https://github.com/lewis6991/gitsigns.nvim', start = true, checkout = 'release' },
     { url = 'https://github.com/terrortylor/nvim-comment', start = true },
     { url = 'https://github.com/andweeb/presence.nvim', start = true },
+    { url = 'https://github.com/fedepujol/move.nvim', start = true },
   }
 })
 
