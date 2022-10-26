@@ -1,0 +1,7 @@
+com.markskelton.one-dark-theme
+io.github.mishkun.ideavimsneak
+IdeaVIM
+com.github.copilot
+zielu.gittoolbox
+com.nasller.CodeGlancePro
+io.techtrails.intellij.prisma

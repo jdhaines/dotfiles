@@ -1,0 +1,336 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">c2VhcmNo</entry>
+        <entry encoding="base64">XDxpbmhlcml0XD4=</entry>
+        <entry encoding="base64">YmFzZWQ=</entry>
+        <entry encoding="base64">cmVi</entry>
+        <entry encoding="base64">dG9vbHM=</entry>
+        <entry encoding="base64">bGludXg=</entry>
+        <entry encoding="base64">Sm9zaCBIYWluZXM=</entry>
+        <entry encoding="base64">M2R0</entry>
+        <entry encoding="base64">U3BldA==</entry>
+        <entry encoding="base64">ZG9lcw==</entry>
+        <entry encoding="base64">TGVhcm4=</entry>
+        <entry encoding="base64">TWlzYw==</entry>
+        <entry encoding="base64">QXBwIERvY3M=</entry>
+        <entry encoding="base64">U3ByaW5n</entry>
+        <entry encoding="base64">Z2Fw</entry>
+        <entry encoding="base64">QnJpbmcgbmV3cw==</entry>
+        <entry encoding="base64">RGVsaXZlciBhbmQgRGVw</entry>
+        <entry encoding="base64">Q29udGFpbmVy</entry>
+        <entry encoding="base64">ZGRhcA==</entry>
+        <entry encoding="base64">RERBUA==</entry>
+        <entry encoding="base64">R3JhZmE=</entry>
+        <entry encoding="base64">VWRlbQ==</entry>
+        <entry encoding="base64">cmVwb3J0</entry>
+        <entry encoding="base64">bGFzdCBR</entry>
+        <entry encoding="base64">bGFzdCBx</entry>
+        <entry encoding="base64">YXZpbA==</entry>
+        <entry encoding="base64">d2Fz</entry>
+        <entry encoding="base64">ZXZlbg==</entry>
+        <entry encoding="base64">dW5lbmM=</entry>
+        <entry encoding="base64">S25vdw==</entry>
+        <entry encoding="base64">cG90aW9u</entry>
+        <entry encoding="base64">VXM=</entry>
+        <entry encoding="base64">MTA=</entry>
+        <entry encoding="base64">Y29uc29s</entry>
+        <entry encoding="base64">QlQ=</entry>
+        <entry encoding="base64">U255aw==</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">c291cmNlIH4vLmlkZWF2aW1yYw==</entry>
+        <entry encoding="base64">d3E=</entry>
+        <entry encoding="base64">dw==</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/git/ogre/report/taskDetails.json" timestamp="1665670178511">
+        <mark key="[" line="23" column="13" />
+        <mark key="]" line="23" column="13" />
+        <mark key="." line="23" column="14" />
+        <mark key="^" line="21" column="4" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/report/test.json" timestamp="1665434955386">
+        <mark key="[" line="13" column="15" />
+        <mark key="]" line="13" column="19" />
+        <mark key="^" line="13" column="19" />
+        <mark key="." line="13" column="18" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1666707025354">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+      </file>
+      <file name="/a.dummy" timestamp="1665430880654">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/taskDetails.json" timestamp="1665428929862">
+        <mark key="[" line="6" column="4" />
+        <mark key="]" line="6" column="4" />
+        <mark key="^" line="6" column="4" />
+        <mark key="." line="6" column="3" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/test/badDev/Projct.yml" timestamp="1665669300833">
+        <mark key="[" line="0" column="3" />
+        <mark key="]" line="0" column="3" />
+        <mark key="." line="0" column="4" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/package.json" timestamp="1665753380682">
+        <mark key="[" line="13" column="140" />
+        <mark key="]" line="14" column="56" />
+        <mark key="^" line="14" column="56" />
+        <mark key="." line="14" column="55" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/src/types.ts" timestamp="1665749730910">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="15" />
+        <mark key="." line="0" column="14" />
+        <mark key="^" line="0" column="15" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/output/Results.json" timestamp="1665670088729">
+        <mark key="[" line="3" column="0" />
+        <mark key="]" line="3" column="65" />
+        <mark key="." line="3" column="64" />
+        <mark key="^" line="3" column="65" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/src/yamlValidation/validator.js" timestamp="1665750558754">
+        <mark key="[" line="2" column="0" />
+        <mark key="]" line="2" column="0" />
+        <mark key="." line="2" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/report/tailwind.config.js" timestamp="1665671082077">
+        <mark key="'" line="1167" column="0" />
+        <mark key="[" line="1161" column="51" />
+        <mark key="]" line="1163" column="30" />
+        <mark key="." line="1163" column="29" />
+        <mark key="^" line="1163" column="30" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/report/Results.json" timestamp="1665680766815">
+        <mark key="[" line="2" column="64" />
+        <mark key="]" line="2" column="64" />
+        <mark key="." line="2" column="64" />
+        <mark key="^" line="2" column="64" />
+      </file>
+      <file name="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" timestamp="1666280846715">
+        <mark key="[" line="950" column="4" />
+      </file>
+      <file name="$USER_HOME$/git/newDocs/docs/about/misc/saf.md" timestamp="1666707007230">
+        <mark key="[" line="32" column="0" />
+        <mark key="]" line="32" column="0" />
+        <mark key="^" line="32" column="390" />
+        <mark key="." line="32" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/src/yamlValidation/validator.mjs" timestamp="1665780367392">
+        <mark key="[" line="32" column="23" />
+        <mark key="]" line="27" column="10" />
+        <mark key="^" line="27" column="10" />
+        <mark key="." line="27" column="9" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/src/yamlValidation/bad.yaml" timestamp="1665754362399">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/src/yamlValidation/validator.ts" timestamp="1665750467056">
+        <mark key="[" line="29" column="0" />
+        <mark key="]" line="29" column="0" />
+        <mark key="^" line="27" column="16" />
+        <mark key="." line="29" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/test/goodDev/Project.yaml" timestamp="1665779491662">
+        <mark key="[" line="20" column="64" />
+        <mark key="]" line="24" column="44" />
+        <mark key="^" line="24" column="44" />
+        <mark key="." line="24" column="43" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/report/index.html" timestamp="1665681127937">
+        <mark key="'" line="157" column="19" />
+        <mark key="[" line="215" column="25" />
+        <mark key="]" line="215" column="25" />
+        <mark key="." line="215" column="26" />
+        <mark key="^" line="215" column="32" />
+      </file>
+      <file name="$USER_HOME$/git/ogre/.eslintrc.yml" timestamp="1665435225635">
+        <mark key="[" line="0" column="10" />
+        <mark key="]" line="3" column="17" />
+        <mark key="^" line="3" column="17" />
+        <mark key="." line="3" column="16" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="44" column="26" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
+      <jump line="136" column="7" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
+      <jump line="5" column="0" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
+      <jump line="48" column="0" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
+      <jump line="49" column="19" filename="$USER_HOME$/git/3dt/src/backend/tests/milestone.test.ts" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/3dt/src/backend/tests/milestone.test.ts" />
+      <jump line="11" column="53" filename="$USER_HOME$/git/sfdocs/docs/.vuepress/config.ts" />
+      <jump line="68" column="18" filename="$USER_HOME$/git/sfdocs/docs/.vuepress/config.ts" />
+      <jump line="40" column="0" filename="$USER_HOME$/git/exVibe/.github/workflows/devChecks.yml" />
+      <jump line="42" column="17" filename="$USER_HOME$/git/newDocs/docs/.vuepress/layouts/Tag.vue" />
+      <jump line="103" column="24" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2020.md" />
+      <jump line="6" column="6" filename="$USER_HOME$/git/newDocs/docs/data/people.ts" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/newDocs/docs/data/people.ts" />
+      <jump line="56" column="0" filename="$USER_HOME$/git/newDocs/docs/data/people.ts" />
+      <jump line="57" column="0" filename="$USER_HOME$/git/newDocs/docs/data/people.ts" />
+      <jump line="324" column="18" filename="$USER_HOME$/git/newDocs/docs/data/expenses22.ts" />
+      <jump line="48" column="25" filename="$USER_HOME$/git/newDocs/docs/about/strategy.md" />
+      <jump line="14" column="109" filename="$USER_HOME$/git/newDocs/docs/about/strategy.md" />
+      <jump line="135" column="15" filename="$USER_HOME$/git/newDocs/docs/data/expenses22.ts" />
+      <jump line="717" column="12" filename="$USER_HOME$/git/newDocs/docs/data/expenses22.ts" />
+      <jump line="274" column="31" filename="$USER_HOME$/git/newDocs/docs/data/expenses22.ts" />
+      <jump line="111" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="1" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="23" column="60" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/Okr.vue" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/Okr.vue" />
+      <jump line="6" column="36" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/OkrList.vue" />
+      <jump line="374" column="18" filename="$USER_HOME$/git/newDocs/tailwind.config.js" />
+      <jump line="1164" column="0" filename="$USER_HOME$/git/newDocs/tailwind.config.js" />
+      <jump line="1" column="4" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/ToolCard.vue" />
+      <jump line="52" column="10" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/ToolCard.vue" />
+      <jump line="84" column="19" filename="$USER_HOME$/git/newDocs/docs/data/tools.ts" />
+      <jump line="13" column="0" filename="$USER_HOME$/git/newDocs/docs/data/okrs.ts" />
+      <jump line="5" column="16" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/ToolCard.vue" />
+      <jump line="114" column="7" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="323" column="17" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="22" column="3" filename="$USER_HOME$/git/newDocs/docs/data/skills.ts" />
+      <jump line="283" column="67" filename="$USER_HOME$/git/newDocs/docs/data/skills.ts" />
+      <jump line="137" column="6" filename="$USER_HOME$/git/newDocs/docs/.vuepress/components/ExpensesTable.vue" />
+      <jump line="116" column="10" filename="$USER_HOME$/git/3dt/src/frontend/src/components/Header.vue" />
+      <jump line="61" column="0" filename="$USER_HOME$/git/newDocs/docs/about/core.md" />
+      <jump line="295" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="14" column="9" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="16" column="15" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="27" column="19" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="39" column="10" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="48" column="19" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="64" column="19" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="79" column="20" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="81" column="19" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="111" column="11" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="133" column="6" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="165" column="13" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="171" column="19" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="180" column="19" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="357" column="33" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="361" column="27" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="15" column="8" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="280" column="13" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="380" column="3" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="18" column="22" filename="$USER_HOME$/git/newDocs/docs/ddap/aboutDDAP.md" />
+      <jump line="312" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/sidebar.ts" />
+      <jump line="3" column="4" filename="$USER_HOME$/git/newDocs/getRevoArtifact.sh" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/newDocs/getRevoArtifact.sh" />
+      <jump line="10" column="13" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="460" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="184" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="480" column="21" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="171" column="14" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="665" column="0" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="135" column="380" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="669" column="11" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="590" column="3" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/ogre/.eslintrc.js" />
+      <jump line="7" column="0" filename="$USER_HOME$/git/ogre/.eslintrc.js" />
+      <jump line="5" column="6" filename="$USER_HOME$/git/ogre/.eslintrc.js" />
+      <jump line="58" column="30" filename="$USER_HOME$/git/newDocs/docs/articles/pmDdapBusinessData.md" />
+      <jump line="66" column="13" filename="$USER_HOME$/git/newDocs/docs/articles/pmDdapBusinessData.md" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/equipment.ts" />
+      <jump line="805" column="4" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+      <jump line="323" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+      <jump line="822" column="16" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+      <jump line="3" column="0" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+      <jump line="5" column="0" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="85" column="0" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="34" column="252" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="91" column="3" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="98" column="136" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="105" column="0" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="106" column="276" filename="$USER_HOME$/git/newDocs/docs/news/Q3_2022.md" />
+      <jump line="202" column="0" filename="$USER_HOME$/git/newDocs/docs/learn/bookclub.md" />
+      <jump line="34" column="27" filename="$USER_HOME$/git/ogre/report/index.html" />
+      <jump line="142" column="0" filename="$USER_HOME$/git/ogre/report/index.html" />
+      <jump line="157" column="19" filename="$USER_HOME$/git/ogre/report/index.html" />
+      <jump line="1145" column="5" filename="$USER_HOME$/git/ogre/report/tailwind.config.js" />
+      <jump line="1167" column="0" filename="$USER_HOME$/git/ogre/report/tailwind.config.js" />
+      <jump line="903" column="22" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+      <jump line="590" column="15" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="a" type="4">
+        <keys>
+          <key char="73" code="0" mods="0" />
+          <key char="32" code="0" mods="0" />
+          <key char="32" code="0" mods="0" />
+          <key char="65535" code="27" mods="0" />
+          <key char="106" code="0" mods="0" />
+        </keys>
+      </register>
+      <register name="&quot;" type="2">
+        <text encoding="base64">PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOyIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIHNyYz0iaHR0cHM6Ly93d3cuZmlnbWEuY29tL2VtYmVkP2VtYmVkX2hvc3Q9c2hhcmUmdXJsPWh0dHBzJTNBJTJGJTJGd3d3LmZpZ21hLmNvbSUyRnByb3RvJTJGRE54UW85Rllqa2p3VWloZ3JWTHV3SCUyRkRldk9wcy1Vc2VySm91cm5leSUzRnBhZ2UtaWQlM0Q0NCUyNTNBNjQzJTI2bm9kZS1pZCUzRDQ4MiUyNTNBNzY4MjYlMjZ2aWV3cG9ydCUzRC0xMDQ0JTI1MkMtMTM3OCUyNTJDMC4xNyUyNnNjYWxpbmclM0RtaW4tem9vbSUyNnN0YXJ0aW5nLXBvaW50LW5vZGUtaWQlM0Q0ODIlMjUzQTc2ODI2IiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+Cg==</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">cw==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOyIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIHNyYz0iaHR0cHM6Ly93d3cuZmlnbWEuY29tL2VtYmVkP2VtYmVkX2hvc3Q9c2hhcmUmdXJsPWh0dHBzJTNBJTJGJTJGd3d3LmZpZ21hLmNvbSUyRnByb3RvJTJGRE54UW85Rllqa2p3VWloZ3JWTHV3SCUyRkRldk9wcy1Vc2VySm91cm5leSUzRnBhZ2UtaWQlM0Q0NCUyNTNBNjQzJTI2bm9kZS1pZCUzRDQ4MiUyNTNBNzY4MjYlMjZ2aWV3cG9ydCUzRC0xMDQ0JTI1MkMtMTM3OCUyNTJDMC4xNyUyNnNjYWxpbmclM0RtaW4tem9vbSUyNnN0YXJ0aW5nLXBvaW50LW5vZGUtaWQlM0Q0ODIlMjUzQTc2ODI2IiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">U255aw==</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">ICB7CiAgICBpZDogODksCiAgICBkYXRlOiAnMjAyMi0xMC0yMCcsCiAgICBkZXNjcmlwdGlvbjogJ0JhY2tlbmQgRGV2IFN0YW5kYXJkJywKICAgIHN1cHBsaWVyOiAnU0VQJywKICAgIHVzZXI6ICdBbGwnLAogICAgc3BlbmRUeXBlOiAnRXh0ZXJuYWwgRGV2IFZlbmRvcicsCiAgICBwcmljZTogMTA3ODUwLAogICAgY2hhcmdlTnVtYmVyOiAnU29mdHdhcmUgRmFjdG9yeScsCiAgfSwK</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOyIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIHNyYz0iaHR0cHM6Ly93d3cuZmlnbWEuY29tL2VtYmVkP2VtYmVkX2hvc3Q9c2hhcmUmdXJsPWh0dHBzJTNBJTJGJTJGd3d3LmZpZ21hLmNvbSUyRnByb3RvJTJGRE54UW85Rllqa2p3VWloZ3JWTHV3SCUyRkRldk9wcy1Vc2VySm91cm5leSUzRnBhZ2UtaWQlM0Q0NCUyNTNBNjQzJTI2bm9kZS1pZCUzRDQ4MiUyNTNBNzY4MjYlMjZ2aWV3cG9ydCUzRC0xMDQ0JTI1MkMtMTM3OCUyNTJDMC4xNyUyNnNjYWxpbmclM0RtaW4tem9vbSUyNnN0YXJ0aW5nLXBvaW50LW5vZGUtaWQlM0Q0ODIlMjUzQTc2ODI2IiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+Cg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgIHByb2plY3ROYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sCg==</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">ICAgICAgfSwKICAgICAgb3B0aW9uYWxQcm9wZXJ0aWVzOiB7fQogICAgfQo=</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">ICAgIFByb2plY3REZXRhaWxzOiB7CiAgICAgIHR5cGU6ICdvYmplY3QnLAogICAgICBwcm9wZXJ0aWVzOiB7Cg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">ICAgICAgICAK</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">aW1wb3J0IAo=</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">UHJvamVjdERldGFpbHM6Cg==</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">ICBwcm9ibGVtU3RhdGVtZW50OiB8CiAgICBUaGlzIHByb2plY3Qgd2FzIGJ1aWx0IGJlY2F1c2Ugd2UgbmVlZGVkIGEgZ29vZCBleGFtcGxlIG9mIGEgd2VsbCBkb2N1bWVudGVkIHByb2plY3QuCiAgZGV0YWlsZWREZXNjcmlwdGlvbjogfAogICAgVGhpcyBpcyBhIHByb2plY3Qgd2hpY2ggd2UgaG9wZSB3aWxsIGJlIHVzZWQgYXMgYSBnb29kIGV4YW1wbGUgb2YgYSB3ZWxsIGRvY3VtZW50ZWQgcHJvamVjdC4KICByZXBsYWNlZFRvb2xzOiB8CiAgICBIZXJlIGlzIGEgbGlzdCBvZiB0b29scyB3aGljaCB3ZSd2ZSByZXBsYWNlZCB1c2luZyB0aGlzIG5ldyBjb29sIHByb2plY3QuCiAgYnVzaW5lc3NJbXBhY3Q6IHwKICAgIFRoaXMgcHJvamVjdCB3aWxsIGhhdmUgYSBodWdlIGltcGFjdCBvbiBvdXIgYnVzaW5lc3MuCkxvY2F0aW9uczoKICBkZXZlbG9wbWVudEVudmlyb25tZW50OiBVUyBBenVyZSBHb3ZDbG91ZAogIHByb2R1Y3Rpb25FbnZpcm9ubWVudDogVVMgQXp1cmUgR292Q2xvdWQKICBkYXRhTG9jYXRpb246IFN0b3JlZCBpbiBhIGRhdGFiYXNlIGluIHRoZSBVUyBBenVyZSBHb3ZDbG91ZAogIHNvdXJjZUNvZGVMb2NhdGlvbjogR2l0SHViIEVudGVycHJpc2UgQ2xvdWQgLSByckdsb2JhbCBvcmdhbml6YXRpb24KICBzb3VyY2VDb2RlTGluazogaHR0cHM6Ly9naXRodWIuY29tL2RvbnRDbGlja01lL2dvb2REZXYKICBkb2N1bWVudGF0aW9uTG9jYXRpb246IEdpdEh1YiBFbnRlcnByaXNlIENsb3VkIC0gcmVwbyB3aWtpCiAgZG9jdW1lbnRhdGlvbkxpbms6IGh0dHBzOi8vZ2l0aHViLmNvbS9kb250Q2xpY2tNZS9nb29kRGV2L3dpa2kKQXJjaGl0ZWN0dXJlOgogIGFyY2hpdGVjdHVyZU92ZXJ2aWV3OiB8CiAgICBUaGlzIHByb2plY3QgaXMgYSBzaW1wbGUgd2ViIGFwcGxpY2F0aW9uIHRoYXQgaXMgYnVpbHQgdXNpbmcgdGhlIE1FQU4gc3RhY2suCiAgZmlsZURlc2NyaWJpbmdEYXRhU2NoZW1hOiBzcmMvbW9kZWxzL2RiLnB5Cg==</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">dw==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">U255aw==</last-search>
+      <last-pattern encoding="base64">U255aw==</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+</application>

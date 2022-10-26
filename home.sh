@@ -3,37 +3,65 @@
 # GLOBALS
 SSH_DIR="$HOME/.ssh"
 
-# install nix
-curl -L https://nixos.org/nix/install | sh
+# Install neovim
+curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
+  | grep "browser_download_url.*linux64.deb" \
+  | cut -d : -f 2,3 \
+  | tr -d \" \
+  | wget -qi -
+sudo apt install ./nvim-linux64.deb
 
-# source nix
-. $HOME/.nix-profile/etc/profile.d/nix.sh
+# Install alacritty
+curl -s https://api.github.com/repos/alacritty/alacritty/releases/latest \
+  | grep "browser_download_url.*linux64.deb" \
+  | cut -d : -f 2,3 \
+  | tr -d \" \
+  | wget -qi -
+sudo apt install ./nvim-linux64.deb
 
-# allow chrome install
-export NIXPKGS_ALLOW_UNFREE=1
+# Install wget & curl to help with later installs
+sudo apt install -y wget curl
 
-# install packages
-nix-env -iA \
-  nixpkgs.git \
-  nixpkgs.neovim \
-  nixpkgs.yarn \
-  nixpkgs.stow \
-  nixpkgs.gcc \
-  nixpkgs.bat \
-  nixpkgs.gnumake \
-  nixpkgs.google-chrome \
-  nixpkgs.vlc \
-  nixpkgs.nodejs \
-  nixpkgs.python3 \
-  nixpkgs.fish \
-  nixpkgs.xclip \
-  nixpkgs.alacritty \
-  nixpkgs.feh \
-  nixpkgs.xcwd \
-  nixpkgs.ripgrep \
-  nixpkgs.jq \
-  nixos.rclone \
-  nixpkgs.rclone-browser
+# Add Repos
+sudo apt-add-repository ppa:fish-shell/release-3 # fish
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - # node
+
+# Install Packages with apt
+sudo apt update
+sudo apt install -y \
+  stow \
+  node-yarnpkg \
+  git \
+  build-essential \
+  bat \
+  make \
+  vlc \
+  fish \
+  nodejs \
+  xclip \
+  feh \
+  rofi \
+  ripgrep\
+  picom \
+  i3 \
+  xcwd \
+  jq \
+  rclone \
+  rclone-browser \
+
+# reconfigure i3 ??
+sudo dpkg-reconfigure i3
+
+# Install Packages with snap
+sudo snap install alacritty --classic
+
+# Fix bat executable
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
+# Install Google Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 # stow Dotfiles
 cd .dotfiles
@@ -56,19 +84,6 @@ python -m pip install --upgrade pip
 python -m pip install psutil
 python -m pip install pygit2
 
-# to fix bug with locale for rofi
-# set LOCALE_ARCHIVE (nix-build --no-out-link "<nixpkgs>" -A glibcLocales | grep /nix/store/)''/lib/locale/locale-archive
-
-# home pc pkgs
-
-# nix-env -iA \
-# nixpkgs.discord \
-# nixpkgs.slack \
-# nixpkgs.spotify \
-# nixpkgs.webstorm \
-# nixpkgs.teams \
-# nixpkgs.gnome-boxes \
-# nixpkgs.insomnia \
 
 # Install Fisher & Configure Fish
 # source /dev/stdin <<< "$(curl -sL https://git.io/fisher)"
@@ -111,32 +126,6 @@ fi
 # Install Bumblebee-status bar for i3
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
-find "/etc/arch-release"
-
-if [ $? -eq 0 ]; then
-  # inside arch
-  echo "in arch"
-  # install i3
-  sudo pacman -S --noconfirm i3-wm
-  sudo pacman -S --noconfirm rofi picom
-
-  # install rofi
-else
-  # inside ubuntu
-  echo "not in arch"
-  # install i3
-  sudo apt install -y i3
-  sudo dpkg-reconfigure i3
-
-  # install rofi
-  sudo apt install -y rofi picom
-fi
-
-# install alacritty
-nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
-nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
-# run alacritty through nixGL like `nixGL alacritty
-
 # Reconfigure Locales
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -153,9 +142,6 @@ gzip -d tree-sitter-linux-x64.gz
 chmod +x tree-sitter-linux-x64
 mv tree-sitter-linux-x64 tree-sitter
 sudo mv tree-sitter /usr/local/bin
-
-# finishing up neovim setup
-nvim --headless +PackerSync +qall
 
 # set keyboard repeat rate
 xset r rate 350 90

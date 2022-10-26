@@ -1,0 +1,587 @@
+12:09:13.196: CPU Name: 11th Gen Intel(R) Core(TM) i9-11950H @ 2.60GHz
+12:09:13.197: CPU Speed: 2600.000MHz
+12:09:13.197: Physical Cores: 8, Logical Cores: 16
+12:09:13.197: Physical Memory: 64015MB Total, 25404MB Free
+12:09:13.197: Kernel Version: Linux 5.18.10-76051810-generic
+12:09:13.197: Distribution: "Pop!_OS" "22.04"
+12:09:13.197: Session Type: x11
+12:09:13.197: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+12:09:13.198: Qt Version: 5.15.3 (runtime), 5.15.3 (compiled)
+12:09:13.198: Portable mode: false
+12:09:13.234: OBS 27.2.4 (linux)
+12:09:13.234: ---------------------------------
+12:09:13.234: ---------------------------------
+12:09:13.234: audio settings reset:
+12:09:13.234: 	samples per sec: 44100
+12:09:13.234: 	speakers:        2
+12:09:13.238: ---------------------------------
+12:09:13.238: Initializing OpenGL...
+12:09:13.278: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
+12:09:13.278: OpenGL loaded successfully, version 3.3.0 NVIDIA 510.85.02, shading language 3.30 NVIDIA via Cg compiler
+12:09:13.283: ---------------------------------
+12:09:13.283: video settings reset:
+12:09:13.283: 	base resolution:   3840x2160
+12:09:13.283: 	output resolution: 3840x2160
+12:09:13.283: 	downscale filter:  Lanczos
+12:09:13.283: 	fps:               30/1
+12:09:13.283: 	format:            NV12
+12:09:13.283: 	YUV mode:          709/Partial
+12:09:13.283: NV12 texture support not available
+12:09:13.284: Audio monitoring device:
+12:09:13.284: 	name: Monitor of RODE NT-USB Analog Stereo
+12:09:13.284: 	id: alsa_output.usb-RODE_Microphones_RODE_NT-USB-00.analog-stereo.monitor
+12:09:13.284: ---------------------------------
+12:09:13.285: No AJA devices found, skipping loading AJA UI plugin
+12:09:13.285: Failed to initialize module 'aja-output-ui.so'
+12:09:13.287: No AJA devices found, skipping loading AJA plugin
+12:09:13.287: Failed to initialize module 'aja.so'
+12:09:13.287: Failed to load 'en-US' text for module: 'decklink-captions.so'
+12:09:13.288: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+12:09:13.347: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+12:09:13.347: No blackmagic support
+12:09:13.351: [obs-browser]: Version 2.17.13
+12:09:13.351: [obs-browser]: CEF Version 95.0.0-MediaHandler.2463+g3b3ac84+chromium-95.0.4638.69
+12:09:13.364: NVENC supported
+12:09:13.364: FFMPEG VAAPI supported
+12:09:13.402: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+12:09:13.402: 
+12:09:13.402: [vlc-video]: Couldn't find VLC installation, VLC video source disabled
+12:09:13.402: ---------------------------------
+12:09:13.402:   Loaded Modules:
+12:09:13.402:     vlc-video.so
+12:09:13.402:     text-freetype2.so
+12:09:13.402:     rtmp-services.so
+12:09:13.402:     obs-x264.so
+12:09:13.402:     obs-vst.so
+12:09:13.402:     obs-transitions.so
+12:09:13.402:     obs-outputs.so
+12:09:13.402:     obs-libfdk.so
+12:09:13.402:     obs-filters.so
+12:09:13.402:     obs-ffmpeg.so
+12:09:13.402:     obs-browser.so
+12:09:13.402:     linux-v4l2.so
+12:09:13.402:     linux-pulseaudio.so
+12:09:13.402:     linux-jack.so
+12:09:13.402:     linux-decklink.so
+12:09:13.402:     linux-capture.so
+12:09:13.402:     linux-alsa.so
+12:09:13.402:     image-source.so
+12:09:13.402:     frontend-tools.so
+12:09:13.402:     decklink-ouput-ui.so
+12:09:13.402:     decklink-captions.so
+12:09:13.402: ---------------------------------
+12:09:13.403: ==== Startup complete ===============================================
+12:09:13.419: All scene data cleared
+12:09:13.419: ------------------------------------------------
+12:09:13.556: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.56) 15.0.0'
+12:09:13.556: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+12:09:13.556: pulse-input: Started recording from 'alsa_output.usb-Lenovo_ThinkPad_Thunderbolt_3_Dock_USB_Audio_000000000000-00.iec958-stereo.monitor'
+12:09:13.557: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.56) 15.0.0'
+12:09:13.558: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+12:09:13.558: pulse-input: Started recording from 'alsa_input.usb-RODE_Microphones_RODE_NT-USB-00.analog-stereo'
+12:09:13.558: v4l2-input: Start capture from /dev/video4
+12:09:13.559: v4l2-input: Input: 0
+12:09:13.579: v4l2-input: Resolution: 3840x2160
+12:09:13.579: v4l2-input: Pixelformat: YU12
+12:09:13.579: v4l2-input: Linesize: 3840 Bytes
+12:09:13.579: v4l2-input: Framerate: 30.00 fps
+12:09:13.583: v4l2-input: /dev/video4: select timeout set to 166666 (5x frame periods)
+12:09:13.765: Switched to scene '[NS] Cam & Background'
+12:09:13.765: ------------------------------------------------
+12:09:13.765: Loaded scenes:
+12:09:13.765: - scene '[NS] Cam & Background':
+12:09:13.766:     - source: 'Cam Background' (image_source)
+12:09:13.766:     - source: 'Brio' (v4l2_input)
+12:09:13.766:         - filter: 'Crop Edges' (crop_filter)
+12:09:13.766:         - filter: 'Green Screen' (chroma_key_filter_v2)
+12:09:13.766:         - filter: 'Scaling/Aspect Ratio' (scale_filter)
+12:09:13.766:     - source: 'Rode Mic' (pulse_input_capture)
+12:09:13.766:         - filter: 'Gain' (gain_filter)
+12:09:13.766:         - filter: 'Noise Suppression' (noise_suppress_filter_v2)
+12:09:13.766:         - filter: 'Noise Gate' (noise_gate_filter)
+12:09:13.766:         - filter: 'Compressor' (compressor_filter)
+12:09:13.766: - scene 'Title':
+12:09:13.766:     - source: 'White' (color_source_v3)
+12:09:13.766:     - source: 'Main Background' (image_source)
+12:09:13.766:     - source: '[NS] Cam & Background' (scene)
+12:09:13.766: - scene 'ShowingContent':
+12:09:13.766:     - source: 'MainBackground' (image_source)
+12:09:13.766:     - source: '[NS] Cam & Background' (scene)
+12:09:13.766: - scene 'Record Teams':
+12:09:13.766:     - source: 'Teams' (xcomposite_input)
+12:09:13.766:     - source: 'Audio Output Capture (PulseAudio)' (pulse_output_capture)
+12:09:13.766: ------------------------------------------------
+12:09:14.113: adding 23 milliseconds of audio buffering, total audio buffering is now 23 milliseconds (source: Audio Output Capture (PulseAudio))
+12:09:14.113: 
+12:12:04.454: User switched to scene 'ShowingContent'
+12:12:08.380: User switched to scene 'Title'
+12:12:18.371: User switched to scene 'ShowingContent'
+12:12:19.545: User switched to scene '[NS] Cam & Background'
+12:12:20.465: User switched to scene 'Title'
+12:12:39.142: Settings changed (hotkeys)
+12:12:39.142: ------------------------------------------------
+12:12:40.828: User switched to scene 'ShowingContent'
+12:12:42.317: User switched to scene 'Title'
+12:12:43.757: User switched to scene 'ShowingContent'
+12:12:44.919: User switched to scene 'Title'
+12:15:11.434: Starting recording due to hotkey
+12:15:11.435: ---------------------------------
+12:15:11.435: [NVENC encoder: 'recording_h264'] settings:
+12:15:11.435: 	rate_control: CBR
+12:15:11.435: 	bitrate:      45000
+12:15:11.435: 	cqp:          0
+12:15:11.435: 	keyint:       250
+12:15:11.435: 	preset:       hq
+12:15:11.435: 	profile:      high
+12:15:11.435: 	width:        3840
+12:15:11.435: 	height:       2160
+12:15:11.435: 	2-pass:       true
+12:15:11.435: 	b-frames:     2
+12:15:11.435: 	psycho-aq:    1
+12:15:11.435: 	GPU:          0
+12:15:11.435: 
+12:15:11.749: libfdk_aac encoder created
+12:15:11.749: libfdk_aac bitrate: 320, channels: 2
+12:15:11.749: libfdk_aac encoder created
+12:15:11.749: libfdk_aac bitrate: 160, channels: 2
+12:15:11.751: ==== Recording Start ===============================================
+12:15:11.751: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-11.mp4'...
+12:15:15.628: Stopping recording due to hotkey
+12:15:16.873: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-11.mp4' stopped
+12:15:16.873: Output 'adv_file_output': stopping
+12:15:16.873: Output 'adv_file_output': Total frames output: 118
+12:15:16.873: Output 'adv_file_output': Total drawn frames: 153
+12:15:16.873: ==== Recording Stop ================================================
+12:15:17.555: libfdk_aac encoder destroyed
+12:15:17.555: libfdk_aac encoder destroyed
+12:15:19.248: Starting recording due to hotkey
+12:15:19.249: ---------------------------------
+12:15:19.249: [NVENC encoder: 'recording_h264'] settings:
+12:15:19.249: 	rate_control: CBR
+12:15:19.249: 	bitrate:      45000
+12:15:19.249: 	cqp:          0
+12:15:19.249: 	keyint:       250
+12:15:19.249: 	preset:       hq
+12:15:19.249: 	profile:      high
+12:15:19.249: 	width:        3840
+12:15:19.249: 	height:       2160
+12:15:19.249: 	2-pass:       true
+12:15:19.249: 	b-frames:     2
+12:15:19.249: 	psycho-aq:    1
+12:15:19.249: 	GPU:          0
+12:15:19.249: 
+12:15:19.558: libfdk_aac encoder created
+12:15:19.558: libfdk_aac bitrate: 320, channels: 2
+12:15:19.558: libfdk_aac encoder created
+12:15:19.558: libfdk_aac bitrate: 160, channels: 2
+12:15:19.560: ==== Recording Start ===============================================
+12:15:19.560: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-19.mp4'...
+12:15:23.658: Stopping recording due to hotkey
+12:15:24.890: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-19.mp4' stopped
+12:15:24.890: Output 'adv_file_output': stopping
+12:15:24.890: Output 'adv_file_output': Total frames output: 124
+12:15:24.890: Output 'adv_file_output': Total drawn frames: 160
+12:15:24.890: ==== Recording Stop ================================================
+12:15:25.582: libfdk_aac encoder destroyed
+12:15:25.582: libfdk_aac encoder destroyed
+12:15:31.433: Starting recording due to hotkey
+12:15:31.435: ---------------------------------
+12:15:31.435: [NVENC encoder: 'recording_h264'] settings:
+12:15:31.435: 	rate_control: CBR
+12:15:31.435: 	bitrate:      45000
+12:15:31.435: 	cqp:          0
+12:15:31.435: 	keyint:       250
+12:15:31.435: 	preset:       hq
+12:15:31.435: 	profile:      high
+12:15:31.435: 	width:        3840
+12:15:31.435: 	height:       2160
+12:15:31.435: 	2-pass:       true
+12:15:31.435: 	b-frames:     2
+12:15:31.435: 	psycho-aq:    1
+12:15:31.435: 	GPU:          0
+12:15:31.435: 
+12:15:31.730: libfdk_aac encoder created
+12:15:31.730: libfdk_aac bitrate: 320, channels: 2
+12:15:31.730: libfdk_aac encoder created
+12:15:31.730: libfdk_aac bitrate: 160, channels: 2
+12:15:31.731: ==== Recording Start ===============================================
+12:15:31.731: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-31.mp4'...
+12:15:33.738: Stopping recording due to hotkey
+12:15:34.958: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-31.mp4' stopped
+12:15:34.958: Output 'adv_file_output': stopping
+12:15:34.958: Output 'adv_file_output': Total frames output: 61
+12:15:34.958: Output 'adv_file_output': Total drawn frames: 97
+12:15:34.958: ==== Recording Stop ================================================
+12:15:35.620: libfdk_aac encoder destroyed
+12:15:35.620: libfdk_aac encoder destroyed
+12:15:38.610: Starting recording due to hotkey
+12:15:38.612: ---------------------------------
+12:15:38.612: [NVENC encoder: 'recording_h264'] settings:
+12:15:38.612: 	rate_control: CBR
+12:15:38.612: 	bitrate:      45000
+12:15:38.612: 	cqp:          0
+12:15:38.612: 	keyint:       250
+12:15:38.612: 	preset:       hq
+12:15:38.612: 	profile:      high
+12:15:38.612: 	width:        3840
+12:15:38.612: 	height:       2160
+12:15:38.612: 	2-pass:       true
+12:15:38.612: 	b-frames:     2
+12:15:38.612: 	psycho-aq:    1
+12:15:38.612: 	GPU:          0
+12:15:38.612: 
+12:15:38.896: libfdk_aac encoder created
+12:15:38.896: libfdk_aac bitrate: 320, channels: 2
+12:15:38.896: libfdk_aac encoder created
+12:15:38.896: libfdk_aac bitrate: 160, channels: 2
+12:15:38.897: ==== Recording Start ===============================================
+12:15:38.897: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-38.mp4'...
+12:15:45.342: Stopping recording due to hotkey
+12:15:46.566: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-38.mp4' stopped
+12:15:46.566: Output 'adv_file_output': stopping
+12:15:46.566: Output 'adv_file_output': Total frames output: 194
+12:15:46.566: Output 'adv_file_output': Total drawn frames: 230
+12:15:46.566: ==== Recording Stop ================================================
+12:15:47.245: libfdk_aac encoder destroyed
+12:15:47.245: libfdk_aac encoder destroyed
+12:15:49.187: Starting recording due to hotkey
+12:15:49.189: ---------------------------------
+12:15:49.189: [NVENC encoder: 'recording_h264'] settings:
+12:15:49.189: 	rate_control: CBR
+12:15:49.189: 	bitrate:      45000
+12:15:49.189: 	cqp:          0
+12:15:49.189: 	keyint:       250
+12:15:49.189: 	preset:       hq
+12:15:49.189: 	profile:      high
+12:15:49.189: 	width:        3840
+12:15:49.189: 	height:       2160
+12:15:49.189: 	2-pass:       true
+12:15:49.189: 	b-frames:     2
+12:15:49.189: 	psycho-aq:    1
+12:15:49.189: 	GPU:          0
+12:15:49.189: 
+12:15:49.497: libfdk_aac encoder created
+12:15:49.497: libfdk_aac bitrate: 320, channels: 2
+12:15:49.497: libfdk_aac encoder created
+12:15:49.497: libfdk_aac bitrate: 160, channels: 2
+12:15:49.499: ==== Recording Start ===============================================
+12:15:49.499: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-49.mp4'...
+12:16:07.660: Stopping recording due to hotkey
+12:16:08.912: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-15-49.mp4' stopped
+12:16:08.912: Output 'adv_file_output': stopping
+12:16:08.912: Output 'adv_file_output': Total frames output: 546
+12:16:08.912: Output 'adv_file_output': Total drawn frames: 582
+12:16:08.912: ==== Recording Stop ================================================
+12:16:09.617: libfdk_aac encoder destroyed
+12:16:09.617: libfdk_aac encoder destroyed
+12:16:47.413: Starting recording due to hotkey
+12:16:47.415: ---------------------------------
+12:16:47.415: [NVENC encoder: 'recording_h264'] settings:
+12:16:47.415: 	rate_control: CBR
+12:16:47.415: 	bitrate:      45000
+12:16:47.415: 	cqp:          0
+12:16:47.415: 	keyint:       250
+12:16:47.415: 	preset:       hq
+12:16:47.415: 	profile:      high
+12:16:47.415: 	width:        3840
+12:16:47.415: 	height:       2160
+12:16:47.415: 	2-pass:       true
+12:16:47.415: 	b-frames:     2
+12:16:47.415: 	psycho-aq:    1
+12:16:47.415: 	GPU:          0
+12:16:47.415: 
+12:16:47.702: libfdk_aac encoder created
+12:16:47.702: libfdk_aac bitrate: 320, channels: 2
+12:16:47.702: libfdk_aac encoder created
+12:16:47.702: libfdk_aac bitrate: 160, channels: 2
+12:16:47.703: ==== Recording Start ===============================================
+12:16:47.703: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-16-47.mp4'...
+12:16:53.488: Stopping recording due to hotkey
+12:16:54.723: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-16-47.mp4' stopped
+12:16:54.723: Output 'adv_file_output': stopping
+12:16:54.723: Output 'adv_file_output': Total frames output: 175
+12:16:54.723: Output 'adv_file_output': Total drawn frames: 211
+12:16:54.723: ==== Recording Stop ================================================
+12:16:55.391: libfdk_aac encoder destroyed
+12:16:55.391: libfdk_aac encoder destroyed
+12:16:55.568: Starting recording due to hotkey
+12:16:55.570: ---------------------------------
+12:16:55.570: [NVENC encoder: 'recording_h264'] settings:
+12:16:55.570: 	rate_control: CBR
+12:16:55.570: 	bitrate:      45000
+12:16:55.570: 	cqp:          0
+12:16:55.570: 	keyint:       250
+12:16:55.570: 	preset:       hq
+12:16:55.570: 	profile:      high
+12:16:55.570: 	width:        3840
+12:16:55.570: 	height:       2160
+12:16:55.570: 	2-pass:       true
+12:16:55.570: 	b-frames:     2
+12:16:55.570: 	psycho-aq:    1
+12:16:55.570: 	GPU:          0
+12:16:55.570: 
+12:16:55.852: libfdk_aac encoder created
+12:16:55.853: libfdk_aac bitrate: 320, channels: 2
+12:16:55.853: libfdk_aac encoder created
+12:16:55.853: libfdk_aac bitrate: 160, channels: 2
+12:16:55.854: ==== Recording Start ===============================================
+12:16:55.854: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-16-55.mp4'...
+12:17:26.891: User switched to scene 'ShowingContent'
+12:29:57.085: Stopping recording due to hotkey
+12:29:58.368: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-16-55.mp4' stopped
+12:29:58.368: Output 'adv_file_output': stopping
+12:29:58.368: Output 'adv_file_output': Total frames output: 23438
+12:29:58.368: Output 'adv_file_output': Total drawn frames: 23475
+12:29:58.368: ==== Recording Stop ================================================
+12:29:59.086: libfdk_aac encoder destroyed
+12:29:59.086: libfdk_aac encoder destroyed
+12:30:32.235: Starting recording due to hotkey
+12:30:32.237: ---------------------------------
+12:30:32.237: [NVENC encoder: 'recording_h264'] settings:
+12:30:32.237: 	rate_control: CBR
+12:30:32.237: 	bitrate:      45000
+12:30:32.237: 	cqp:          0
+12:30:32.237: 	keyint:       250
+12:30:32.237: 	preset:       hq
+12:30:32.237: 	profile:      high
+12:30:32.237: 	width:        3840
+12:30:32.237: 	height:       2160
+12:30:32.237: 	2-pass:       true
+12:30:32.237: 	b-frames:     2
+12:30:32.237: 	psycho-aq:    1
+12:30:32.237: 	GPU:          0
+12:30:32.237: 
+12:30:32.542: libfdk_aac encoder created
+12:30:32.542: libfdk_aac bitrate: 320, channels: 2
+12:30:32.542: libfdk_aac encoder created
+12:30:32.542: libfdk_aac bitrate: 160, channels: 2
+12:30:32.543: ==== Recording Start ===============================================
+12:30:32.543: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-30-32.mp4'...
+12:31:14.881: Stopping recording due to hotkey
+12:31:16.112: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-30-32.mp4' stopped
+12:31:16.112: Output 'adv_file_output': stopping
+12:31:16.112: Output 'adv_file_output': Total frames output: 1271
+12:31:16.112: Output 'adv_file_output': Total drawn frames: 1307
+12:31:16.112: ==== Recording Stop ================================================
+12:31:16.786: libfdk_aac encoder destroyed
+12:31:16.786: libfdk_aac encoder destroyed
+12:34:16.616: User switched to scene 'Title'
+12:34:20.011: User switched to scene 'ShowingContent'
+12:34:23.731: Starting recording due to hotkey
+12:34:23.733: ---------------------------------
+12:34:23.733: [NVENC encoder: 'recording_h264'] settings:
+12:34:23.733: 	rate_control: CBR
+12:34:23.733: 	bitrate:      45000
+12:34:23.733: 	cqp:          0
+12:34:23.733: 	keyint:       250
+12:34:23.733: 	preset:       hq
+12:34:23.733: 	profile:      high
+12:34:23.733: 	width:        3840
+12:34:23.733: 	height:       2160
+12:34:23.733: 	2-pass:       true
+12:34:23.733: 	b-frames:     2
+12:34:23.733: 	psycho-aq:    1
+12:34:23.733: 	GPU:          0
+12:34:23.733: 
+12:34:24.014: libfdk_aac encoder created
+12:34:24.014: libfdk_aac bitrate: 320, channels: 2
+12:34:24.014: libfdk_aac encoder created
+12:34:24.014: libfdk_aac bitrate: 160, channels: 2
+12:34:24.016: ==== Recording Start ===============================================
+12:34:24.016: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-34-23.mp4'...
+12:34:26.379: User switched to scene 'Title'
+12:34:49.280: Stopping recording due to hotkey
+12:34:50.502: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-34-23.mp4' stopped
+12:34:50.502: Output 'adv_file_output': stopping
+12:34:50.502: Output 'adv_file_output': Total frames output: 759
+12:34:50.502: Output 'adv_file_output': Total drawn frames: 795
+12:34:50.502: ==== Recording Stop ================================================
+12:34:51.204: libfdk_aac encoder destroyed
+12:34:51.204: libfdk_aac encoder destroyed
+12:34:56.770: User switched to scene 'Title'
+12:34:58.426: User switched to scene 'ShowingContent'
+12:35:00.307: User switched to scene 'Title'
+12:35:02.365: User switched to scene 'ShowingContent'
+12:35:07.642: Starting recording due to hotkey
+12:35:07.644: ---------------------------------
+12:35:07.644: [NVENC encoder: 'recording_h264'] settings:
+12:35:07.644: 	rate_control: CBR
+12:35:07.644: 	bitrate:      45000
+12:35:07.644: 	cqp:          0
+12:35:07.644: 	keyint:       250
+12:35:07.644: 	preset:       hq
+12:35:07.644: 	profile:      high
+12:35:07.644: 	width:        3840
+12:35:07.644: 	height:       2160
+12:35:07.644: 	2-pass:       true
+12:35:07.644: 	b-frames:     2
+12:35:07.644: 	psycho-aq:    1
+12:35:07.644: 	GPU:          0
+12:35:07.644: 
+12:35:07.929: libfdk_aac encoder created
+12:35:07.929: libfdk_aac bitrate: 320, channels: 2
+12:35:07.929: libfdk_aac encoder created
+12:35:07.929: libfdk_aac bitrate: 160, channels: 2
+12:35:07.930: ==== Recording Start ===============================================
+12:35:07.930: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-35-07.mp4'...
+12:35:10.545: User switched to scene 'Title'
+12:35:23.698: Stopping recording due to hotkey
+12:35:23.728: Stopping recording due to hotkey
+12:35:23.747: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-35-07.mp4' stopped
+12:35:23.747: Output 'adv_file_output': stopping
+12:35:23.747: Output 'adv_file_output': Total frames output: 438
+12:35:23.747: Output 'adv_file_output': Total drawn frames: 474
+12:35:23.748: ==== Recording Stop ================================================
+12:35:24.464: libfdk_aac encoder destroyed
+12:35:24.464: libfdk_aac encoder destroyed
+12:35:26.504: User switched to scene 'Title'
+12:35:26.890: User switched to scene 'ShowingContent'
+12:35:34.510: Starting recording due to hotkey
+12:35:34.512: ---------------------------------
+12:35:34.512: [NVENC encoder: 'recording_h264'] settings:
+12:35:34.512: 	rate_control: CBR
+12:35:34.512: 	bitrate:      45000
+12:35:34.512: 	cqp:          0
+12:35:34.512: 	keyint:       250
+12:35:34.512: 	preset:       hq
+12:35:34.512: 	profile:      high
+12:35:34.512: 	width:        3840
+12:35:34.512: 	height:       2160
+12:35:34.512: 	2-pass:       true
+12:35:34.512: 	b-frames:     2
+12:35:34.512: 	psycho-aq:    1
+12:35:34.512: 	GPU:          0
+12:35:34.512: 
+12:35:34.800: libfdk_aac encoder created
+12:35:34.800: libfdk_aac bitrate: 320, channels: 2
+12:35:34.800: libfdk_aac encoder created
+12:35:34.800: libfdk_aac bitrate: 160, channels: 2
+12:35:34.802: ==== Recording Start ===============================================
+12:35:34.802: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-35-34.mp4'...
+12:35:39.480: User switched to scene 'ShowingContent'
+12:35:40.101: User switched to scene 'Title'
+12:35:45.464: Stopping recording due to hotkey
+12:35:46.484: User switched to scene 'ShowingContent'
+12:35:46.690: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-35-34.mp4' stopped
+12:35:46.690: Output 'adv_file_output': stopping
+12:35:46.690: Output 'adv_file_output': Total frames output: 321
+12:35:46.690: Output 'adv_file_output': Total drawn frames: 357
+12:35:46.690: ==== Recording Stop ================================================
+12:35:47.351: libfdk_aac encoder destroyed
+12:35:47.351: libfdk_aac encoder destroyed
+12:35:53.286: Starting recording due to hotkey
+12:35:53.287: ---------------------------------
+12:35:53.287: [NVENC encoder: 'recording_h264'] settings:
+12:35:53.287: 	rate_control: CBR
+12:35:53.287: 	bitrate:      45000
+12:35:53.287: 	cqp:          0
+12:35:53.287: 	keyint:       250
+12:35:53.287: 	preset:       hq
+12:35:53.287: 	profile:      high
+12:35:53.287: 	width:        3840
+12:35:53.287: 	height:       2160
+12:35:53.287: 	2-pass:       true
+12:35:53.287: 	b-frames:     2
+12:35:53.287: 	psycho-aq:    1
+12:35:53.287: 	GPU:          0
+12:35:53.287: 
+12:35:53.574: libfdk_aac encoder created
+12:35:53.575: libfdk_aac bitrate: 320, channels: 2
+12:35:53.575: libfdk_aac encoder created
+12:35:53.575: libfdk_aac bitrate: 160, channels: 2
+12:35:53.576: ==== Recording Start ===============================================
+12:35:53.576: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/josh/git/branding/clips/raw/2022-08-24_12-35-53.mp4'...
+12:35:57.763: User switched to scene 'Title'
+12:36:53.341: Stopping recording due to hotkey
+12:36:54.591: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/josh/git/branding/clips/raw/2022-08-24_12-35-53.mp4' stopped
+12:36:54.591: Output 'adv_file_output': stopping
+12:36:54.591: Output 'adv_file_output': Total frames output: 1794
+12:36:54.591: Output 'adv_file_output': Total drawn frames: 1831
+12:36:54.592: ==== Recording Stop ================================================
+12:36:55.282: libfdk_aac encoder destroyed
+12:36:55.282: libfdk_aac encoder destroyed
+12:40:34.679: ==== Shutting down ==================================================
+12:40:34.705: X Error: BadWindow (invalid Window parameter), Major opcode: BadValue (integer parameter out of range for operation), Minor opcode: 0, Serial: 44
+12:40:34.705: X Error: BadWindow (invalid Window parameter), Major opcode: 142, Minor opcode: BadWindow (invalid Window parameter), Serial: 45
+12:40:34.705: pulse-input: Stopped recording from 'alsa_output.usb-Lenovo_ThinkPad_Thunderbolt_3_Dock_USB_Audio_000000000000-00.iec958-stereo.monitor'
+12:40:34.705: pulse-input: Got 75248 packets with 90297600 frames
+12:40:34.719: v4l2-input: /dev/video4: Stopped capture after 51595 frames
+12:40:34.793: pulse-input: Stopped recording from 'alsa_input.usb-RODE_Microphones_RODE_NT-USB-00.analog-stereo'
+12:40:34.793: pulse-input: Got 75256 packets with 90307200 frames
+12:40:34.820: All scene data cleared
+12:40:34.820: ------------------------------------------------
+12:40:34.939: [Scripting] Total detached callbacks: 45
+12:40:34.939: Freeing OBS context data
+12:40:34.971: == Profiler Results =============================
+12:40:34.971: run_program_init: 788.729 ms
+12:40:34.971:  ┣OBSApp::AppInit: 1.286 ms
+12:40:34.971:  ┃ ┗OBSApp::InitLocale: 0.534 ms
+12:40:34.971:  ┗OBSApp::OBSInit: 684.66 ms
+12:40:34.971:    ┣obs_startup: 19.049 ms
+12:40:34.971:    ┗OBSBasic::OBSInit: 629.941 ms
+12:40:34.971:      ┣OBSBasic::InitBasicConfig: 0.053 ms
+12:40:34.971:      ┣OBSBasic::ResetAudio: 0.073 ms
+12:40:34.971:      ┣OBSBasic::ResetVideo: 49.562 ms
+12:40:34.971:      ┣OBSBasic::InitOBSCallbacks: 0.003 ms
+12:40:34.971:      ┣OBSBasic::InitHotkeys: 0.026 ms
+12:40:34.971:      ┣obs_load_all_modules: 118.653 ms
+12:40:34.971:      ┃ ┣obs_init_module(aja-output-ui.so): 0.049 ms
+12:40:34.971:      ┃ ┣obs_init_module(aja.so): 0.058 ms
+12:40:34.971:      ┃ ┣obs_init_module(decklink-captions.so): 0.025 ms
+12:40:34.971:      ┃ ┣obs_init_module(decklink-ouput-ui.so): 0.293 ms
+12:40:34.971:      ┃ ┣obs_init_module(frontend-tools.so): 44.436 ms
+12:40:34.971:      ┃ ┣obs_init_module(image-source.so): 0.004 ms
+12:40:34.971:      ┃ ┣obs_init_module(linux-alsa.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(linux-capture.so): 0.168 ms
+12:40:34.971:      ┃ ┣obs_init_module(linux-decklink.so): 0.066 ms
+12:40:34.971:      ┃ ┣obs_init_module(linux-jack.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(linux-v4l2.so): 1.531 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-browser.so): 0.024 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-ffmpeg.so): 0.364 ms
+12:40:34.971:      ┃ ┃ ┗nvenc_check: 0.226 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-filters.so): 0.01 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-libfdk.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-outputs.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-transitions.so): 0.003 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-vst.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(obs-x264.so): 0.001 ms
+12:40:34.971:      ┃ ┣obs_init_module(rtmp-services.so): 0.373 ms
+12:40:34.971:      ┃ ┣obs_init_module(text-freetype2.so): 0.008 ms
+12:40:34.971:      ┃ ┗obs_init_module(vlc-video.so): 0.075 ms
+12:40:34.971:      ┣OBSBasic::ResetOutputs: 0.148 ms
+12:40:34.971:      ┣OBSBasic::CreateHotkeys: 0.17 ms
+12:40:34.971:      ┣OBSBasic::InitService: 0.674 ms
+12:40:34.971:      ┣OBSBasic::InitPrimitives: 0.171 ms
+12:40:34.971:      ┗OBSBasic::Load: 363.955 ms
+12:40:34.971: obs_hotkey_thread(25 ms): min=0.029 ms, median=0.128 ms, max=28.85 ms, 99th percentile=0.618 ms, 99.9987% below 25 ms
+12:40:34.971: audio_thread(Audio): min=0 ms, median=0.436 ms, max=33.481 ms, 99th percentile=1.418 ms
+12:40:34.971:  ┗receive_audio: min=0.001 ms, median=0.231 ms, max=9.951 ms, 99th percentile=0.841 ms, 1.07369 calls per parent call
+12:40:34.971:    ┣buffer_audio: min=0 ms, median=0 ms, max=0.019 ms, 99th percentile=0.001 ms
+12:40:34.971:    ┗do_encode: min=0.034 ms, median=0.23 ms, max=9.949 ms, 99th percentile=0.839 ms
+12:40:34.971:      ┣encode(Track2): min=0.034 ms, median=0.182 ms, max=1.608 ms, 99th percentile=0.313 ms, 0.500157 calls per parent call
+12:40:34.971:      ┣send_packet: min=0 ms, median=0.002 ms, max=9.744 ms, 99th percentile=0.602 ms
+12:40:34.971:      ┗encode(Track1): min=0.049 ms, median=0.229 ms, max=2.291 ms, 99th percentile=0.397 ms, 0.499843 calls per parent call
+12:40:34.971: obs_graphics_thread(33.3333 ms): min=0.148 ms, median=2.341 ms, max=316.193 ms, 99th percentile=7.834 ms, 99.9858% below 33.333 ms
+12:40:34.971:  ┣tick_sources: min=0 ms, median=0.012 ms, max=314.337 ms, 99th percentile=0.026 ms
+12:40:34.971:  ┣output_frame: min=0.062 ms, median=1.632 ms, max=35.961 ms, 99th percentile=2.809 ms
+12:40:34.971:  ┃ ┣gs_context(video->graphics): min=0.062 ms, median=1.181 ms, max=35.96 ms, 99th percentile=2.084 ms
+12:40:34.971:  ┃ ┃ ┣render_video: min=0.021 ms, median=1.044 ms, max=35.747 ms, 99th percentile=1.864 ms
+12:40:34.971:  ┃ ┃ ┃ ┣render_main_texture: min=0.018 ms, median=1.005 ms, max=35.741 ms, 99th percentile=1.826 ms
+12:40:34.971:  ┃ ┃ ┃ ┣render_convert_texture: min=0.023 ms, median=0.028 ms, max=0.775 ms, 99th percentile=0.05 ms, 0.525735 calls per parent call
+12:40:34.971:  ┃ ┃ ┃ ┗stage_output_texture: min=0.014 ms, median=0.017 ms, max=1.937 ms, 99th percentile=0.057 ms, 0.525735 calls per parent call
+12:40:34.971:  ┃ ┃ ┣gs_flush: min=0.003 ms, median=0.006 ms, max=12.019 ms, 99th percentile=0.046 ms
+12:40:34.971:  ┃ ┃ ┗download_frame: min=0 ms, median=0.001 ms, max=0.31 ms, 99th percentile=0.003 ms, 0.525735 calls per parent call
+12:40:34.971:  ┃ ┗output_video_data: min=0.658 ms, median=0.807 ms, max=4.804 ms, 99th percentile=1.261 ms, 0.525522 calls per parent call
+12:40:34.971:  ┗render_displays: min=0.025 ms, median=0.309 ms, max=31.818 ms, 99th percentile=6.223 ms
+12:40:34.971: video_thread(video): min=1.872 ms, median=3.897 ms, max=15.222 ms, 99th percentile=5.081 ms
+12:40:34.971:  ┗receive_video: min=1.87 ms, median=3.896 ms, max=15.22 ms, 99th percentile=5.08 ms
+12:40:34.971:    ┗do_encode: min=1.869 ms, median=3.895 ms, max=15.218 ms, 99th percentile=5.079 ms
+12:40:34.971:      ┣encode(recording_h264): min=1.867 ms, median=3.854 ms, max=15.211 ms, 99th percentile=4.837 ms
+12:40:34.971:      ┗send_packet: min=0.002 ms, median=0.009 ms, max=9.591 ms, 99th percentile=0.571 ms
+12:40:34.971: =================================================
+12:40:34.971: == Profiler Time Between Calls ==================
+12:40:34.971: obs_hotkey_thread(25 ms): min=25.05 ms, median=25.216 ms, max=341.542 ms, 86.6499% within ±2% of 25 ms (0% lower, 13.3501% higher)
+12:40:34.971: obs_graphics_thread(33.3333 ms): min=12.685 ms, median=33.333 ms, max=316.196 ms, 99.9717% within ±2% of 33.333 ms (0.0141743% lower, 0.0141743% higher)
+12:40:34.971: =================================================
+12:40:35.010: Number of memory leaks: 0

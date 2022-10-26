@@ -1,0 +1,162 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="2D4YHraLO25eyqDESHotXKA4cZY">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2DG4ZeYgvFgRDyExgQYAjL4ZeGK">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2DG6JCCbjsydMkau53yugYOCPAS">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2DRmv4ws6Q2eNrjQ1YOii0jQfh8">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2DqXd42Qv49O2dde3KQQm3nBzgA">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2E3EOIaNnQSNRq6gTI6hh2vLakq">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2E5fmZuMnOVVaOXN0e9fEyC0IbX">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2F2B9f9vVxirNwcsjR6hyAM19dh">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2F2BSVUJyATMqW2NGpRoXb07OGc">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2FiVemvVKYrb3GmeYYPvlq7sHCz">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2FirjiHyb2Yg1Dk5mbqanEY08UK">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="JetBrainsMono Nerd Font" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "CWM_LOGGING_VERSION": "1",
+    "ColorChooser.RecentColors": "55-63-75-255,,,50-57-68-255,,,99-239-60-255",
+    "ExpandBeforeRunStepsPanel": "true",
+    "FileTemplates.SelectedTemplate": "HTML File",
+    "FindSplitterProportion": "0.3301481",
+    "FontPreviewText": "WebStorm is an <bold>Integrated \nDevelopment Environment (IDE)</bold> designed\nto maximize productivity. It provides\n<bold>clever code completion, static code\nanalysis, and refactorings,</bold> and lets\nyou focus on the bright side of\nsoftware development making\nit an enjoyable experience.\n\nDefault:\nabcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n 0123456789 (){}[]\n +-*/= .,;:!? #&$%@|^\n\n<bold>Bold:\nabcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n 0123456789 (){}[]\n +-*/= .,;:!? #&$%@|^</bold>\n\n<!-- -- != := === >= >- >=> |-> -> <$>\n</> #[ |||> |= ~@\n",
+    "GeneralSettings.initiallyConfigured": "true",
+    "InstalledPluginsSearchHistory": "/outdated\nvim\ncodeglance\ncodeglan\ncodegla",
+    "JestJavaScriptTestRunnerSupport.hideIgnoredTests": "false",
+    "JestJavaScriptTestRunnerSupport.hidePassedTests": "true",
+    "JestJavaScriptTestRunnerSupport.scrollToSource": "true",
+    "JestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
+    "KEYMAP": "move line up\nmove line\ntoggle",
+    "LayoutCode.codeCleanup": "true",
+    "LayoutCode.optimizeImports": "false",
+    "LayoutCode.processChangedText": "false",
+    "LayoutCode.rearrangeEntriesHTML": "false",
+    "LayoutCode.rearrangeEntriesYAML": "false",
+    "Markdown Split EditorLayout": "Editor only",
+    "MarketplacePluginsSearchHistory": "icon\nicons\nvim\nvitest\nvitesty",
+    "MemberChooser.copyJavadoc": "false",
+    "MemberChooser.showClasses": "true",
+    "NonModalCommitCustomization.IsApplied": "true",
+    "PluginConfigurable.selectionTab": "1",
+    "RegistryRecentKeys": "ide.experimental.ui",
+    "RunOnceActivity.se.text.search": "true",
+    "SHELLCHECK.PATH": "I do mind",
+    "SNYK_TOOL_WINDOW_SPLITTER_PROPORTION": "0.29595828",
+    "SettingsSearchHistory": "on save\nrun for f\nManual\nignore\nhidden",
+    "TextEditorWithPreview.SplitterProportionKey": "0.7015458",
+    "appcds.runOnSecondStart": "WS-222.4167.31-52dcf37585601abbf847b37afa9395439f8e9a76ccff8eadf74c1b2d5dacb80c",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "bundled.plugins.list.saved.version": "WS-222.4167.31",
+    "evlsprt.222": "18310f47600",
+    "evlsprt3.222": "26",
+    "file.gist.reindex.count": "189",
+    "fileTypeChangedCounter": "8",
+    "fontSizeToResetConsole": "15.0",
+    "fontSizeToResetEditor": "15.0",
+    "got.it.tooltip.builtin.web.server.reload.on.save": "1",
+    "got.it.tooltip.copilot.inlayGotIt": "1",
+    "got.it.tooltip.js.debugger.terminal.start.debugger.from.url": "1",
+    "got.it.tooltip.reader.mode.got.it": "1",
+    "got.it.tooltip.terminal.smart_command_execution": "1",
+    "got.it.tooltip.web.preview.reload.on.save": "1",
+    "ide.memory.adjusted": "true",
+    "ideavim.statistics.timestamp": "1666705654088",
+    "input.method.disabler.muted": "true",
+    "js.rename.search.for.text.occurrences": "false",
+    "js.rename.search.in.comments": "false",
+    "last_opened_file_path": "/home/josh/git",
+    "previousColorScheme": "_@user_One Dark Vivid Italic",
+    "registry.to.advanced.settings.migration.build": "WS-222.4167.31",
+    "selected.color.option.type": "GIT_TOOLBOX.EDITOR_INLINE_BLAME_ATTRIBUTES",
+    "tasks.pass.word.conversion.enforced": "true",
+    "ts.lib.d.ts.version": "4.7.4"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/josh/git/newDocs",
+      "/home/josh/git/ogre",
+      "/home/josh/git",
+      "/home/josh/git/sfm",
+      "/home/josh/git/sfdocs",
+      "/home/josh/git/3dt",
+      "/home/josh/git/vuepressTemp",
+      "/home/josh/git/vuepressError",
+      "/home/josh/git/hopper",
+      "/home/josh/git/exVibe",
+      "/home/josh/git/3dt/src/backend/node_modules/vitest",
+      "/home/josh/git/3dt/src/backend/vitest.config.ts",
+      "/home/josh/git/vuecobalt"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="ogre-history1" project-path="$USER_HOME$/git/ogre" last-access-time="1666278952967" />
+      <command-history-file filename="ogre-history" project-path="$USER_HOME$/git/ogre" last-access-time="1666278952960" />
+      <command-history-file filename="newDocs-history" project-path="$USER_HOME$/git/newDocs" last-access-time="1666705652309" />
+      <command-history-file filename="newDocs-history1" project-path="$USER_HOME$/git/newDocs" last-access-time="1666705652322" />
+      <command-history-file filename="sfm-history" project-path="$USER_HOME$/git/sfm" last-access-time="1664974990704" />
+      <command-history-file filename="sfdocs-history" project-path="$USER_HOME$/git/sfdocs" last-access-time="1664629725666" />
+      <command-history-file filename="sfdocs-history1" project-path="$USER_HOME$/git/sfdocs" last-access-time="1664629725667" />
+    </command-history-files>
+  </component>
+</application>

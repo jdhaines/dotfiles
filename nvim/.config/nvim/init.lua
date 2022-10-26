@@ -27,6 +27,7 @@ require('slowly').setup({
     { url = 'https://github.com/ahmedkhalf/project.nvim', start = true },
     { url = 'https://github.com/lewis6991/gitsigns.nvim', start = true, checkout = 'release' },
     { url = 'https://github.com/terrortylor/nvim-comment', start = true },
+    { url = 'https://github.com/andweeb/presence.nvim', start = true },
   }
 })
 
@@ -49,3 +50,5 @@ require("plugins.telescope")
 require("plugins.project")
 require("plugins.gitsigns")
 require("plugins.comment")
+require("plugins.presence")
+
