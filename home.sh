@@ -11,14 +11,6 @@ curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
   | wget -qi -
 sudo apt install ./nvim-linux64.deb
 
-# Install alacritty
-curl -s https://api.github.com/repos/alacritty/alacritty/releases/latest \
-  | grep "browser_download_url.*linux64.deb" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | wget -qi -
-sudo apt install ./nvim-linux64.deb
-
 # Install wget & curl to help with later installs
 sudo apt install -y wget curl
 
@@ -53,7 +45,18 @@ sudo apt install -y \
   rclone \
   rclone-browser \
   gimp \
-  kdenlive
+  kdenlive \
+  cargo \
+  cmake \
+  pkg-config \
+  libfreetype6-dev \
+  libfontconfig1-dev \
+  libxcb-xfixes0-dev \
+  libxkbcommon-dev
+
+# Install alacritty
+cargo install alacritty
+sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 
 # reconfigure i3 ??
 sudo dpkg-reconfigure i3
@@ -151,4 +154,14 @@ mv tree-sitter-linux-x64 tree-sitter
 sudo mv tree-sitter /usr/local/bin
 
 # set keyboard repeat rate
-xset r rate 350 90
+xset r rate 350 75
+
+# Install Neovim Plugins
+nvim --headless +'Slowly install' +qall
+
+# Cleanup
+cd ~
+rm google-chrome-stable_current_amd64.deb
+rm nvim-linux64.deb
+rm nvim-linux64.deb.sha256sum
+
