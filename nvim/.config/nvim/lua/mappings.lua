@@ -15,6 +15,7 @@ vim.g.splitright = true
 -- Variables - Local to Window
 vim.wo.cursorline = true
 vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- Variables - Local to Buffer
 vim.bo.expandtab = true
