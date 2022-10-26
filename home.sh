@@ -29,6 +29,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 # Add Repos
 sudo apt-add-repository -y ppa:fish-shell/release-3 # fish
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - # node
+sudo add-apt-repository ppa:kdenlive/kdenlive-stable  # kdenlive
 
 # Install Packages with apt
 sudo apt update
@@ -50,7 +51,9 @@ sudo apt install -y \
   xcwd \
   jq \
   rclone \
-  rclone-browser
+  rclone-browser \
+  gimp \
+  kdenlive
 
 # reconfigure i3 ??
 sudo dpkg-reconfigure i3
@@ -101,17 +104,18 @@ cd ~/.dotfiles
 stow fish
 cd ~
 
+# add fish as a login shell
+command -v fish | sudo tee -a /etc/shells
+
+# use fish as default shell
+chsh -s /usr/bin/fish
+
+
 # Fonts
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Jet Brains Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
 fc-cache -f -v # rebuild font cache
 cd ~
-
-# add fish as a login shell
-command -v fish | sudo tee -a /etc/shells
-
-# use fish as default shell
-sudo chsh -s $(which fish) $USER
 
 # Set up SSH
 if ! [ -f "$SSH_DIR/id_rsa" ]; then
