@@ -86,13 +86,12 @@ cd .dotfiles
 stow alacritty
 stow git
 stow i3
-stow jetbrains
-stow lazygit
-stow lf
 stow nvim
 stow picom
 stow profile
 stow rofi
+stow lazygit
+stow jetbrains
 cd ~
 
 # install pip

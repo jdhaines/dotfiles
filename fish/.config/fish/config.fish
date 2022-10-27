@@ -13,6 +13,10 @@
    set_onedark $onedark_options
  end
 
+# Set Standard Variables
+set -Ux EDITOR nvim
+set -gx EDITOR nvim
+
 # Useful Abbreviations (Maintain auto-complete)
 abbr -a -g nv nvim
 abbr -a -g dc docker-compose
