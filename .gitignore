@@ -2,3 +2,5 @@ nvim/.config/nvim/undodir/*
 nvim/.config/nvim/plugged/*
 nvim/.config/nvim/plugin/
 .dccache
+
+fish/.config/fish/fish_variables
