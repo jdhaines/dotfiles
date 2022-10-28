@@ -20,11 +20,11 @@
         "y": 0
       },
       "marks": [],
-      "name": "i3-save-tree --outpu ~",
+      "name": "Terminal",
       "percent": 1,
       "swallows": [
         {
-          // "class": "^Alacritty$",
+          "class": "^Alacritty$"
           // "instance": "^Alacritty$",
           // "machine": "^pop\\-os$",
           // "title": "^i3\\-save\\-tree\\ \\-\\-outpu\\ \\~$"

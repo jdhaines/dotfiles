@@ -5,7 +5,7 @@
   "floating": "auto_off",
   "layout": "splith",
   "marks": [],
-  "percent": null,
+  "percent": 1,
   "type": "workspace",
   "nodes": [
       {
@@ -19,11 +19,11 @@
              "y": 360
           },
           "marks": [],
-          "name": "Friends - Discord",
+          "name": "Discord",
           "percent": 1,
           "swallows": [
              {
-             // "class": "^discord$",
+             "class": "^discord$",
              // "instance": "^discord$",
              // "machine": "^pop\\-os$",
              // "title": "^Friends\\ \\-\\ Discord$",
@@ -50,40 +50,17 @@
           "current_border_width": 2,
           "floating": "auto_off",
           "geometry": {
-             "height": 1628,
-             "width": 1316,
-             "x": 0,
-             "y": 0
-          },
-          "marks": [],
-          "name": "~/.d/i/.c/i3",
-          "percent": 0.5,
-          "swallows": [
-             {
-             // "class": "^Alacritty$",
-             // "instance": "^Alacritty$",
-             // "machine": "^pop\\-os$",
-             // "title": "^\\~\\/\\.d\\/i\\/\\.c\\/i3$"
-             }
-          ],
-          "type": "con"
-      },
-      {
-          "border": "normal",
-          "current_border_width": 2,
-          "floating": "auto_off",
-          "geometry": {
              "height": 1395,
              "width": 2556,
              "x": 2560,
              "y": 43
           },
           "marks": [],
-          "name": "i3: Layout saving in i3 - Google Chrome",
-          "percent": 0.5,
+          "name": "Browser",
+          "percent":null, 
           "swallows": [
              {
-             // "class": "^Google\\-chrome$",
+             "class": "^Google\\-chrome$",
              // "instance": "^google\\-chrome$",
              // "machine": "^pop\\-os$",
              // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Google\\ Chrome$",
@@ -101,7 +78,7 @@
   "floating": "auto_off",
   "layout": "splith",
   "marks": [],
-  "percent": null,
+  "percent": 1,
   "type": "workspace",
   "nodes": [
       {
@@ -115,11 +92,11 @@
              "y": 24
           },
           "marks": [],
-          "name": "October 2022 - Inkdrop",
+          "name": "Inkdrop",
           "percent": 1,
           "swallows": [
              {
-             // "class": "^inkdrop$",
+             "class": "^inkdrop$",
              // "instance": "^inkdrop$",
              // "machine": "^pop\\-os$",
              // "title": "^October\\ 2022\\ \\-\\ Inkdrop$",
