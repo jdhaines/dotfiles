@@ -1,0 +1,43 @@
+               // "window_role": "^browser$"
+              }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // workspace with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "type": "workspace",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1416,
+               "width": 854,
+               "x": 2560,
+               "y": 24
+            },
+            "marks": [],
+            "name": "October 2022 - Inkdrop",
+            "percent": 1,
+            "swallows": [
+               {
+               // "class": "^inkdrop$",
+               // "instance": "^inkdrop$",
+               // "machine": "^pop\\-os$",
+               // "title": "^October\\ 2022\\ \\-\\ Inkdrop$",
+               // "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
