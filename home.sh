@@ -61,7 +61,8 @@ sudo apt install -y \
   libfontconfig1-dev \
   libxcb-xfixes0-dev \
   libxkbcommon-dev \
-  guvcview
+  guvcview \
+  python3-pip 
 
 # Install alacritty
 cargo install alacritty
