@@ -176,4 +176,6 @@ rm google-chrome-stable_current_amd64.deb
 rm nvim-linux64.deb
 rm nvim-linux64.deb.sha256sum
 rm lf-linux-amd64.tar.gz
+rm lf
+rm .fehbg
 
