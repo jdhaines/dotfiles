@@ -67,7 +67,11 @@ sudo apt install -y \
   libxcb-xfixes0-dev \
   libxkbcommon-dev \
   guvcview \
-  python3-pip 
+  python3-pip \
+  dotool \
+  x11-xserver-utils \
+  indent \
+  libanyevent-i3-perl
 
 # Install alacritty
 cargo install alacritty
