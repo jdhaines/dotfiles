@@ -15,17 +15,18 @@ curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
 sudo apt install ./nvim-linux64.deb
 
 # Install lf
-curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \                                 ⎈ default
+curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
   | grep "browser_download_url.*linux-amd64.tar.gz" \
   | cut -d : -f 2,3 \
   | tr -d \" \
   | wget -qi -
-tar -xf lf-linux-amd64.tar.gz  
+sudo tar -xf lf-linux-amd64.tar.gz  
 sudo cp ~/lf /usr/local/bin
 
 # Install discord
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo apt install -y ./discord.deb
+# Install Inkdrop - need the version, no auto install
 
 # Instally Yarn Classic
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
