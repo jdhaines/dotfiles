@@ -30,7 +30,6 @@ shutdown -r now
 
 ### Fish Config
 
-
 ### Neovim
 
 Things should set up correctly automatically.  You might need to run neovim twice in case of error.  While in neovim the command `:PackerSync` and/or `:PackerCompile` may be helpful.
@@ -57,14 +56,18 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`zM`|Fold All|
 |`zo/zc`|Open and Close a Fold|
 
-
 ### Rofi
+
 - Win key should open rofi launcher
 
 ### i3
+
 - Win-h/j/k/l select windows
 - Win-Shift-h/j/k/l move windows
 - Win-e toggle layout
 - Win-shift-q close window
 - Win-enter open terminal (alacritty)
 
+## Other Notes
+
+**Lid Switch:** Look in `/etc/systemd/logind.conf` and change the value of the 3 lid values (after uncommenting the line) to `ignore` so that closing the laptop lid doesn't blow up your i3 config.
