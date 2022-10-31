@@ -32,6 +32,10 @@ sudo apt install -y ./discord.deb
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
+sudo apt update && sudo apt install yarn
+
+export PATH="$(yarn global bin):$PATH"
+
 # Add Repos
 sudo apt-add-repository -y ppa:fish-shell/release-3 # fish
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - # node
@@ -72,6 +76,7 @@ sudo apt install -y \
   dotool \
   x11-xserver-utils \
   indent \
+  flameshot \
   libanyevent-i3-perl
 
 # Install alacritty
@@ -82,6 +87,11 @@ sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+
+# Install Spotify
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt update && sudo apt install spotify-client
 
 # reconfigure i3 ??
 sudo dpkg-reconfigure i3
