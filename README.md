@@ -36,8 +36,11 @@ Things should set up correctly automatically.  You might need to run neovim twic
 
 |Command|Notes|
 |---|---|
-|`:PackerInstall`|Install current plugins list|
-|`:PackerSync`|Similar to above|
+|`:Slowly install`|Install current plugins list|
+|`:Slowly upgrade`|Upgrade currently installed plugins|
+|`:Slowly reinstall`|Reinstall current plugin list|
+|`:Slowly restore`|Restore saved plugin list|
+|`:Slowly save`|Save current plugins to restorable file|
 |`:LspInstall`|Install a new lsp server|
 |`:LspInstallInfo`|Details on currently installed language servers|
 |`:LspInfo`|Current file and LSP information|
@@ -62,12 +65,19 @@ Things should set up correctly automatically.  You might need to run neovim twic
 
 ### i3
 
-- Win-h/j/k/l select windows
-- Win-Shift-h/j/k/l move windows
-- Win-e toggle layout
-- Win-shift-q close window
-- Win-enter open terminal (alacritty)
+|Key|Function|
+|---|---|
+|`Win-h/j/k/l`|select windows|
+|`Win-Shift-h/j/k/l`|move windows|
+|`Win-e`|toggle layout|
+|`Win-c`|close application|
+|`Win-enter`|open terminal (alacritty)|
+|`Win-Shift-c`|reload the i3 config|
+|`Win-Shift-r`|refresh the i3 config|
+|`Win-Shift-s`|reset the monitor config to laptop only (**s**ingle monitor)|
+|`Win-Shift-d`|reset the monitor config to dual monitor (**d**ual monitor)|
 
 ## Other Notes
 
 **Lid Switch:** Look in `/etc/systemd/logind.conf` and change the value of the 3 lid values (after uncommenting the line) to `ignore` so that closing the laptop lid doesn't blow up your i3 config.
+
