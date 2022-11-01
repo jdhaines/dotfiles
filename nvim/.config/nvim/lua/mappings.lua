@@ -11,6 +11,11 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.splitbelow = true
 vim.g.splitright = true
+vim.g.smarttab = true
+vim.g.tabstop = 8
+vim.g.shiftwidth = 2
+vim.g.softtabstop = 0
+vim.g.expandtab = true
 
 -- Variables - Local to Window
 vim.wo.cursorline = true
@@ -18,10 +23,6 @@ vim.wo.relativenumber = true
 vim.wo.number = true
 
 -- Variables - Local to Buffer
-vim.bo.expandtab = true
-vim.bo.shiftwidth = 2
-vim.bo.softtabstop = 2
-vim.bo.tabstop = 2
 
 
 ----
