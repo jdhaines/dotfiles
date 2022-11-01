@@ -37,3 +37,4 @@ require 'lspconfig'.marksman.setup {}
 require 'lspconfig'.yamlls.setup {}
 require 'lspconfig'.sumneko_lua.setup {}
 require 'lspconfig'.jsonls.setup {}
+require 'lspconfig'.prismals.setup {}
