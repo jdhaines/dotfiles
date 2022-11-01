@@ -85,5 +85,11 @@ keymap('n', '<leader>g', ':Telescope live_grep<cr>', opts)
 keymap('n', '<leader>c', ':Telescope git_commits<cr>', opts)
 
 -- Better new lines without comments
-keymap('n', '<leader>o', 'o<Esc>^Da', opts)
-keymap('n', '<leader>O', 'O<Esc>^Da', opts)
+keymap('n', 'o', 'o<Esc>^Da', opts)
+keymap('n', 'O', 'O<Esc>^Da', opts)
+
+-- Format Document
+keymap('n', '<leader>f', ':Format<CR>', opts)
+keymap('n', '<leader>F', ':FormatWrite<CR>', opts)
+
+
