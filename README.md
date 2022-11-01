@@ -44,6 +44,9 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`:LspInstall`|Install a new lsp server|
 |`:LspInfo`|Current file and LSP information|
 |`:Mason`|Open mason to install plugins|
+|`:TSUpdate`|Update Tree-Sitter/Highlighting Plugins|
+|`:TSInstall lang`|Install new tree-sitter module|
+|`:TSInstallInfo`|Check other modules to be installed|
 
 |Key|Function|
 |---|---|
