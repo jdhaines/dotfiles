@@ -42,21 +42,21 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`:Slowly restore`|Restore saved plugin list|
 |`:Slowly save`|Save current plugins to restorable file|
 |`:LspInstall`|Install a new lsp server|
-|`:LspInstallInfo`|Details on currently installed language servers|
 |`:LspInfo`|Current file and LSP information|
+|`:Mason`|Open mason to install plugins|
 
 |Key|Function|
 |---|---|
 |`Space+w`|Activate hop, type next two characters to hop|
 |`Space+e`|Toggle nvim-tree|
 |`Space+f`|Telescope fuzzy find|
+|`Space+F`|Format document and save|
 |`Space+g`|Telescope grep search|
 |`Space+c`|Telescope git commits|
 |`Ctrl+P`|List completions|
 |`Tab/Shift + Tab`|Move through completions, Enter to Select|
 |`zM/zR`|Fold/Unfold All|
 |`zm/zr`|Fold/Unfold One|
-|`zM`|Fold All|
 |`zo/zc`|Open and Close a Fold|
 
 ### Rofi

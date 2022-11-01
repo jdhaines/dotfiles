@@ -89,7 +89,6 @@ keymap('n', 'o', 'o<Esc>^Da', opts)
 keymap('n', 'O', 'O<Esc>^Da', opts)
 
 -- Format Document
-keymap('n', '<leader>f', ':Format<CR>', opts)
 keymap('n', '<leader>F', ':FormatWrite<CR>', opts)
 
 
