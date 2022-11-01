@@ -61,6 +61,10 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`zM/zR`|Fold/Unfold All|
 |`zm/zr`|Fold/Unfold One|
 |`zo/zc`|Open and Close a Fold|
+|`ctrl+w hjkl`|Switch to another nvim buffer|
+|`ctrl+w <>`|Expand or Contract when buffers are side-by-side.  Can add number before <>.|
+|`ctrl+w J`|Change to horizontal split|
+|`ctrl+w H`|Change to vertical split|
 
 ### Rofi
 
