@@ -37,9 +37,18 @@ sudo apt update && sudo apt install yarn
 export PATH="$(yarn global bin):$PATH"
 
 # Add Repos
-sudo apt-add-repository -y ppa:fish-shell/release-3 # fish
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - # node
-sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable  # kdenlive
+  # fish
+sudo apt-add-repository -y ppa:fish-shell/release-3
+  # node
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  #kdenlive
+sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
+  # Docker
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install Packages with apt
 sudo apt update
@@ -76,8 +85,19 @@ sudo apt install -y \
   dotool \
   x11-xserver-utils \
   indent \
+  libanyevent-i3-perl \
   flameshot \
-  libanyevent-i3-perl
+  ca-certificates \
+  curl \
+  gnupg \
+  lsb-release \
+  docker-ce \
+  docker-ce-cli \
+  containerd.io \
+  docker-compose-plugin 
+
+# Docker post install
+sudo usermod -aG docker $USER
 
 # Install alacritty
 cargo install alacritty
