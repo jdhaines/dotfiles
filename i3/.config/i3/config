@@ -219,7 +219,7 @@ bar {
   # status_command ~/.dotfiles/bumblebee-status/bumblebee-status -m cpu memory battery time pasink pasource -p time.format="%H:%M" -t onedark-powerline
   status_command python3 ~/.config/i3/bumblebee-status/bumblebee-status \
     -m datetime sensors cpu memory battery disk git pasink pasource \
-    -p datetime.format="%I:%M %p - %a %e %b %Y" \
+    -p datetime.format="%I:%M %p - %a -%e %b %Y" \
     sensors2.field_include="temp" sensors2.match_number=0\
     -t onedark-powerline
 }
