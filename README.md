@@ -84,6 +84,20 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`Win-Shift-s`|reset the monitor config to laptop only (**s**ingle monitor)|
 |`Win-Shift-d`|reset the monitor config to dual monitor (**d**ual monitor)|
 
+### LazyGit
+
+|Key|Function|
+|---|---|
+|`?`|hotkey map|
+|`lg`|alias for lazygit|
+|`jk`|move within a block|
+|`hl`|move between blocks|
+|`p`|pull|
+|`P`|push|
+|`space`|In _Files_, stage file|
+|`a`|In _Files_, stage all files|
+|`c`|commit|
+
 ## Other Notes
 
 **Lid Switch:** Look in `/etc/systemd/logind.conf` and change the value of the 3 lid values (after uncommenting the line) to `ignore` so that closing the laptop lid doesn't blow up your i3 config.

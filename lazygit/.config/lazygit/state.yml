@@ -2,6 +2,7 @@ lastupdatecheck: 0
 recentrepos:
 - /home/josh/.dotfiles
 - /home/josh/git/saf
+- /home/josh/git/ogre
 - /home/josh/git/docs
 startuppopupversion: 5
 customcommandshistory: []
