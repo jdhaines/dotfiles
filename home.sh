@@ -139,6 +139,7 @@ stow nvim
 stow picom
 stow profile
 stow rofi
+stow neofetch
 cd ~
 
 # install pip
