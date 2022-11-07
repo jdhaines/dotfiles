@@ -23,6 +23,16 @@ curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
 sudo tar -xf lf-linux-amd64.tar.gz  
 sudo cp ~/lf /usr/local/bin
 
+# Install yamlfmt
+curl -s https://api.github.com/repos/google/yamlfmt/releases/latest \
+  | grep "browser_download_url.*Linux_x86_64.tar.gz" \
+  | cut -d : -f 2,3 \
+  | tr -d \" \
+  | wget -qi -
+sudo mv yamlfmt* yamlfmt.tar.gz
+sudo tar -xf yamlfmt.tar.gz
+sudo cp ~/yamlfmt /usr/local/bin
+
 # Install discord
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo apt install -y ./discord.deb
@@ -235,4 +245,5 @@ rm nvim-linux64.deb.sha256sum
 rm lf-linux-amd64.tar.gz
 rm lf
 rm .fehbg
+rm yamlfmt
 

@@ -17,7 +17,7 @@ require("slowly").setup({
     { url = "https://github.com/williamboman/mason.nvim", start = true },
     { url = "https://github.com/williamboman/mason-lspconfig.nvim", start = true },
     { url = "https://github.com/jose-elias-alvarez/null-ls.nvim", start = true },
-    { url = "https://github.com/jayp0521/mason-null-ls.nvim", start = true },
+    -- { url = "https://github.com/jayp0521/mason-null-ls.nvim", start = true },
     -- { url = "https://github.com/mhartington/formatter.nvim", start = true },
     { url = "https://github.com/neovim/nvim-lspconfig", start = true },
     { url = "https://github.com/hrsh7th/cmp-nvim-lsp", start = true },

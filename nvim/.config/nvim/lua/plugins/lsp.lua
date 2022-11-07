@@ -29,10 +29,23 @@ require("lspconfig").sumneko_lua.setup({})
 require("lspconfig").jsonls.setup({})
 require("lspconfig").prismals.setup({})
 
-require("null-ls").setup()
-require("mason-null-ls").setup({
-  automatic_setup = true,
-})
+local null_ls = require("null-ls")
+
+--formatting sources
+-- local formatting = null_ls.builtins.formatting
+
+local sources = {
+  null_ls.builtins.formatting.prettier,
+  null_ls.builtins.formatting.yamlfmt,
+}
+
+null_ls.setup({ sources = sources })
+
+-- require("null-ls").setup()
+-- require('mason-null-ls').setup({
+--   ensure_installed = { 'stylua', 'jq', 'yamlfmt' },
+--   automatic_setup = true
+-- })
 
 -- -- formatting
 -- -- Utilities for creating configurations
