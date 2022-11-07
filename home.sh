@@ -42,7 +42,7 @@ sudo apt install -y ./discord.deb
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-sudo apt update && sudo apt install yarn
+sudo apt update && sudo apt install -y yarn
 
 export PATH="$(yarn global bin):$PATH"
 
@@ -126,9 +126,6 @@ sudo apt update && sudo apt install spotify-client
 # reconfigure i3 ??
 sudo dpkg-reconfigure i3
 
-# Install Packages with snap
-sudo snap install alacritty --classic
-
 # Fix bat executable
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
@@ -138,7 +135,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 # stow Dotfiles
-cd .dotfiles
+cd ~/.dotfiles
 stow alacritty
 stow git
 stow i3
