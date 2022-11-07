@@ -1,6 +1,6 @@
 -- Mapping helper
 local mapper = function(mode, key, result)
-	vim.keymap.set(mode, key, result, { noremap = true, silent = true })
+  vim.keymap.set(mode, key, result, { noremap = true, silent = true })
 end
 
 -- Cancel search highlighting with ESC
@@ -37,7 +37,8 @@ mapper("n", "o", "o<Esc>^Da")
 mapper("n", "O", "O<Esc>^Da")
 
 -- Format Document
-mapper("n", "<leader>F", ":FormatWrite<CR>")
+mapper("n", "<leader>F", "<cmd>lua vim.lsp.buf.format()<cr>")
+-- mapper("n", "<leader>F", ":FormatWrite<CR>")
 
 -- LSP Keybindings
 mapper("n", "gd", ":lua vim.lsp.buf.definition()<cr>")
