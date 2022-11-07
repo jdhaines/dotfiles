@@ -153,14 +153,23 @@ python -m pip install pygit2
 
 # Install Fisher & Configure Fish
 # source /dev/stdin <<< "$(curl -sL https://git.io/fisher)"
+# allow fisher,tide,onedark install
 sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/completions
+sudo rm $HOME/.dotfiles/fish/.config/fish/completions/fisher.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fish_mode_prompt.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fish_prompt.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/conf.d/_tide_init.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/completions/tide.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/functions/set_onedark.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/functions/set_onedark_color.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/completions/set_onedark.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/completions/set_onedark_color.fish
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install rkbk60/onedark-fish"
 rm -f $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
 rm -f $HOME/.dotfiles/fish/.config/fish/config.fish
-fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
+fish -c "echo 1 2 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
 cd ~/.dotfiles
 stow fish
