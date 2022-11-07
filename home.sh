@@ -153,11 +153,13 @@ python -m pip install pygit2
 
 # Install Fisher & Configure Fish
 # source /dev/stdin <<< "$(curl -sL https://git.io/fisher)"
+sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
+sudo rm $HOME/.dotfiles/fish/.config/fish/completions
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install rkbk60/onedark-fish"
-rm -f $HOME/.config/fish/conf.d/omf.fish
-rm -f $HOME/.config/fish/config.fish
+rm -f $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
+rm -f $HOME/.dotfiles/fish/.config/fish/config.fish
 fish -c "echo 1 1 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
 cd ~/.dotfiles
