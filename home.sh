@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install Gum
+echo 'deb [trusted=yes] https://repo.charm.sh/apt/ /' | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update && sudo apt install -y gum
+
 # GLOBALS
 SSH_DIR="$HOME/.ssh"
 
@@ -38,14 +42,6 @@ wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=d
 sudo apt install -y ./discord.deb
 # Install Inkdrop - need the version, no auto install
 
-# Instally Yarn Classic
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
-sudo apt update && sudo apt install -y yarn
-
-export PATH="$(yarn global bin):$PATH"
-
 # Add Repos
   # fish
 sudo apt-add-repository -y ppa:fish-shell/release-3
@@ -62,8 +58,7 @@ echo \
 
 # Install Packages with apt
 sudo apt update
-sudo apt install -y \
-  stow \
+sudo apt install -y stow \
   git \
   build-essential \
   bat \
@@ -91,8 +86,9 @@ sudo apt install -y \
   libxcb-xfixes0-dev \
   libxkbcommon-dev \
   guvcview \
+  python3 \
   python3-pip \
-  dotool \
+  xdotool \
   x11-xserver-utils \
   indent \
   libanyevent-i3-perl \
@@ -108,6 +104,14 @@ sudo apt install -y \
 
 # Docker post install
 sudo usermod -aG docker $USER
+
+# Instally Yarn Classic
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt update && sudo apt install -y yarn
+
+export PATH="$(yarn global bin):$PATH"
 
 # Install alacritty
 cargo install alacritty
@@ -150,8 +154,8 @@ stow neofetch
 cd ~
 
 # install pip
-python -m ensurepip --upgrade
-python -m pip install --upgrade pip
+# python -m ensurepip --upgrade
+# python -m pip install --upgrade pip
 
 # install psutils for bumblebee-status bar on i3
 python -m pip install psutil
@@ -161,21 +165,21 @@ python -m pip install pygit2
 # Install Fisher & Configure Fish
 # source /dev/stdin <<< "$(curl -sL https://git.io/fisher)"
 # allow fisher,tide,onedark install
-sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/completions/fisher.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fish_mode_prompt.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/functions/fish_prompt.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/conf.d/_tide_init.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/completions/tide.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/functions/set_onedark.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/functions/set_onedark_color.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/completions/set_onedark.fish
-sudo rm $HOME/.dotfiles/fish/.config/fish/completions/set_onedark_color.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/fisher.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fish_mode_prompt.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fish_prompt.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/conf.d/_tide_init.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/tide.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/set_onedark.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/set_onedark_color.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/set_onedark.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/set_onedark_color.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/config.fish
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install rkbk60/onedark-fish"
-rm -f $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
-rm -f $HOME/.dotfiles/fish/.config/fish/config.fish
 fish -c "echo 1 2 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
 cd ~/.dotfiles
