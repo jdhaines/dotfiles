@@ -42,7 +42,7 @@ exec --not-startup-id flameshot
 exec --no-startup-id nm-applet
 
 # Key Repeat Settings
-exec_always --no-startup-id xset r rate 350 75
+exec_always --no-startup-id bash -c 'sleep 10 && xset r rate 350 75'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
