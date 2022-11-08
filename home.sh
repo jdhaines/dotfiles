@@ -11,11 +11,15 @@ DEBIAN_FRONTEND=noninteractive
 
 function successwriter() 
 {
+  echo "\n"
   gum style --foreground 77 --border-foreground 77 --border rounded -- "$1 Installed"
+  echo "\n"
 }
 function failurewriter() 
 {
+  echo "\n"
   gum style --foreground 212 --border-foreground 212 --border rounded "$1 Failed"
+  echo "\n"
 }
 
 # pass parameter to install with apt, and verify it got installed
@@ -48,7 +52,6 @@ function addcmd()
 function testcmd()
 {
   echo "Installing $1..."
-  sudo apt install -qy $1
   if command -v $1 &> /dev/null
   then
     successwriter $1
@@ -99,13 +102,13 @@ addpkg nodejs
 testcmd npx
 addcmd wget
 addpkg build-essential
-addcmd bat
+addpkg bat
 addcmd make
 addcmd vlc
 addcmd xclip
 addcmd feh
 addcmd rofi
-addcmd ripgrep
+addpkg ripgrep
 addcmd picom
 addcmd i3
 addcmd xcwd
@@ -206,13 +209,9 @@ cd ~
 # SSH Key
 if ! [ -f "$SSH_DIR/id_rsa" ]; then
     mkdir -p "$SSH_DIR"
-
     chmod 700 "$SSH_DIR"
-
     ssh-keygen -b 4096 -t rsa -f "$SSH_DIR/id_rsa" -N "" -C "Josh@JoshHaines.com"
-
     cat "$SSH_DIR/id_rsa.pub" >> "$SSH_DIR/authorized_keys"
-
     chmod 600 "$SSH_DIR/authorized_keys"
 fi
 
@@ -275,13 +274,13 @@ chsh -s /usr/bin/fish
 
 ### Cleanup ###
 cd ~
-rm google-chrome-stable_current_amd64.deb
-rm nvim-linux64.deb
-rm nvim-linux64.deb.sha256sum
-rm lf-linux-amd64.tar.gz
-rm lf
-rm .fehbg
-rm yamlfmt
+rm -rf google-chrome-stable_current_amd64.deb
+rm -rf nvim-linux64.deb
+rm -rf nvim-linux64.deb.sha256sum
+rm -rf lf-linux-amd64.tar.gz
+rm -rf lf
+rm -rf .fehbg
+rm -rf yamlfmt
 #
 # # Reconfigure Locales
 # # export LANGUAGE="en_US.UTF-8"
