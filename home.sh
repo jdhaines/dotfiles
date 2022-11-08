@@ -61,10 +61,16 @@ function testcmd()
 }
 
 ### Install Gum for UI ###
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
-echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
-sudo apt update && sudo apt install -yq gum
+curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
+  | grep "browser_download_url.*linux_x86_64.tar.gz" \
+  | cut -d : -f 2,3 \
+  | tr -d \" \
+  | wget -qi -
+sudo rm -rf *.sbom
+sudo mv gum* gum.tar.gz
+sudo tar -xf gum.tar.gz
+sudo cp ~/gum /usr/local/bin
+testcmd gum
 
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
@@ -282,6 +288,9 @@ rm -rf lf-linux-amd64.tar.gz
 rm -rf lf
 rm -rf .fehbg
 rm -rf yamlfmt
+rm -rf LICENSE
+rm -rf README.md
+
 #
 # # Reconfigure Locales
 # # export LANGUAGE="en_US.UTF-8"
