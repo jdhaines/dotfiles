@@ -7,10 +7,6 @@
 SSH_DIR="$HOME/.ssh"
 DEBIAN_FRONTEND=noninteractive
 
-### Install Gum for UI ###
-  echo 'deb [trusted=yes] https://repo.charm.sh/apt/ /' | sudo tee /etc/apt/sources.list.d/charm.list
-sudo apt update 2>/dev/null /dev/null && sudo apt install -yq gum
-
 ### Functions ###
 
 function successwriter() 
@@ -63,6 +59,12 @@ function testcmd()
     failurewriter $1
   fi
 }
+
+### Install Gum for UI ###
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update && sudo apt install -yq gum
 
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
