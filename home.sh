@@ -271,7 +271,7 @@ cd ~
 # add fish as a login shell
 command -v fish | sudo tee -a /etc/shells
 # use fish as default shell
-chsh -s /usr/bin/fish
+sudo chsh -s $(which fish) $(whoami)
 
 
 ### Cleanup ###
