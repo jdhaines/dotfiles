@@ -64,12 +64,10 @@ function testcmd()
   fi
 }
 
-
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd gum
-addcmd yarn
 addcmd curl
 addcmd git
 addcmd wget
@@ -135,6 +133,7 @@ addpkg containerd.io
 addpkg docker-ce 
 addpkg docker-ce-cli 
 addpkg docker-compose-plugin 
+addcmd yarn
 addpkg spotify-client
 
 ### Post Install ###
