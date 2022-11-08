@@ -64,45 +64,14 @@ function testcmd()
   fi
 }
 
-### Add Repos ###
-function addrepos() {
-  sudo apt-add-repository -qy ppa:fish-shell/release-3
-  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-  sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
-  sudo mkdir -p /etc/apt/keyrings
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
-  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-}
- 
-### Run the Installs ###
-# repos
-addrepos
 
-# update
-sudo apt update -q 
-
-# install things
+### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd gum
-addpkg spotify-client
 addcmd yarn
-addpkg containerd.io
 addcmd curl
-addpkg docker-ce 
-addpkg docker-ce-cli 
-addpkg docker-compose-plugin 
 addcmd git
-addcmd fish
-addpkg kdenlive
-addpkg nodejs
-testcmd npx
 addcmd wget
 addpkg build-essential
 addpkg bat
@@ -138,6 +107,35 @@ addpkg ca-certificates
 addpkg gnupg
 addpkg lsb-release
 addcmd stow
+
+### Add Repos ###
+function addrepos() {
+  sudo apt-add-repository -qy ppa:fish-shell/release-3
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
+  sudo mkdir -p /etc/apt/keyrings
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+}
+ 
+### Install from New Repos ###
+addrepos
+sudo apt update -q 
+addcmd fish
+addpkg nodejs
+testcmd npx
+addpkg kdenlive
+addpkg containerd.io
+addpkg docker-ce 
+addpkg docker-ce-cli 
+addpkg docker-compose-plugin 
+addpkg spotify-client
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker
