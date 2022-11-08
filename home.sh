@@ -7,19 +7,23 @@
 SSH_DIR="$HOME/.ssh"
 DEBIAN_FRONTEND=noninteractive
 
+### Install Gum for UI ###
+  echo 'deb [trusted=yes] https://repo.charm.sh/apt/ /' | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update 2>/dev/null /dev/null && sudo apt install -yq gum
+
 ### Functions ###
 
 function successwriter() 
 {
-  echo "\n"
+  echo ""
   gum style --foreground 77 --border-foreground 77 --border rounded -- "$1 Installed"
-  echo "\n"
+  echo ""
 }
 function failurewriter() 
 {
-  echo "\n"
+  echo ""
   gum style --foreground 212 --border-foreground 212 --border rounded "$1 Failed"
-  echo "\n"
+  echo ""
 }
 
 # pass parameter to install with apt, and verify it got installed
@@ -62,7 +66,6 @@ function testcmd()
 
 ### Add Repos ###
 function addrepos() {
-  echo 'deb [trusted=yes] https://repo.charm.sh/apt/ /' | sudo tee /etc/apt/sources.list.d/charm.list
   sudo apt-add-repository -qy ppa:fish-shell/release-3
   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
@@ -87,6 +90,7 @@ sudo apt update -q
 # install things
 #   addpkg - installs package, ensures it's installed
 #   addcmd - installs package, ensures that command is avialable in the PATH
+testcmd gum
 addpkg spotify-client
 addcmd yarn
 addpkg containerd.io
@@ -95,7 +99,6 @@ addpkg docker-ce
 addpkg docker-ce-cli 
 addpkg docker-compose-plugin 
 addcmd git
-addcmd gum
 addcmd fish
 addpkg kdenlive
 addpkg nodejs
@@ -260,7 +263,6 @@ sudo rm -rf $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/config.fish
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
-fish -c "fisher install rkbk60/onedark-fish"
 fish -c "echo 1 2 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
 cd ~/.dotfiles
