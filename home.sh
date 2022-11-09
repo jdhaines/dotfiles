@@ -70,7 +70,6 @@ sudo rm -rf *.sbom
 sudo mv gum* gum.tar.gz
 sudo tar -xf gum.tar.gz
 sudo cp ~/gum /usr/local/bin
-testcmd gum
 
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
