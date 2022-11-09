@@ -75,43 +75,45 @@ sudo cp ~/gum /usr/local/bin
 #   addpkg - installs package, ensures it's installed
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd gum
-addcmd curl
-addcmd git
-addcmd wget
-addpkg build-essential
+
+addcmd arandr
 addpkg bat
-addcmd make
-addcmd vlc
-addcmd xclip
-addcmd feh
-addcmd rofi
-addpkg ripgrep
-addcmd picom
-addcmd i3
-addcmd xcwd
-addcmd jq
-addcmd rclone
-addcmd rclone-browser
-addcmd gimp
+addpkg build-essential
+addpkg ca-certificates
 addcmd cargo
 addcmd cmake
-addpkg pkg-config
-addpkg libfreetype6-dev
+addcmd curl
+addcmd feh
+addcmd flameshot
+addcmd gimp
+addcmd git
+addpkg gnupg
+addcmd guvcview
+addcmd i3
+addcmd indent
+addcmd jq
+addpkg libanyevent-i3-perl
 addpkg libfontconfig1-dev
+addpkg libfreetype6-dev
 addpkg libxcb-xfixes0-dev
 addpkg libxkbcommon-dev
-addcmd guvcview
+addpkg lsb-release
+addcmd make
+addcmd picom
+addpkg pkg-config
 addcmd python3
 addpkg python3-pip
-addpkg xdotool
-addpkg x11-xserver-utils
-addcmd indent
-addpkg libanyevent-i3-perl
-addcmd flameshot
-addpkg ca-certificates
-addpkg gnupg
-addpkg lsb-release
+addcmd rclone
+addcmd rclone-browser
+addpkg ripgrep
+addcmd rofi
 addcmd stow
+addcmd vlc
+addcmd wget
+addpkg x11-xserver-utils
+addcmd xclip
+addcmd xcwd
+addpkg xdotool
 
 ### Add Repos ###
 function addrepos() {
