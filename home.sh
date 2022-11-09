@@ -61,6 +61,7 @@ function testcmd()
 }
 
 ### Install Gum for UI ###
+addcmd curl
 curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
   | grep "browser_download_url.*linux_x86_64.tar.gz" \
   | cut -d : -f 2,3 \
@@ -84,7 +85,6 @@ addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
 addcmd cmake
-addcmd curl
 addcmd feh
 addcmd flameshot
 addcmd gimp
