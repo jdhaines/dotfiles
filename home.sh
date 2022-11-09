@@ -136,6 +136,7 @@ addrepos
 sudo apt update -q 
 addcmd fish
 addpkg nodejs
+addpkg npm
 testcmd npx
 addpkg kdenlive
 addpkg containerd.io
