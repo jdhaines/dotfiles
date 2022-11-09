@@ -263,6 +263,9 @@ sudo rm -rf $HOME/.dotfiles/fish/.config/fish/conf.d/_tide_init.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/tide.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/set_onedark.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/set_onedark_color.fish
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/_tide*
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/tide
+sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/tide.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/set_onedark.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/set_onedark_color.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
@@ -271,9 +274,9 @@ fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jo
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "echo 1 2 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
-cd ~/.dotfiles
+cd $HOME/.dotfiles
 stow fish
-cd ~
+cd $HOME
 # add fish as a login shell
 command -v fish | sudo tee -a /etc/shells
 # use fish as default shell
@@ -291,6 +294,12 @@ rm -rf .fehbg
 rm -rf yamlfmt
 rm -rf LICENSE
 rm -rf README.md
+rm -rf discord.deb
+rm -rf lazygit.tar.gz
+rm -rf yamlfmt.tar.gz
+rm -rf gum*
+rm -rf home.sh2
+
 
 #
 # # Reconfigure Locales
