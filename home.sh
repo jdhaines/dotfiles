@@ -61,7 +61,8 @@ function testcmd()
 }
 
 ### Install Gum for UI ###
-addcmd curl
+sudo apt install -yq curl
+testcmd curl
 curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
   | grep "browser_download_url.*linux_x86_64.tar.gz" \
   | cut -d : -f 2,3 \
