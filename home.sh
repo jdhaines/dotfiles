@@ -78,6 +78,8 @@ testcmd gum
 
 addcmd arandr
 addpkg bat
+addpkg pulseaudio-utils
+testcmd pactl
 addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
