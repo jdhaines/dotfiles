@@ -1,8 +1,5 @@
 #!/bin/bash
 
-### Todo ###
-# inkdrop
-
 ### Variables ###
 SSH_DIR="$HOME/.ssh"
 DEBIAN_FRONTEND=noninteractive
@@ -160,6 +157,10 @@ mkdir -p ~/.local/bin && ln -s /usr/bin/batcat ~/.local/bin/bat  # bat fix
 
 ### Custom Installs ###
 cd ~
+
+# inkdrop
+wget https://api.inkdrop.app/download/linux/deb -O /tmp/inkdrop.deb && sudo dpkg -i /tmp/inkdrop.deb && rm /tmp/inkdrop.deb
+testcmd inkdrop
 
 # neovim
 curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
