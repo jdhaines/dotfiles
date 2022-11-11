@@ -90,11 +90,13 @@ addcmd feh
 addcmd flameshot
 addcmd gimp
 addcmd git
+addpkg gnome-tweaks
 addpkg gnupg
 addcmd guvcview
 addcmd i3
 addcmd indent
 addcmd jq
+addcmd kleopatra
 addpkg libanyevent-i3-perl
 addpkg libfontconfig1-dev
 addpkg libfreetype6-dev
@@ -110,6 +112,7 @@ addcmd rclone
 addcmd rclone-browser
 addpkg ripgrep
 addcmd rofi
+addpkg scdaemon
 addcmd stow
 addcmd vlc
 addcmd wget
@@ -256,6 +259,7 @@ stow picom
 stow profile
 stow rofi
 stow neofetch
+stow arandr
 cd ~
 
 # Install Fisher & Configure Fish
