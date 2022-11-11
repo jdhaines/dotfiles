@@ -162,6 +162,11 @@ cd ~
 wget https://api.inkdrop.app/download/linux/deb -O /tmp/inkdrop.deb && sudo dpkg -i /tmp/inkdrop.deb && rm /tmp/inkdrop.deb
 testcmd inkdrop
 
+# snyk cli tool
+sudo wget https://static.snyk.io/cli/latest/snyk-linux -O /usr/local/bin/snyk
+sudo chmod +x /usr/local/bin/snyk
+testcmd snyk
+
 # neovim
 curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
   | grep "browser_download_url.*linux64.deb" \
