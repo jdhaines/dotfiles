@@ -9,7 +9,7 @@ require("slowly").setup({
     -- { url = 'https://github.com/olimorris/onedarkpro.nvim', start = true },
     { url = "https://github.com/shaunsingh/nord.nvim", start = true },
     { url = "https://github.com/ThePrimeagen/vim-be-good", start = true },
-    { url = "https://github.com/phaazon/hop.nvim", start = true, checkout = "v2" },
+    { url = "https://github.com/phaazon/hop.nvim", start = true },
     { url = "https://github.com/norcalli/nvim-colorizer.lua", start = true },
     { url = "https://github.com/kyazdani42/nvim-web-devicons", start = true },
     { url = "https://github.com/tamton-aquib/staline.nvim", start = true },

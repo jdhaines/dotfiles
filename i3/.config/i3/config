@@ -32,17 +32,17 @@ exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/blackhole.png
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Flameshot
-exec --not-startup-id flameshot
+exec --no-startup-id bash -c 'sleep 5 & flameshot'
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
 # Key Repeat Settings
-exec_always --no-startup-id bash -c 'sleep 10 && xset r rate 350 75'
+exec_always --no-startup-id bash -c 'sleep 10 && xset r rate 350 90'
 exec_always --no-startup-id bash -c 'sleep 10 && xrandr --dpi 110'
 exec_always --no-startup-id bash -c 'gsettings get org.gnome.desktop.interface cursor-size 12'
 
@@ -225,7 +225,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   position top
-  font pango: JetBrainsMono Nerd Font Mono 10
+  font pango: JetBrainsMono Nerd Font Mono 13
   # status_command i3status
   # status_command ~/.dotfiles/bumblebee-status/bumblebee-status -m cpu memory battery time pasink pasource -p time.format="%H:%M" -t onedark-powerline
   status_command python3 ~/.config/i3/bumblebee-status/bumblebee-status \

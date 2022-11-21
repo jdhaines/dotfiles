@@ -42,7 +42,7 @@ require("nvim-treesitter.configs").setup({
 		"yaml",
 	},
 	highlight = { -- enable highlighting
-		enable = true,
+	--	enable = true,
 	},
 	indent = {
 		enable = true, -- default is disabled anyways

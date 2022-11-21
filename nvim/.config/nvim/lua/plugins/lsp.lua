@@ -10,24 +10,25 @@ require("mason").setup({
 
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "sumneko_lua",
-    "tsserver",
-    "tailwindcss",
-    "marksman",
-    "yamlls",
-    "prismals",
     "jsonls",
+    "marksman",
+    "prismals",
+    "sumneko_lua",
+    "tailwindcss",
+    "tsserver",
+    "volar",
+    "yamlls",
   },
 })
 
-require("lspconfig").sumneko_lua.setup({})
-require("lspconfig").tsserver.setup({})
-require("lspconfig").tailwindcss.setup({})
-require("lspconfig").marksman.setup({})
-require("lspconfig").yamlls.setup({})
-require("lspconfig").sumneko_lua.setup({})
 require("lspconfig").jsonls.setup({})
+require("lspconfig").marksman.setup({})
 require("lspconfig").prismals.setup({})
+require("lspconfig").sumneko_lua.setup({})
+require("lspconfig").tailwindcss.setup({})
+require("lspconfig").tsserver.setup({})
+require("lspconfig").volar.setup({})
+require("lspconfig").yamlls.setup({})
 
 local null_ls = require("null-ls")
 
@@ -63,6 +64,9 @@ null_ls.setup({ sources = sources })
 -- 		},
 -- 		typescript = {
 -- 			require("formatter.filetypes.typescript").prettier,
+-- 		},
+-- 		yaml = {
+-- 			require("formatter.filetypes.yaml").yamlfmt,
 -- 		},
 -- 	},
 -- })
