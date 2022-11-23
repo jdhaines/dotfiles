@@ -232,7 +232,7 @@ cd ~
 if ! [ -f "$SSH_DIR/id_rsa" ]; then
     mkdir -p "$SSH_DIR"
     chmod 700 "$SSH_DIR"
-    ssh-keygen -b 4096 -t rsa -f "$SSH_DIR/id_rsa" -N "" -C "Josh@JoshHaines.com"
+    ssh-keygen -t ed25519 -f "$SSH_DIR/id_rsa" -N "" -C "Josh@JoshHaines.com"
     cat "$SSH_DIR/id_rsa.pub" >> "$SSH_DIR/authorized_keys"
     chmod 600 "$SSH_DIR/authorized_keys"
 fi
@@ -286,6 +286,7 @@ sudo rm -rf $HOME/.dotfiles/fish/.config/fish/conf.d/omf.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/config.fish
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
+fish -c "fisher install jorgebucaran/nvm.fish"
 fish -c "echo 1 2 1 1 2 2 y | tide configure >/dev/null"
 rm -rf ~/.config/fish
 cd $HOME/.dotfiles

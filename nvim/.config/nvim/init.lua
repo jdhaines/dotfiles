@@ -34,6 +34,7 @@ require("slowly").setup({
     { url = "https://github.com/terrortylor/nvim-comment", start = true },
     { url = "https://github.com/andweeb/presence.nvim", start = true },
     { url = "https://github.com/fedepujol/move.nvim", start = true },
+    { url = "https://github.com/github/copilot.vim", start = true },
   },
 })
 
