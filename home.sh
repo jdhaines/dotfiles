@@ -237,6 +237,10 @@ if ! [ -f "$SSH_DIR/id_rsa" ]; then
     chmod 600 "$SSH_DIR/authorized_keys"
 fi
 
+# JetBrains Toolbox
+curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
+testcmd jetbrains-toolbox
+
 # Install Bumblebee-status bar for i3
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
@@ -296,7 +300,6 @@ cd $HOME
 command -v fish | sudo tee -a /etc/shells
 # use fish as default shell
 sudo chsh -s $(which fish) $(whoami)
-
 
 ### Cleanup ###
 cd ~
