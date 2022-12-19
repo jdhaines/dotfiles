@@ -38,10 +38,14 @@
         <entry encoding="base64">Y29uc29s</entry>
         <entry encoding="base64">QlQ=</entry>
         <entry encoding="base64">U255aw==</entry>
+        <entry encoding="base64">bGVhZGVy</entry>
       </history-search>
       <history-cmd>
         <entry encoding="base64">c291cmNlIH4vLmlkZWF2aW1yYw==</entry>
         <entry encoding="base64">d3E=</entry>
+        <entry encoding="base64">ZWNobyBtYXBsZWFkZXI=</entry>
+        <entry encoding="base64">Vw==</entry>
+        <entry encoding="base64">cQ==</entry>
         <entry encoding="base64">dw==</entry>
       </history-cmd>
       <history-expr />
@@ -51,75 +55,46 @@
   <component name="VimMarksSettings">
     <globalmarks />
     <filemarks>
-      <file name="$USER_HOME$/git/ogre/report/taskDetails.json" timestamp="1665670178511">
-        <mark key="[" line="23" column="13" />
-        <mark key="]" line="23" column="13" />
-        <mark key="." line="23" column="14" />
-        <mark key="^" line="21" column="4" />
-      </file>
-      <file name="$USER_HOME$/git/ogre/report/test.json" timestamp="1665434955386">
-        <mark key="[" line="13" column="15" />
-        <mark key="]" line="13" column="19" />
-        <mark key="^" line="13" column="19" />
-        <mark key="." line="13" column="18" />
-      </file>
-      <file name="/Dummy.txt" timestamp="1666707025354">
+      <file name="/Dummy.txt" timestamp="1670071839355">
         <mark key="[" line="0" column="0" />
         <mark key="]" line="0" column="0" />
         <mark key="." line="0" column="0" />
       </file>
-      <file name="/a.dummy" timestamp="1665430880654">
-        <mark key="[" line="0" column="0" />
+      <file name="$USER_HOME$/git/aoc2022/1/test.js" timestamp="1670072283958">
+        <mark key="[" line="0" column="7" />
+        <mark key="]" line="0" column="22" />
+        <mark key="." line="0" column="21" />
+        <mark key="^" line="0" column="22" />
       </file>
-      <file name="$USER_HOME$/git/ogre/taskDetails.json" timestamp="1665428929862">
-        <mark key="[" line="6" column="4" />
-        <mark key="]" line="6" column="4" />
-        <mark key="^" line="6" column="4" />
-        <mark key="." line="6" column="3" />
+      <file name="$USER_HOME$/git/aoc2022/1/.prettierrc" timestamp="1670078422794">
+        <mark key="[" line="1" column="22" />
+        <mark key="]" line="1" column="22" />
+        <mark key="." line="1" column="23" />
       </file>
-      <file name="$USER_HOME$/git/ogre/test/badDev/Projct.yml" timestamp="1665669300833">
-        <mark key="[" line="0" column="3" />
-        <mark key="]" line="0" column="3" />
-        <mark key="." line="0" column="4" />
+      <file name="$USER_HOME$/.dotfiles/jetbrains/.ideavimrc" timestamp="1669673513942">
+        <mark key="'" line="65" column="6" />
+        <mark key="[" line="1" column="15" />
+        <mark key="]" line="1" column="15" />
+        <mark key="n" line="65" column="6" />
+        <mark key="." line="1" column="16" />
+        <mark key="^" line="2" column="5" />
       </file>
-      <file name="$USER_HOME$/git/ogre/package.json" timestamp="1665753380682">
-        <mark key="[" line="13" column="140" />
-        <mark key="]" line="14" column="56" />
-        <mark key="^" line="14" column="56" />
-        <mark key="." line="14" column="55" />
+      <file name="$USER_HOME$/git/jennyswebsite/bookReviews.html" timestamp="1669756390670">
+        <mark key="[" line="14" column="94" />
+        <mark key="]" line="14" column="94" />
+        <mark key="." line="14" column="95" />
+        <mark key="^" line="20" column="15" />
       </file>
-      <file name="$USER_HOME$/git/ogre/src/types.ts" timestamp="1665749730910">
-        <mark key="[" line="0" column="0" />
-        <mark key="]" line="0" column="15" />
-        <mark key="." line="0" column="14" />
-        <mark key="^" line="0" column="15" />
+      <file name="$USER_HOME$/git/aoc2022/1/test.ts" timestamp="1670072944539">
+        <mark key="[" line="1" column="38" />
+        <mark key="]" line="1" column="44" />
+        <mark key="." line="1" column="43" />
+        <mark key="^" line="1" column="44" />
       </file>
-      <file name="$USER_HOME$/git/ogre/output/Results.json" timestamp="1665670088729">
-        <mark key="[" line="3" column="0" />
-        <mark key="]" line="3" column="65" />
-        <mark key="." line="3" column="64" />
-        <mark key="^" line="3" column="65" />
-      </file>
-      <file name="$USER_HOME$/git/ogre/src/yamlValidation/validator.js" timestamp="1665750558754">
-        <mark key="[" line="2" column="0" />
-        <mark key="]" line="2" column="0" />
-        <mark key="." line="2" column="0" />
-      </file>
-      <file name="$USER_HOME$/git/ogre/report/tailwind.config.js" timestamp="1665671082077">
-        <mark key="'" line="1167" column="0" />
-        <mark key="[" line="1161" column="51" />
-        <mark key="]" line="1163" column="30" />
-        <mark key="." line="1163" column="29" />
-        <mark key="^" line="1163" column="30" />
-      </file>
-      <file name="$USER_HOME$/git/ogre/report/Results.json" timestamp="1665680766815">
-        <mark key="[" line="2" column="64" />
-        <mark key="]" line="2" column="64" />
-        <mark key="." line="2" column="64" />
-        <mark key="^" line="2" column="64" />
-      </file>
-      <file name="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" timestamp="1666280846715">
-        <mark key="[" line="950" column="4" />
+      <file name="$USER_HOME$/git/docs/docs/about/core.md" timestamp="1669659056657">
+        <mark key="[" line="37" column="3" />
+        <mark key="]" line="39" column="0" />
+        <mark key="." line="39" column="0" />
       </file>
       <file name="$USER_HOME$/git/newDocs/docs/about/misc/saf.md" timestamp="1666707007230">
         <mark key="[" line="32" column="0" />
@@ -127,50 +102,61 @@
         <mark key="^" line="32" column="390" />
         <mark key="." line="32" column="0" />
       </file>
+      <file name="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" timestamp="1666280846715">
+        <mark key="[" line="950" column="4" />
+      </file>
+      <file name="$USER_HOME$/git/jennyswebsite/static/css/main.css" timestamp="1669756327010">
+        <mark key="'" line="131" column="9" />
+        <mark key="[" line="49" column="0" />
+        <mark key="]" line="49" column="3" />
+        <mark key="^" line="48" column="8" />
+        <mark key="." line="49" column="4" />
+      </file>
+      <file name="$USER_HOME$/git/aoc2022/1/main.test.ts" timestamp="1670082233035">
+        <mark key="'" line="25" column="42" />
+        <mark key="[" line="3" column="18" />
+        <mark key="]" line="3" column="24" />
+        <mark key="^" line="3" column="24" />
+        <mark key="." line="3" column="23" />
+      </file>
+      <file name="$USER_HOME$/git/aoc2022/1/package.json" timestamp="1670082467233">
+        <mark key="[" line="19" column="107" />
+        <mark key="]" line="19" column="107" />
+        <mark key="." line="19" column="107" />
+        <mark key="^" line="18" column="21" />
+      </file>
       <file name="$USER_HOME$/git/ogre/src/yamlValidation/validator.mjs" timestamp="1665780367392">
         <mark key="[" line="32" column="23" />
         <mark key="]" line="27" column="10" />
         <mark key="^" line="27" column="10" />
         <mark key="." line="27" column="9" />
       </file>
-      <file name="$USER_HOME$/git/ogre/src/yamlValidation/bad.yaml" timestamp="1665754362399">
-        <mark key="[" line="0" column="0" />
-        <mark key="]" line="0" column="0" />
-        <mark key="." line="0" column="0" />
+      <file name="$USER_HOME$/git/aoc2022/1/main.ts" timestamp="1670082184243">
+        <mark key="[" line="21" column="0" />
+        <mark key="]" line="21" column="0" />
+        <mark key="^" line="21" column="19" />
+        <mark key="." line="21" column="0" />
       </file>
-      <file name="$USER_HOME$/git/ogre/src/yamlValidation/validator.ts" timestamp="1665750467056">
-        <mark key="[" line="29" column="0" />
-        <mark key="]" line="29" column="0" />
-        <mark key="^" line="27" column="16" />
-        <mark key="." line="29" column="0" />
+      <file name="$USER_HOME$/git/aoc2022/1/tsconfig.json" timestamp="1670077201307">
+        <mark key="[" line="2" column="30" />
+        <mark key="]" line="2" column="31" />
+        <mark key="." line="2" column="30" />
+        <mark key="^" line="2" column="31" />
       </file>
-      <file name="$USER_HOME$/git/ogre/test/goodDev/Project.yaml" timestamp="1665779491662">
-        <mark key="[" line="20" column="64" />
-        <mark key="]" line="24" column="44" />
-        <mark key="^" line="24" column="44" />
-        <mark key="." line="24" column="43" />
+      <file name="$USER_HOME$/git/aoc2022/1/vitest.config.ts" timestamp="1670082741053">
+        <mark key="[" line="4" column="17" />
+        <mark key="]" line="4" column="21" />
+        <mark key="^" line="4" column="21" />
+        <mark key="." line="4" column="20" />
       </file>
-      <file name="$USER_HOME$/git/ogre/report/index.html" timestamp="1665681127937">
-        <mark key="'" line="157" column="19" />
-        <mark key="[" line="215" column="25" />
-        <mark key="]" line="215" column="25" />
-        <mark key="." line="215" column="26" />
-        <mark key="^" line="215" column="32" />
-      </file>
-      <file name="$USER_HOME$/git/ogre/.eslintrc.yml" timestamp="1665435225635">
-        <mark key="[" line="0" column="10" />
-        <mark key="]" line="3" column="17" />
-        <mark key="^" line="3" column="17" />
-        <mark key="." line="3" column="16" />
+      <file name="$USER_HOME$/git/jennyswebsite/index.html" timestamp="1669673747488">
+        <mark key="[" line="17" column="16" />
+        <mark key="]" line="17" column="127" />
+        <mark key="." line="17" column="126" />
+        <mark key="^" line="17" column="127" />
       </file>
     </filemarks>
     <jumps>
-      <jump line="44" column="26" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
-      <jump line="136" column="7" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
-      <jump line="5" column="0" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
-      <jump line="0" column="0" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
-      <jump line="48" column="0" filename="$USER_HOME$/git/hopper/src/frontend/src/views/Home.vue" />
-      <jump line="49" column="19" filename="$USER_HOME$/git/3dt/src/backend/tests/milestone.test.ts" />
       <jump line="0" column="0" filename="$USER_HOME$/git/3dt/src/backend/tests/milestone.test.ts" />
       <jump line="11" column="53" filename="$USER_HOME$/git/sfdocs/docs/.vuepress/config.ts" />
       <jump line="68" column="18" filename="$USER_HOME$/git/sfdocs/docs/.vuepress/config.ts" />
@@ -265,6 +251,12 @@
       <jump line="1167" column="0" filename="$USER_HOME$/git/ogre/report/tailwind.config.js" />
       <jump line="903" column="22" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
       <jump line="590" column="15" filename="$USER_HOME$/git/newDocs/docs/.vuepress/public/data/expenses22.ts" />
+      <jump line="51" column="0" filename="$USER_HOME$/.dotfiles/jetbrains/.ideavimrc" />
+      <jump line="1" column="7" filename="$USER_HOME$/.dotfiles/jetbrains/.ideavimrc" />
+      <jump line="63" column="8" filename="$USER_HOME$/.dotfiles/jetbrains/.ideavimrc" />
+      <jump line="64" column="6" filename="$USER_HOME$/.dotfiles/jetbrains/.ideavimrc" />
+      <jump line="131" column="9" filename="$USER_HOME$/git/jennyswebsite/static/css/main.css" />
+      <jump line="25" column="42" filename="$USER_HOME$/git/aoc2022/1/main.test.ts" />
     </jumps>
   </component>
   <component name="VimRegisterSettings">
@@ -278,47 +270,50 @@
           <key char="106" code="0" mods="0" />
         </keys>
       </register>
-      <register name="&quot;" type="2">
-        <text encoding="base64">PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOyIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIHNyYz0iaHR0cHM6Ly93d3cuZmlnbWEuY29tL2VtYmVkP2VtYmVkX2hvc3Q9c2hhcmUmdXJsPWh0dHBzJTNBJTJGJTJGd3d3LmZpZ21hLmNvbSUyRnByb3RvJTJGRE54UW85Rllqa2p3VWloZ3JWTHV3SCUyRkRldk9wcy1Vc2VySm91cm5leSUzRnBhZ2UtaWQlM0Q0NCUyNTNBNjQzJTI2bm9kZS1pZCUzRDQ4MiUyNTNBNzY4MjYlMjZ2aWV3cG9ydCUzRC0xMDQ0JTI1MkMtMTM3OCUyNTJDMC4xNyUyNnNjYWxpbmclM0RtaW4tem9vbSUyNnN0YXJ0aW5nLXBvaW50LW5vZGUtaWQlM0Q0ODIlMjUzQTc2ODI2IiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+Cg==</text>
+      <register name="&quot;" type="4">
+        <text encoding="base64">dGVzdA==</text>
+      </register>
+      <register name="*" type="4">
+        <text encoding="base64">dGVzdA==</text>
       </register>
       <register name="-" type="4">
-        <text encoding="base64">cw==</text>
+        <text encoding="base64">dGVzdA==</text>
       </register>
       <register name="." type="4">
-        <text encoding="base64">PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOyIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIHNyYz0iaHR0cHM6Ly93d3cuZmlnbWEuY29tL2VtYmVkP2VtYmVkX2hvc3Q9c2hhcmUmdXJsPWh0dHBzJTNBJTJGJTJGd3d3LmZpZ21hLmNvbSUyRnByb3RvJTJGRE54UW85Rllqa2p3VWloZ3JWTHV3SCUyRkRldk9wcy1Vc2VySm91cm5leSUzRnBhZ2UtaWQlM0Q0NCUyNTNBNjQzJTI2bm9kZS1pZCUzRDQ4MiUyNTNBNzY4MjYlMjZ2aWV3cG9ydCUzRC0xMDQ0JTI1MkMtMTM3OCUyNTJDMC4xNyUyNnNjYWxpbmclM0RtaW4tem9vbSUyNnN0YXJ0aW5nLXBvaW50LW5vZGUtaWQlM0Q0ODIlMjUzQTc2ODI2IiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+</text>
+        <text encoding="base64">c3BlYw==</text>
       </register>
       <register name="/" type="4">
-        <text encoding="base64">U255aw==</text>
+        <text encoding="base64">bGVhZGVy</text>
       </register>
       <register name="0" type="2">
-        <text encoding="base64">ICB7CiAgICBpZDogODksCiAgICBkYXRlOiAnMjAyMi0xMC0yMCcsCiAgICBkZXNjcmlwdGlvbjogJ0JhY2tlbmQgRGV2IFN0YW5kYXJkJywKICAgIHN1cHBsaWVyOiAnU0VQJywKICAgIHVzZXI6ICdBbGwnLAogICAgc3BlbmRUeXBlOiAnRXh0ZXJuYWwgRGV2IFZlbmRvcicsCiAgICBwcmljZTogMTA3ODUwLAogICAgY2hhcmdlTnVtYmVyOiAnU29mdHdhcmUgRmFjdG9yeScsCiAgfSwK</text>
+        <text encoding="base64">ICAgIGNvbnNvbGUubG9nKCdpOiAnLCBpKQo=</text>
       </register>
       <register name="1" type="2">
-        <text encoding="base64">PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOyIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIHNyYz0iaHR0cHM6Ly93d3cuZmlnbWEuY29tL2VtYmVkP2VtYmVkX2hvc3Q9c2hhcmUmdXJsPWh0dHBzJTNBJTJGJTJGd3d3LmZpZ21hLmNvbSUyRnByb3RvJTJGRE54UW85Rllqa2p3VWloZ3JWTHV3SCUyRkRldk9wcy1Vc2VySm91cm5leSUzRnBhZ2UtaWQlM0Q0NCUyNTNBNjQzJTI2bm9kZS1pZCUzRDQ4MiUyNTNBNzY4MjYlMjZ2aWV3cG9ydCUzRC0xMDQ0JTI1MkMtMTM3OCUyNTJDMC4xNyUyNnNjYWxpbmclM0RtaW4tem9vbSUyNnN0YXJ0aW5nLXBvaW50LW5vZGUtaWQlM0Q0ODIlMjUzQTc2ODI2IiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+Cg==</text>
+        <text encoding="base64">ZXhwb3J0IGZ1bmN0aW9uIGdldAo=</text>
       </register>
-      <register name="2" type="2">
-        <text encoding="base64">ICAgIHByb2plY3ROYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sCg==</text>
+      <register name="2" type="4">
+        <text encoding="base64">Cg==</text>
       </register>
-      <register name="3" type="2">
-        <text encoding="base64">ICAgICAgfSwKICAgICAgb3B0aW9uYWxQcm9wZXJ0aWVzOiB7fQogICAgfQo=</text>
+      <register name="3" type="4">
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="4" type="2">
-        <text encoding="base64">ICAgIFByb2plY3REZXRhaWxzOiB7CiAgICAgIHR5cGU6ICdvYmplY3QnLAogICAgICBwcm9wZXJ0aWVzOiB7Cg==</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="5" type="2">
-        <text encoding="base64">ICAgICAgICAK</text>
+        <text encoding="base64">CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo=</text>
       </register>
-      <register name="6" type="2">
+      <register name="6" type="4">
         <text encoding="base64">Cg==</text>
       </register>
       <register name="7" type="2">
-        <text encoding="base64">aW1wb3J0IAo=</text>
+        <text encoding="base64">Y29uc29sZS5sb2coJ1Jlc3VsdDogJywgTWF0aC5tYXgoY3JlYXRlU3Vtcyhwcm9jZXNzSW5wdXQoZmlsZW5hbWUpKSkK</text>
       </register>
-      <register name="8" type="2">
-        <text encoding="base64">UHJvamVjdERldGFpbHM6Cg==</text>
+      <register name="8" type="4">
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="9" type="2">
-        <text encoding="base64">ICBwcm9ibGVtU3RhdGVtZW50OiB8CiAgICBUaGlzIHByb2plY3Qgd2FzIGJ1aWx0IGJlY2F1c2Ugd2UgbmVlZGVkIGEgZ29vZCBleGFtcGxlIG9mIGEgd2VsbCBkb2N1bWVudGVkIHByb2plY3QuCiAgZGV0YWlsZWREZXNjcmlwdGlvbjogfAogICAgVGhpcyBpcyBhIHByb2plY3Qgd2hpY2ggd2UgaG9wZSB3aWxsIGJlIHVzZWQgYXMgYSBnb29kIGV4YW1wbGUgb2YgYSB3ZWxsIGRvY3VtZW50ZWQgcHJvamVjdC4KICByZXBsYWNlZFRvb2xzOiB8CiAgICBIZXJlIGlzIGEgbGlzdCBvZiB0b29scyB3aGljaCB3ZSd2ZSByZXBsYWNlZCB1c2luZyB0aGlzIG5ldyBjb29sIHByb2plY3QuCiAgYnVzaW5lc3NJbXBhY3Q6IHwKICAgIFRoaXMgcHJvamVjdCB3aWxsIGhhdmUgYSBodWdlIGltcGFjdCBvbiBvdXIgYnVzaW5lc3MuCkxvY2F0aW9uczoKICBkZXZlbG9wbWVudEVudmlyb25tZW50OiBVUyBBenVyZSBHb3ZDbG91ZAogIHByb2R1Y3Rpb25FbnZpcm9ubWVudDogVVMgQXp1cmUgR292Q2xvdWQKICBkYXRhTG9jYXRpb246IFN0b3JlZCBpbiBhIGRhdGFiYXNlIGluIHRoZSBVUyBBenVyZSBHb3ZDbG91ZAogIHNvdXJjZUNvZGVMb2NhdGlvbjogR2l0SHViIEVudGVycHJpc2UgQ2xvdWQgLSByckdsb2JhbCBvcmdhbml6YXRpb24KICBzb3VyY2VDb2RlTGluazogaHR0cHM6Ly9naXRodWIuY29tL2RvbnRDbGlja01lL2dvb2REZXYKICBkb2N1bWVudGF0aW9uTG9jYXRpb246IEdpdEh1YiBFbnRlcnByaXNlIENsb3VkIC0gcmVwbyB3aWtpCiAgZG9jdW1lbnRhdGlvbkxpbms6IGh0dHBzOi8vZ2l0aHViLmNvbS9kb250Q2xpY2tNZS9nb29kRGV2L3dpa2kKQXJjaGl0ZWN0dXJlOgogIGFyY2hpdGVjdHVyZU92ZXJ2aWV3OiB8CiAgICBUaGlzIHByb2plY3QgaXMgYSBzaW1wbGUgd2ViIGFwcGxpY2F0aW9uIHRoYXQgaXMgYnVpbHQgdXNpbmcgdGhlIE1FQU4gc3RhY2suCiAgZmlsZURlc2NyaWJpbmdEYXRhU2NoZW1hOiBzcmMvbW9kZWxzL2RiLnB5Cg==</text>
+        <text encoding="base64">ICAgIC8vIC4uLgo=</text>
       </register>
       <register name=":" type="4">
         <text encoding="base64">dw==</text>
@@ -327,8 +322,8 @@
   </component>
   <component name="VimSearchSettings">
     <search>
-      <last-search encoding="base64">U255aw==</last-search>
-      <last-pattern encoding="base64">U255aw==</last-pattern>
+      <last-search encoding="base64">bGVhZGVy</last-search>
+      <last-pattern encoding="base64">bGVhZGVy</last-pattern>
       <last-dir encoding="base64">MQ==</last-dir>
       <show-last encoding="base64">ZmFsc2U=</show-last>
     </search>

@@ -1,0 +1,371 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">U3BldA==</entry>
+        <entry encoding="base64">ZG9lcw==</entry>
+        <entry encoding="base64">TGVhcm4=</entry>
+        <entry encoding="base64">TWlzYw==</entry>
+        <entry encoding="base64">QXBwIERvY3M=</entry>
+        <entry encoding="base64">U3ByaW5n</entry>
+        <entry encoding="base64">Z2Fw</entry>
+        <entry encoding="base64">QnJpbmcgbmV3cw==</entry>
+        <entry encoding="base64">RGVsaXZlciBhbmQgRGVw</entry>
+        <entry encoding="base64">Q29udGFpbmVy</entry>
+        <entry encoding="base64">ZGRhcA==</entry>
+        <entry encoding="base64">RERBUA==</entry>
+        <entry encoding="base64">R3JhZmE=</entry>
+        <entry encoding="base64">VWRlbQ==</entry>
+        <entry encoding="base64">cmVwb3J0</entry>
+        <entry encoding="base64">bGFzdCBR</entry>
+        <entry encoding="base64">bGFzdCBx</entry>
+        <entry encoding="base64">YXZpbA==</entry>
+        <entry encoding="base64">d2Fz</entry>
+        <entry encoding="base64">ZXZlbg==</entry>
+        <entry encoding="base64">dW5lbmM=</entry>
+        <entry encoding="base64">S25vdw==</entry>
+        <entry encoding="base64">cG90aW9u</entry>
+        <entry encoding="base64">VXM=</entry>
+        <entry encoding="base64">MTA=</entry>
+        <entry encoding="base64">Y29uc29s</entry>
+        <entry encoding="base64">QlQ=</entry>
+        <entry encoding="base64">U255aw==</entry>
+        <entry encoding="base64">Zmlyc3Q=</entry>
+        <entry encoding="base64">Z3JleQ==</entry>
+        <entry encoding="base64">cmluZw==</entry>
+        <entry encoding="base64">bGVhZGVy</entry>
+        <entry encoding="base64">cnJlY3M=</entry>
+        <entry encoding="base64">aWRlYURhdGU=</entry>
+        <entry encoding="base64">Zmlyc3RDb21taXREYXRl</entry>
+        <entry encoding="base64">ZGV2RW52RGF0ZQ==</entry>
+        <entry encoding="base64">Y29tcGxldGVkTVZQRGF0ZQ==</entry>
+        <entry encoding="base64">cHJvZEVudkRhdGU=</entry>
+        <entry encoding="base64">cnJncmV5</entry>
+        <entry encoding="base64">Y2FsbEJ1dHRvblRleHQ=</entry>
+        <entry encoding="base64">cHJvZmll</entry>
+        <entry encoding="base64">aWQ=</entry>
+        <entry encoding="base64">aWQ6</entry>
+        <entry encoding="base64">UHJvamVjdCBDYXRl</entry>
+        <entry encoding="base64">Ymc=</entry>
+        <entry encoding="base64">JGZvbnQtc2l6ZQ==</entry>
+        <entry encoding="base64">Zm9udC1zaXpl</entry>
+        <entry encoding="base64">JGtleQ==</entry>
+        <entry encoding="base64">JGRpYW1ldGVy</entry>
+        <entry encoding="base64">Ym9va3M=</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">ZWNobyBtYXBsZWFkZXI=</entry>
+        <entry encoding="base64">Vw==</entry>
+        <entry encoding="base64">cQ==</entry>
+        <entry encoding="base64">d3E=</entry>
+        <entry encoding="base64">JzwsJz53</entry>
+        <entry encoding="base64">JzwsJz5zL2ZpcnN0L3NlY29uZA==</entry>
+        <entry encoding="base64">JzwsJz5zL2dyZXkvZ3JheQ==</entry>
+        <entry encoding="base64">PFBsdWc+KGVhc3ltb3Rpb24tdyk=</entry>
+        <entry encoding="base64">c291cmNlIH4vLmlkZWF2aW1yYw==</entry>
+        <entry encoding="base64">JzwsJz5zL2lkZWFEYXRlL2ZpcnN0Q29tbWl0RGF0ZQ==</entry>
+        <entry encoding="base64">JzwsJz5zL2lkZWFEYXRlL2ZpcnN0Q29tbWl0RGF0ZS9n</entry>
+        <entry encoding="base64">JzwsJz5zL2ZpcnN0Q29tbWl0RGF0ZS9kZXZFbnZEYXRlL2c=</entry>
+        <entry encoding="base64">JzwsJz5zL2RldkVudkRhdGUvY29tcGxldGVkTVZQRGF0ZS9n</entry>
+        <entry encoding="base64">JzwsJz5zL2NvbXBsZXRlZE1WUERhdGUvcHJvZEVudkRhdGUvZw==</entry>
+        <entry encoding="base64">JzwsJz5zL3Byb2RFbnZEYXRlL2RlcHJlY2F0aW9uRGF0ZS9n</entry>
+        <entry encoding="base64">cy9ycmdyZXkvcnJncmF5L2c=</entry>
+        <entry encoding="base64">d2U=</entry>
+        <entry encoding="base64">JzwsJz5zL2JnL3RleHQvZw==</entry>
+        <entry encoding="base64">dw==</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/ToolCard.vue" timestamp="1671048880643">
+        <mark key="[" line="126" column="0" />
+        <mark key="]" line="126" column="0" />
+        <mark key="." line="126" column="0" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1671048533288">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+        <mark key="^" line="0" column="40" />
+        <mark key="o" line="0" column="35" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/StaticLink.vue" timestamp="1671048553285">
+        <mark key="[" line="17" column="0" />
+        <mark key="]" line="17" column="0" />
+        <mark key="." line="17" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/sidebar.ts" timestamp="1670962048914">
+        <mark key="[" line="46" column="5" />
+        <mark key="]" line="46" column="6" />
+        <mark key="." line="46" column="5" />
+        <mark key="^" line="46" column="6" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/Projects.vue" timestamp="1671113703220">
+        <mark key="'" line="331" column="0" />
+        <mark key="[" line="319" column="0" />
+        <mark key="]" line="319" column="0" />
+        <mark key="^" line="310" column="33" />
+        <mark key="." line="319" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/README.md" timestamp="1670592462792">
+        <mark key="[" line="44" column="0" />
+        <mark key="]" line="44" column="0" />
+        <mark key="." line="44" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/Filter.vue" timestamp="1671038065077">
+        <mark key="[" line="10" column="23" />
+        <mark key="]" line="10" column="24" />
+        <mark key="^" line="10" column="24" />
+        <mark key="." line="10" column="23" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/Tools.vue" timestamp="1671064105816">
+        <mark key="[" line="195" column="0" />
+        <mark key="]" line="195" column="0" />
+        <mark key="." line="195" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/aoc2022/5/main.spec.ts" timestamp="1670553103063">
+        <mark key="[" line="4" column="0" />
+        <mark key="]" line="4" column="0" />
+        <mark key="." line="4" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/public/data/okrs.ts" timestamp="1671460261554">
+        <mark key="'" line="0" column="0" />
+        <mark key="[" line="624" column="24" />
+        <mark key="]" line="624" column="24" />
+        <mark key="." line="624" column="25" />
+        <mark key="^" line="633" column="20" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/BenefitsChart.vue" timestamp="1671047002398">
+        <mark key="'" line="0" column="0" />
+        <mark key="[" line="48" column="9" />
+        <mark key="]" line="48" column="9" />
+        <mark key="." line="48" column="9" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/Timeline.vue" timestamp="1671046969336">
+        <mark key="'" line="158" column="2" />
+        <mark key="[" line="89" column="9" />
+        <mark key="]" line="89" column="10" />
+        <mark key="." line="89" column="9" />
+        <mark key="^" line="89" column="10" />
+      </file>
+      <file name="$USER_HOME$/.ideavimrc" timestamp="1670613398902">
+        <mark key="'" line="6" column="0" />
+        <mark key="[" line="10" column="0" />
+        <mark key="]" line="10" column="1" />
+        <mark key="." line="10" column="0" />
+        <mark key="^" line="10" column="1" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" timestamp="1671037994459">
+        <mark key="[" line="41" column="0" />
+        <mark key="]" line="41" column="0" />
+        <mark key="." line="41" column="0" />
+      </file>
+      <file name="$USER_HOME$/git/docs/.github/workflows/build_and_deploy.yaml" timestamp="1671047074163">
+        <mark key="[" line="43" column="54" />
+        <mark key="]" line="43" column="54" />
+        <mark key="." line="43" column="54" />
+        <mark key="^" line="43" column="53" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/about/projects.md" timestamp="1670979724987">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="2" column="3" />
+        <mark key="^" line="2" column="3" />
+        <mark key="." line="2" column="2" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectCard.vue" timestamp="1671063992868">
+        <mark key="'" line="2" column="8" />
+        <mark key="[" line="4" column="78" />
+        <mark key="]" line="4" column="79" />
+        <mark key="^" line="4" column="79" />
+        <mark key="." line="4" column="78" />
+      </file>
+      <file name="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" timestamp="1671459178340">
+        <mark key="[" line="1122" column="61" />
+        <mark key="]" line="1122" column="90" />
+        <mark key="." line="1122" column="89" />
+        <mark key="^" line="1122" column="90" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="16" column="41" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Tools.vue" />
+      <jump line="398" column="31" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="69" column="28" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="65" column="28" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="31" column="16" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="33" column="23" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="44" column="30" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="298" column="5" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="94" column="10" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="97" column="66" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="102" column="31" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="105" column="30" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="119" column="25" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="120" column="69" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="172" column="5" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="171" column="210" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="174" column="108" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="178" column="5" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="177" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="181" column="5" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="180" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="184" column="5" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="183" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="175" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="167" column="5" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectModal.vue" />
+      <jump line="30" column="6" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/architectures.ts" />
+      <jump line="855" column="44" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="866" column="17" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="1" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="11" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="53" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="99" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="191" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="274" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="316" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="361" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="424" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="470" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="516" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="563" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="608" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="655" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="700" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="745" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="790" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="836" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="881" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="927" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="972" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="668" column="125" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="5" column="22" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="15" column="13" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="19" column="115" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="27" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="51" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="63" column="80" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="97" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="145" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="192" column="32" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="236" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="244" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="251" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="258" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="265" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="277" column="34" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="319" column="9" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="367" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="409" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="417" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="430" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="477" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="524" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="571" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="619" column="25" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="664" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="710" column="23" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="756" column="36" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="802" column="36" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="849" column="36" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="895" column="36" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="942" column="4" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="988" column="23" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="1034" column="35" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="1076" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="1084" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="344" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Projects.vue" />
+      <jump line="404" column="19" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Projects.vue" />
+      <jump line="331" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Projects.vue" />
+      <jump line="8" column="7" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectCard.vue" />
+      <jump line="22" column="15" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectCard.vue" />
+      <jump line="35" column="8" filename="$USER_HOME$/git/docs/docs/.vuepress/components/ProjectCard.vue" />
+      <jump line="122" column="15" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Timeline.vue" />
+      <jump line="129" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Timeline.vue" />
+      <jump line="168" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Timeline.vue" />
+      <jump line="96" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Timeline.vue" />
+      <jump line="158" column="2" filename="$USER_HOME$/git/docs/docs/.vuepress/components/Timeline.vue" />
+      <jump line="1109" column="25" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/projects.ts" />
+      <jump line="264" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="448" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/okrs.ts" />
+      <jump line="0" column="0" filename="$USER_HOME$/git/docs/docs/.vuepress/public/data/okrs.ts" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="a" type="4">
+        <keys>
+          <key char="105" code="0" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="32" code="0" mods="0" />
+          <key char="65535" code="27" mods="0" />
+        </keys>
+      </register>
+      <register name="&quot;" type="4">
+        <text encoding="base64">TWFy</text>
+      </register>
+      <register name="*" type="4">
+        <text encoding="base64">TWFy</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">TWFy</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">RGVj</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">Ym9va3M=</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">ICB7CiAgICBpZDogMTQsCiAgICBhY3RpdmU6IHRydWUsCiAgICBhc3NpZ25lZTogJ1dpbGxpYW0gQmVsY2hlcicsCiAgICBvYmplY3RpdmVUZXh0OiAnUGVyc29uYWwgR3Jvd3RoIChUcmFpbmluZywgTGVhcm5pbmcsIGV0Yy4pJywKICAgIGtleVJlc3VsdHM6IFsKICAgICAgewogICAgICAgIGlkOiAxLAogICAgICAgIGNyZWF0ZWQ6ICcwMyBPY3QgMjAyMicsCiAgICAgICAgZHVlOiAnMzAgRGVjIDIwMjInLAogICAgICAgIGtleVJlc3VsdFRleHQ6ICdSZWFkIGF0IGxlYXN0IDcgYm9va3MgaW4gdGhpcyBzcGFjZS4nLAogICAgICAgIHByb2dyZXNzOiAxLjAsCiAgICAgICAgc3RyZXRjaDogdHJ1ZSwKICAgICAgICBhc3NpZ25lZTogJ1dpbGxpYW0gQmVsY2hlcicsCiAgICAgICAgbm90ZXM6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgaWQ6IDEsCiAgICAgICAgICAgIG1zZzogJ1JlYWQgMTAgYm9va3Mgc2luY2Ugam9pbmluZyBTRicsCiAgICAgICAgICAgIGRhdGU6ICcxOSBEZWMgMjAyMicsCiAgICAgICAgICB9LAogICAgICAgIF0sCiAgICAgIH0sCiAgICAgIHsKICAgICAgICBpZDogMiwKICAgICAgICBjcmVhdGVkOiAnMDMgT2N0IDIwMjInLAogICAgICAgIGR1ZTogJzMwIERlYyAyMDIyJywKICAgICAgICBrZXlSZXN1bHRUZXh0OiAnQ29tcGxldGUgQ291cnNlcmEgY291cnNlIG9uIEZpZ21hJywKICAgICAgICBwcm9ncmVzczogMC4wLAogICAgICAgIHN0cmV0Y2g6IGZhbHNlLAogICAgICAgIGFzc2lnbmVlOiAnV2lsbGlhbSBCZWxjaGVyJywKICAgICAgICBub3RlczogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogMSwKICAgICAgICAgICAgbXNnOiAnRmluaXNoZWQgYWJvdXQgMiB3ZWVrcyBvZiBpdC4gIE1heSBjb250aW51ZSwgbWF5IG5vdC4nLAogICAgICAgICAgICBkYXRlOiAnMTkgRGVjIDIwMjInLAogICAgICAgICAgfSwKICAgICAgICBdLAogICAgICB9LAogICAgXSwKICB9LAo=</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">ICAgICAgICBub3RlczogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogMSwKICAgICAgICAgICAgbXNnOiAnRmluaXNoZWQgYWJvdXQgMiB3ZWVrcyBvZiBpdC4gIE1heSBjb250aW51ZSwgbWF5IG5vdC4nLAogICAgICAgICAgICBkYXRlOiAnMTkgRGVjIDIwMjInLAogICAgICAgICAgfSwKICAgICAgICBdLAo=</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICBub3RlczogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogMSwKICAgICAgICAgICAgbXNnOiAnUmVhZCAxMCBib29rcyBzaW5jZSBqb2luaW5nIFNGJywKICAgICAgICAgICAgZGF0ZTogJzE5IERlYyAyMDIyJywKICAgICAgICAgIH0sCiAgICAgICAgXSwK</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">ICAgICAgICAgIGlkCg==</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">ICB7CiAgICBpZDogMSwKICAgIHllYXI6ICMjIyMsCiAgICBleHBlY3RlZEJlbmVmaXRzOiAjIywKICAgIGFjdHVhbEJlbmVmaXRzOiAjIywKICAgIGNvbW1lbnRzOgogICAgICAiIiwKICB9LAo=</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">Ly8gXSwK</text>
+      </register>
+      <register name="6" type="4">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">Ly8gICB7Ci8vICAgICBpZDogMiwKLy8gICAgIHllYXI6IDIwMjEsCi8vICAgICBleHBlY3RlZEJlbmVmaXRzOiAyNjQwMDAsCi8vICAgICBhY3R1YWxCZW5lZml0czogMCwKLy8gICAgIGNvbW1lbnRzOgovLyAgICAgICAnQmVuZWZpdHMgcmVtYWluIHN0YWJsZSB5ZWFyIG92ZXIgeWVhciB1bmxlc3MgdGhlIHByb2Nlc3MgY2hhbmdlcyBvciBhcHAgZGVwcmVjYXRlcy4nLAovLyAgIH0sCg==</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICBjb25zb2xlLmxvZygnaW4gbG9hZFByb2plY3RzJykK</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">CmNvbnN0IHByb2plY3RzOiBQcm9qZWN0SXRlbVtdID0gWwoKXQoKY29uc3QgYXJjaGl0ZWN0dXJlczogQXJjaGl0ZWN0dXJlSXRlbVtdID0gWwoKXQo=</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">dw==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">Ym9va3M=</last-search>
+      <last-substitute encoding="base64">Ymc=</last-substitute>
+      <last-replace encoding="base64">dGV4dA==</last-replace>
+      <last-pattern encoding="base64">Ym9va3M=</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+</application>

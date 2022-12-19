@@ -57,6 +57,31 @@
             <ProjectPluginTracker />
           </value>
         </entry>
+        <entry key="2IBcRtq2eagSPcss1HcSa8BLTI3">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2IBciLB6XWP29B3G7fftTyQ3nKX">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2IBeq51KRjnHWZFiCfNqt4ZWMfw">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2IC7KtOh3cK6jUciE6rphJjasmd">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2IP8UzjStJx9bVvNvDfmqLtQfIO">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
       </map>
     </trackers>
   </component>
@@ -72,38 +97,38 @@
     "FindSplitterProportion": "0.3301481",
     "FontPreviewText": "WebStorm is an <bold>Integrated \nDevelopment Environment (IDE)</bold> designed\nto maximize productivity. It provides\n<bold>clever code completion, static code\nanalysis, and refactorings,</bold> and lets\nyou focus on the bright side of\nsoftware development making\nit an enjoyable experience.\n\nDefault:\nabcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n 0123456789 (){}[]\n +-*/= .,;:!? #&$%@|^\n\n<bold>Bold:\nabcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n 0123456789 (){}[]\n +-*/= .,;:!? #&$%@|^</bold>\n\n<!-- -- != := === >= >- >=> |-> -> <$>\n</> #[ |||> |= ~@\n",
     "GeneralSettings.initiallyConfigured": "true",
-    "InstalledPluginsSearchHistory": "/outdated\nvim\ncodeglance\ncodeglan\ncodegla",
-    "JestJavaScriptTestRunnerSupport.hideIgnoredTests": "false",
+    "InstalledPluginsSearchHistory": "vitest\nvim\nfont\nfo\nf",
+    "JestJavaScriptTestRunnerSupport.hideIgnoredTests": "true",
     "JestJavaScriptTestRunnerSupport.hidePassedTests": "true",
     "JestJavaScriptTestRunnerSupport.scrollToSource": "true",
     "JestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
     "KEYMAP": "move line up\nmove line\ntoggle",
     "LayoutCode.codeCleanup": "true",
-    "LayoutCode.optimizeImports": "false",
+    "LayoutCode.optimizeImports": "true",
     "LayoutCode.processChangedText": "false",
+    "LayoutCode.rearrangeEntries": "true",
     "LayoutCode.rearrangeEntriesHTML": "false",
     "LayoutCode.rearrangeEntriesYAML": "false",
     "Markdown Split EditorLayout": "Editor only",
-    "MarketplacePluginsSearchHistory": "icon\nicons\nvim\nvitest\nvitesty",
+    "MarketplacePluginsSearchHistory": "vitest\nv\ngithub\ngithu\nvim",
     "MemberChooser.copyJavadoc": "false",
     "MemberChooser.showClasses": "true",
     "NonModalCommitCustomization.IsApplied": "true",
-    "PluginConfigurable.selectionTab": "1",
     "RegistryRecentKeys": "ide.experimental.ui",
     "RunOnceActivity.se.text.search": "true",
     "SHELLCHECK.PATH": "I do mind",
     "SNYK_TOOL_WINDOW_SPLITTER_PROPORTION": "0.29595828",
-    "SettingsSearchHistory": "on save\nrun for f\nManual\nignore\nhidden",
+    "SettingsSearchHistory": "vim\nfont\non save\nrun for f\nManual",
     "TextEditorWithPreview.SplitterProportionKey": "0.7015458",
-    "appcds.runOnSecondStart": "WS-222.4167.31-52dcf37585601abbf847b37afa9395439f8e9a76ccff8eadf74c1b2d5dacb80c",
+    "appcds.runOnSecondStart": "WS-222.4345.14-09dcb6785a7c2decc1701c80e8186c05bc8c9035cdc20f43cd15c873c25676ca",
     "ask.about.ctrl.y.shortcut.v2": "true",
-    "bundled.plugins.list.saved.version": "WS-222.4167.31",
+    "bundled.plugins.list.saved.version": "WS-222.4345.14",
     "evlsprt.222": "18310f47600",
     "evlsprt3.222": "26",
-    "file.gist.reindex.count": "189",
+    "file.gist.reindex.count": "192",
     "fileTypeChangedCounter": "8",
-    "fontSizeToResetConsole": "15.0",
-    "fontSizeToResetEditor": "15.0",
+    "fontSizeToResetConsole": "16.0",
+    "fontSizeToResetEditor": "16.0",
     "got.it.tooltip.builtin.web.server.reload.on.save": "1",
     "got.it.tooltip.copilot.inlayGotIt": "1",
     "got.it.tooltip.js.debugger.terminal.start.debugger.from.url": "1",
@@ -111,19 +136,23 @@
     "got.it.tooltip.terminal.smart_command_execution": "1",
     "got.it.tooltip.web.preview.reload.on.save": "1",
     "ide.memory.adjusted": "true",
-    "ideavim.statistics.timestamp": "1666705654088",
+    "ideavim.statistics.timestamp": "1670071839290",
     "input.method.disabler.muted": "true",
     "js.rename.search.for.text.occurrences": "false",
     "js.rename.search.in.comments": "false",
-    "last_opened_file_path": "/home/josh/git",
-    "previousColorScheme": "_@user_One Dark Vivid Italic",
-    "registry.to.advanced.settings.migration.build": "WS-222.4167.31",
+    "last_opened_file_path": "/home/josh/git/docs",
+    "previousColorScheme": "_@user_Nord",
+    "registry.to.advanced.settings.migration.build": "WS-222.4345.14",
     "selected.color.option.type": "GIT_TOOLBOX.EDITOR_INLINE_BLAME_ATTRIBUTES",
     "tasks.pass.word.conversion.enforced": "true",
     "ts.lib.d.ts.version": "4.7.4"
   },
   "keyToStringList": {
     "file.chooser.recent.files": [
+      "/home/josh/git/aoc2022",
+      "/home/josh/git/jennyswebsite",
+      "/home/josh/.dotfiles",
+      "/home/josh/git/docs",
       "/home/josh/git/newDocs",
       "/home/josh/git/ogre",
       "/home/josh/git",
@@ -150,13 +179,8 @@
 }]]></component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="ogre-history1" project-path="$USER_HOME$/git/ogre" last-access-time="1666278952967" />
-      <command-history-file filename="ogre-history" project-path="$USER_HOME$/git/ogre" last-access-time="1666278952960" />
-      <command-history-file filename="newDocs-history" project-path="$USER_HOME$/git/newDocs" last-access-time="1666705652309" />
-      <command-history-file filename="newDocs-history1" project-path="$USER_HOME$/git/newDocs" last-access-time="1666705652322" />
-      <command-history-file filename="sfm-history" project-path="$USER_HOME$/git/sfm" last-access-time="1664974990704" />
-      <command-history-file filename="sfdocs-history" project-path="$USER_HOME$/git/sfdocs" last-access-time="1664629725666" />
-      <command-history-file filename="sfdocs-history1" project-path="$USER_HOME$/git/sfdocs" last-access-time="1664629725667" />
+      <command-history-file filename="aoc2022-history" project-path="$USER_HOME$/git/aoc2022" last-access-time="1670077416117" />
+      <command-history-file filename="jennyswebsite-history" project-path="$USER_HOME$/git/jennyswebsite" last-access-time="1669673656093" />
     </command-history-files>
   </component>
 </application>

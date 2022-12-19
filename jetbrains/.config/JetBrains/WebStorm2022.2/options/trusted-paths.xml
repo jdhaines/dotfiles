@@ -2,9 +2,13 @@
   <component name="Trusted.Paths">
     <option name="TRUSTED_PROJECT_PATHS">
       <map>
+        <entry key="$USER_HOME$/.dotfiles" value="true" />
         <entry key="$USER_HOME$/git/3dt" value="true" />
+        <entry key="$USER_HOME$/git/aoc2022" value="true" />
+        <entry key="$USER_HOME$/git/docs" value="true" />
         <entry key="$USER_HOME$/git/exVibe" value="true" />
         <entry key="$USER_HOME$/git/hopper" value="true" />
+        <entry key="$USER_HOME$/git/jennyswebsite" value="true" />
         <entry key="$USER_HOME$/git/newDocs" value="true" />
         <entry key="$USER_HOME$/git/ogre" value="true" />
         <entry key="$USER_HOME$/git/sfdocs" value="true" />
@@ -19,6 +23,7 @@
     <option name="TRUSTED_PATHS">
       <list>
         <option value="$USER_HOME$/git" />
+        <option value="$USER_HOME$" />
       </list>
     </option>
   </component>

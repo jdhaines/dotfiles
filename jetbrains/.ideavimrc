@@ -1,0 +1,83 @@
+noremap <SPACE> <Nop>
+let mapleader=" "
+
+"plugins
+" Plug 'tpope/vim-commentary'
+" set commentary
+
+"Plug 'easymotion/vim-easymotion'
+set easymotion
+"map <Leader> <Plug>(easymotion-prefix)
+"let g:EasyMotion_override_acejump = 0
+
+" Set Options
+set scrolloff=1
+set foldlevel=0
+set foldlevelstart=99
+set splitright=true
+set splitbelow=true
+set wrap=true
+set textwidth=120
+set cursorline=true
+set laststatus=3
+set wildmenu=true
+set ignorecase=true
+set smartcase=true
+set hlsearch=true
+set incsearch=true
+set number=relativenumber
+set relativenumber
+set signcolumn="yes"
+set cursorline=false
+set list=true
+set listchars={
+    tab = "→ ",
+    nbsp = "␣",
+    eol = "↲",
+    extends = "…",
+    precedes = "…",
+    trail = "·",
+    multispace = "·",
+    leadmultispace = " ",
+}
+set autoindent=true
+set smartindent=true
+set smarttab=true
+set expandtab=true
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set belloff="all"
+set completeopt={ 'menu', 'menuone', 'noselect' }
+set swapfile=false
+set inccommand="nosplit"
+set undofile=true
+set grepprg="rg
+set grepformat="%f:%l:%c:%m"
+set mouse="nv"
+set mousescroll="ver:3,hor:0"
+set incsearch
+
+" Set clipboard behavior.
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+
+" Set Mappings
+map Q gq
+:imap jj <Esc>
+:nnoremap o o<Esc>^Da
+:nnoremap O O<Esc>^Da
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc

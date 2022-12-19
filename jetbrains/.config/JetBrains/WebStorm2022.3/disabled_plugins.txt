@@ -1,0 +1,2 @@
+lermitage.intellij.extra.icons
+vitest

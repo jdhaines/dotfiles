@@ -132,6 +132,7 @@ function addrepos() {
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo add-apt-repository ppa:inkscape.dev/stable
 }
  
 ### Install from New Repos ###
@@ -142,6 +143,7 @@ addpkg nodejs
 addpkg npm
 testcmd npx
 addpkg kdenlive
+addpkg inkscape
 addpkg containerd.io
 addpkg docker-ce 
 addpkg docker-ce-cli 

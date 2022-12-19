@@ -1,0 +1,75 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/.dotfiles">
+          <value>
+            <RecentProjectMetaInfo frameTitle=".dotfiles – .ideavimrc" projectWorkspaceId="2IBeq51KRjnHWZFiCfNqt4ZWMfw">
+              <option name="activationTimestamp" value="1669673649771" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-222.4345.14" />
+              <option name="buildTimestamp" value="1664946103930" />
+              <frame x="2564" y="15" width="2564" height="1427" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1669659591140" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/jennyswebsite">
+          <value>
+            <RecentProjectMetaInfo frameTitle="jennyswebsite – bookReviews.html" projectWorkspaceId="2IC7KtOh3cK6jUciE6rphJjasmd">
+              <option name="activationTimestamp" value="1669767138000" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-222.4345.14" />
+              <option name="buildTimestamp" value="1664946117411" />
+              <frame x="2564" y="15" width="2564" height="1427" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1669673650141" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/aoc2022">
+          <value>
+            <RecentProjectMetaInfo frameTitle="aoc2022 – main.spec.ts" projectWorkspaceId="2IP8UzjStJx9bVvNvDfmqLtQfIO">
+              <option name="activationTimestamp" value="1670553200655" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-223.7571.168" />
+              <option name="buildTimestamp" value="1669636606290" />
+              <frame x="2564" y="15" width="2564" height="1427" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1670455985735" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/saf">
+          <value>
+            <RecentProjectMetaInfo frameTitle="saf – .env" projectWorkspaceId="2IpN2doyzAP737oC1kahRbNXw41">
+              <option name="activationTimestamp" value="1670876406923" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-223.7571.168" />
+              <option name="buildTimestamp" value="1669636578939" />
+              <frame x="2564" y="15" width="2564" height="1427" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1670874358797" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/docs">
+          <value>
+            <RecentProjectMetaInfo frameTitle="docs – projects.ts" opened="true" projectWorkspaceId="2IBciLB6XWP29B3G7fftTyQ3nKX">
+              <option name="activationTimestamp" value="1671471384802" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-223.7571.168" />
+              <option name="buildTimestamp" value="1669636564875" />
+              <frame x="2564" y="15" width="2564" height="1427" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1671118089005" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/git/docs" />
+    <option name="lastProjectLocation" value="$USER_HOME$/git" />
+  </component>
+</application>

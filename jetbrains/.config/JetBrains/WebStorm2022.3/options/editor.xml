@@ -1,0 +1,14 @@
+<application>
+  <component name="InlayHintsSettings">
+    <option name="lastViewedProviderKeyId" value="Vue.parameter.hints.old" />
+    <settingsMapElement>
+      <TypeScript.ts.type.hints>
+        <Settings>
+          <option name="showForFunctions" value="true" />
+          <option name="showForShorthandFunctions" value="true" />
+          <option name="showForVariablesAndFields" value="true" />
+        </Settings>
+      </TypeScript.ts.type.hints>
+    </settingsMapElement>
+  </component>
+</application>

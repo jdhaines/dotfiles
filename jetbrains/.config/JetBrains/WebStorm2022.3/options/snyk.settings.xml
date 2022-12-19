@@ -1,0 +1,17 @@
+<application>
+  <component name="SnykApplicationSettingsState">
+    <option name="cliVersion" value="1.1041.0" />
+    <option name="customEndpointUrl" value="" />
+    <option name="lastCheckDate" value="1666705658603" />
+    <option name="lastTimeFeedbackRequestShown" value="1666278954208" />
+    <option name="localCodeEngineEnabled" value="false" />
+    <option name="organization" value="rrglobal" />
+    <option name="pluginFirstInstallTime" value="1660836245001" />
+    <option name="pluginFirstRun" value="false" />
+    <option name="pluginInstalled" value="true" />
+    <option name="reportFalsePositivesEnabled" value="true" />
+    <option name="sastOnServerEnabled" value="true" />
+    <option name="token" value="b5a132af-e7b9-46bb-99bf-742c4a9f697b" />
+    <option name="userAnonymousId" value="bb1900a5-abb0-489c-b713-e4c487ef3f61" />
+  </component>
+</application>
