@@ -1,4 +1,6 @@
 noremap <SPACE> <Nop>
+"noremap <C-Left> <Nop>
+"noremap <C-Right> <Nop>
 let mapleader=" "
 
 "plugins
@@ -62,12 +64,16 @@ set incsearch
 set clipboard+=unnamed
 set clipboard+=ideaput
 
+" Allow ctrl left/right to shift tabs
 
 " Set Mappings
 map Q gq
-:imap jj <Esc>
+:imap jj <Esc> "jj works like esc
 :nnoremap o o<Esc>^Da
 :nnoremap O O<Esc>^Da
+:nnoremap <C-Left> gT
+:nnoremap <C-Right> gt
+
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action

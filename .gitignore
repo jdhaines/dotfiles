@@ -47,3 +47,8 @@ fish/.config/fish/functions/fish_prompt.fish
 fish/.config/fish/functions/fisher.fish
 fish/.config/fish/conf.d/_tide_init.fish
 lazygit/.config/lazygit/state.yml
+jetbrains/.config/JetBrains/WebStorm2022.3/tasks
+jetbrains/.config/JetBrains/WebStorm2022.3/workspace
+jetbrains/.config/JetBrains/WebStorm2022.3/plugin_PCWMP.license
+jetbrains/.config/JetBrains/WebStorm2022.3/settingsSync
+jetbrains/.config/JetBrains/WebStorm2022.3/webstorm.key

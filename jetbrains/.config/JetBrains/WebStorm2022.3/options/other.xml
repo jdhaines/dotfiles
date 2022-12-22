@@ -105,7 +105,7 @@
     "JestJavaScriptTestRunnerSupport.hidePassedTests": "true",
     "JestJavaScriptTestRunnerSupport.scrollToSource": "true",
     "JestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
-    "KEYMAP": "move line up\nmove line\ntoggle",
+    "KEYMAP": "tab\nmove line up\nmove line\ntoggle",
     "LayoutCode.codeCleanup": "true",
     "LayoutCode.optimizeImports": "true",
     "LayoutCode.processChangedText": "false",
@@ -124,20 +124,20 @@
     "RunOnceActivity.se.text.search": "true",
     "SHELLCHECK.PATH": "I do mind",
     "SNYK_TOOL_WINDOW_SPLITTER_PROPORTION": "0.29595828",
-    "SettingsSearchHistory": "ace\nvim\nfont\non save\nrun for f",
+    "SettingsSearchHistory": "short\nshortcut\nkeymap\nace\nvim",
     "TextEditorWithPreview.SplitterProportionKey": "0.7015458",
     "VitestJavaScriptTestRunnerSupport.hideIgnoredTests": "true",
     "VitestJavaScriptTestRunnerSupport.hidePassedTests": "false",
     "VitestJavaScriptTestRunnerSupport.scrollToSource": "true",
     "VitestJavaScriptTestRunnerSupport.scrollToStackTrace": "true",
     "VitestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
-    "appcds.runOnSecondStart": "WS-223.7571.168-bcf39a2d3d41304c6188686af9f25791e5dca6b4ab4c575569a884519aa66fba",
+    "appcds.runOnSecondStart": "WS-223.7571.168-fe0e1365a9f916c1cadb16d87bcd6876d2cfbdbd341c6d0d54cf043c81fbb698",
     "ask.about.ctrl.y.shortcut.v2": "true",
     "bundled.plugins.list.saved.version": "WS-223.7571.168",
     "evlsprt.222": "18310f47600",
     "evlsprt3.222": "26",
     "evlsprt3.223": "23",
-    "file.gist.reindex.count": "205",
+    "file.gist.reindex.count": "206",
     "fileTypeChangedCounter": "9",
     "fontSizeToResetConsole": "16.0",
     "fontSizeToResetEditor": "16.0",
@@ -149,7 +149,7 @@
     "got.it.tooltip.terminal.smart_command_execution": "1",
     "got.it.tooltip.web.preview.reload.on.save": "1",
     "ide.memory.adjusted": "true",
-    "ideavim.statistics.timestamp": "1671459389234",
+    "ideavim.statistics.timestamp": "1671668198632",
     "ignoreUltimateEdition": "true",
     "input.method.disabler.muted": "true",
     "js.rename.search.for.text.occurrences": "true",
@@ -200,9 +200,9 @@
 }]]></component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="docs-history" project-path="$USER_HOME$/git/docs" last-access-time="1671459368859" />
+      <command-history-file filename="docs-history" project-path="$USER_HOME$/git/docs" last-access-time="1671550138953" />
       <command-history-file filename="saf-history" project-path="$USER_HOME$/git/saf" last-access-time="1670874398467" />
-      <command-history-file filename="docs-history1" project-path="$USER_HOME$/git/docs" last-access-time="1671459368864" />
+      <command-history-file filename="docs-history1" project-path="$USER_HOME$/git/docs" last-access-time="1671550138978" />
       <command-history-file filename="aoc2022-history" project-path="$USER_HOME$/git/aoc2022" last-access-time="1670458270796" />
     </command-history-files>
   </component>
