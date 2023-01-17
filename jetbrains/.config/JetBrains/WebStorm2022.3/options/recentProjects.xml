@@ -54,16 +54,29 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/git/docs">
+        <entry key="$USER_HOME$/git/ogre">
           <value>
-            <RecentProjectMetaInfo frameTitle="docs – ~/.ideavimrc" opened="true" projectWorkspaceId="2IBciLB6XWP29B3G7fftTyQ3nKX">
-              <option name="activationTimestamp" value="1671669264269" />
+            <RecentProjectMetaInfo frameTitle="ogre – Project.yaml" projectWorkspaceId="2IBcRtq2eagSPcss1HcSa8BLTI3">
+              <option name="activationTimestamp" value="1671727696904" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="WS-223.7571.168" />
               <option name="buildTimestamp" value="1669636582356" />
               <frame x="2564" y="15" width="2564" height="1427" />
               <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1671669026058" />
+              <option name="projectOpenTimestamp" value="1671727451547" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/docs">
+          <value>
+            <RecentProjectMetaInfo frameTitle="docs – README.md" opened="true" projectWorkspaceId="2IBciLB6XWP29B3G7fftTyQ3nKX">
+              <option name="activationTimestamp" value="1673974827383" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-223.8214.51" />
+              <option name="buildTimestamp" value="1671535285931" />
+              <frame x="2564" y="15" width="2564" height="1427" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1673366731589" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

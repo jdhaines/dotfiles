@@ -140,6 +140,8 @@ org.intellij.intelliLang|Other Tools
 
 org.intellij.plugins.markdown|Languages
 
+org.intellij.qodana|null
+
 org.jetbrains.plugins.emojipicker|Other Tools
 
 org.jetbrains.plugins.github|Version Controls

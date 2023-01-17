@@ -100,7 +100,7 @@
     "FindSplitterProportion": "0.3301481",
     "FontPreviewText": "WebStorm is an <bold>Integrated \nDevelopment Environment (IDE)</bold> designed\nto maximize productivity. It provides\n<bold>clever code completion, static code\nanalysis, and refactorings,</bold> and lets\nyou focus on the bright side of\nsoftware development making\nit an enjoyable experience.\n\nDefault:\nabcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n 0123456789 (){}[]\n +-*/= .,;:!? #&$%@|^\n\n<bold>Bold:\nabcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n 0123456789 (){}[]\n +-*/= .,;:!? #&$%@|^</bold>\n\n<!-- -- != := === >= >- >=> |-> -> <$>\n</> #[ |||> |= ~@\n",
     "GeneralSettings.initiallyConfigured": "true",
-    "InstalledPluginsSearchHistory": "easy\n/enabled\n/outdated\neasymot\nideavim-eas",
+    "InstalledPluginsSearchHistory": "/tag:Paid\neasy\n/enabled\n/outdated\neasymot",
     "JestJavaScriptTestRunnerSupport.hideIgnoredTests": "true",
     "JestJavaScriptTestRunnerSupport.hidePassedTests": "true",
     "JestJavaScriptTestRunnerSupport.scrollToSource": "true",
@@ -120,24 +120,25 @@
     "MemberChooser.showClasses": "true",
     "NonModalCommitCustomization.IsApplied": "true",
     "NonModalCommitPromotionState": "ACCEPTED",
+    "PluginConfigurable.selectionTab": "1",
     "RegistryRecentKeys": "ide.experimental.ui",
     "RunOnceActivity.se.text.search": "true",
     "SHELLCHECK.PATH": "I do mind",
     "SNYK_TOOL_WINDOW_SPLITTER_PROPORTION": "0.29595828",
-    "SettingsSearchHistory": "short\nshortcut\nkeymap\nace\nvim",
+    "SettingsSearchHistory": "Harry\nshort\nshortcut\nkeymap\nace",
     "TextEditorWithPreview.SplitterProportionKey": "0.7015458",
     "VitestJavaScriptTestRunnerSupport.hideIgnoredTests": "true",
     "VitestJavaScriptTestRunnerSupport.hidePassedTests": "false",
     "VitestJavaScriptTestRunnerSupport.scrollToSource": "true",
     "VitestJavaScriptTestRunnerSupport.scrollToStackTrace": "true",
     "VitestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
-    "appcds.runOnSecondStart": "WS-223.7571.168-fe0e1365a9f916c1cadb16d87bcd6876d2cfbdbd341c6d0d54cf043c81fbb698",
+    "appcds.runOnSecondStart": "WS-223.8214.51-00a55cb873dff9e013deea80b45d0af1bdecdfca3b842a9f98428bb86dcd8f4e",
     "ask.about.ctrl.y.shortcut.v2": "true",
-    "bundled.plugins.list.saved.version": "WS-223.7571.168",
+    "bundled.plugins.list.saved.version": "WS-223.8214.51",
     "evlsprt.222": "18310f47600",
     "evlsprt3.222": "26",
     "evlsprt3.223": "23",
-    "file.gist.reindex.count": "206",
+    "file.gist.reindex.count": "216",
     "fileTypeChangedCounter": "9",
     "fontSizeToResetConsole": "16.0",
     "fontSizeToResetEditor": "16.0",
@@ -149,7 +150,7 @@
     "got.it.tooltip.terminal.smart_command_execution": "1",
     "got.it.tooltip.web.preview.reload.on.save": "1",
     "ide.memory.adjusted": "true",
-    "ideavim.statistics.timestamp": "1671668198632",
+    "ideavim.statistics.timestamp": "1673621714246",
     "ignoreUltimateEdition": "true",
     "input.method.disabler.muted": "true",
     "js.rename.search.for.text.occurrences": "true",
@@ -157,17 +158,18 @@
     "last_opened_file_path": "/home/josh/git/docs",
     "plugins.preselection.path": "/home/josh/Downloads",
     "previousColorScheme": "_@user_Nord",
-    "registry.to.advanced.settings.migration.build": "WS-223.7571.168",
+    "registry.to.advanced.settings.migration.build": "WS-223.8214.51",
     "selected.color.option.type": "GIT_TOOLBOX.EDITOR_INLINE_BLAME_ATTRIBUTES",
     "settings.code.style.selected.tab.Vue": "Tabs and Indents",
     "tasks.pass.word.conversion.enforced": "true",
     "tooltips.show.actions.in.key": "false",
-    "ts.lib.d.ts.version": "4.7.4",
+    "ts.lib.d.ts.version": "4.8.4",
     "vcs.branch.view.splitter.proportion": "0.21786065",
-    "vcs.log.changes.splitter.proportion": "0.9104478"
+    "vcs.log.changes.splitter.proportion": "0.8867924"
   },
   "keyToStringList": {
     "file.chooser.recent.files": [
+      "/home/josh/git/ogre",
       "/home/josh/git/saf",
       "/home/josh/Downloads/IdeaVim-EasyMotion-1.9.zip",
       "/home/josh/git/aoc2022",
@@ -175,7 +177,6 @@
       "/home/josh/.dotfiles",
       "/home/josh/git/docs",
       "/home/josh/git/newDocs",
-      "/home/josh/git/ogre",
       "/home/josh/git",
       "/home/josh/git/sfm",
       "/home/josh/git/sfdocs",
@@ -200,10 +201,8 @@
 }]]></component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="docs-history" project-path="$USER_HOME$/git/docs" last-access-time="1671550138953" />
+      <command-history-file filename="docs-history" project-path="$USER_HOME$/git/docs" last-access-time="1673366729338" />
       <command-history-file filename="saf-history" project-path="$USER_HOME$/git/saf" last-access-time="1670874398467" />
-      <command-history-file filename="docs-history1" project-path="$USER_HOME$/git/docs" last-access-time="1671550138978" />
-      <command-history-file filename="aoc2022-history" project-path="$USER_HOME$/git/aoc2022" last-access-time="1670458270796" />
     </command-history-files>
   </component>
 </application>

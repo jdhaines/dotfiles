@@ -68,7 +68,7 @@ set clipboard+=ideaput
 
 " Set Mappings
 map Q gq
-:imap jj <Esc> "jj works like esc
+:imap jj <Esc>l
 :nnoremap o o<Esc>^Da
 :nnoremap O O<Esc>^Da
 :nnoremap <C-Left> gT
