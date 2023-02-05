@@ -134,6 +134,10 @@ function addrepos() {
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo add-apt-repository ppa:inkscape.dev/stable
 sudo add-apt-repository ppa:obsproject/obs-studio
+type -p curl >/dev/null || sudo apt install curl -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 }
  
 ### Install from New Repos ###
@@ -152,6 +156,7 @@ addpkg docker-ce-cli
 addpkg docker-compose-plugin 
 addcmd yarn
 addpkg spotify-client
+addpkg gh
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker

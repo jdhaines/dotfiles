@@ -1,9 +1,0 @@
-<application>
-  <component name="FileTypeManager" version="18">
-    <ignoreFiles list="" />
-    <extensionMap>
-      <removed_mapping pattern=".env" approved="true" type=".env file" />
-      <removed_mapping pattern=".env" approved="true" type="PLAIN_TEXT" />
-    </extensionMap>
-  </component>
-</application>
