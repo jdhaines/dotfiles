@@ -110,6 +110,7 @@ addcmd rclone-browser
 addpkg ripgrep
 addcmd rofi
 addpkg scdaemon
+addpkg software-properties-common
 addcmd stow
 addcmd vlc
 addcmd wget
@@ -138,6 +139,12 @@ type -p curl >/dev/null || sudo apt install curl -y
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
 }
  
 ### Install from New Repos ###
@@ -157,6 +164,7 @@ addpkg docker-compose-plugin
 addcmd yarn
 addpkg spotify-client
 addpkg gh
+addpkg terraform
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker
