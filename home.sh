@@ -212,6 +212,11 @@ wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=d
 sudo apt install -qy ./discord.deb
 testcmd discord
 
+# slack
+wget -O slack.deb "https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb"
+sudo apt install -qy ./slack.deb
+testcmd slack
+
 # alacritty
 cargo install alacritty
 sudo cp ~/.cargo/bin/alacritty /usr/local/bin
@@ -322,11 +327,11 @@ rm -rf yamlfmt
 rm -rf LICENSE
 rm -rf README.md
 rm -rf discord.deb
+rm -rf slack.deb
 rm -rf lazygit.tar.gz
 rm -rf yamlfmt.tar.gz
 rm -rf gum*
 rm -rf home.sh2
-
 
 #
 # # Reconfigure Locales
