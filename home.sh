@@ -145,12 +145,17 @@ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 }
  
 ### Install from New Repos ###
 addrepos
 sudo apt update -q 
+testcmd ffmpeg
 addcmd fish
+addpkg gh
 addpkg nodejs
 addpkg npm
 testcmd npx
@@ -161,10 +166,11 @@ addpkg containerd.io
 addpkg docker-ce 
 addpkg docker-ce-cli 
 addpkg docker-compose-plugin 
-addcmd yarn
 addpkg spotify-client
-addpkg gh
 addpkg terraform
+addcmd vhs
+addcmd yarn
+addpkg git-lfs
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker
@@ -178,6 +184,9 @@ cd ~
 # inkdrop
 wget https://api.inkdrop.app/download/linux/deb -O /tmp/inkdrop.deb && sudo dpkg -i /tmp/inkdrop.deb && rm /tmp/inkdrop.deb
 testcmd inkdrop
+
+# ttyd
+sudo snap install ttyd --classic
 
 # snyk cli tool
 sudo wget https://static.snyk.io/cli/latest/snyk-linux -O /usr/local/bin/snyk
