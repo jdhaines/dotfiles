@@ -65,6 +65,7 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`ctrl+w <>`|Expand or Contract when buffers are side-by-side.  Can add number before <>.|
 |`ctrl+w J`|Change to horizontal split|
 |`ctrl+w H`|Change to vertical split|
+|`gcc`|Toggle Comment on Selection|
 
 ### Rofi
 
