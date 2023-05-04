@@ -148,12 +148,15 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
 echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo add-apt-repository ppa:yubico/stable
 }
  
 ### Install from New Repos ###
 addrepos
 sudo apt update -q 
 testcmd ffmpeg
+addpkg yubikey-manager
+testcmd ykman
 addcmd fish
 addpkg gh
 addpkg nodejs
