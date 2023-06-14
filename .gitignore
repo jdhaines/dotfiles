@@ -107,3 +107,6 @@ inkdrop/.config/inkdrop/TransportSecurity
 inkdrop/.config/inkdrop/account
 inkdrop/.config/inkdrop/encryption-key
 inkdrop/.config/inkdrop/plugin-updates-cache.json
+inkdrop/.config/inkdrop/SingletonCookie
+inkdrop/.config/inkdrop/SingletonLock
+inkdrop/.config/inkdrop/SingletonSocket

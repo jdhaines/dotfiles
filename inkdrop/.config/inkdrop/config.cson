@@ -14,6 +14,7 @@
           bookId: ""
           visible: false
     mainWindow:
+      acrylicEnabled: true
       fullscreen: false
       hiddenComponents:
         "sidebar-menu": [
@@ -23,16 +24,16 @@
       noteListBar:
         w: 296
       position:
-        x: 2566
+        x: 0
         y: 33
       sideBar: {}
       size:
         h: 1407
-        w: 1280
+        w: 2560
     themes: [
-      "default-dark-ui"
-      "default-dark-syntax"
       "github-preview"
+      "default-dark-syntax"
+      "default-dark-ui"
     ]
   editor:
     fontFamily: "JetBrainsMono Nerd Font mono,SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace"
