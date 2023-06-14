@@ -304,6 +304,7 @@ stow profile
 stow rofi
 stow neofetch
 stow arandr
+stow inkdrop
 cd ~
 
 # Install Fisher & Configure Fish

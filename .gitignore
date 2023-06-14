@@ -88,3 +88,22 @@ jetbrains/.config/JetBrains/WebStorm2023.1/plugin_PEXTRAICONS.license
 jetbrains/.config/JetBrains/WebStorm2023.1/updatedBrokenPlugins.db
 jetbrains/.config/JetBrains/WebStorm2023.1/user.web.token
 jetbrains/.config/JetBrains/WebStorm2023.1/webstorm.key
+inkdrop/.config/inkdrop/Cache/Cache_Data
+inkdrop/.config/inkdrop/Code Cache
+inkdrop/.config/inkdrop/Crashpad
+inkdrop/.config/inkdrop/DawnCache
+inkdrop/.config/inkdrop/Dictionaries
+inkdrop/.config/inkdrop/GPUCache
+inkdrop/.config/inkdrop/Local Storage/leveldb
+inkdrop/.config/inkdrop/Session Storage
+inkdrop/.config/inkdrop/blob-store
+inkdrop/.config/inkdrop/compile-cache
+inkdrop/.config/inkdrop/db
+inkdrop/.config/inkdrop/packages
+inkdrop/.config/inkdrop/Cookies
+inkdrop/.config/inkdrop/Cookies-journal
+inkdrop/.config/inkdrop/Network Persistent State
+inkdrop/.config/inkdrop/TransportSecurity
+inkdrop/.config/inkdrop/account
+inkdrop/.config/inkdrop/encryption-key
+inkdrop/.config/inkdrop/plugin-updates-cache.json

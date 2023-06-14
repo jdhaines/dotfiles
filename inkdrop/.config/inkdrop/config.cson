@@ -1,0 +1,41 @@
+"*":
+  core:
+    db:
+      machineId: "SVLbzKTTy"
+    lastNavigationState:
+      editingNoteId: "note:JxkJmgDQn"
+      queryContext:
+        bookId: "book:first"
+        filterKeyword: ""
+        includeChildren: false
+        mode: "book"
+      sidebar:
+        workspace:
+          bookId: ""
+          visible: false
+    mainWindow:
+      fullscreen: false
+      hiddenComponents:
+        "sidebar-menu": [
+          "SideBarMenuStatusList"
+        ]
+      maximized: false
+      noteListBar:
+        w: 296
+      position:
+        x: 2566
+        y: 33
+      sideBar: {}
+      size:
+        h: 1407
+        w: 1280
+    themes: [
+      "default-dark-ui"
+      "default-dark-syntax"
+      "github-preview"
+    ]
+  editor:
+    fontFamily: "JetBrainsMono Nerd Font mono,SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace"
+    fontSize: 18
+    lineNumbers: true
+    viewMode: "sideBySide"

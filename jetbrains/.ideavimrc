@@ -7,9 +7,9 @@ let mapleader=" "
 " Plug 'tpope/vim-commentary'
 " set commentary
 
-"Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 set easymotion
-"map <Leader> <Plug>(easymotion-prefix)
+map <Leader> <Plug>(easymotion-prefix)
 "let g:EasyMotion_override_acejump = 0
 
 " Set Options
