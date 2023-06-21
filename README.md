@@ -53,6 +53,7 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`Space+w`|Activate hop, type next two characters to hop|
 |`Space+e`|Toggle nvim-tree|
 |`Space+f`|Telescope fuzzy find|
+|`Ctrl+n/p`|Telescope select item|
 |`Space+F`|Format document and save|
 |`Space+g`|Telescope grep search|
 |`Space+c`|Telescope git commits|
