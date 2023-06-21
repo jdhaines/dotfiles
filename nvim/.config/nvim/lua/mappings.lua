@@ -28,13 +28,17 @@ mapper("n", "<leader>e", ":NvimTreeToggle<cr>")
 mapper("v", "<leader>e", ":NvimTreeToggle<cr>")
 
 -- Telescope Keybindings
-mapper("n", "<leader>f", ":Telescope find_files<cr>")
+mapper("n", "<leader>f", ":Telescope find_files hidden=true<cr>")
 mapper("n", "<leader>g", ":Telescope live_grep<cr>")
 mapper("n", "<leader>c", ":Telescope git_commits<cr>")
 
 -- Better new lines without comments
 mapper("n", "o", "o<Esc>^Da")
 mapper("n", "O", "O<Esc>^Da")
+
+-- Center screen after moving down or up
+mapper("n", "<C-d>", "<C-d>zz")
+mapper("n", "<C-u>", "<C-u>zz")
 
 -- Format Document
 mapper("n", "<leader>F", "<cmd>lua vim.lsp.buf.format()<cr>")
