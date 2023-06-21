@@ -13,7 +13,7 @@ require("mason-lspconfig").setup({
     "jsonls",
     "marksman",
     "prismals",
-    "sumneko_lua",
+    "lua_ls",
     "tailwindcss",
     "tsserver",
     "volar",
@@ -24,7 +24,8 @@ require("mason-lspconfig").setup({
 require("lspconfig").jsonls.setup({})
 require("lspconfig").marksman.setup({})
 require("lspconfig").prismals.setup({})
-require("lspconfig").sumneko_lua.setup({})
+-- require("lspconfig").sumneko_lua.setup({})
+require("lspconfig").lua_ls.setup({})
 require("lspconfig").tailwindcss.setup({})
 require("lspconfig").tsserver.setup({})
 require("lspconfig").volar.setup({})
