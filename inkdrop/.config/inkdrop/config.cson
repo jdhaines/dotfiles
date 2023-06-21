@@ -17,14 +17,12 @@
       acrylicEnabled: true
       fullscreen: false
       hiddenComponents:
-        "sidebar-menu": [
-          "SideBarMenuStatusList"
-        ]
+        "sidebar-menu": []
       maximized: false
       noteListBar:
         w: 296
       position:
-        x: 0
+        x: 2566
         y: 33
       sideBar: {}
       size:
@@ -32,9 +30,10 @@
         w: 2560
     themes: [
       "github-preview"
-      "default-dark-syntax"
       "default-dark-ui"
+      "default-dark-syntax"
     ]
+    toggleDarkThemeAutomatically: false
   editor:
     fontFamily: "JetBrainsMono Nerd Font mono,SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace"
     fontSize: 18
