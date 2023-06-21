@@ -97,6 +97,7 @@ addcmd kleopatra
 addpkg libanyevent-i3-perl
 addpkg libfontconfig1-dev
 addpkg libfreetype6-dev
+addpkg libfuse2
 addpkg libxcb-xfixes0-dev
 addpkg libxkbcommon-dev
 addpkg lsb-release
@@ -198,11 +199,13 @@ testcmd snyk
 
 # neovim
 curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
-  | grep "browser_download_url.*linux64.deb" \
+  | grep "browser_download_url.*vim.appimage" \
   | cut -d : -f 2,3 \
   | tr -d \" \
   | wget -qi -
-sudo apt install -yq ./nvim-linux64.deb
+mv nvim.appimage nvim
+sudo cp nvim /usr/local/bin/
+sudo chmod +x /usr/local/bin/nvim
 testcmd nvim
 nvim --headless +'Slowly install' +qall
 
@@ -339,8 +342,10 @@ sudo chsh -s $(which fish) $(whoami)
 ### Cleanup ###
 cd ~
 rm -rf google-chrome-stable_current_amd64.deb
-rm -rf nvim-linux64.deb
-rm -rf nvim-linux64.deb.sha256sum
+rm -rf nvim.appimage
+rm -rf nvim.appimage.sha256sum
+rm -rf nvim.appimage.zsync
+rm -rf nvim.appimage.zsync.sha256sum
 rm -rf lf-linux-amd64.tar.gz
 rm -rf lf
 rm -rf .fehbg
