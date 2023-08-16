@@ -3,12 +3,9 @@
     db:
       machineId: "SVLbzKTTy"
     lastNavigationState:
-      editingNoteId: "note:JxkJmgDQn"
+      editingNoteId: "note:KtT9g40EK"
       queryContext:
-        bookId: "book:first"
-        filterKeyword: ""
-        includeChildren: false
-        mode: "book"
+        mode: "all"
       sidebar:
         workspace:
           bookId: ""
@@ -22,7 +19,7 @@
       noteListBar:
         w: 296
       position:
-        x: 2566
+        x: 0
         y: 33
       sideBar: {}
       size:
@@ -38,4 +35,4 @@
     fontFamily: "JetBrainsMono Nerd Font mono,SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace"
     fontSize: 18
     lineNumbers: true
-    viewMode: "sideBySide"
+    viewMode: "edit"

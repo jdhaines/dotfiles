@@ -5,6 +5,7 @@
 [core]
     excludesfiles = ~/.gitignore_global
     editor = nvim
+	autocrlf = input
 [pull]
     rebase = true
 [commit]
