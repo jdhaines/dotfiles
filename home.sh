@@ -101,6 +101,7 @@ addpkg libfuse2
 addpkg libxcb-xfixes0-dev
 addpkg libxkbcommon-dev
 addpkg lsb-release
+addcmd tmux
 addcmd make
 addcmd picom
 addpkg pkg-config
@@ -191,6 +192,9 @@ testcmd inkdrop
 
 # ttyd
 sudo snap install ttyd --classic
+
+# tmux package manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # snyk cli tool
 sudo wget https://static.snyk.io/cli/latest/snyk-linux -O /usr/local/bin/snyk
