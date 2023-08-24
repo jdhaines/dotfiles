@@ -25,6 +25,9 @@ shutdown -r now
 |`xrandr --output Virtual-1 --mode 2560x1600`|Set the resolution on a VM to 2560x1600|
 |`xset r rate 350 90`|Fix keyboard repeat rates|
 |`sudo apt install spice-vdagent`|If on boxes vm, use this to get proper resolutions, restart after|
+|`flusdns`|Alias for `sudo resolvectl flush-caches` wihch will flush the dns cache(s)|
+|`tf`|Alias for `terraform`|
+|`tg`|Alias for `terragrunt`|
 
 ## Config
 
@@ -71,6 +74,15 @@ Things should set up correctly automatically.  You might need to run neovim twic
 ### Rofi
 
 - Win key should open rofi launcher
+
+### tmux
+
+|Key|Function|
+|---|---|
+|`Ctrl + b`|Prefix|
+|`Prefix + I|Install new Plugins after adding to tmux.conf|
+|`Prefix + u|Update Plugins|
+|`Prefix + alt + u|Remove Plugins installed but missing from plugin list in tmux.conf|
 
 ### i3
 
