@@ -18,6 +18,7 @@ require("mason-lspconfig").setup({
     "tsserver",
     "volar",
     "yamlls",
+    "terraformls"
   },
 })
 
@@ -30,6 +31,7 @@ require("lspconfig").tailwindcss.setup({})
 require("lspconfig").tsserver.setup({})
 require("lspconfig").volar.setup({})
 require("lspconfig").yamlls.setup({})
+require("lspconfig").terraformls.setup({})
 
 local null_ls = require("null-ls")
 

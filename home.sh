@@ -213,6 +213,11 @@ sudo chmod +x /usr/local/bin/nvim
 testcmd nvim
 nvim --headless +'Slowly install' +qall
 
+# pulumi
+curl -fsSL https://get.pulumi.com | sh
+sudo cp -r ~/.pulumi/bin/. /usr/local/bin/
+testcmd pulumi
+
 # lf
 curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
   | grep "browser_download_url.*linux-amd64.tar.gz" \
