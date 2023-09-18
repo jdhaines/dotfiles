@@ -61,7 +61,7 @@ function testcmd()
 sudo apt install -yq curl
 testcmd curl
 curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
-  | grep "browser_download_url.*linux_x86_64.tar.gz" \
+  | grep "browser_download_url.*Linux_x86_64.tar.gz" \
   | cut -d : -f 2,3 \
   | tr -d \" \
   | wget -qi -
@@ -84,7 +84,6 @@ addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
 addcmd cmake
-testcmd curl
 addcmd feh
 addcmd flameshot
 addcmd gimp
