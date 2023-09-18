@@ -66,6 +66,7 @@ curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
   | tr -d \" \
   | wget -qi -
 sudo rm -rf *.sbom
+sudo mv gum* ~
 sudo mv gum* gum.tar.gz
 sudo tar -xf gum.tar.gz
 sudo cp ~/gum /usr/local/bin
@@ -75,7 +76,7 @@ sudo cp ~/gum /usr/local/bin
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd gum
 
-addpkg apt-transports-https
+addpkg apt-transport-https
 addcmd arandr
 addpkg bat
 addpkg pulseaudio-utils
