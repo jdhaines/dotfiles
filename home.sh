@@ -84,7 +84,7 @@ addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
 addcmd cmake
-addcmd curl
+testcmd curl
 addcmd feh
 addcmd flameshot
 addcmd gimp
