@@ -10,7 +10,7 @@ let mapleader=" "
 Plug 'easymotion/vim-easymotion'
 set easymotion
 map <Leader> <Plug>(easymotion-prefix)
-"let g:EasyMotion_override_acejump = 0
+"let g:EasyMotion_override_acejump = 1
 
 " Set Options
 set scrolloff=1

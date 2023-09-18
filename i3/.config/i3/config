@@ -24,6 +24,9 @@ font Jet Brains Mono for Powerline Nerd Font Complete 16
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Polkit System
+exec --no-startup-id lxpolkit
+
 # Picom
 exec_always --no-startup-id "picom --config $HOME/.config/picom/picom.conf -b"
 exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/blackhole1.jpg
@@ -231,6 +234,6 @@ bar {
   status_command python3 ~/.config/i3/bumblebee-status/bumblebee-status \
     -m datetime sensors cpu memory battery disk git pasink pasource \
     -p datetime.format="%I:%M %p - %a - %e %b %Y" \
-    sensors2.field_include="temp" sensors2.match_number=0\
+    sensors2.field_include="" sensors2.match_number=0\
     -t nord-powerline
 }

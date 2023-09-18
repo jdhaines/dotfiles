@@ -75,6 +75,7 @@ sudo cp ~/gum /usr/local/bin
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd gum
 
+addpkg apt-transports-https
 addcmd arandr
 addpkg bat
 addpkg pulseaudio-utils
@@ -83,6 +84,7 @@ addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
 addcmd cmake
+addcmd curl
 addcmd feh
 addcmd flameshot
 addcmd gimp
@@ -123,34 +125,66 @@ addpkg xdotool
 
 ### Add Repos ###
 function addrepos() {
-  sudo apt-add-repository -qy ppa:fish-shell/release-3
-  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-  sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
-  sudo mkdir -p /etc/apt/keyrings
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+# fish
+sudo apt-add-repository -qy ppa:fish-shell/release-3
+
+# node
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+
+# kdenlive
+sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
+
+# docker
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  
+# spotify
   curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
-  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+# inkscape
 sudo add-apt-repository ppa:inkscape.dev/stable
+
+# obs studio
 sudo add-apt-repository ppa:obsproject/obs-studio
-type -p curl >/dev/null || sudo apt install curl -y
+
+# github cli
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+# hashicorp
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+# charm
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
 echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+
+# git lfs
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
+# yubikey
 sudo add-apt-repository ppa:yubico/stable
+
+# kubectl
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+# helm
+curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 }
  
 ### Install from New Repos ###
@@ -176,6 +210,8 @@ addpkg terraform
 addcmd vhs
 addcmd yarn
 addpkg git-lfs
+addcmd kubectl
+addcmd helm
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker
@@ -358,6 +394,7 @@ sudo chsh -s $(which fish) $(whoami)
 ### Cleanup ###
 cd ~
 rm -rf google-chrome-stable_current_amd64.deb
+rm -rf nvim-linux64.deb
 rm -rf nvim.appimage
 rm -rf nvim.appimage.sha256sum
 rm -rf nvim.appimage.zsync
