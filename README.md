@@ -10,7 +10,7 @@
 git clone https://github.com/jdhaines/dotfiles.git $HOME/.dotfiles
 
 # run the install script
-./.dotfiles/install.sh
+./.dotfiles/home.sh
 
 # restart
 shutdown -r now
