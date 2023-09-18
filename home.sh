@@ -71,6 +71,7 @@ curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
   | wget -qi -
 sudo rm -rf *.sbom
 sudo mv gum* ~
+cd ~
 sudo mv gum* gum.tar.gz
 sudo tar -xf gum.tar.gz
 sudo cp ~/gum /usr/local/bin
