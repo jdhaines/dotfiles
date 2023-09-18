@@ -3,6 +3,7 @@
 ### Variables ###
 SSH_DIR="$HOME/.ssh"
 DEBIAN_FRONTEND=noninteractive
+NODE_MAJOR=20
 
 ### Functions ###
 
@@ -73,70 +74,70 @@ sudo rm -rf *.sbom
 sudo mv gum* gum.tar.gz
 sudo tar -xf gum.tar.gz
 sudo cp ~/gum /usr/local/bin
-breaker
+#breaker
 
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd curl
 testcmd gum
-breaker
+#breaker
 
 addpkg apt-transport-https
 addcmd arandr
 addpkg bat
 addpkg pulseaudio-utils
 testcmd pactl
-breaker
+#breaker
 
 addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
 addcmd cmake
 addcmd feh
-breaker
+#breaker
 
 addcmd flameshot
 addcmd gimp
 addcmd git
 addpkg gnome-tweaks
 addpkg gnupg
-breaker
+#breaker
 
 addcmd guvcview
 addcmd i3
 addcmd indent
 addcmd jq
 addcmd kleopatra
-breaker
+#breaker
 
 addpkg libanyevent-i3-perl
 addpkg libfontconfig1-dev
 addpkg libfreetype6-dev
 addpkg libfuse2
 addpkg libxcb-xfixes0-dev
-breaker
+#breaker
 
 addpkg libxkbcommon-dev
 addpkg lsb-release
 addcmd tmux
 addcmd make
 addcmd picom
-breaker
+#breaker
 
 addpkg pkg-config
 addcmd python3
 addpkg python3-pip
 addcmd rclone
 addcmd rclone-browser
-breaker
+#breaker
 
 addpkg ripgrep
 addcmd rofi
 addpkg scdaemon
 addpkg software-properties-common
 addcmd stow
-breaker
+#breaker
 
 addcmd vlc
 addcmd wget
@@ -144,7 +145,7 @@ addpkg x11-xserver-utils
 addcmd xclip
 addcmd xcwd
 addpkg xdotool
-breaker
+#breaker
 
 ### Add Repos ###
 function addrepos() {
@@ -153,7 +154,9 @@ function addrepos() {
 sudo apt-add-repository -qy ppa:fish-shell/release-3
 
 # node
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 # kdenlive
 sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
@@ -225,7 +228,8 @@ addpkg gh
 breaker
  
 addpkg nodejs
-addpkg npm
+testcmd node
+testcmd npm
 testcmd npx
 addpkg kdenlive
 addpkg obs-studio
