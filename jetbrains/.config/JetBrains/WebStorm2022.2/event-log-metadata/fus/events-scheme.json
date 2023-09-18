@@ -15,7 +15,7 @@
       "from" : "9"
     } ],
     "rules" : {
-      "event_id" : [ "{util#action}", "{enum:action.invoked|custom.action.invoked|action.finished|action.updated}" ],
+      "event_id" : [ "{util#action}", "{enum#__event_id}" ],
       "event_data" : {
         "action_id" : [ "{util#action}", "{util#rider_backend_action}", "{enum:com.intellij.microservices.ui.diagrams.model.MsDiagramDataModel$showNotificationIfNoDataFound$1}" ],
         "additional.same_window" : [ "{enum#boolean}" ],
@@ -28,6 +28,7 @@
         "duration_ms" : [ "{regexp#integer}" ],
         "enable" : [ "{enum#boolean}" ],
         "input_event" : [ "{util#shortcut}" ],
+        "isSubmenu" : [ "{enum#boolean}" ],
         "lang" : [ "{util#lang}" ],
         "parent" : [ "{enum#parent}", "{util#class_name}" ],
         "place" : [ "{util#place}" ],
@@ -36,10 +37,12 @@
         "plugin_version" : [ "{util#plugin_version}" ],
         "result.error" : [ "{util#class_name}" ],
         "result.type" : [ "{enum:ignored|performed|failed|unknown}" ],
+        "size" : [ "{regexp#integer}" ],
         "start_time" : [ "{regexp#integer}" ],
         "toolwindow" : [ "{util#toolwindow}" ]
       },
       "enums" : {
+        "__event_id" : [ "action.invoked", "custom.action.invoked", "action.finished", "action.updated", "action.group.expanded" ],
         "parent" : [ "LineMarkerActionWrapper", "TreeActionWrapper", "MyTreeActionWrapper" ]
       }
     }
@@ -144,6 +147,20 @@
       }
     }
   }, {
+    "id" : "aqua.usages",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:selection.updated|url.updated|locator.evaluated}" ],
+      "event_data" : {
+        "isAqua" : [ "{enum#boolean}" ],
+        "locatorType" : [ "{enum:XPATH|CSS|TAG_WITH_CLASSES|ID|NAME|TEXT|DATA|ARIA_LABEL}" ],
+        "source" : [ "{enum:NONE|BROWSER|PAGE_STRUCTURE|EVALUATOR|CODE_EDITOR|CACHE}", "{enum:intention|navigation}" ]
+      }
+    }
+  }, {
     "id" : "balloons",
     "builds" : [ ],
     "versions" : [ {
@@ -152,7 +169,7 @@
     "rules" : {
       "event_id" : [ "{enum:balloon.shown}" ],
       "event_data" : {
-        "balloon_id" : [ "{enum#__balloon_id}", "{enum:cwm.contols.hidden}", "{enum:cwm.host.builtinserver.port_bind_error}" ]
+        "balloon_id" : [ "{enum#__balloon_id}", "{enum:cwm.contols.hidden}", "{enum:cwm.host.builtinserver.port_bind_error}", "{enum:cwm.controls.hidden}" ]
       },
       "enums" : {
         "__balloon_id" : [ "cwm.telephony.text_message", "cwm.host.session.nmins_left", "cwm.telephony.participant_enabled_video", "cwm.host.connection.version_mismatch_error", "cwm.host.action.getjoinlink.link_copied", "cwm.permissions.accept_decline", "cwm.host.action.copyjoinlink.link_copied", "cwm.following.started", "cwm.host.terminal.shared.status", "cwm.host.connection.user_left", "cwm.telephony.customize_audio_video_settings", "cwm.host.connection.user_joined", "cwm.following.request", "cwm.guest.telephony.voice_chat_enabled", "cwm.guest.following.stopped" ]
@@ -251,16 +268,29 @@
     "rules" : {
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
+        "commit_check_class" : [ "{util#class_name}" ],
+        "commit_option" : [ "{enum:SIGN_OFF|RUN_HOOKS|AMEND}" ],
+        "commit_problem_class" : [ "{util#class_name}" ],
+        "commit_problem_place" : [ "{enum:NOTIFICATION|COMMIT_TOOLWINDOW|PUSH_DIALOG}" ],
         "duration_ms" : [ "{regexp#integer}" ],
+        "enabled" : [ "{enum#boolean}" ],
+        "errors_count" : [ "{regexp#integer}" ],
+        "execution_order" : [ "{enum:EARLY|MODIFICATION|LATE|POST_COMMIT}" ],
         "files_included" : [ "{regexp#integer}" ],
         "files_total" : [ "{regexp#integer}" ],
         "ide_activity_id" : [ "{regexp#integer}" ],
         "input_event" : [ "{util#shortcut}" ],
+        "is_from_settings" : [ "{enum#boolean}" ],
+        "is_success" : [ "{enum#boolean}" ],
+        "plugin" : [ "{util#plugin}" ],
+        "plugin_type" : [ "{util#plugin_type}" ],
+        "plugin_version" : [ "{util#plugin_version}" ],
         "unversioned_included" : [ "{regexp#integer}" ],
-        "unversioned_total" : [ "{regexp#integer}" ]
+        "unversioned_total" : [ "{regexp#integer}" ],
+        "warnings_count" : [ "{regexp#integer}" ]
       },
       "enums" : {
-        "__event_id" : [ "select.item", "session.started", "session.finished", "show.diff", "close.diff", "commit", "jump.to.source", "commit.and.push", "include.file", "exclude.file" ]
+        "__event_id" : [ "select.item", "session.started", "session.finished", "show.diff", "close.diff", "commit", "jump.to.source", "commit.and.push", "include.file", "exclude.file", "toggle.commit.check", "commit_check_session.finished", "code.analysis.warning", "commit_check_session.started", "toggle.commit.option", "view.commit.problem" ]
       }
     }
   }, {
@@ -511,6 +541,7 @@
         "external-data" : [ "{enum#boolean}" ],
         "init-script" : [ "{enum#boolean}" ],
         "introspect" : [ "{enum#_}" ],
+        "introspection-level" : [ "{enum:l1|l2|l3}" ],
         "legacy-introspector" : [ "{enum#boolean}" ],
         "legacy_introspector" : [ "{enum#boolean}" ],
         "mapped-to-ddl" : [ "{enum#boolean}" ],
@@ -573,6 +604,29 @@
       },
       "enums" : {
         "_" : [ "ORACLE", "MEMSQL", "MARIADB", "MYSQL", "POSTGRES", "REDSHIFT", "GREENPLUM", "MSSQL", "AZURE", "SYBASE", "DB2_LUW", "DB2", "SQLITE", "HSQLDB", "H2", "DERBY", "EXASOL", "CLICKHOUSE", "CASSANDRA", "VERTICA", "HIVE", "SPARK", "HANA", "FIREBIRD", "PRESTO", "INFORMIX", "IMPALA", "NETEZZA", "PHOENIX", "SNOWFLAKE", "INGRES", "TERADATA", "OPENEDGE", "TIBERO", "FILEMAKER", "FRONTBASE", "MONGO", "UNKNOWN" ]
+      }
+    }
+  }, {
+    "id" : "debugger.attach.dialog",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum#__event_id}" ],
+      "event_data" : {
+        "debuggersFilterSet" : [ "{enum#boolean}" ],
+        "hostType" : [ "{enum:LOCAL|REMOTE}" ],
+        "isMainAction" : [ "{enum#boolean}" ],
+        "plugin" : [ "{util#plugin}" ],
+        "plugin_type" : [ "{util#plugin_type}" ],
+        "plugin_version" : [ "{util#plugin_version}" ],
+        "searchFieldUsed" : [ "{enum#boolean}" ],
+        "selectedDebugger" : [ "{util#class_name}" ],
+        "viewType" : [ "{enum:LIST|TREE}" ]
+      },
+      "enums" : {
+        "__event_id" : [ "attach.button.pressed", "host.switched", "view.switched", "search.filter.used", "debuggers.filter.set" ]
       }
     }
   }, {
@@ -1160,6 +1214,7 @@
         "duration_ms" : [ "{regexp#integer}" ],
         "file_editor" : [ "{util#class_name}" ],
         "file_extension" : [ "{util#file_extension}" ],
+        "file_name_pattern" : [ "{util#file_name_pattern}" ],
         "file_path" : [ "{regexp#hash}" ],
         "file_type" : [ "{util#file_type}", "{enum:DIFF}" ],
         "is_in_reader_mode" : [ "{enum#boolean}" ],
@@ -1244,7 +1299,7 @@
     "rules" : {
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
-        "connector" : [ "{enum:unknown|cwm.connector|space.connector|ssh.connector}", "{enum:gitpod.connector}", "{enum:google.cloud.connector}" ],
+        "connector" : [ "{enum:unknown|cwm.connector|space.connector|ssh.connector}", "{enum:gitpod.connector}", "{enum:google.cloud.connector}", "{enum:SshConnector|SpaceGatewayConnector|CodeWithMeConnector|WslConnector}" ],
         "duration_ms" : [ "{regexp#integer}" ],
         "ide_activity_id" : [ "{regexp#integer}" ],
         "installationSource" : [ "{enum:CustomLink|LocalArchive|SuggestionList}" ],
@@ -1257,8 +1312,10 @@
         "numberOfSshHosts" : [ "{regexp#integer}" ],
         "numberOfWslInstances" : [ "{regexp#integer}" ],
         "panel" : [ "{enum:LocateRemoteProjectPanel|ChooseHostPanel}" ],
+        "panelName" : [ "{enum:LocateRemoteProjectPanel|ChooseHostPanel|LocateRemoteSshProjectPanel|LocateWslProjectPanel}" ],
         "parentProductId" : [ "{enum:RM|WS|PS|PY|DS|OC|CL|DB|RD|GO|IU|GW|unknown}" ],
         "plugin" : [ "{util#plugin}" ],
+        "pluginId" : [ "{enum:io.gitpod.jetbrains.gateway}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
         "productId" : [ "{enum:unknown|IU|RM|PY|DS|PS|WS|CL|RD|GO}", "{enum:IC}" ],
@@ -1267,7 +1324,7 @@
         "sshAuthType" : [ "{enum:unknown|Password|Key pair (OpenSSH or PuTTY)|OpenSSH config and authentication agent|PASSWORD|OPEN_SSH|KEY_PAIR}" ]
       },
       "enums" : {
-        "__event_id" : [ "full.deploy.cycle.activity.started", "full.deploy.cycle.activity.finished", "download.ide.backend.activity.started", "download.ide.backend.activity.finished", "otherOptions.clicked", "useOldBackend.clicked", "openSshTerminal.clicked", "uploadInstaller.clicked", "useNewBackend.clicked", "documentation.clicked", "useDownloadLink.clicked", "checkConnectionAndContinue.clicked", "connect.clicked", "gtwFromStandaloneIde.started", "install_plugin", "ssh.auth.type.selected", "recent.ssh.projects.opened", "projects.per.host.registered", "JBInstaller.clicked", "backend.changed", "checking.connection.activity.finished", "checking.connection.activity.started", "connection.changed", "installation.source.selected", "projects.per.wsl.instance.registered", "recent.wsl.projects.opened", "openSettings.clicked", "leave_panel" ]
+        "__event_id" : [ "full.deploy.cycle.activity.started", "full.deploy.cycle.activity.finished", "download.ide.backend.activity.started", "download.ide.backend.activity.finished", "otherOptions.clicked", "useOldBackend.clicked", "openSshTerminal.clicked", "uploadInstaller.clicked", "useNewBackend.clicked", "documentation.clicked", "useDownloadLink.clicked", "checkConnectionAndContinue.clicked", "connect.clicked", "gtwFromStandaloneIde.started", "install_plugin", "ssh.auth.type.selected", "recent.ssh.projects.opened", "projects.per.host.registered", "JBInstaller.clicked", "backend.changed", "checking.connection.activity.finished", "checking.connection.activity.started", "connection.changed", "installation.source.selected", "projects.per.wsl.instance.registered", "recent.wsl.projects.opened", "openSettings.clicked", "leave_panel", "backButton.clicked", "plugin.documentation.clicked", "plugin.install.clicked" ]
       }
     }
   }, {
@@ -2120,11 +2177,12 @@
         "error_size" : [ "{regexp#integer}" ],
         "headless" : [ "{enum#boolean}" ],
         "internal" : [ "{enum#boolean}" ],
-        "memory_error_kind" : [ "{enum#__memory_error_kind}" ],
+        "memory_error_kind" : [ "{enum#__memory_error_kind}", "{enum:direct_buffers}" ],
         "mode" : [ "{enum:new|same|attach}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
+        "project_tab" : [ "{enum#boolean}" ],
         "restart" : [ "{enum#boolean}" ],
         "test" : [ "{enum#boolean}" ],
         "too_many_errors" : [ "{enum#boolean}" ]
@@ -2231,6 +2289,7 @@
         "duration_in_background_ms" : [ "{regexp#integer}" ],
         "duration_in_write_action_ms" : [ "{regexp#integer}" ],
         "duration_ms" : [ "{regexp#integer}" ],
+        "duration_of_workspace_update_call_ms" : [ "{regexp#integer}" ],
         "ide_activity_id" : [ "{regexp#integer}" ],
         "importer_class" : [ "{util#class_name}" ],
         "number_of_modules" : [ "{regexp#integer}" ],
@@ -2504,6 +2563,19 @@
       }
     }
   }, {
+    "id" : "php.debug.validation",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "2"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:debug.config.validated}" ],
+      "event_data" : {
+        "error_count" : [ "{regexp#integer}" ],
+        "type" : [ "{enum:SCRIPT|LOCAL|REMOTE|PHPINFO}" ]
+      }
+    }
+  }, {
     "id" : "php.phing",
     "builds" : [ ],
     "versions" : [ {
@@ -2604,7 +2676,7 @@
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
         "plugins" : [ "{util#plugin}" ],
-        "source" : [ "{enum:editor|notification}" ]
+        "source" : [ "{enum:editor|notification}", "{enum:search}" ]
       },
       "enums" : {
         "__event_id" : [ "install.plugins", "ignore.extensions", "open.download.page", "ignore.ultimate", "ignore.unknown.features", "enable.plugins", "configure.plugins", "learn.more" ]
@@ -3004,6 +3076,7 @@
       "event_data" : {
         "additional.alternative_jre_version" : [ "{regexp#integer}" ],
         "additional.lang" : [ "{util#lang}" ],
+        "additional.launch_settings_command" : [ "{enum:executable|iis|iisexpress|project}" ],
         "additional.node_version_major" : [ "{regexp#integer}" ],
         "duration_ms" : [ "{regexp#integer}" ],
         "executor" : [ "{util#run_config_executor}" ],
@@ -3322,6 +3395,20 @@
       }
     }
   }, {
+    "id" : "settings.sync.state",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:general.state|editor.font.state|disabled.bundled.plugins|disabled.categories}" ],
+      "event_data" : {
+        "category" : [ "{enum:UI|KEYMAP|CODE|TOOLS|SYSTEM|PLUGINS|OTHER}" ],
+        "disabled" : [ "{enum#boolean}" ],
+        "enabled" : [ "{enum#boolean}" ]
+      }
+    }
+  }, {
     "id" : "shared.indexes",
     "builds" : [ ],
     "versions" : [ {
@@ -3400,13 +3487,14 @@
         "quick_filter" : [ "{enum:OPEN|AUTHORED_BY_ME|NEEDS_MY_ATTENTION|NEEDS_MY_REVIEW|ASSIGNED_TO_ME|CLOSED}" ],
         "refresh_reviews_place" : [ "{enum:EMPTY_LIST|CONTEXT_MENU}" ],
         "review_diff_place" : [ "{enum:EDITOR|DIALOG}" ],
+        "review_filter_state" : [ "{enum:CLEAR|SELECT_STATE|SELECT_TYPE|SELECT_AUTHOR|SELECT_REVIEWER}" ],
         "tab" : [ "{enum:INFO|FILES}" ],
         "type" : [ "{enum:CODE_REVIEW|MERGE_REQUEST}", "{enum:REVIEWER_ACCEPT|REVIEWER_WAITS_FOR_RESPONSE|REVIEWER_RESUME|REVIEWER_LEAVE|AUTHOR_WAITS_FOR_RESPONSE|AUTHOR_RESUME}", "{enum:ACTION|PREVIEW}" ],
         "with_participants" : [ "{enum#boolean}" ],
         "with_title" : [ "{enum#boolean}" ]
       },
       "enums" : {
-        "__event_id" : [ "adv_explore_space", "adv_log_in_link", "adv_sign_up_link", "adv_watch_overview", "button_log_in", "button_log_out", "cancel_login", "chat_collapse_discussion", "chat_delete_message", "chat_discard_edit_message", "chat_discard_send_message", "chat_expand_discussion", "chat_open_thread", "chat_reopen_discussion", "chat_resolve_discussion", "chat_send_edit_message", "chat_send_message", "chat_start_edit_message", "clone_repo", "create_new_project", "open_git_settings_in_space", "open_main_toolbar_popup", "open_share_project", "open_space_clone_tab", "review_details_accept_changes", "review_details_add_participant_icon", "review_details_back_to_list", "review_details_change_commits_selection", "review_details_checkout_branch", "review_details_edit_participant", "review_details_open_project_in_space", "review_details_open_review_diff", "review_details_open_review_in_space", "review_details_resume_review", "review_details_select_details_tab", "review_details_show_timeline", "review_details_update_branch", "review_details_wait_for_response", "review_diff_close_leave_comment", "review_diff_leave_comment", "review_diff_loaded", "reviews_list_change_quick_filter", "reviews_list_change_text_filter", "reviews_list_log_in_link", "reviews_list_open_review", "reviews_list_refresh_action", "share_project", "start_creating_new_project", "create_review", "review_details_participant_action", "auto_auth_failed", "mark_as_unread", "open_ssh_settings_in_space", "mark_as_read", "open_diff", "create_review_opened", "create_review_back_to_list", "all_review_diff_loaded" ]
+        "__event_id" : [ "adv_explore_space", "adv_log_in_link", "adv_sign_up_link", "adv_watch_overview", "button_log_in", "button_log_out", "cancel_login", "chat_collapse_discussion", "chat_delete_message", "chat_discard_edit_message", "chat_discard_send_message", "chat_expand_discussion", "chat_open_thread", "chat_reopen_discussion", "chat_resolve_discussion", "chat_send_edit_message", "chat_send_message", "chat_start_edit_message", "clone_repo", "create_new_project", "open_git_settings_in_space", "open_main_toolbar_popup", "open_share_project", "open_space_clone_tab", "review_details_accept_changes", "review_details_add_participant_icon", "review_details_back_to_list", "review_details_change_commits_selection", "review_details_checkout_branch", "review_details_edit_participant", "review_details_open_project_in_space", "review_details_open_review_diff", "review_details_open_review_in_space", "review_details_resume_review", "review_details_select_details_tab", "review_details_show_timeline", "review_details_update_branch", "review_details_wait_for_response", "review_diff_close_leave_comment", "review_diff_leave_comment", "review_diff_loaded", "reviews_list_change_quick_filter", "reviews_list_change_text_filter", "reviews_list_log_in_link", "reviews_list_open_review", "reviews_list_refresh_action", "share_project", "start_creating_new_project", "create_review", "review_details_participant_action", "auto_auth_failed", "mark_as_unread", "open_ssh_settings_in_space", "mark_as_read", "open_diff", "create_review_opened", "create_review_back_to_list", "all_review_diff_loaded", "reviews_list_update_filters_action" ]
       }
     }
   }, {
@@ -3968,7 +4056,7 @@
     "rules" : {
       "event_id" : [ "{enum#_}", "{enum#__event_id}" ],
       "event_data" : {
-        "algorithm" : [ "{enum#__algorithm}", "{enum:ONE_TIP_SURROUNDWITH_SUMMER2020|ONE_TIP_EXTENDSELECTION_SUMMER2020|ONE_TIP_SWITCHER_SUMMER2020|LOCAL_SORT_SUMMER2020}", "{enum:tip_utility_and_ignore_used|tip_utility}", "{enum:random_ignore_used}" ],
+        "algorithm" : [ "{enum#__algorithm}", "{enum:ONE_TIP_SURROUNDWITH_SUMMER2020|ONE_TIP_EXTENDSELECTION_SUMMER2020|ONE_TIP_SWITCHER_SUMMER2020|LOCAL_SORT_SUMMER2020}", "{enum:tip_utility_and_ignore_used|tip_utility}", "{enum:random_ignore_used}", "{enum:usage_and_applicability|shuffle}" ],
         "feature_id" : [ "{util#tip_info}" ],
         "filename" : [ "{util#tip_info}" ],
         "keep_showing_after" : [ "{enum#boolean}" ],
@@ -3977,6 +4065,7 @@
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
         "time_passed" : [ "{regexp#integer}" ],
+        "tip_id" : [ "{util#tip_info}" ],
         "type" : [ "{enum#type}" ],
         "version" : [ "{regexp#version}" ]
       },
@@ -4015,7 +4104,7 @@
         "userAction" : [ "{enum:Shown|Aborted|Continued}" ]
       },
       "enums" : {
-        "__event_id" : [ "usage.navigate", "usage.shown", "tooManyResultsDialog", "scope.changed", "switch.tab", "item.chosen", "finished", "started", "open.in.tool.window" ]
+        "__event_id" : [ "usage.navigate", "usage.shown", "tooManyResultsDialog", "scope.changed", "switch.tab", "item.chosen", "finished", "started", "open.in.tool.window", "cancelled" ]
       }
     }
   }, {
@@ -4028,6 +4117,7 @@
       "event_id" : [ "{enum#_}" ],
       "event_data" : {
         "is_jb_team" : [ "{enum#boolean}" ],
+        "login_hash" : [ "{regexp#hash}" ],
         "metadata" : [ "{regexp#license_metadata}", "{enum:unknown}" ],
         "value" : [ "{enum#value}" ]
       },
@@ -4479,6 +4569,19 @@
       }
     }
   }, {
+    "id" : "vim.handlers",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:vim.handler}" ],
+      "event_data" : {
+        "handler" : [ "{enum:NORMAL_UNDEFINED|NORMAL_IDE|NORMAL_VIM|INSERT_UNDEFINED|INSERT_IDE|INSERT_VIM|VISUAL_AND_SELECT_UNDEFINED|VISUAL_AND_SELECT_IDE|VISUAL_AND_SELECT_VIM}" ],
+        "key_stroke" : [ "{enum:Ctrl+1|Ctrl+2|Ctrl+3|Ctrl+4|Ctrl+5|Ctrl+6|Ctrl+7|Ctrl+8|Ctrl+9|Ctrl+0|Ctrl+Shift+1|Ctrl+Shift+2|Ctrl+Shift+3|Ctrl+Shift+4|Ctrl+Shift+5|Ctrl+Shift+6|Ctrl+Shift+7|Ctrl+Shift+8|Ctrl+Shift+9|Ctrl+Shift+0|Ctrl+A|Ctrl+B|Ctrl+C|Ctrl+D|Ctrl+E|Ctrl+F|Ctrl+G|Ctrl+H|Ctrl+I|Ctrl+J|Ctrl+K|Ctrl+L|Ctrl+M|Ctrl+N|Ctrl+O|Ctrl+P|Ctrl+Q|Ctrl+R|Ctrl+S|Ctrl+T|Ctrl+U|Ctrl+V|Ctrl+W|Ctrl+X|Ctrl+Y|Ctrl+Z|Ctrl+Open Bracket|Ctrl+Close Bracket|Ctrl+Shift+A|Ctrl+Shift+B|Ctrl+Shift+C|Ctrl+Shift+D|Ctrl+Shift+E|Ctrl+Shift+F|Ctrl+Shift+G|Ctrl+Shift+H|Ctrl+Shift+I|Ctrl+Shift+J|Ctrl+Shift+K|Ctrl+Shift+L|Ctrl+Shift+M|Ctrl+Shift+N|Ctrl+Shift+O|Ctrl+Shift+P|Ctrl+Shift+Q|Ctrl+Shift+R|Ctrl+Shift+S|Ctrl+Shift+T|Ctrl+Shift+U|Ctrl+Shift+V|Ctrl+Shift+W|Ctrl+Shift+X|Ctrl+Shift+Y|Ctrl+Shift+Z|Ctrl+Shift+Open Bracket|Ctrl+Shift+Close Bracket}" ]
+      }
+    }
+  }, {
     "id" : "vim.options",
     "builds" : [ ],
     "versions" : [ {
@@ -4607,5 +4710,5 @@
       "version" : "Unknown|unknown.format|unknown|UNKNOWN|((\\d+\\.?)*\\d+)"
     }
   },
-  "version" : "2799"
+  "version" : "2883"
 }

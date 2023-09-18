@@ -23,10 +23,10 @@ require('staline').setup({
     -- font_active = "bold"
   },
   mode_colors = {
-    n  = "#e5c07b",
-    i  = "#e06c75",
-    ic = "#c678dd",
-    c  = "#61afef",
+    n  = "#8FBCBB",
+    i  = "#BF616A",
+    ic = "#B48EAD",
+    c  = "#EBCB8B",
     v  = "#98c379", -- etc
   }
 })

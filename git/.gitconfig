@@ -5,10 +5,11 @@
 [core]
     excludesfiles = ~/.gitignore_global
     editor = nvim
+	autocrlf = input
 [pull]
     rebase = true
 [commit]
-    gpgsign = true
+	gpgsign = true
 [init]
     defaultBranch = main
 [fetch]
@@ -20,3 +21,6 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[push]
+	default = current
+	autoSetupRemote = true

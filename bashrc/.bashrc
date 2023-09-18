@@ -115,3 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# add global yarn bin location to path
+export PATH="$PATH:$(yarn global bin)"
+

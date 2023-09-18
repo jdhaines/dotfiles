@@ -2,139 +2,61 @@
   <component name="RecentProjectsManager">
     <option name="additionalInfo">
       <map>
-        <entry key="$USER_HOME$/git/vuecobalt">
+        <entry key="$USER_HOME$/.dotfiles">
           <value>
-            <RecentProjectMetaInfo frameTitle="vuecobalt – .prettierrc" projectWorkspaceId="2DG4ZeYgvFgRDyExgQYAjL4ZeGK">
-              <option name="activationTimestamp" value="1660312999800" />
+            <RecentProjectMetaInfo frameTitle=".dotfiles – .ideavimrc" projectWorkspaceId="2IBeq51KRjnHWZFiCfNqt4ZWMfw">
+              <option name="activationTimestamp" value="1669673649771" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.3345.108" />
-              <option name="buildTimestamp" value="1658513748622" />
-              <frame x="2568" y="40" width="2544" height="1392" />
+              <option name="build" value="WS-222.4345.14" />
+              <option name="buildTimestamp" value="1664946103930" />
+              <frame x="2564" y="15" width="2564" height="1427" />
               <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1659965810120" />
+              <option name="projectOpenTimestamp" value="1669659591140" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/git/exVibe">
+        <entry key="$USER_HOME$/git/jennyswebsite">
           <value>
-            <RecentProjectMetaInfo frameTitle="exVibe – devChecks.yml" projectWorkspaceId="2DRmv4ws6Q2eNrjQ1YOii0jQfh8">
-              <option name="activationTimestamp" value="1662653239580" />
+            <RecentProjectMetaInfo frameTitle="jennyswebsite – bookReviews.html" projectWorkspaceId="2IC7KtOh3cK6jUciE6rphJjasmd">
+              <option name="activationTimestamp" value="1669767138000" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.3739.57" />
-              <option name="buildTimestamp" value="1660674481006" />
-              <frame x="2568" y="40" width="2544" height="1392" />
+              <option name="build" value="WS-222.4345.14" />
+              <option name="buildTimestamp" value="1664946117411" />
+              <frame x="2564" y="15" width="2564" height="1427" />
               <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1662653223904" />
+              <option name="projectOpenTimestamp" value="1669673650141" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/git/hopper">
+        <entry key="$USER_HOME$/git/docs">
           <value>
-            <RecentProjectMetaInfo frameTitle="hopper – images.ts" projectWorkspaceId="2DG6JCCbjsydMkau53yugYOCPAS">
-              <option name="activationTimestamp" value="1663601549190" />
+            <RecentProjectMetaInfo frameTitle="docs – core.md" projectWorkspaceId="2IBciLB6XWP29B3G7fftTyQ3nKX">
+              <option name="activationTimestamp" value="1670071876900" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.3739.57" />
-              <option name="buildTimestamp" value="1660674498836" />
-              <frame x="2568" y="40" width="2544" height="1392" />
+              <option name="build" value="WS-222.4345.14" />
+              <option name="buildTimestamp" value="1664946071680" />
+              <frame x="2564" y="15" width="2564" height="1427" />
               <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1663601428187" />
+              <option name="projectOpenTimestamp" value="1669767138219" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/git/vuepressError">
+        <entry key="$USER_HOME$/git/aoc2022">
           <value>
-            <RecentProjectMetaInfo frameTitle="vuepressError – config.ts" projectWorkspaceId="2F2B9f9vVxirNwcsjR6hyAM19dh">
-              <option name="activationTimestamp" value="1663680298071" />
+            <RecentProjectMetaInfo frameTitle="aoc2022 – vitest.config.ts" opened="true" projectWorkspaceId="2IP8UzjStJx9bVvNvDfmqLtQfIO">
+              <option name="activationTimestamp" value="1670082866542" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152913691" />
-              <frame x="2568" y="40" width="1268" height="1392" />
+              <option name="build" value="WS-222.4345.14" />
+              <option name="buildTimestamp" value="1664946095234" />
+              <frame x="2564" y="15" width="2564" height="1427" />
               <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1663680148880" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/git/vuepressTemp">
-          <value>
-            <RecentProjectMetaInfo frameTitle="vuepressTemp – config.ts" projectWorkspaceId="2F2BSVUJyATMqW2NGpRoXb07OGc">
-              <option name="activationTimestamp" value="1663855174686" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152913691" />
-              <frame x="500" y="35" width="1412" height="1157" />
-              <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1663680298235" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/git/3dt">
-          <value>
-            <RecentProjectMetaInfo frameTitle="3dt – release-please.yml" projectWorkspaceId="2DqXd42Qv49O2dde3KQQm3nBzgA">
-              <option name="activationTimestamp" value="1663958494640" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152950735" />
-              <frame x="2568" y="40" width="2544" height="1392" />
-              <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1663944089654" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/git/sfdocs">
-          <value>
-            <RecentProjectMetaInfo frameTitle="sfdocs – flowchart.jpg" projectWorkspaceId="2E3EOIaNnQSNRq6gTI6hh2vLakq">
-              <option name="activationTimestamp" value="1664974958062" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152935754" />
-              <frame x="3844" y="191" width="1268" height="1392" />
-              <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1664629703960" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/git/sfm">
-          <value>
-            <RecentProjectMetaInfo frameTitle="sfm – pre-commit" projectWorkspaceId="2FiVemvVKYrb3GmeYYPvlq7sHCz">
-              <option name="activationTimestamp" value="1664985882548" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152935754" />
-              <frame x="2568" y="191" width="2544" height="1392" />
-              <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1664974988508" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/git/ogre">
-          <value>
-            <RecentProjectMetaInfo frameTitle="ogre – goodDev/Project.yaml" projectWorkspaceId="2FirjiHyb2Yg1Dk5mbqanEY08UK">
-              <option name="activationTimestamp" value="1666278965425" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152908383" />
-              <frame x="3844" y="40" width="1268" height="1392" />
-              <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1665170980356" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/git/newDocs">
-          <value>
-            <RecentProjectMetaInfo frameTitle="newDocs – saf.md" opened="true" projectWorkspaceId="2E5fmZuMnOVVaOXN0e9fEyC0IbX">
-              <option name="activationTimestamp" value="1666707313763" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="WS-222.4167.31" />
-              <option name="buildTimestamp" value="1663152949112" />
-              <frame x="2568" y="40" width="2544" height="1392" />
-              <option name="productionCode" value="WS" />
-              <option name="projectOpenTimestamp" value="1666278965739" />
+              <option name="projectOpenTimestamp" value="1670071877210" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/git/newDocs" />
+    <option name="lastOpenedProject" value="$USER_HOME$/git/aoc2022" />
     <option name="lastProjectLocation" value="$USER_HOME$/git" />
   </component>
 </application>

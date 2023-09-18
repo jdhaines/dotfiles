@@ -1,95 +1,59 @@
-----
--- keybindings
-----
-
--- Variables - Global
-vim.o.scrolloff = 10
-vim.g.mapleader = " "
-vim.opt.termguicolors = true
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.g.splitbelow = true
-vim.g.splitright = true
-vim.g.smarttab = true
-vim.g.tabstop = 8
-vim.g.shiftwidth = 2
-vim.g.softtabstop = 0
-vim.g.expandtab = true
-
--- Variables - Local to Window
-vim.wo.cursorline = true
-vim.wo.relativenumber = true
-vim.wo.number = true
-
--- Variables - Local to Buffer
-
-
-----
--- keymappings
-----
-
-local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
+-- Mapping helper
+local mapper = function(mode, key, result)
+  vim.keymap.set(mode, key, result, { noremap = true, silent = true })
+end
 
 -- Cancel search highlighting with ESC
-keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", opts)
+mapper("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
 
 --Remap space as leader key
-keymap("n", "<Space>", "<Nop>", opts)
-keymap("v", "<Space>", "<Nop>", opts)
-
--- Alt j & k move lines and blocks
-keymap('n', '<A-j>', ':MoveLine(1)<CR>', opts)
-keymap('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
---keymap('n', '<A-h>', ':MoveHChar(-1)<CR>', opts) -- don't want horizontal movement
---keymap('n', '<A-l>', ':MoveHChar(1)<CR>', opts) -- don't want horizontal movement
-keymap('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
-keymap('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
---keymap('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts) -- don't want horizontal movement
---keymap('v', '<A-l>', ':MoveHBlock(1)<CR>', opts) -- don't want horizontal movement
-
--- jj works like esc
-keymap('i', 'jj', '<Esc>', opts)
+mapper("n", "<Space>", "<Nop>")
+mapper("v", "<Space>", "<Nop>")
 
 -- hop keybindings
--- keymap('n', '<Leader><Leader>b', '<cmd>HopWordBC<CR>', opts)
-keymap('n', '<Leader>w', '<cmd>HopWordMW<CR>', opts)
--- keymap('v', '<Leader><Leader>b', '<cmd>HopWordBC<CR>', opts)
-keymap('v', '<Leader>w', '<cmd>HopWordMW<CR>', opts)
--- keymap('n', 's', '<cmd>HopChar2AC<CR>', opts)
--- keymap('n', 'S', '<cmd>HopChar2BC<CR>', opts)
--- keymap('v', 's', '<cmd>HopChar2AC<CR>', opts)
--- keymap('v', 'S', '<cmd>HopChar2BC<CR>', opts)
+mapper("n", "<Leader>w", "<cmd>HopWordMW<CR>")
+mapper("v", "<Leader>w", "<cmd>HopWordMW<CR>")
 
--- LSP Keybindings
-keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', opts)
-keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>', opts)
-keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', opts)
-keymap('n', 'gw', ':lua vim.lsp.buf.document_symbol()<cr>', opts)
-keymap('n', 'gw', ':lua vim.lsp.buf.workspace_symbol()<cr>', opts)
-keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', opts)
-keymap('n', 'gt', ':lua vim.lsp.buf.type_definition()<cr>', opts)
-keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', opts)
-keymap('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<cr>', opts)
-keymap('n', '<leader>af', ':lua vim.lsp.buf.code_action()<cr>', opts)
-keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', opts)
+-- jj works like esc
+mapper("i", "jj", "<Esc>")
+
+-- Alt j & k move lines and blocks
+mapper("n", "<A-j>", ":MoveLine(1)<CR>")
+mapper("n", "<A-k>", ":MoveLine(-1)<CR>")
+mapper("v", "<A-j>", ":MoveBlock(1)<CR>")
+mapper("v", "<A-k>", ":MoveBlock(-1)<CR>")
 
 -- nvim-tree Keybindings
-keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
-keymap('v', '<leader>e', ':NvimTreeToggle<cr>', opts)
+mapper("n", "<leader>e", ":NvimTreeToggle<cr>")
+mapper("v", "<leader>e", ":NvimTreeToggle<cr>")
 
 -- Telescope Keybindings
-keymap('n', '<leader>f', ':Telescope find_files<cr>', opts)
-keymap('n', '<leader>g', ':Telescope live_grep<cr>', opts)
-keymap('n', '<leader>c', ':Telescope git_commits<cr>', opts)
+mapper("n", "<leader>f", ":Telescope find_files hidden=true<cr>")
+mapper("n", "<leader>g", ":Telescope live_grep<cr>")
+mapper("n", "<leader>c", ":Telescope git_commits<cr>")
 
 -- Better new lines without comments
-keymap('n', 'o', 'o<Esc>^Da', opts)
-keymap('n', 'O', 'O<Esc>^Da', opts)
+mapper("n", "o", "o<Esc>^Da")
+mapper("n", "O", "O<Esc>^Da")
+
+-- Center screen after moving down or up
+mapper("n", "<C-d>", "<C-d>zz")
+mapper("n", "<C-u>", "<C-u>zz")
 
 -- Format Document
-keymap('n', '<leader>F', ':FormatWrite<CR>', opts)
+mapper("n", "<leader>F", "<cmd>lua vim.lsp.buf.format()<cr>")
+-- mapper("n", "<leader>F", ":FormatWrite<CR>")
 
-
+-- LSP Keybindings
+mapper("n", "gd", ":lua vim.lsp.buf.definition()<cr>")
+mapper("n", "gD", ":lua vim.lsp.buf.declaration()<cr>")
+mapper("n", "gi", ":lua vim.lsp.buf.implementation()<cr>")
+mapper("n", "gw", ":lua vim.lsp.buf.document_symbol()<cr>")
+mapper("n", "gw", ":lua vim.lsp.buf.workspace_symbol()<cr>")
+mapper("n", "gr", ":lua vim.lsp.buf.references()<cr>")
+mapper("n", "ge", ":lua vim.diagnostic.open_float()<cr>")
+mapper("n", "gt", ":lua vim.lsp.buf.type_definition()<cr>")
+mapper("n", "K", ":lua vim.lsp.buf.hover()<cr>")
+mapper("n", "<c-k>", ":lua vim.lsp.buf.signature_help()<cr>")
+mapper("n", "<leader>af", ":lua vim.lsp.buf.code_action()<cr>")
+mapper("n", "<leader>rn", ":lua vim.lsp.buf.rename()<cr>")
