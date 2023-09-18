@@ -175,10 +175,10 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   
 # spotify
-  curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-# echo "after spotify"
-# breaker
+echo "after spotify"
+breaker
 
 # inkscape
 sudo add-apt-repository -y ppa:inkscape.dev/stable
@@ -190,27 +190,17 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-echo "after gh cli"
-breaker
 
 # hashicorp
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-echo "after wget"
-breaker
-
 gpg --no-default-keyring \
 --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
 --fingerprint
-echo "after gpg"
-breaker
-
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
-echo "after hashicorp"
-breaker
 
 # charm
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
@@ -220,7 +210,7 @@ echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
 # yubikey
-sudo add-apt-repository ppa:yubico/stable
+sudo add-apt-repository -y ppa:yubico/stable
 
 # kubectl
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
@@ -232,33 +222,23 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.
  
 ### Install from New Repos ###
 addrepos
-echo "after add repos"
-breaker
-
 sudo apt update -q 
 testcmd ffmpeg
 addpkg yubikey-manager
 testcmd ykman
 addcmd fish
 addpkg gh
-echo "after gh"
-breaker
- 
 addpkg nodejs
 testcmd node
 testcmd npm
 testcmd npx
 addpkg kdenlive
 addpkg obs-studio
-breaker
- 
 addpkg inkscape
 addpkg containerd.io
 addpkg docker-ce 
 addpkg docker-ce-cli 
 addpkg docker-compose-plugin 
-breaker
- 
 addpkg spotify-client
 addpkg terraform
 addcmd vhs
@@ -266,7 +246,7 @@ addcmd yarn
 addpkg git-lfs
 addcmd kubectl
 addcmd helm
-breaker
+#breaker
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker
@@ -310,7 +290,7 @@ curl -fsSL https://get.pulumi.com | sh
 sudo cp -r ~/.pulumi/bin/. /usr/local/bin/
 testcmd pulumi
 
-# lf
+# lf #TODO
 curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
   | grep "browser_download_url.*linux-amd64.tar.gz" \
   | cut -d : -f 2,3 \
@@ -319,8 +299,10 @@ curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
 sudo tar -xf lf-linux-amd64.tar.gz  
 sudo cp ~/lf /usr/local/bin
 testcmd lf
+echo "after lf"
+breaker
 
-# yamlfmt
+# yamlfmt #TODO
 curl -s https://api.github.com/repos/google/yamlfmt/releases/latest \
   | grep "browser_download_url.*Linux_x86_64.tar.gz" \
   | cut -d : -f 2,3 \
@@ -330,28 +312,37 @@ sudo mv yamlfmt* yamlfmt.tar.gz
 sudo tar -xf yamlfmt.tar.gz
 sudo cp ~/yamlfmt /usr/local/bin
 testcmd yamlfmt
+echo "after yamlfmt"
 breaker
 
-# discord
+# discord #TODO
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo apt install -qy ./discord.deb
 testcmd discord
+echo "after discord"
+breaker
 
-# slack
+# slack TODO
 wget -O slack.deb "https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb"
 sudo apt install -qy ./slack.deb
 testcmd slack
+echo "after slack"
+breaker
 
-# alacritty
+# alacritty #TODO
 cargo install alacritty
 sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 testcmd alacritty
+echo "after alacritty"
+breaker
 
-# lazygit
+# lazygit #TODO
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 testcmd lazygit
+echo "after lazygit"
+breaker
 
 # terragrunt
 TERRAGRUNT_VERSION=$(curl -s "https://api.github.com/repos/gruntwork-io/terragrunt/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
@@ -359,12 +350,13 @@ curl -Lo terragrunt "https://github.com/gruntwork-io/terragrunt/releases/downloa
 chmod +x terragrunt
 sudo mv terragrunt /usr/local/bin
 testcmd terragrunt
-breaker
 
-# Google Chrome
+# Google Chrome #TODO
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -qy ./google-chrome-stable_current_amd64.deb
 testcmd google-chrome
+echo "after chrome"
+breaker
 
 # psutils & pygit2 for bumblebee-status bar on i3
 python3 -m pip install --no-input psutil pygit2
@@ -384,9 +376,10 @@ if ! [ -f "$SSH_DIR/id_rsa" ]; then
     chmod 600 "$SSH_DIR/authorized_keys"
 fi
 
-# JetBrains Toolbox
+# JetBrains Toolbox #TODO
 curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
 testcmd jetbrains-toolbox
+echo "after jetbrains toolbox"
 breaker
 
 # Install Bumblebee-status bar for i3
