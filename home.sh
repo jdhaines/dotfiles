@@ -151,15 +151,17 @@ addpkg xdotool
 function addrepos() {
   
 # fish
-sudo apt-add-repository -qy ppa:fish-shell/release-3
+sudo add-apt-repository -y ppa:fish-shell/release-3
 
 # node
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+breaker
+echo "after node"
 
 # kdenlive
-sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
+sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
 
 # docker
 sudo mkdir -p /etc/apt/keyrings
@@ -176,6 +178,8 @@ breaker
 # spotify
   curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+breaker
+echo "after spotify"
 
 # inkscape
 sudo add-apt-repository ppa:inkscape.dev/stable
@@ -196,6 +200,7 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
 breaker
+echo "after hashicorp"
 
 # charm
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
@@ -210,15 +215,16 @@ sudo add-apt-repository ppa:yubico/stable
 # kubectl
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-
 # helm
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 }
-breaker
  
 ### Install from New Repos ###
 addrepos
+breaker
+echo "after add repos"
+
 sudo apt update -q 
 testcmd ffmpeg
 addpkg yubikey-manager
@@ -226,6 +232,7 @@ testcmd ykman
 addcmd fish
 addpkg gh
 breaker
+echo "after gh"
  
 addpkg nodejs
 testcmd node
