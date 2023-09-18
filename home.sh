@@ -157,8 +157,8 @@ sudo add-apt-repository -y ppa:fish-shell/release-3
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-breaker
-echo "after node"
+# echo "after node"
+# breaker
 
 # kdenlive
 sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
@@ -173,13 +173,12 @@ echo \
 # yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-breaker
   
 # spotify
   curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-breaker
-echo "after spotify"
+# echo "after spotify"
+# breaker
 
 # inkscape
 sudo add-apt-repository ppa:inkscape.dev/stable
@@ -191,16 +190,21 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+echo "after gh cli"
+breaker
 
 # hashicorp
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+gpg --no-default-keyring \
+--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+--fingerprint
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
-breaker
 echo "after hashicorp"
+breaker
 
 # charm
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
@@ -222,8 +226,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.
  
 ### Install from New Repos ###
 addrepos
-breaker
 echo "after add repos"
+breaker
 
 sudo apt update -q 
 testcmd ffmpeg
@@ -231,8 +235,8 @@ addpkg yubikey-manager
 testcmd ykman
 addcmd fish
 addpkg gh
-breaker
 echo "after gh"
+breaker
  
 addpkg nodejs
 testcmd node
