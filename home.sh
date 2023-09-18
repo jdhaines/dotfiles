@@ -6,6 +6,11 @@ DEBIAN_FRONTEND=noninteractive
 
 ### Functions ###
 
+function breaker()
+{
+  read -p "Press [Enter] key to continue..."
+}
+
 function successwriter() 
 {
   echo ""
@@ -59,7 +64,6 @@ function testcmd()
 
 ### Install Gum for UI ###
 sudo apt install -yq curl
-testcmd curl
 curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
   | grep "browser_download_url.*Linux_x86_64.tar.gz" \
   | cut -d : -f 2,3 \
@@ -70,66 +74,87 @@ sudo mv gum* ~
 sudo mv gum* gum.tar.gz
 sudo tar -xf gum.tar.gz
 sudo cp ~/gum /usr/local/bin
+breaker
 
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
 #   addcmd - installs package, ensures that command is avialable in the PATH
+testcmd curl
 testcmd gum
+breaker
 
 addpkg apt-transport-https
 addcmd arandr
 addpkg bat
 addpkg pulseaudio-utils
 testcmd pactl
+breaker
+
 addpkg build-essential
 addpkg ca-certificates
 addcmd cargo
 addcmd cmake
 addcmd feh
+breaker
+
 addcmd flameshot
 addcmd gimp
 addcmd git
 addpkg gnome-tweaks
 addpkg gnupg
+breaker
+
 addcmd guvcview
 addcmd i3
 addcmd indent
 addcmd jq
 addcmd kleopatra
+breaker
+
 addpkg libanyevent-i3-perl
 addpkg libfontconfig1-dev
 addpkg libfreetype6-dev
 addpkg libfuse2
 addpkg libxcb-xfixes0-dev
+breaker
+
 addpkg libxkbcommon-dev
 addpkg lsb-release
 addcmd tmux
 addcmd make
 addcmd picom
+breaker
+
 addpkg pkg-config
 addcmd python3
 addpkg python3-pip
 addcmd rclone
 addcmd rclone-browser
+breaker
+
 addpkg ripgrep
 addcmd rofi
 addpkg scdaemon
 addpkg software-properties-common
 addcmd stow
+breaker
+
 addcmd vlc
 addcmd wget
 addpkg x11-xserver-utils
 addcmd xclip
 addcmd xcwd
 addpkg xdotool
+breaker
 
 ### Add Repos ###
 function addrepos() {
+  
 # fish
 sudo apt-add-repository -qy ppa:fish-shell/release-3
 
 # node
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
 # kdenlive
 sudo add-apt-repository -qy ppa:kdenlive/kdenlive-stable
@@ -144,6 +169,7 @@ echo \
 # yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+breaker
   
 # spotify
   curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
@@ -167,6 +193,7 @@ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
+breaker
 
 # charm
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
@@ -186,6 +213,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 }
+breaker
  
 ### Install from New Repos ###
 addrepos
@@ -195,16 +223,22 @@ addpkg yubikey-manager
 testcmd ykman
 addcmd fish
 addpkg gh
+breaker
+ 
 addpkg nodejs
 addpkg npm
 testcmd npx
 addpkg kdenlive
 addpkg obs-studio
+breaker
+ 
 addpkg inkscape
 addpkg containerd.io
 addpkg docker-ce 
 addpkg docker-ce-cli 
 addpkg docker-compose-plugin 
+breaker
+ 
 addpkg spotify-client
 addpkg terraform
 addcmd vhs
@@ -212,6 +246,7 @@ addcmd yarn
 addpkg git-lfs
 addcmd kubectl
 addcmd helm
+breaker
 
 ### Post Install ###
 sudo usermod -aG docker $USER  # docker
@@ -236,6 +271,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo wget https://static.snyk.io/cli/latest/snyk-linux -O /usr/local/bin/snyk
 sudo chmod +x /usr/local/bin/snyk
 testcmd snyk
+breaker
 
 # neovim
 curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
@@ -274,6 +310,7 @@ sudo mv yamlfmt* yamlfmt.tar.gz
 sudo tar -xf yamlfmt.tar.gz
 sudo cp ~/yamlfmt /usr/local/bin
 testcmd yamlfmt
+breaker
 
 # discord
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
@@ -302,6 +339,7 @@ curl -Lo terragrunt "https://github.com/gruntwork-io/terragrunt/releases/downloa
 chmod +x terragrunt
 sudo mv terragrunt /usr/local/bin
 testcmd terragrunt
+breaker
 
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -329,6 +367,7 @@ fi
 # JetBrains Toolbox
 curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
 testcmd jetbrains-toolbox
+breaker
 
 # Install Bumblebee-status bar for i3
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
@@ -344,6 +383,7 @@ chmod +x tree-sitter-linux-x64
 mv tree-sitter-linux-x64 tree-sitter
 sudo mv tree-sitter /usr/local/bin
 testcmd tree-sitter
+breaker
 
 ### Stow Dotfiles ###
 cd ~/.dotfiles
@@ -390,6 +430,7 @@ cd $HOME
 command -v fish | sudo tee -a /etc/shells
 # use fish as default shell
 sudo chsh -s $(which fish) $(whoami)
+breaker
 
 ### Cleanup ###
 cd ~
