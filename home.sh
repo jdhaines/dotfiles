@@ -181,10 +181,10 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 # breaker
 
 # inkscape
-sudo add-apt-repository ppa:inkscape.dev/stable
+sudo add-apt-repository -y ppa:inkscape.dev/stable
 
 # obs studio
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository -y ppa:obsproject/obs-studio
 
 # github cli
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
@@ -197,9 +197,15 @@ breaker
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "after wget"
+breaker
+
 gpg --no-default-keyring \
 --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
 --fingerprint
+echo "after gpg"
+breaker
+
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
