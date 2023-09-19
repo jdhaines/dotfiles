@@ -113,7 +113,7 @@ addcmd kleopatra
 
 addpkg libanyevent-i3-perl
 addpkg libfontconfig1-dev
-addpkg libfreetype6-dev
+addpkg libfreetype-dev
 addpkg libfuse2
 addpkg libxcb-xfixes0-dev
 #breaker
@@ -283,7 +283,7 @@ mv nvim.appimage nvim
 sudo cp nvim /usr/local/bin/
 sudo chmod +x /usr/local/bin/nvim
 testcmd nvim
-nvim --headless +'Slowly install' +qall
+neovim --headless +'Slowly install' +qall
 
 # pulumi
 curl -fsSL https://get.pulumi.com | sh
@@ -299,8 +299,6 @@ curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
 sudo tar -xf lf-linux-amd64.tar.gz  
 sudo cp ~/lf /usr/local/bin
 testcmd lf
-echo "after lf"
-breaker
 
 # yamlfmt #TODO
 curl -s https://api.github.com/repos/google/yamlfmt/releases/latest \
@@ -312,37 +310,27 @@ sudo mv yamlfmt* yamlfmt.tar.gz
 sudo tar -xf yamlfmt.tar.gz
 sudo cp ~/yamlfmt /usr/local/bin
 testcmd yamlfmt
-echo "after yamlfmt"
-breaker
 
 # discord #TODO
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo apt install -qy ./discord.deb
 testcmd discord
-echo "after discord"
-breaker
 
 # slack TODO
 wget -O slack.deb "https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb"
 sudo apt install -qy ./slack.deb
 testcmd slack
-echo "after slack"
-breaker
 
 # alacritty #TODO
 cargo install alacritty
 sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 testcmd alacritty
-echo "after alacritty"
-breaker
 
 # lazygit #TODO
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 testcmd lazygit
-echo "after lazygit"
-breaker
 
 # terragrunt
 TERRAGRUNT_VERSION=$(curl -s "https://api.github.com/repos/gruntwork-io/terragrunt/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
@@ -355,8 +343,6 @@ testcmd terragrunt
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -qy ./google-chrome-stable_current_amd64.deb
 testcmd google-chrome
-echo "after chrome"
-breaker
 
 # psutils & pygit2 for bumblebee-status bar on i3
 python3 -m pip install --no-input psutil pygit2
@@ -396,7 +382,6 @@ chmod +x tree-sitter-linux-x64
 mv tree-sitter-linux-x64 tree-sitter
 sudo mv tree-sitter /usr/local/bin
 testcmd tree-sitter
-breaker
 
 ### Stow Dotfiles ###
 cd ~/.dotfiles
