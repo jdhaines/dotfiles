@@ -40,7 +40,7 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |Command|Notes|
 |---|---|
 |`:Slowly install`|Install current plugins list|
-|`:Slowly upgrade`|Upgrade currently installed plugins|
+|`:Slowly update`|Upgrade currently installed plugins|
 |`:Slowly reinstall`|Reinstall current plugin list|
 |`:Slowly restore`|Restore saved plugin list|
 |`:Slowly save`|Save current plugins to restorable file|
