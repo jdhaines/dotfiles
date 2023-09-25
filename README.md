@@ -50,6 +50,7 @@ Things should set up correctly automatically.  You might need to run neovim twic
 |`:TSUpdate`|Update Tree-Sitter/Highlighting Plugins|
 |`:TSInstall lang`|Install new tree-sitter module|
 |`:TSInstallInfo`|Check other modules to be installed|
+|`:Copilot setup`|Configure GitHub Copilot and Login|
 
 |Key|Function|
 |---|---|
