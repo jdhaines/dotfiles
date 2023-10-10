@@ -7,8 +7,8 @@ end
 mapper("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
 
 --Remap space as leader key
-mapper("n", "<Space>", "<Nop>")
-mapper("v", "<Space>", "<Nop>")
+--mapper("n", "<Space>", "<Nop>")
+--mapper("v", "<Space>", "<Nop>")
 
 -- hop keybindings
 mapper("n", "<Leader>w", "<cmd>HopWordMW<CR>")

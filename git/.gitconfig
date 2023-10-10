@@ -1,7 +1,7 @@
 [user]
     name = Josh Haines
     email = Josh@JoshHaines.com
-  	signingkey = 26BA967CFF531F8E
+	signingkey = 24030EE0FF40D4B6!
 [core]
     excludesfiles = ~/.gitignore_global
     editor = nvim
