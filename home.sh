@@ -7,69 +7,60 @@ NODE_MAJOR=20
 
 ### Functions ###
 
-function breaker()
-{
-  read -p "Press [Enter] key to continue..."
+function breaker() {
+	read -p "Press [Enter] key to continue..."
 }
 
-function successwriter() 
-{
-  echo ""
-  gum style --foreground 77 --border-foreground 77 --border rounded -- "$1 Installed"
-  echo ""
+function successwriter() {
+	echo ""
+	gum style --foreground 77 --border-foreground 77 --border rounded -- "$1 Installed"
+	echo ""
 }
-function failurewriter() 
-{
-  echo ""
-  gum style --foreground 212 --border-foreground 212 --border rounded "$1 Failed"
-  echo ""
+function failurewriter() {
+	echo ""
+	gum style --foreground 212 --border-foreground 212 --border rounded "$1 Failed"
+	echo ""
 }
 
 # pass parameter to install with apt, and verify it got installed
-function addpkg()
-{
-  echo "Installing $1..."
-  sudo apt install -qy $1
-  if dpkg -s $1 2>/dev/null >/dev/null
-  then
-    successwriter $1
-  else
-    failurewriter $1
-  fi
+function addpkg() {
+	echo "Installing $1..."
+	sudo apt install -qy $1
+	if dpkg -s $1 2>/dev/null >/dev/null; then
+		successwriter $1
+	else
+		failurewriter $1
+	fi
 }
 
 # pass parameter to install with apt and make sure it's callable in the PATH
-function addcmd()
-{
-  echo "Installing $1..."
-  sudo apt install -qy $1
-  if command -v $1 &> /dev/null
-  then
-    successwriter $1
-  else
-    failurewriter $1
-  fi
+function addcmd() {
+	echo "Installing $1..."
+	sudo apt install -qy $1
+	if command -v $1 &>/dev/null; then
+		successwriter $1
+	else
+		failurewriter $1
+	fi
 }
 
 # pass parameter to make sure cmd is available and in the PATH
-function testcmd()
-{
-  echo "Installing $1..."
-  if command -v $1 &> /dev/null
-  then
-    successwriter $1
-  else
-    failurewriter $1
-  fi
+function testcmd() {
+	echo "Installing $1..."
+	if command -v $1 &>/dev/null; then
+		successwriter $1
+	else
+		failurewriter $1
+	fi
 }
 
 ### Install Gum for UI ###
 sudo apt install -yq curl
-curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest \
-  | grep "browser_download_url.*Linux_x86_64.tar.gz" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | wget -qi -
+curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest |
+	grep "browser_download_url.*Linux_x86_64.tar.gz" |
+	cut -d : -f 2,3 |
+	tr -d \" |
+	wget -qi -
 sudo rm -rf *.sbom
 sudo mv gum* gum.tar.gz
 sudo tar -xf gum.tar.gz
@@ -149,80 +140,80 @@ addpkg xdotool
 
 ### Add Repos ###
 function addrepos() {
-  
-# fish
-sudo add-apt-repository -y ppa:fish-shell/release-3
 
-# node
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-# echo "after node"
-# breaker
+	# fish
+	sudo add-apt-repository -y ppa:fish-shell/release-3
 
-# kdenlive
-sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
+	# node
+	sudo mkdir -p /etc/apt/keyrings
+	curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+	echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+	# echo "after node"
+	# breaker
 
-# docker
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+	# kdenlive
+	sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
 
-# yarn
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  
-# spotify
-curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-echo "after spotify"
-breaker
+	# docker
+	sudo mkdir -p /etc/apt/keyrings
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+	echo \
+		"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
-# inkscape
-sudo add-apt-repository -y ppa:inkscape.dev/stable
+	# yarn
+	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-# obs studio
-sudo add-apt-repository -y ppa:obsproject/obs-studio
+	# spotify
+	curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+	echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+	echo "after spotify"
+	breaker
 
-# github cli
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+	# inkscape
+	sudo add-apt-repository -y ppa:inkscape.dev/stable
 
-# hashicorp
-wget -O- https://apt.releases.hashicorp.com/gpg | \
-gpg --dearmor | \
-sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-gpg --no-default-keyring \
---keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
---fingerprint
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-sudo tee /etc/apt/sources.list.d/hashicorp.list
+	# obs studio
+	sudo add-apt-repository -y ppa:obsproject/obs-studio
 
-# charm
-curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
-echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+	# github cli
+	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg &&
+		sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg &&
+		echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 
-# git lfs
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+	# hashicorp
+	wget -O- https://apt.releases.hashicorp.com/gpg |
+		gpg --dearmor |
+		sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg >/dev/null
+	gpg --no-default-keyring \
+		--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+		--fingerprint
+	echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
+		sudo tee /etc/apt/sources.list.d/hashicorp.list
 
-# yubikey
-sudo add-apt-repository -y ppa:yubico/stable
+	# charm
+	curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+	echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
 
-# kubectl
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-# helm
-curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+	# git lfs
+	curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
+	# yubikey
+	sudo add-apt-repository -y ppa:yubico/stable
+
+	# kubectl
+	curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+	echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+	# helm
+	curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg >/dev/null
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 }
- 
+
 ### Install from New Repos ###
 addrepos
-sudo apt update -q 
+sudo apt update -q
 testcmd ffmpeg
 addpkg yubikey-manager
 testcmd ykman
@@ -236,9 +227,9 @@ addpkg kdenlive
 addpkg obs-studio
 addpkg inkscape
 addpkg containerd.io
-addpkg docker-ce 
-addpkg docker-ce-cli 
-addpkg docker-compose-plugin 
+addpkg docker-ce
+addpkg docker-ce-cli
+addpkg docker-compose-plugin
 addpkg spotify-client
 addpkg terraform
 addcmd vhs
@@ -249,10 +240,10 @@ addcmd helm
 #breaker
 
 ### Post Install ###
-sudo usermod -aG docker $USER  # docker
-export PATH="$(yarn global bin):$PATH"  # yarn
-sudo dpkg-reconfigure i3  # i3
-mkdir -p ~/.local/bin && ln -s /usr/bin/batcat ~/.local/bin/bat  # bat fix
+sudo usermod -aG docker $USER                                   # docker
+export PATH="$(yarn global bin):$PATH"                          # yarn
+sudo dpkg-reconfigure i3                                        # i3
+mkdir -p ~/.local/bin && ln -s /usr/bin/batcat ~/.local/bin/bat # bat fix
 
 ### Custom Installs ###
 cd ~
@@ -274,16 +265,16 @@ testcmd snyk
 breaker
 
 # neovim
-curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
-  | grep "browser_download_url.*vim.appimage" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | wget -qi -
+curl -s https://api.github.com/repos/neovim/neovim/releases/latest |
+	grep "browser_download_url.*vim.appimage" |
+	cut -d : -f 2,3 |
+	tr -d \" |
+	wget -qi -
 mv nvim.appimage nvim
+sudo chmod +x nvim
+sudo rm /usr/local/bin/nvim
 sudo cp nvim /usr/local/bin/
-sudo chmod +x /usr/local/bin/nvim
 testcmd nvim
-neovim --headless +'Slowly install' +qall
 
 # pulumi
 curl -fsSL https://get.pulumi.com | sh
@@ -291,21 +282,33 @@ sudo cp -r ~/.pulumi/bin/. /usr/local/bin/
 testcmd pulumi
 
 # lf #TODO
-curl -s https://api.github.com/repos/gokcehan/lf/releases/latest \
-  | grep "browser_download_url.*linux-amd64.tar.gz" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | wget -qi -
-sudo tar -xf lf-linux-amd64.tar.gz  
+curl -s https://api.github.com/repos/gokcehan/lf/releases/latest |
+	grep "browser_download_url.*linux-amd64.tar.gz" |
+	cut -d : -f 2,3 |
+	tr -d \" |
+	wget -qi -
+sudo tar -xf lf-linux-amd64.tar.gz
 sudo cp ~/lf /usr/local/bin
 testcmd lf
 
+# zellij
+curl -s https://api.github.com/repos/zellij-org/zellij/releases/latest |
+	grep "browser_download_url.*zellij-x86_64-unknown-linux-musl.tar.gz" |
+	cut -d : -f 2,3 |
+	tr -d \" |
+	wget -qi -
+sudo mv zellij* zellij.tar.gz
+sudo tar -xf zellij.tar.gz
+sudo chmod +x zellij
+sudo cp zellij /usr/local/bin
+testcmd zellij
+
 # yamlfmt #TODO
-curl -s https://api.github.com/repos/google/yamlfmt/releases/latest \
-  | grep "browser_download_url.*Linux_x86_64.tar.gz" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | wget -qi -
+curl -s https://api.github.com/repos/google/yamlfmt/releases/latest |
+	grep "browser_download_url.*Linux_x86_64.tar.gz" |
+	cut -d : -f 2,3 |
+	tr -d \" |
+	wget -qi -
 sudo mv yamlfmt* yamlfmt.tar.gz
 sudo tar -xf yamlfmt.tar.gz
 sudo cp ~/yamlfmt /usr/local/bin
@@ -327,13 +330,13 @@ sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 testcmd alacritty
 
 # lazygit #TODO
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 testcmd lazygit
 
 # terragrunt
-TERRAGRUNT_VERSION=$(curl -s "https://api.github.com/repos/gruntwork-io/terragrunt/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
+TERRAGRUNT_VERSION=$(curl -s "https://api.github.com/repos/gruntwork-io/terragrunt/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
 curl -Lo terragrunt "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
 chmod +x terragrunt
 sudo mv terragrunt /usr/local/bin
@@ -355,11 +358,11 @@ cd ~
 
 # SSH Key
 if ! [ -f "$SSH_DIR/id_rsa" ]; then
-    mkdir -p "$SSH_DIR"
-    chmod 700 "$SSH_DIR"
-    ssh-keygen -t ed25519 -f "$SSH_DIR/id_rsa" -N "" -C "Josh@JoshHaines.com"
-    cat "$SSH_DIR/id_rsa.pub" >> "$SSH_DIR/authorized_keys"
-    chmod 600 "$SSH_DIR/authorized_keys"
+	mkdir -p "$SSH_DIR"
+	chmod 700 "$SSH_DIR"
+	ssh-keygen -t ed25519 -f "$SSH_DIR/id_rsa" -N "" -C "Josh@JoshHaines.com"
+	cat "$SSH_DIR/id_rsa.pub" >>"$SSH_DIR/authorized_keys"
+	chmod 600 "$SSH_DIR/authorized_keys"
 fi
 
 # JetBrains Toolbox #TODO
@@ -372,11 +375,11 @@ breaker
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
 
 # Install tree-sitter-cli
-curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest \
-  | grep "browser_download_url.*linux-x64.gz" \
-  | cut -d : -f 2,3 \
-  | tr -d \" \
-  | wget -qi -
+curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest |
+	grep "browser_download_url.*linux-x64.gz" |
+	cut -d : -f 2,3 |
+	tr -d \" |
+	wget -qi -
 gzip -d tree-sitter-linux-x64.gz
 chmod +x tree-sitter-linux-x64
 mv tree-sitter-linux-x64 tree-sitter
@@ -434,10 +437,7 @@ breaker
 cd ~
 rm -rf google-chrome-stable_current_amd64.deb
 rm -rf nvim-linux64.deb
-rm -rf nvim.appimage
-rm -rf nvim.appimage.sha256sum
-rm -rf nvim.appimage.zsync
-rm -rf nvim.appimage.zsync.sha256sum
+rm -rf nvim.appimage*
 rm -rf lf-linux-amd64.tar.gz
 rm -rf lf
 rm -rf .fehbg
