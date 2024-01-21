@@ -136,7 +136,7 @@ addpkg x11-xserver-utils
 addcmd xclip
 addcmd xcwd
 addpkg xdotool
-#breaker
+breaker
 
 ### Add Repos ###
 function addrepos() {
@@ -213,6 +213,7 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
 
 ### Install from New Repos ###
 addrepos
+breaker
 sudo apt update -q
 testcmd ffmpeg
 addpkg yubikey-manager
@@ -328,7 +329,7 @@ testcmd slack
 cargo install alacritty
 sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 testcmd alacritty
-
+breaker
 # lazygit #TODO
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
@@ -402,6 +403,7 @@ stow neofetch
 stow arandr
 stow inkdrop
 cd ~
+breaker
 
 # Install Fisher & Configure Fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
