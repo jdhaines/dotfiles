@@ -136,6 +136,8 @@ addpkg x11-xserver-utils
 addcmd xclip
 addcmd xcwd
 addpkg xdotool
+addpkg lxpolkit
+addpkg pavucontrol
 breaker
 
 ### Add Repos ###
@@ -234,6 +236,7 @@ addpkg docker-compose-plugin
 addpkg spotify-client
 addpkg terraform
 addcmd vhs
+addcmd glow
 addcmd yarn
 addpkg git-lfs
 addcmd kubectl
@@ -374,6 +377,8 @@ breaker
 
 # Install Bumblebee-status bar for i3
 npx -y degit tobi-wan-kenobi/bumblebee-status $HOME/.dotfiles/bumblebee-status
+addpkg python3-psutil
+addpkg python3-pygit2
 
 # Install tree-sitter-cli
 curl -s https://api.github.com/repos/tree-sitter/tree-sitter/releases/latest |

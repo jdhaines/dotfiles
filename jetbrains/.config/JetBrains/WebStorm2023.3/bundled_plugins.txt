@@ -92,6 +92,8 @@ com.intellij.tasks|Other Tools
 
 com.intellij|null
 
+com.jetbrains.ae.database|null
+
 com.jetbrains.codeWithMe|null
 
 com.jetbrains.gateway.terminal|null
