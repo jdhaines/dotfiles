@@ -56,11 +56,12 @@ Things should set up correctly automatically. You might need to run neovim twice
 | ----------------- | --------------------------------------------------------------------------- |
 | `Space+w`         | Activate hop, type next two characters to hop                               |
 | `Space+e`         | Toggle nvim-tree                                                            |
-| `Space+f`         | Telescope fuzzy find                                                        |
+| `Space+f`         | Open Telescope (find)                                                           |
+| `Space+Space`     | Telescope fuzzy find                                                        |
 | `Ctrl+n/p`        | Telescope select item                                                       |
 | `Space+F`         | Format document and save                                                    |
-| `Space+g`         | Telescope grep search                                                       |
-| `Space+c`         | Telescope git commits                                                       |
+| `Space+g`         | Open Telescope (git)                                                       |
+| `Space+c`         | Open LSP menu                                                       |
 | `Ctrl+P`          | List completions                                                            |
 | `Tab/Shift + Tab` | Move through completions, Enter to Select                                   |
 | `zM/zR`           | Fold/Unfold All                                                             |
