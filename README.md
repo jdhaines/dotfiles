@@ -56,13 +56,15 @@ Things should set up correctly automatically. You might need to run neovim twice
 | ----------------- | --------------------------------------------------------------------------- |
 | `Space+w`         | Activate hop, type next two characters to hop                               |
 | `Space+e`         | Toggle nvim-tree                                                            |
-| `Space+f`         | Open Telescope (find)                                                           |
+| `Space+f`         | Open Telescope (find)                                                       |
 | `Space+Space`     | Telescope fuzzy find                                                        |
 | `Ctrl+n/p`        | Telescope select item                                                       |
 | `Space+F`         | Format document and save                                                    |
-| `Space+g`         | Open Telescope (git)                                                       |
-| `Space+c`         | Open LSP menu                                                       |
+| `Space+g`         | Open Telescope (git)                                                        |
+| `Space+c`         | Open LSP menu                                                               |
 | `Ctrl+P`          | List completions                                                            |
+| `Shift+k`         | List Help/Hints on underlying item                                          |
+| `Space+uh`        | Toggle greyed-out type hints                                                |
 | `Tab/Shift + Tab` | Move through completions, Enter to Select                                   |
 | `zM/zR`           | Fold/Unfold All                                                             |
 | `zm/zr`           | Fold/Unfold One                                                             |
