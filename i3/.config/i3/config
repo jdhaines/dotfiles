@@ -29,7 +29,7 @@ exec --no-startup-id lxpolkit
 
 # Picom
 exec_always --no-startup-id "picom --config $HOME/.config/picom/picom.conf -b"
-exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/blackhole1.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/cat-sound.png
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -236,8 +236,9 @@ bar {
   # status_command i3status
   # status_command ~/.dotfiles/bumblebee-status/bumblebee-status -m cpu memory battery time pasink pasource -p time.format="%H:%M" -t onedark-powerline
   status_command python3 ~/.config/i3/bumblebee-status/bumblebee-status \
-    -m datetime sensors cpu memory battery disk git pasink pasource \
+    -m datetime sensors cpu memory battery disk git pasink pasource pomodoro \
     -p datetime.format="%I:%M %p - %a - %e %b %Y" \
     sensors2.field_include="" sensors2.match_number=0\
-    -t nord-powerline
+    pomodoro.notify="notify-send 'Time is Up!'" \
+    -t catppuccin-macchiato
 }

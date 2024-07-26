@@ -2,13 +2,12 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# pnpm
-set -gx PNPM_HOME "/home/josh/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# go
+set --export GOROOT /usr/local/go
+set --export PATH $GOROOT/bin $PATH
+set --export GOPATH $HOME/golibs
+set --export PATH $GOPATH/bin $PATH
