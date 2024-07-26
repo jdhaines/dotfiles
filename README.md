@@ -63,6 +63,8 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `Ctrl+n/p`        | Telescope select item                                                       |
 | `Space+F`         | Format document and save                                                    |
 | `Space+c`         | Open LSP menu                                                               |
+| `Shift+h`         | Back to last buffer                                                         |
+| `gd`              | Go to item definition                                                       |
 | `Ctrl+P`          | List completions                                                            |
 | `Shift+k`         | List Help/Hints on underlying item                                          |
 | `Space+uh`        | Toggle greyed-out type hints                                                |
