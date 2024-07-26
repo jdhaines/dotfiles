@@ -57,10 +57,11 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `Space+w`         | Activate hop, type next two characters to hop                               |
 | `Space+e`         | Toggle nvim-tree                                                            |
 | `Space+f`         | Open Telescope (find)                                                       |
+| `Space+/`         | Open Telescope (fuzzy find)                                                 |
+| `Space+g`         | Open Telescope (git)                                                        |
 | `Space+Space`     | Telescope fuzzy find                                                        |
 | `Ctrl+n/p`        | Telescope select item                                                       |
 | `Space+F`         | Format document and save                                                    |
-| `Space+g`         | Open Telescope (git)                                                        |
 | `Space+c`         | Open LSP menu                                                               |
 | `Ctrl+P`          | List completions                                                            |
 | `Shift+k`         | List Help/Hints on underlying item                                          |
@@ -74,6 +75,17 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `ctrl+w J`        | Change to horizontal split                                                  |
 | `ctrl+w H`        | Change to vertical split                                                    |
 | `gcc`             | Toggle Comment on Selection                                                 |
+
+#### Harpoon
+
+
+| Key               | Function  |
+| ----------------- | ---------------- |
+| `Shift+hm` | Open Harpoon Menu       |
+| `Shift+ha` | Add File to Harpoon     |
+| `Shift+hr` | Remove File from Harpoon|
+| `Shift+hj` | Previous Harpoon File   |
+| `Shift+hh` | Next Harpoon File       |
 
 ### Rofi
 
