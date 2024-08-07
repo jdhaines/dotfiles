@@ -27,7 +27,8 @@ shutdown -r now
 | `flusdns`                                    | Alias for `sudo resolvectl flush-caches` wihch will flush the dns cache(s) |
 | `tf`                                         | Alias for `terraform`                                                      |
 | `tg`                                         | Alias for `terragrunt`                                                     |
-| pn                                           | Alias for pnpm                                                             |
+| `pn`                                          | Alias for `pnpm`                                                             |
+| `tmf` | Alias for `tmuxifier` |
 
 ## Config
 
