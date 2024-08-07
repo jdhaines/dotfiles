@@ -142,6 +142,8 @@ return {
     opts = {
       ensure_installed = {
         "bash",
+        "go",
+        "hcl",
         "html",
         "javascript",
         "json",
@@ -151,6 +153,8 @@ return {
         "python",
         "query",
         "regex",
+        "rust",
+        "terraform",
         "tsx",
         "typescript",
         "vim",
@@ -192,7 +196,6 @@ return {
       }
     end,
   },
-
   -- use mini.starter instead of alpha
   { import = "lazyvim.plugins.extras.ui.mini-starter" },
 

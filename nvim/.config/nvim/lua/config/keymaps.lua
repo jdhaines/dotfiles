@@ -31,6 +31,11 @@ mapper("i", "jj", "<Esc>")
 -- mapper("v", "<leader>e", ":NvimTreeToggle<cr>")
 --
 -- -- Telescope Keybindings
+mapper(
+  "n",
+  "<leader>ff",
+  "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>"
+)
 -- mapper("n", "<leader>f", ":Telescope find_files hidden=true<cr>")
 -- mapper("n", "<leader>g", ":Telescope live_grep<cr>")
 -- mapper("n", "<leader>c", ":Telescope git_commits<cr>")

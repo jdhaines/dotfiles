@@ -399,6 +399,7 @@ stow neofetch
 stow arandr
 stow inkdrop
 stow tmux
+stow starship
 cd ~
 breaker
 
@@ -421,7 +422,10 @@ sudo rm -rf $HOME/.dotfiles/fish/.config/fish/config.fish
 fish -c "curl -sL --insecure https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install IlanCosman/tide@v5"
 fish -c "fisher install jorgebucaran/nvm.fish"
+fish -c "fisher install catppuccin/fish"
+fish -c "fisher install nickeb96/puffer-fish"
 fish -c "echo 1 2 1 1 2 2 y | tide configure >/dev/null"
+fish -c "fish_config theme save "Catppucin Macchiato"
 rm -rf ~/.config/fish
 cd $HOME/.dotfiles
 stow fish
