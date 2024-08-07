@@ -101,6 +101,12 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `Prefix + I       | Install new Plugins after adding to tmux.conf                      |
 | `Prefix + u       | Update Plugins                                                     |
 | `Prefix + alt + u | Remove Plugins installed but missing from plugin list in tmux.conf |
+| `Prefix + h` | Switch Pane Left |
+| `Prefix + j | Switch Pane Down |
+| `Prefix + k` | Switch Pane Up |
+| `Prefix + l` | Switch Pane Right |
+| `Prefix + "` | New Pane Below |
+| `Prefix + %` | New Pane Right |
 
 ### i3
 
