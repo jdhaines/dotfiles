@@ -27,6 +27,9 @@ exec --no-startup-id dex --autostart --environment i3
 # Polkit System
 exec --no-startup-id lxpolkit
 
+# Set Numlock to On
+exec --no-startup-id numlockx on
+
 # Picom
 exec_always --no-startup-id "picom --config $HOME/.config/picom/picom.conf -b"
 exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/cat-sound.png
@@ -156,6 +159,7 @@ workspace $ws5 output DP-2
 workspace $ws6 output DP-2
 
 # Assign apps to workspaces
+# Get this value with the command ' xprop | grep WM_CLASS '
 for_window [class="discord"] move to workspace $ws1
 for_window [class="Google-chrome"] move to workspace $ws2
 for_window [class="Alacritty"] move to workspace $ws3

@@ -1,0 +1,8 @@
+--pad-horiz 30
+--pad-vert 35
+--tab-width 4
+--theme catppuccin-macchiato
+--line-pad 3
+--background '#c6a0f6'
+--shadow-color '#7f000000'
+--font 'JetBrainsMono Nerd Font Mono'

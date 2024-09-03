@@ -12,6 +12,11 @@ if initialize_session "apps"; then
   # Load a defined window layout.
   load_window "HealthAndVitality"
   load_window "MLC"
+  load_window "Docs"
+  load_window "SoftwareDocs"
+  load_window "JoshHaines"
+  load_window "SFPlatform"
+  load_window "Codewars"
 
   # Select the default active window on session creation.
   select_window 1

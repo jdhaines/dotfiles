@@ -97,6 +97,21 @@ return {
     },
   },
 
+  {
+    -- add emmet
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      ---@type lspconfig.options
+      servers = {
+        -- pyright will be automatically installed with mason and loaded with lspconfig
+        emmet_language_server = {
+          filetypes = { "html", "css", "javascript", "templ", "markdown" },
+        },
+      },
+    },
+  },
+
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
