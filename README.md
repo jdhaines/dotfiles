@@ -27,8 +27,8 @@ shutdown -r now
 | `flusdns`                                    | Alias for `sudo resolvectl flush-caches` wihch will flush the dns cache(s) |
 | `tf`                                         | Alias for `terraform`                                                      |
 | `tg`                                         | Alias for `terragrunt`                                                     |
-| `pn`                                          | Alias for `pnpm`                                                             |
-| `tmf` | Alias for `tmuxifier` |
+| `pn`                                         | Alias for `pnpm`                                                           |
+| `tmf`                                        | Alias for `tmuxifier`                                                      |
 
 ## Config
 
@@ -62,7 +62,6 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `Space+g`         | Open Telescope (git)                                                        |
 | `Space+Space`     | Telescope fuzzy find                                                        |
 | `Ctrl+n/p`        | Telescope select item                                                       |
-| `Space+F`         | Format document and save                                                    |
 | `Space+c`         | Open LSP menu                                                               |
 | `Shift+h`         | Back to last buffer                                                         |
 | `gd`              | Go to item definition                                                       |
@@ -79,16 +78,27 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `ctrl+w H`        | Change to vertical split                                                    |
 | `gcc`             | Toggle Comment on Selection                                                 |
 
+#### LSP
+
+| Key       | Function                                                |
+| --------- | ------------------------------------------------------- |
+| `K`       | Hover (show documentation)                              |
+| `Space+F` | Format document and save                                |
+| `gd`      | Go to Definition                                        |
+| `gr`      | Go to References                                        |
+| `gi`      | Go to Implementation                                    |
+| `gy`      | Go to Type Definition                                   |
+| `ctrl+T`  | Go back to previous location after using an LSP command |
+
 #### Harpoon
 
-
-| Key               | Function  |
-| ----------------- | ---------------- |
-| `Shift+hm` | Open Harpoon Menu       |
-| `Shift+ha` | Add File to Harpoon     |
-| `Shift+hr` | Remove File from Harpoon|
-| `Shift+hj` | Previous Harpoon File   |
-| `Shift+hh` | Next Harpoon File       |
+| Key        | Function                 |
+| ---------- | ------------------------ |
+| `Shift+hm` | Open Harpoon Menu        |
+| `Shift+ha` | Add File to Harpoon      |
+| `Shift+hr` | Remove File from Harpoon |
+| `Shift+hh` | Next Harpoon File        |
+| `Shift+hj` | Previous Harpoon File    |
 
 ### Rofi
 
@@ -102,12 +112,12 @@ Things should set up correctly automatically. You might need to run neovim twice
 | `Prefix + I       | Install new Plugins after adding to tmux.conf                      |
 | `Prefix + u       | Update Plugins                                                     |
 | `Prefix + alt + u | Remove Plugins installed but missing from plugin list in tmux.conf |
-| `Prefix + h` | Switch Pane Left |
-| `Prefix + j | Switch Pane Down |
-| `Prefix + k` | Switch Pane Up |
-| `Prefix + l` | Switch Pane Right |
-| `Prefix + "` | New Pane Below |
-| `Prefix + %` | New Pane Right |
+| `Prefix + h`      | Switch Pane Left                                                   |
+| `Prefix + j       | Switch Pane Down                                                   |
+| `Prefix + k`      | Switch Pane Up                                                     |
+| `Prefix + l`      | Switch Pane Right                                                  |
+| `Prefix + "`      | New Pane Below                                                     |
+| `Prefix + %`      | New Pane Right                                                     |
 
 ### i3
 

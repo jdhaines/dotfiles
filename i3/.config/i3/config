@@ -30,6 +30,9 @@ exec --no-startup-id lxpolkit
 # Set Numlock to On
 exec --no-startup-id numlockx on
 
+# Prefer dark mode
+exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 # Picom
 exec_always --no-startup-id "picom --config $HOME/.config/picom/picom.conf -b"
 exec_always --no-startup-id feh --bg-fill $HOME/.dotfiles/cat-sound.png
