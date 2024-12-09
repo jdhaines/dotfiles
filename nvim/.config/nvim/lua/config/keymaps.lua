@@ -36,6 +36,13 @@ mapper(
   "<leader>ff",
   "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>"
 )
+-- set leader space to find files in cwd (failed attempt)
+-- vim.keymap.del("n", "<leader><Space>", {})
+-- mapper(
+--   "n",
+--   "<leader><Space>",
+--   "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>"
+-- )
 -- mapper("n", "<leader>f", ":Telescope find_files hidden=true<cr>")
 -- mapper("n", "<leader>g", ":Telescope live_grep<cr>")
 -- mapper("n", "<leader>c", ":Telescope git_commits<cr>")
@@ -65,3 +72,6 @@ mapper("n", "<leader>F", "<cmd>lua vim.lsp.buf.format()<cr>")
 -- mapper("n", "<c-k>", ":lua vim.lsp.buf.signature_help()<cr>")
 -- mapper("n", "<leader>af", ":lua vim.lsp.buf.code_action()<cr>")
 -- mapper("n", "<leader>rn", ":lua vim.lsp.buf.rename()<cr>")
+
+-- -- Make It Rain
+mapper("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")

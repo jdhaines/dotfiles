@@ -12,8 +12,8 @@ split_h 50
 
 # Run commands.
 run_cmd "cd ~/git/handv/src/frontend && nvim ." 1
-run_cmd "cd ~/git/handv/src/frontend && yarn dev" 2
-run_cmd "cd ~/git/handv/src/backend && yarn dev" 3
+run_cmd "cd ~/git/handv/src/frontend" 2
+run_cmd "cd ~/git/handv/src/backend" 3
 #run_cmd "top"     # runs in active pane
 #run_cmd "date" 1  # runs in pane 1
 

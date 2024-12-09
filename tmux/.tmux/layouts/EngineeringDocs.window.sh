@@ -1,13 +1,17 @@
 # Set window root path. Default is `$session_root`.
 # Must be called before `new_window`.
-window_root "~/git/sfplatform/"
+window_root "~/git/engineeringDocs/"
 
 # Create new window. If no argument is given, window name will be based on
 # layout file name.
-new_window "SFPlatform"
+new_window "engineeringDocs"
+
+# Split window into panes.
+split_v 5
 
 # Run commands.
-run_cmd "cd ~/git/sfplatform && nvim ." 1
+run_cmd "cd ~/git/engineeringDocs && nvim ." 1
+run_cmd "cd ~/git/engineeringDocs" 2
 #run_cmd "top"     # runs in active pane
 #run_cmd "date" 1  # runs in pane 1
 

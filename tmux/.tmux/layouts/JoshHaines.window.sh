@@ -11,7 +11,7 @@ split_v 5
 
 # Run commands.
 run_cmd "cd ~/git/joshhaines && nvim ." 1
-run_cmd "cd ~/git/joshhaines && bun run dev" 2
+run_cmd "cd ~/git/joshhaines" 2
 #run_cmd "top"     # runs in active pane
 #run_cmd "date" 1  # runs in pane 1
 

@@ -1,13 +1,24 @@
 # Set window root path. Default is `$session_root`.
 # Must be called before `new_window`.
-window_root "~/git/sfplatform/"
+window_root "~/git/saferra/"
 
 # Create new window. If no argument is given, window name will be based on
 # layout file name.
-new_window "SFPlatform"
+new_window "Saferra"
+
+# Split window into panes.
+split_v 10
+split_h 66
+split_h 66
+split_h 50
 
 # Run commands.
-run_cmd "cd ~/git/sfplatform && nvim ." 1
+run_cmd "cd ~/git/saferra && nvim ." 1
+run_cmd "cd ~/git/saferra" 2
+run_cmd "cd ~/git/saferra && make run-client" 3
+run_cmd "cd ~/git/saferra && make run-server" 4
+run_cmd "cd ~/git/saferra && make templ & make tailwind &" 5
+# run_cmd "echo \"hi\"" 6
 #run_cmd "top"     # runs in active pane
 #run_cmd "date" 1  # runs in pane 1
 
