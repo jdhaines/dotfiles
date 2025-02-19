@@ -75,3 +75,6 @@ mapper("n", "<leader>F", "<cmd>lua vim.lsp.buf.format()<cr>")
 
 -- -- Make It Rain
 mapper("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+-- -- Harpoon Keybindings
+-- mapper("n", "<leader>hm", "function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)")
