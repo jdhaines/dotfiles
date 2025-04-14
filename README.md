@@ -94,11 +94,20 @@ Things should set up correctly automatically. You might need to run neovim twice
 
 | Key        | Function                 |
 | ---------- | ------------------------ |
-| `Shift+hm` | Open Harpoon Menu        |
-| `Shift+ha` | Add File to Harpoon      |
-| `Shift+hr` | Remove File from Harpoon |
-| `Shift+hh` | Next Harpoon File        |
-| `Shift+hj` | Previous Harpoon File    |
+| `Space+hm` | Open Harpoon Menu        |
+| `Space+ha` | Add File to Harpoon      |
+| `Space+hr` | Remove File from Harpoon |
+| `Space+hh` | Next Harpoon File        |
+| `Space+hj` | Previous Harpoon File    |
+
+#### Spelling
+
+| Key        | Function                 |
+| ---------- | ------------------------ |
+| `]s` | Move to next misspelled word |
+| `[s` | Move to previous misspelled word |
+| `zg` | Add word to personal spelling list |
+| `z=` | Look at spelling recommendations |
 
 ### Rofi
 
