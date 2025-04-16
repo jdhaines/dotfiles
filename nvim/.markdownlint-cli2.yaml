@@ -1,0 +1,4 @@
+# General markdown linting rules and config for lazyvim
+config:
+  MD013: false
+  MD033: false
