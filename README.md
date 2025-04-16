@@ -19,16 +19,20 @@ shutdown -r now
 
 **Helpful Commands**
 
-| Command                                      | Notes                                                                      |
-| -------------------------------------------- | -------------------------------------------------------------------------- |
-| `xrandr --output Virtual-1 --mode 2560x1600` | Set the resolution on a VM to 2560x1600                                    |
-| `xset r rate 350 90`                         | Fix keyboard repeat rates                                                  |
-| `sudo apt install spice-vdagent`             | If on boxes vm, use this to get proper resolutions, restart after          |
-| `flusdns`                                    | Alias for `sudo resolvectl flush-caches` wihch will flush the dns cache(s) |
-| `tf`                                         | Alias for `terraform`                                                      |
-| `tg`                                         | Alias for `terragrunt`                                                     |
-| `pn`                                         | Alias for `pnpm`                                                           |
-| `tmf`                                        | Alias for `tmuxifier`                                                      |
+| Command                                      | Notes                                                                                                                                                                                                                                         |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `xrandr --output Virtual-1 --mode 2560x1600` | Set the resolution on a VM to 2560x1600                                                                                                                                                                                                       |
+| `xset r rate 350 90`                         | Fix keyboard repeat rates                                                                                                                                                                                                                     |
+| `sudo apt install spice-vdagent`             | If on boxes vm, use this to get proper resolutions, restart after                                                                                                                                                                             |
+| `flusdns`                                    | Alias for `sudo resolvectl flush-caches` wihch will flush the dns cache(s)                                                                                                                                                                    |
+| `tf`                                         | Alias for `terraform`                                                                                                                                                                                                                         |
+| `tg`                                         | Alias for `terragrunt`                                                                                                                                                                                                                        |
+| `pn`                                         | Alias for `pnpm`                                                                                                                                                                                                                              |
+| `tmf`                                        | Alias for `tmuxifier`                                                                                                                                                                                                                         |
+| `mdclean`                                    | Runs a list of find and replace commands found in the `.repalce_rules.txt` file. If run with no flags it works downward recursively from the current directory. If you pass a directory it'll go down from there. (`e.g. mdclean ./git/news`) |
+| `add_mdclean_rule "x" "o"`                   | Adds a new "find" and "replace" to the execution in mdclean. This command would have mdclean replace all x's with o's in recursively down from the current directory.                                                                         |
+
+located in `~/.dotfiles/fish` directory and simlinked to `$HOME`.
 
 ## Config
 
@@ -94,20 +98,11 @@ Things should set up correctly automatically. You might need to run neovim twice
 
 | Key        | Function                 |
 | ---------- | ------------------------ |
-| `Space+hm` | Open Harpoon Menu        |
-| `Space+ha` | Add File to Harpoon      |
-| `Space+hr` | Remove File from Harpoon |
-| `Space+hh` | Next Harpoon File        |
-| `Space+hj` | Previous Harpoon File    |
-
-#### Spelling
-
-| Key        | Function                 |
-| ---------- | ------------------------ |
-| `]s` | Move to next misspelled word |
-| `[s` | Move to previous misspelled word |
-| `zg` | Add word to personal spelling list |
-| `z=` | Look at spelling recommendations |
+| `Shift+hm` | Open Harpoon Menu        |
+| `Shift+ha` | Add File to Harpoon      |
+| `Shift+hr` | Remove File from Harpoon |
+| `Shift+hh` | Next Harpoon File        |
+| `Shift+hj` | Previous Harpoon File    |
 
 ### Rofi
 
