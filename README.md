@@ -1,5 +1,7 @@
 # Dotfiles
 
+These are my dotfiles!
+
 ## Usage
 
 > If you are running in Gnome Boxes, first run `sudo apt install spice-vdagent` to install the helper libraries then reboot the machine (`shutdown -r now`)
@@ -17,7 +19,7 @@ shutdown -r now
 # When you log back in, select i3 as the desktop manager
 ```
 
-**Helpful Commands**
+### Commands
 
 | Command                                      | Notes                                                                                                                                                                                                                                         |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,33 +34,28 @@ shutdown -r now
 | `mdclean`                                    | Runs a list of find and replace commands found in the `.repalce_rules.txt` file. If run with no flags it works downward recursively from the current directory. If you pass a directory it'll go down from there. (`e.g. mdclean ./git/news`) |
 | `add_mdclean_rule "x" "o"`                   | Adds a new "find" and "replace" to the execution in mdclean. This command would have mdclean replace all x's with o's in recursively down from the current directory.                                                                         |
 
-located in `~/.dotfiles/fish` directory and simlinked to `$HOME`.
+> located in `~/.dotfiles/fish` directory and simlinked to `$HOME`.
 
-## Config
+## Config and Keybindings
 
 ### Fish Config
 
 ### Neovim
 
-Things should set up correctly automatically. You might need to run neovim twice in case of error. While in neovim the command `:PackerSync` and/or `:PackerCompile` may be helpful.
+Things should set up correctly automatically.  I've switched to LazyVim for my config and setup.
 
 | Command             | Notes                                   |
 | ------------------- | --------------------------------------- |
-| `:Slowly install`   | Install current plugins list            |
-| `:Slowly update`    | Upgrade currently installed plugins     |
-| `:Slowly reinstall` | Reinstall current plugin list           |
-| `:Slowly restore`   | Restore saved plugin list               |
-| `:Slowly save`      | Save current plugins to restorable file |
-| `:LspInstall`       | Install a new lsp server                |
-| `:LspInfo`          | Current file and LSP information        |
-| `:Mason`            | Open mason to install plugins           |
-| `:TSUpdate`         | Update Tree-Sitter/Highlighting Plugins |
-| `:TSInstall lang`   | Install new tree-sitter module          |
-| `:TSInstallInfo`    | Check other modules to be installed     |
+| `:Lazy`   | Lazy menu for updates, installs, etc.            |
+| `:Mason`    | Upgrade or install plugins     |
 | `:Copilot setup`    | Configure GitHub Copilot and Login      |
+
+**Keybindings**
 
 | Key               | Function                                                                    |
 | ----------------- | --------------------------------------------------------------------------- |
+| `Space` | Leader |
+| `\` | LocalLeader |
 | `Space+w`         | Activate hop, type next two characters to hop                               |
 | `Space+e`         | Toggle nvim-tree                                                            |
 | `Space+f`         | Open Telescope (find)                                                       |
@@ -106,22 +103,44 @@ Things should set up correctly automatically. You might need to run neovim twice
 
 ### Rofi
 
-- Win key should open rofi launcher
+`Win` or `Super` key should open rofi launcher
 
 ### tmux
 
+**General**
+
 | Key               | Function                                                           |
 | ----------------- | ------------------------------------------------------------------ |
-| `Ctrl + b`        | Prefix                                                             |
-| `Prefix + I       | Install new Plugins after adding to tmux.conf                      |
-| `Prefix + u       | Update Plugins                                                     |
-| `Prefix + alt + u | Remove Plugins installed but missing from plugin list in tmux.conf |
+| `Alt+M` or _Right Nuclear Key_        | Prefix                                          |
+| `Prefix + I`       | Install new Plugins after adding to tmux.conf                      |
+| `Prefix + u`       | Update Plugins                                                     |
+| `Prefix + alt + u` | Remove Plugins installed but missing from plugin list in tmux.conf |
+
+**Panes**
+
+| Key               | Function                                                           |
+| ----------------- | ------------------------------------------------------------------ |
 | `Prefix + h`      | Switch Pane Left                                                   |
-| `Prefix + j       | Switch Pane Down                                                   |
+| `Prefix + j`       | Switch Pane Down                                                   |
 | `Prefix + k`      | Switch Pane Up                                                     |
 | `Prefix + l`      | Switch Pane Right                                                  |
-| `Prefix + "`      | New Pane Below                                                     |
-| `Prefix + %`      | New Pane Right                                                     |
+| `Prefix + \|`      | Draw Vertical Line (New Pane to Left)                          |
+| `Prefix + _`      | Draw Horizontal Line (New Pane to Bottom)                          |
+| `Prefix + x` | Kill Current Pane
+
+**Windows**
+
+| Key               | Function                                                           |
+| ----------------- | ------------------------------------------------------------------ |
+| `Prefix + c` | New Window |
+| `Prefix + n` | Next Window |
+| `Prefix + p` | Previous Window |
+
+**Sessions**
+
+| Key               | Function                                                           |
+| ----------------- | ------------------------------------------------------------------ |
+| `Prefix + d` | Kill Current Session |
 
 ### i3
 
