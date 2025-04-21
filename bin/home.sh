@@ -393,21 +393,21 @@ testcmd tree-sitter
 ### Stow Dotfiles ###
 cd ~/.dotfiles
 stow alacritty
+stow arandr
+stow gh-dash
 stow git
-stow i3
 stow jetbrains
 stow lazygit
+stow i3
 stow lf
+stow neofetch
 stow nvim
 stow picom
 stow profile
 stow rofi
-stow neofetch
-stow arandr
-stow inkdrop
-stow tmux
-stow starship
 stow silicon
+stow starship
+stow tmux
 cd ~
 breaker
 
