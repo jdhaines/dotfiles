@@ -1,0 +1,115 @@
+prSections:
+  - title: Reviewer
+    filters: >-
+      sort:updated-desc
+      is:open
+      archived:false
+      review-requested:jdhaines
+  - title: Involved
+    filters: >-
+      sort:updated-desc
+      is:open
+      archived:false
+      involves:@me
+      draft:false
+issuesSections:
+  - title: Assignee
+    filters: >-
+      sort:updated-desc
+      state:open
+      archived:false
+      assignee:@me
+  - title: Creator
+    filters: >-
+      sort:updated-desc
+      state:open
+      archived:false
+      author:@me
+  - title: Mentioned
+    filters: >-
+      sort:updated-desc 
+      state:open
+      archived:false
+      mentions:@me
+  - title: Involved
+    filters: >-
+      sort:updated-desc
+      state:open
+      archived:false
+      involves:@me
+
+pager:
+  diff: diffnav
+defaults:
+  view: prs
+  refetchIntervalMinutes: 5
+  layout:
+    prs:
+      repoName:
+        grow: true
+        hidden: false
+      author:
+        grow: true
+        width: 15
+      base:
+        hidden: true
+  preview:
+    open: true
+    width: 70
+  prsLimit: 20
+  issuesLimit: 20
+  prApproveComment: ":shipit:"
+
+repoPaths:
+  rropen/*: ~/git/*
+  rrglobal/*: ~/git/*
+  rollsroyceus/*: ~/git/*
+  jdhaines/*: ~/git/*
+
+keybindings:
+  universal:
+    - key: g
+      name: lazygit
+      command: >
+        cd {{.RepoPath}} && lazygit
+  prs:
+    - key: O
+      builtin: checkout
+    - key: C
+      name: code review
+      command: >
+        alacritty -T "edit PR {{.PrNumber}}" -e nvim -c ":silent Octo pr edit {{.PrNumber}}"
+    # - key: a
+    #   name: lazygit add
+    #   command: >
+    #     cd {{.RepoPath}} && git add -A && lazygit
+    - key: v
+      name: approve
+      command: >
+        gh pr review --repo {{.RepoName}} --approve --body "$(gum input --prompt='Approval Comment: ')" {{.PrNumber}}
+  issues: []
+  branches: []
+
+smartFilteringAtLaunch: true
+
+theme:
+  ui:
+    sectionsShowCount: true
+    table:
+      showSeparator: true
+      compact: true
+  colors:
+    text:
+      primary: "#cad3f5"
+      secondary: "#8aadf4"
+      inverted: "#181926"
+      faint: "#b8c0e0"
+      warning: "#eed49f"
+      success: "#a6da95"
+      error: "#ed8796"
+    background:
+      selected: "#363a4f"
+    border:
+      primary: "#8aadf4"
+      secondary: "#494d64"
+      faint: "#363a4f"
