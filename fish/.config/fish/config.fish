@@ -17,6 +17,10 @@ set --export PATH $HOME/.tmux/plugins/tmuxifier/bin $PATH
 eval (tmuxifier init - fish)
 set --export TMUXIFIER_LAYOUT_PATH $HOME/.tmux/layouts
 
+# tmux-sessionizer
+set --export PATH $HOME/.dotfiles/bin/ $PATH
+bind \cf "tmux-sessionizer.sh"
+
 # editor
 set --export EDITOR nvim
 
