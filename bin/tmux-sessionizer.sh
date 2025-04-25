@@ -12,44 +12,50 @@ fi
 
 selected_name=$(basename "$selected" | tr . _)
 
-# Returns window index by name, or empty string if not found
+# Function to get window index by name
 get_window_index_by_name() {
   tmux list-windows -t "$1" -F "#{window_index}:#{window_name}" 2>/dev/null | awk -F: -v name="$2" '$2 == name { print $1 }'
 }
 
-# Ensure session exists
+# 1-based indexing
+nvim_index=1
+shell_index=2
+dash_index=3
+
+# Create session if needed with just nvim window
 if ! tmux has-session -t="$selected_name" 2>/dev/null; then
   tmux new-session -ds "$selected_name" -c "$selected" -n nvim "nvim ."
+  tmux move-window -s "$selected_name:0" -t "$selected_name:$nvim_index" 2>/dev/null
 fi
 
-# nvim → index 0
-nvim_index=$(get_window_index_by_name "$selected_name" "nvim")
-if [[ -z $nvim_index ]]; then
-  tmux new-window -t "$selected_name:0" -n nvim -c "$selected" "nvim ."
-elif [[ $nvim_index -ne 0 ]]; then
-  tmux move-window -s "$selected_name:$nvim_index" -t "$selected_name:0"
+# Ensure 'nvim' window exists at index 1
+existing_nvim_index=$(get_window_index_by_name "$selected_name" "nvim")
+if [[ -z $existing_nvim_index ]]; then
+  tmux new-window -t "$selected_name:$nvim_index" -n nvim -c "$selected" "nvim ."
+elif [[ $existing_nvim_index -ne $nvim_index ]]; then
+  tmux move-window -s "$selected_name:$existing_nvim_index" -t "$selected_name:$nvim_index"
 fi
 
-# shell → index 1
-shell_index=$(get_window_index_by_name "$selected_name" "shell")
-if [[ -z $shell_index ]]; then
-  tmux new-window -t "$selected_name:1" -n shell -c "$selected"
-elif [[ $shell_index -ne 1 ]]; then
-  tmux move-window -s "$selected_name:$shell_index" -t "$selected_name:1"
+# Ensure 'shell' window exists at index 2
+existing_shell_index=$(get_window_index_by_name "$selected_name" "shell")
+if [[ -z $existing_shell_index ]]; then
+  tmux new-window -t "$selected_name:$shell_index" -n shell -c "$selected"
+elif [[ $existing_shell_index -ne $shell_index ]]; then
+  tmux move-window -s "$selected_name:$existing_shell_index" -t "$selected_name:$shell_index"
 fi
 
-# dash → index 2 (only for ~/git)
+# Ensure 'dash' window exists at index 3 (for ~/git only)
 if [[ $selected == "$HOME/git/"* ]]; then
-  dash_index=$(get_window_index_by_name "$selected_name" "dash")
-  if [[ -z $dash_index ]]; then
-    tmux new-window -t "$selected_name:2" -n dash -c "$selected" "gh dash"
-  elif [[ $dash_index -ne 2 ]]; then
-    tmux move-window -s "$selected_name:$dash_index" -t "$selected_name:2"
+  existing_dash_index=$(get_window_index_by_name "$selected_name" "dash")
+  if [[ -z $existing_dash_index ]]; then
+    tmux new-window -t "$selected_name:$dash_index" -n dash -c "$selected" "gh dash"
+  elif [[ $existing_dash_index -ne $dash_index ]]; then
+    tmux move-window -s "$selected_name:$existing_dash_index" -t "$selected_name:$dash_index"
   fi
 fi
 
-# Focus on nvim (index 0)
-tmux select-window -t "$selected_name:0"
+# Select nvim window (index 1)
+tmux select-window -t "$selected_name:$nvim_index"
 
 # Attach or switch
 if [[ -z $TMUX ]]; then
