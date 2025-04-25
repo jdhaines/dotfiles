@@ -55,7 +55,7 @@ defaults:
         hidden: true
   preview:
     open: true
-    width: 70
+    width: 100
   prsLimit: 20
   issuesLimit: 20
   prApproveComment: ":shipit:"
