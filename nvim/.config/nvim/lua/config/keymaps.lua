@@ -19,6 +19,7 @@ mapper("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
 --
 -- -- jj works like esc
 mapper("i", "jj", "<Esc>")
+
 --
 -- -- Alt j & k move lines and blocks
 -- mapper("n", "<A-j>", ":MoveLine(1)<CR>")
