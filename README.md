@@ -90,6 +90,7 @@ Things should set up correctly automatically.  I've switched to LazyVim for my c
 | `gi`      | Go to Implementation                                    |
 | `gy`      | Go to Type Definition                                   |
 | `ctrl+T`  | Go back to previous location after using an LSP command |
+| `Space+cd`|Show Code Actions (Light Bulb Hints) |
 
 #### Harpoon
 
