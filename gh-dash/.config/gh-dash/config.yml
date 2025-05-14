@@ -12,6 +12,11 @@ prSections:
       archived:false
       involves:@me
       draft:false
+  - title: All
+    filters: >-
+      sort:updated-desc
+      is:open
+      archived:false
 issuesSections:
   - title: Assignee
     filters: >-
