@@ -5,8 +5,8 @@ return {
   --   { "<leader>hj", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "Go to previous harpoon mark" },
   --   { "<leader>hm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
 
-  'ThePrimeagen/harpoon',
-  branch = 'harpoon2',
+  "ThePrimeagen/harpoon",
+  branch = "harpoon2",
   opts = {
     menu = {
       width = vim.api.nvim_win_get_width(0) - 4,
@@ -18,40 +18,40 @@ return {
   keys = function()
     local keys = {
       {
-        '<leader>ha',
+        "<leader>ha",
         function()
-          require('harpoon'):list():add()
+          require("harpoon"):list():add()
         end,
-        desc = 'Add File to Harpoon',
+        desc = "Add File to Harpoon",
       },
       {
-        '<leader>hr',
+        "<leader>hr",
         function()
-          require('harpoon'):list():remove()
+          require("harpoon"):list():remove()
         end,
-        desc = 'Remove File from Harpoon',
+        desc = "Remove File from Harpoon",
       },
       {
-        '<leader>hh',
+        "<leader>hh",
         function()
-          require('harpoon'):list():next()
+          require("harpoon"):list():next()
         end,
-        desc = 'Next Harpoon File',
+        desc = "Next Harpoon File",
       },
       {
-        '<leader>hj',
+        "<leader>hj",
         function()
-          require('harpoon'):list():prev()
+          require("harpoon"):list():prev()
         end,
-        desc = 'Previous Harpoon File',
+        desc = "Previous Harpoon File",
       },
       {
-        '<leader>hm',
+        "<leader>hm",
         function()
-          local harpoon = require 'harpoon'
+          local harpoon = require("harpoon")
           harpoon.ui:toggle_quick_menu(harpoon:list())
         end,
-        desc = 'Toggle Harpoon Quick Menu',
+        desc = "Toggle Harpoon Quick Menu",
       },
     }
     return keys
