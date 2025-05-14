@@ -266,7 +266,7 @@ breaker
 
 # neovim
 curl -s https://api.github.com/repos/neovim/neovim/releases/latest |
-  grep "browser_download_url.*vim.appimage" |
+  grep "browser_download_url.*vim-linux-x86_64.appimage" |
   cut -d : -f 2,3 |
   tr -d \" |
   wget -qi -
