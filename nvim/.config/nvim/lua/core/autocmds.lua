@@ -29,6 +29,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight yanked text',
     group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
     callback = function()
-        vim.highlight.on_yank()
+        vim.hl.on_yank()
+    end,
+})
+
+-- Telescope open if nvim pointed at a directory
+vim.api.nvim_create_autocmd('VimEnter', {
+    callback = function()
+        if vim.fn.argv(0) == '' then
+            require('telescope.builtin').find_files()
+        end
     end,
 })

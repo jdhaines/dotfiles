@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(find ~/.dotfiles ~/git -mindepth 1 -maxdepth 1 -type d | fzf)
+  selected=$(find ~/.dotfiles ~/git ~/Documents -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
@@ -24,14 +24,14 @@ dash_index=3
 
 # Create session if needed with just nvim window
 if ! tmux has-session -t="$selected_name" 2>/dev/null; then
-  tmux new-session -ds "$selected_name" -c "$selected" -n nvim "nvim ."
+  tmux new-session -ds "$selected_name" -c "$selected" -n nvim "nvim"
   tmux move-window -s "$selected_name:0" -t "$selected_name:$nvim_index" 2>/dev/null
 fi
 
 # Ensure 'nvim' window exists at index 1
 existing_nvim_index=$(get_window_index_by_name "$selected_name" "nvim")
 if [[ -z $existing_nvim_index ]]; then
-  tmux new-window -t "$selected_name:$nvim_index" -n nvim -c "$selected" "nvim ."
+  tmux new-window -t "$selected_name:$nvim_index" -n nvim -c "$selected" "nvim"
 elif [[ $existing_nvim_index -ne $nvim_index ]]; then
   tmux move-window -s "$selected_name:$existing_nvim_index" -t "$selected_name:$nvim_index"
 fi

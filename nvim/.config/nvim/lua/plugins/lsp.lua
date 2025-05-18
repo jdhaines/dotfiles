@@ -192,7 +192,6 @@ return {
     --  By default, Neovim doesn't support everything that is in the LSP specification.
     --  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
     --  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-    local capabilities = require('blink.cmp').get_lsp_capabilities()
     local vue_language_server_path = vim.fn.expand '$MASON/packages'
       .. '/vue-language-server'
       .. '/node_modules/@vue/language-server'
