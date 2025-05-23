@@ -1,0 +1,66 @@
+{
+	"os": "linux",
+	"arch": "amd64",
+	"packages": [
+		{
+			"source": "github",
+			"owner": "sharkdp",
+			"repo": "bat",
+			"tag": "v0.25.0",
+			"asset": "bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz",
+			"binary": "bat",
+			"url": "https://api.github.com/repos/sharkdp/bat/releases/assets/218683426",
+			"binaryHash": "5ef02209ddc4e565bfa0f914f502cc01ba74181f1b50a8cc7e2283092babde98"
+		},
+		{
+			"source": "github",
+			"owner": "snyk",
+			"repo": "cli",
+			"tag": "v1.1297.1",
+			"asset": "snyk-linux",
+			"binary": "snyk",
+			"url": "https://api.github.com/repos/snyk/cli/releases/assets/255303735",
+			"binaryHash": "f7c1ea2c28479136cc0ae6134a2c87bc2493473af6c3766e400fb04c01f2e3fe"
+		},
+		{
+			"source": "github",
+			"owner": "jesseduffield",
+			"repo": "lazygit",
+			"tag": "v0.51.1",
+			"asset": "lazygit_0.51.1_Linux_x86_64.tar.gz",
+			"binary": "lazygit",
+			"url": "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/257411207",
+			"binaryHash": "18236e2b40d47e3b054ee503b9d9eeaa805b0e42918c768fb9542e4e695c8874"
+		},
+		{
+			"source": "github",
+			"owner": "neovim",
+			"repo": "neovim",
+			"tag": "v0.11.1",
+			"asset": "nvim-linux-x86_64.appimage",
+			"binary": "nvim",
+			"url": "https://api.github.com/repos/neovim/neovim/releases/assets/249699684",
+			"binaryHash": "7f89b0de9e74481aab58acf90cafc049fb04197c5630ddfbb8ca7abb638570da"
+		},
+		{
+			"source": "github",
+			"owner": "tailwindlabs",
+			"repo": "tailwindcss",
+			"tag": "v4.1.7",
+			"asset": "tailwindcss-linux-x64",
+			"binary": "tailwindcss",
+			"url": "https://api.github.com/repos/tailwindlabs/tailwindcss/releases/assets/254926287",
+			"binaryHash": "0706292935a9773c6c879e17d23625322e4490e7e8f7a0ad0e688faae4def981"
+		},
+		{
+			"source": "github",
+			"owner": "mikefarah",
+			"repo": "yq",
+			"tag": "v4.45.4",
+			"asset": "yq_linux_amd64",
+			"binary": "yq",
+			"url": "https://api.github.com/repos/mikefarah/yq/releases/assets/253660508",
+			"binaryHash": "b96de04645707e14a12f52c37e6266832e03c29e95b9b139cddcae7314466e69"
+		}
+	]
+}

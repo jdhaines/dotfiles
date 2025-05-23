@@ -1,0 +1,5 @@
+{
+	"stewPath": "/home/josh/.config/stew",
+	"stewBinPath": "/home/josh/.local/bin",
+	"excludedFromUpgradeAll": []
+}

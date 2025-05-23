@@ -76,7 +76,6 @@ testcmd gum
 
 addpkg apt-transport-https
 addcmd arandr
-addpkg bat
 addpkg pulseaudio-utils
 testcmd pactl
 #breaker
@@ -144,7 +143,7 @@ breaker
 function addrepos() {
 
   # fish
-  sudo add-apt-repository -y ppa:fish-shell/release-3
+  sudo add-apt-repository -y ppa:fish-shell/release-4
 
   # node
   sudo mkdir -p /etc/apt/keyrings
@@ -247,10 +246,21 @@ addcmd helm
 sudo usermod -aG docker $USER                                   # docker
 export PATH="$(yarn global bin):$PATH"                          # yarn
 sudo dpkg-reconfigure i3                                        # i3
-mkdir -p ~/.local/bin && ln -s /usr/bin/batcat ~/.local/bin/bat # bat fix
 
 ### Custom Installs ###
 cd ~
+
+# stew
+curl -s https://api.github.com/repos/marwanhawari/stew/releases/latest |
+  grep "browser_download_url.*linux-amd64.tar.gz" |
+  cut -d : -f 2,3 |
+  tr -d \" |
+  wget -qi -
+sudo mv stew* stew.tar.gz
+sudo tar -xf stew.tar.gz
+sudo chmod +x stew
+sudo cp stew /usr/local/bin
+testcmd stew
 
 # ttyd
 sudo snap install ttyd --classic
@@ -408,8 +418,12 @@ stow rofi
 stow silicon
 stow starship
 stow tmux
+stow stew
 cd ~
 breaker
+
+# Install Stew Binaries
+stew install $HOME/.config/stew/Stewfile.lock.json
 
 # Install Fisher & Configure Fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
