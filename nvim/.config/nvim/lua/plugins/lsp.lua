@@ -218,7 +218,6 @@ return {
       -- ts_ls = {},
       --
 
-      ts_ls = {}, -- tsserver is deprecated
       ruff = {},
       pylsp = {
         settings = {
@@ -243,7 +242,20 @@ return {
       sqlls = {},
       terraformls = {},
       jsonls = {},
-      volar = {},
+      vue_ls = {},
+      ts_ls = {
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+              location = vim.fn.stdpath 'data'
+                .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+              languages = { 'vue' },
+            },
+          },
+        },
+      }, -- tsserver is deprecated
       yamlls = {},
 
       lua_ls = {
@@ -291,6 +303,7 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
+      'yamlfmt', -- Used to format YAML code
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
