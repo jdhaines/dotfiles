@@ -152,6 +152,8 @@ function addrepos() {
   # echo "after node"
   # breaker
 
+  # ghostty
+
   # kdenlive
   sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
 
@@ -201,6 +203,9 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
   # git lfs
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
+  # ghostty
+  curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh
+
   # yubikey
   sudo add-apt-repository -y ppa:yubico/stable
 
@@ -240,6 +245,7 @@ addcmd yarn
 addpkg git-lfs
 addcmd kubectl
 addcmd helm
+testcmd ghostty
 #breaker
 
 ### Post Install ###
@@ -267,57 +273,7 @@ sudo snap install ttyd --classic
 
 # tmux package manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# snyk cli tool
-sudo wget https://static.snyk.io/cli/latest/snyk-linux -O /usr/local/bin/snyk
-sudo chmod +x /usr/local/bin/snyk
-testcmd snyk
 breaker
-
-# neovim
-curl -s https://api.github.com/repos/neovim/neovim/releases/latest |
-  grep "browser_download_url.*vim-linux-x86_64.appimage" |
-  cut -d : -f 2,3 |
-  tr -d \" |
-  wget -qi -
-mv nvim.appimage nvim
-sudo chmod +x nvim
-sudo rm /usr/local/bin/nvim
-sudo cp nvim /usr/local/bin/
-testcmd nvim
-
-# lf #TODO
-curl -s https://api.github.com/repos/gokcehan/lf/releases/latest |
-  grep "browser_download_url.*linux-amd64.tar.gz" |
-  cut -d : -f 2,3 |
-  tr -d \" |
-  wget -qi -
-sudo tar -xf lf-linux-amd64.tar.gz
-sudo cp ~/lf /usr/local/bin
-testcmd lf
-
-# zellij
-curl -s https://api.github.com/repos/zellij-org/zellij/releases/latest |
-  grep "browser_download_url.*zellij-x86_64-unknown-linux-musl.tar.gz" |
-  cut -d : -f 2,3 |
-  tr -d \" |
-  wget -qi -
-sudo mv zellij* zellij.tar.gz
-sudo tar -xf zellij.tar.gz
-sudo chmod +x zellij
-sudo cp zellij /usr/local/bin
-testcmd zellij
-
-# yamlfmt #TODO
-curl -s https://api.github.com/repos/google/yamlfmt/releases/latest |
-  grep "browser_download_url.*Linux_x86_64.tar.gz" |
-  cut -d : -f 2,3 |
-  tr -d \" |
-  wget -qi -
-sudo mv yamlfmt* yamlfmt.tar.gz
-sudo tar -xf yamlfmt.tar.gz
-sudo cp ~/yamlfmt /usr/local/bin
-testcmd yamlfmt
 
 # discord #TODO
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
@@ -334,25 +290,6 @@ cargo install alacritty
 sudo cp ~/.cargo/bin/alacritty /usr/local/bin
 testcmd alacritty
 breaker
-
-# lazygit
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
-testcmd lazygit
-
-# lazydocker
-LAZYDOCKER_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazydocker/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
-curl -Lo lazydocker.tar.gz "https://github.com/jesseduffield/lazydocker/releases/latest/download/lazydocker_${LAZYDOCKER_VERSION}_Linux_x86_64.tar.gz"
-sudo tar xf lazydocker.tar.gz -C /usr/local/bin lazydocker
-testcmd lazydocker
-
-# terragrunt
-TERRAGRUNT_VERSION=$(curl -s "https://api.github.com/repos/gruntwork-io/terragrunt/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
-curl -Lo terragrunt "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
-chmod +x terragrunt
-sudo mv terragrunt /usr/local/bin
-testcmd terragrunt
 
 # Google Chrome #TODO
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -425,6 +362,17 @@ breaker
 # Install Stew Binaries
 stew install $HOME/.config/stew/Stewfile.lock.json
 
+testcmd bat
+testcmd nvim
+testcmd eza
+testcmd lazygit
+testcmd lazydocker
+testcmd snyk
+testcmd tailwindcss
+testcmd yamlfmt
+testcmd yq
+testcmd zoxide
+
 # Install Fisher & Configure Fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/completions/fisher.fish
@@ -466,13 +414,11 @@ rm -rf nvim.appimage*
 rm -rf lf-linux-amd64.tar.gz
 rm -rf lf
 rm -rf .fehbg
-rm -rf yamlfmt
 rm -rf LICENSE
 rm -rf README.md
 rm -rf discord.deb
 rm -rf slack.deb
 rm -rf lazygit.tar.gz
-rm -rf yamlfmt.tar.gz
 rm -rf gum*
 rm -rf home.sh2
 
