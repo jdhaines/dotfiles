@@ -26,3 +26,6 @@ set --export EDITOR nvim
 
 # starship
 starship init fish | source
+
+# zoxide
+zoxide init fish | source
