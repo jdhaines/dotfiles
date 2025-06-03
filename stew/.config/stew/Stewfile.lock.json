@@ -46,11 +46,11 @@
 			"source": "github",
 			"owner": "tailwindlabs",
 			"repo": "tailwindcss",
-			"tag": "v4.1.7",
+			"tag": "v4.1.8",
 			"asset": "tailwindcss-linux-x64",
 			"binary": "tailwindcss",
-			"url": "https://api.github.com/repos/tailwindlabs/tailwindcss/releases/assets/254926287",
-			"binaryHash": "0706292935a9773c6c879e17d23625322e4490e7e8f7a0ad0e688faae4def981"
+			"url": "https://api.github.com/repos/tailwindlabs/tailwindcss/releases/assets/258872482",
+			"binaryHash": "8f84ce810bdff225e599781d1e2daa82b4282229021c867a71b419f59f9aa836"
 		},
 		{
 			"source": "github",
@@ -61,6 +61,66 @@
 			"binary": "yq",
 			"url": "https://api.github.com/repos/mikefarah/yq/releases/assets/253660508",
 			"binaryHash": "b96de04645707e14a12f52c37e6266832e03c29e95b9b139cddcae7314466e69"
+		},
+		{
+			"source": "github",
+			"owner": "google",
+			"repo": "yamlfmt",
+			"tag": "v0.17.0",
+			"asset": "yamlfmt_0.17.0_Linux_x86_64.tar.gz",
+			"binary": "yamlfmt",
+			"url": "https://api.github.com/repos/google/yamlfmt/releases/assets/257965753",
+			"binaryHash": "c2f4acd79553ecd757197ebc7a06cc33ef9aa6d43c38f27bede1c25ca1bdfed2"
+		},
+		{
+			"source": "github",
+			"owner": "jesseduffield",
+			"repo": "lazydocker",
+			"tag": "v0.24.1",
+			"asset": "lazydocker_0.24.1_Linux_x86_64.tar.gz",
+			"binary": "lazydocker",
+			"url": "https://api.github.com/repos/jesseduffield/lazydocker/releases/assets/208515250",
+			"binaryHash": "20486dd92005e47f8709b8e5d7ab288e7e597303208189799f52351a554f4daa"
+		},
+		{
+			"source": "github",
+			"owner": "eza-community",
+			"repo": "eza",
+			"tag": "v0.21.3",
+			"asset": "eza_x86_64-unknown-linux-gnu.tar.gz",
+			"binary": "eza",
+			"url": "https://api.github.com/repos/eza-community/eza/releases/assets/251242614",
+			"binaryHash": "cbbb789d92c767a4962601d580043a59524c6b9d9db5bd0e81fd9367f08833ad"
+		},
+		{
+			"source": "github",
+			"owner": "ajeetdsouza",
+			"repo": "zoxide",
+			"tag": "v0.9.8",
+			"asset": "zoxide-0.9.8-x86_64-unknown-linux-musl.tar.gz",
+			"binary": "zoxide",
+			"url": "https://api.github.com/repos/ajeetdsouza/zoxide/releases/assets/258335140",
+			"binaryHash": "a55e651f93824e68058938dfb1dd12e34ace0712553cee35df2fd853726cd49b"
+		},
+		{
+			"source": "github",
+			"owner": "junegunn",
+			"repo": "fzf",
+			"tag": "v0.62.0",
+			"asset": "fzf-0.62.0-linux_amd64.tar.gz",
+			"binary": "fzf",
+			"url": "https://api.github.com/repos/junegunn/fzf/releases/assets/251727786",
+			"binaryHash": "dd2ffc3e2f58d107cb0eb975bbf849731dc51fa240d720bcf84200a3d16306ea"
+		},
+		{
+			"source": "github",
+			"owner": "troykinsella",
+			"repo": "bacon",
+			"tag": "v0.4.0",
+			"asset": "bacon_linux_amd64",
+			"binary": "bacon",
+			"url": "https://api.github.com/repos/troykinsella/bacon/releases/assets/12434374",
+			"binaryHash": "ff6386e15dedd6e6b236103dd287235274ac24ada2c31b82f02c741c15f15f2f"
 		}
 	]
 }
