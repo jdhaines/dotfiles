@@ -3,7 +3,7 @@
 ### Variables ###
 SSH_DIR="$HOME/.ssh"
 DEBIAN_FRONTEND=noninteractive
-NODE_MAJOR=20
+NODE_MAJOR=24
 
 ### Functions ###
 

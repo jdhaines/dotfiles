@@ -16,41 +16,41 @@
 			"source": "github",
 			"owner": "snyk",
 			"repo": "cli",
-			"tag": "v1.1297.1",
+			"tag": "v1.1298.3",
 			"asset": "snyk-linux",
 			"binary": "snyk",
-			"url": "https://api.github.com/repos/snyk/cli/releases/assets/255303735",
-			"binaryHash": "f7c1ea2c28479136cc0ae6134a2c87bc2493473af6c3766e400fb04c01f2e3fe"
+			"url": "https://api.github.com/repos/snyk/cli/releases/assets/282435730",
+			"binaryHash": "943cffd46891174b0f660a8d20d9e555910a178ca2f74dff98844b38388e49dd"
 		},
 		{
 			"source": "github",
 			"owner": "jesseduffield",
 			"repo": "lazygit",
-			"tag": "v0.51.1",
-			"asset": "lazygit_0.51.1_Linux_x86_64.tar.gz",
+			"tag": "v0.54.2",
+			"asset": "lazygit_0.54.2_linux_x86_64.tar.gz",
 			"binary": "lazygit",
-			"url": "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/257411207",
-			"binaryHash": "18236e2b40d47e3b054ee503b9d9eeaa805b0e42918c768fb9542e4e695c8874"
+			"url": "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/281484456",
+			"binaryHash": "7cff3948cf4a64237e686d55765d0c3369bc09f954f47b71975c99be7da25a1b"
 		},
 		{
 			"source": "github",
 			"owner": "neovim",
 			"repo": "neovim",
-			"tag": "v0.11.1",
+			"tag": "v0.11.2",
 			"asset": "nvim-linux-x86_64.appimage",
 			"binary": "nvim",
-			"url": "https://api.github.com/repos/neovim/neovim/releases/assets/249699684",
-			"binaryHash": "7f89b0de9e74481aab58acf90cafc049fb04197c5630ddfbb8ca7abb638570da"
+			"url": "https://api.github.com/repos/neovim/neovim/releases/assets/259415440",
+			"binaryHash": "c7c365fdf651f058b2fc153d667b406ac39ca674a54aa9f799544bc8c28dd898"
 		},
 		{
 			"source": "github",
 			"owner": "tailwindlabs",
 			"repo": "tailwindcss",
-			"tag": "v4.1.8",
+			"tag": "v4.1.11",
 			"asset": "tailwindcss-linux-x64",
 			"binary": "tailwindcss",
-			"url": "https://api.github.com/repos/tailwindlabs/tailwindcss/releases/assets/258872482",
-			"binaryHash": "8f84ce810bdff225e599781d1e2daa82b4282229021c867a71b419f59f9aa836"
+			"url": "https://api.github.com/repos/tailwindlabs/tailwindcss/releases/assets/267473168",
+			"binaryHash": "64805b84af4292e043ea6f86d242f191c0ac75359c1a498455dfe6c642afdbab"
 		},
 		{
 			"source": "github",
@@ -66,11 +66,11 @@
 			"source": "github",
 			"owner": "google",
 			"repo": "yamlfmt",
-			"tag": "v0.17.0",
-			"asset": "yamlfmt_0.17.0_Linux_x86_64.tar.gz",
+			"tag": "v0.17.2",
+			"asset": "yamlfmt_0.17.2_Linux_x86_64.tar.gz",
 			"binary": "yamlfmt",
-			"url": "https://api.github.com/repos/google/yamlfmt/releases/assets/257965753",
-			"binaryHash": "c2f4acd79553ecd757197ebc7a06cc33ef9aa6d43c38f27bede1c25ca1bdfed2"
+			"url": "https://api.github.com/repos/google/yamlfmt/releases/assets/266662502",
+			"binaryHash": "1d9e3c669ea94b38ed522c4b73ee73a61ef2eedcd2cf6b88c0e7123b23ad2e95"
 		},
 		{
 			"source": "github",
@@ -81,16 +81,6 @@
 			"binary": "lazydocker",
 			"url": "https://api.github.com/repos/jesseduffield/lazydocker/releases/assets/208515250",
 			"binaryHash": "20486dd92005e47f8709b8e5d7ab288e7e597303208189799f52351a554f4daa"
-		},
-		{
-			"source": "github",
-			"owner": "eza-community",
-			"repo": "eza",
-			"tag": "v0.21.3",
-			"asset": "eza_x86_64-unknown-linux-gnu.tar.gz",
-			"binary": "eza",
-			"url": "https://api.github.com/repos/eza-community/eza/releases/assets/251242614",
-			"binaryHash": "cbbb789d92c767a4962601d580043a59524c6b9d9db5bd0e81fd9367f08833ad"
 		},
 		{
 			"source": "github",
@@ -106,11 +96,11 @@
 			"source": "github",
 			"owner": "junegunn",
 			"repo": "fzf",
-			"tag": "v0.62.0",
-			"asset": "fzf-0.62.0-linux_amd64.tar.gz",
+			"tag": "v0.65.1",
+			"asset": "fzf-0.65.1-linux_amd64.tar.gz",
 			"binary": "fzf",
-			"url": "https://api.github.com/repos/junegunn/fzf/releases/assets/251727786",
-			"binaryHash": "dd2ffc3e2f58d107cb0eb975bbf849731dc51fa240d720bcf84200a3d16306ea"
+			"url": "https://api.github.com/repos/junegunn/fzf/releases/assets/278890600",
+			"binaryHash": "84524f737107fd4ce65fb43877debd83551cceef16fa74e24aa772e2d3b7acf9"
 		},
 		{
 			"source": "github",
@@ -121,6 +111,16 @@
 			"binary": "bacon",
 			"url": "https://api.github.com/repos/troykinsella/bacon/releases/assets/12434374",
 			"binaryHash": "ff6386e15dedd6e6b236103dd287235274ac24ada2c31b82f02c741c15f15f2f"
+		},
+		{
+			"source": "github",
+			"owner": "eza-community",
+			"repo": "eza",
+			"tag": "v0.23.0",
+			"asset": "eza_x86_64-unknown-linux-gnu.tar.gz",
+			"binary": "eza",
+			"url": "https://api.github.com/repos/eza-community/eza/releases/assets/274134722",
+			"binaryHash": "731df137afcd9fd25e8151673040832dc3aaa487524c5c04e59e026f1c38b4db"
 		}
 	]
 }

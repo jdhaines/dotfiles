@@ -17,8 +17,8 @@ vim.keymap.set('n', 'o', 'o<Esc>^Da', opts)
 vim.keymap.set('n', 'O', 'O<Esc>^Da', opts)
 
 -- Center screen after moving down or up
-vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
-vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
+-- vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
+-- vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 
 -- Alt j & k move lines and blocks
 vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', opts)

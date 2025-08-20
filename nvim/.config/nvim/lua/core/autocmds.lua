@@ -4,40 +4,49 @@
 
 -- Disable :q by remapping to :bd
 vim.api.nvim_create_autocmd('CmdlineEnter', {
-    desc = "Redirect :q to :bd so nvim window doesn't close",
-    pattern = '*',
-    callback = function()
-        vim.cmd [[
+  desc = "Redirect :q to :bd so nvim window doesn't close",
+  pattern = '*',
+  callback = function()
+    vim.cmd [[
       cnoreabbrev <expr> q getcmdtype() ==# ':' && getcmdline() ==# 'q' ? 'bd' : 'q'
     ]]
-    end,
+  end,
 })
 
 -- Remap :wq to just :w
 vim.api.nvim_create_autocmd('CmdlineEnter', {
-    desc = 'Redirect :wq to :w to avoid closing nvim',
-    pattern = '*',
-    callback = function()
-        vim.cmd [[
+  desc = 'Redirect :wq to :w to avoid closing nvim',
+  pattern = '*',
+  callback = function()
+    vim.cmd [[
       cnoreabbrev <expr> wq getcmdtype() ==# ':' && getcmdline() ==# 'wq' ? 'w' : 'wq'
     ]]
-    end,
+  end,
 })
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight yanked text',
-    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-    callback = function()
-        vim.hl.on_yank()
-    end,
+  desc = 'Highlight yanked text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
 })
 
 -- Telescope open if nvim pointed at a directory
 vim.api.nvim_create_autocmd('VimEnter', {
-    callback = function()
-        if vim.fn.argv(0) == '' then
-            require('telescope.builtin').find_files()
-        end
-    end,
+  callback = function()
+    if vim.fn.argv(0) == '' then
+      require('telescope.builtin').find_files()
+    end
+  end,
+})
+
+-- Enable spell checking for specific filetypes
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Enable built-in spell checking for specific filetypes',
+  pattern = { 'markdown', 'text', 'gitcommit', 'mdx' },
+  callback = function()
+    vim.opt_local.spell = true
+  end,
 })

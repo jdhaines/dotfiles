@@ -34,6 +34,8 @@ require('lazy').setup {
   require 'plugins.colorizer',
   require 'plugins.copilot',
   require 'plugins.obsidian',
+  require 'plugins.mdx',
+  require 'plugins.cspell',
 
   -- pick nvim_cmp OR blink... not both
 

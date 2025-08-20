@@ -23,8 +23,8 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-INCLUDE_EXT=("md" "markdown" "txt" "html" "js" "ts" "vue" "json" "css" "yml" "yaml" "xml")
-IGNORE_DIRS=("node_modules" ".git" "dist" "build" "__pycache__" ".cache" "cache" ".temp")
+INCLUDE_EXT=("md" "mdx" "markdown" "txt" "html" "js" "ts" "vue" "json" "css" "yml" "yaml" "xml")
+IGNORE_DIRS=("node_modules" ".git" "dist" "build" "__pycache__" ".cache" "cache" ".temp" ".next" ".out" "out" ".contentlayer")
 IGNORE_EXT=("lock" "min.js" "bin" "exe" "jpg" "png" "svg" "ico" "pdf")
 
 CHANGED_FILES=()
