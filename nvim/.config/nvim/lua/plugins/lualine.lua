@@ -39,10 +39,10 @@ return {
 
     require('lualine').setup {
       options = {
-        section_separators = { '', '' },
-        component_separators = { '', '' },
+        -- section_separators = { '', '' },
+        -- component_separators = { '', '' },
         icons_enabled = true,
-        theme = 'catppuccin', -- Set theme based on environment variable
+        -- theme = 'catppuccin', -- Set theme based on environment variable
         -- Some useful glyphs:
         -- https://www.nerdfonts.com/cheat-sheet
         --        

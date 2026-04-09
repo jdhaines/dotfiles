@@ -27,5 +27,9 @@ set --export EDITOR nvim
 # starship
 starship init fish | source
 
+# mise
+/home/josh/.local/bin/mise activate fish | source
+
 # zoxide
 zoxide init fish | source
+

@@ -1,0 +1,21 @@
+[tools]
+"aqua:jesseduffield/lazygit" = "latest"
+"github:tailwindlabs/tailwindcss" = {
+  version = "latest",
+  asset_pattern = "tailwindcss-linux-x64"
+}
+"github:snyk/cli" = {
+  version = "latest",
+  asset_pattern = "snyk-linux",
+  bin = "snyk"
+}
+"aqua:mikefarah/yq" = "latest"
+"aqua:sharkdp/bat" = "latest"
+"aqua:google/yamlfmt" = "latest"
+"aqua:jesseduffield/lazydocker" = "latest"
+"aqua:eza-community/eza" = "latest"
+"aqua:ajeetdsouza/zoxide" = "latest"
+"aqua:junegunn/fzf" = "latest"
+"github:troykinsella/bacon" = "latest"
+"aqua:neovim/neovim" = "latest"
+"aqua:cli/cli" = "latest"

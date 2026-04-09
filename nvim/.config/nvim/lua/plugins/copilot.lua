@@ -13,6 +13,7 @@ return {
           return true
         end,
       },
+      copilot_model = '',
       suggestion = { enabled = false },
       panel = { enabled = false },
     }

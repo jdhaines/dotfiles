@@ -153,6 +153,9 @@ function addrepos() {
   # breaker
 
   # ghostty
+  sudo add-apt-repository ppa:mkasberg/ghostty-ubuntu
+  sudo apt update
+  sudo apt install ghostty
 
   # kdenlive
   sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
@@ -180,11 +183,6 @@ function addrepos() {
   # obs studio
   sudo add-apt-repository -y ppa:obsproject/obs-studio
 
-  # github cli
-  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg &&
-    sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg &&
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
-
   # hashicorp
   wget -O- https://apt.releases.hashicorp.com/gpg |
     gpg --dearmor |
@@ -202,9 +200,6 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
 
   # git lfs
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-
-  # ghostty
-  curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh
 
   # yubikey
   sudo add-apt-repository -y ppa:yubico/stable
@@ -225,7 +220,6 @@ testcmd ffmpeg
 addpkg yubikey-manager
 testcmd ykman
 addcmd fish
-addpkg gh
 addpkg nodejs
 testcmd node
 testcmd npm
@@ -238,7 +232,6 @@ addpkg docker-ce
 addpkg docker-ce-cli
 addpkg docker-compose-plugin
 addpkg spotify-client
-addpkg terraform
 addcmd vhs
 addcmd glow
 addcmd yarn
@@ -256,17 +249,9 @@ sudo dpkg-reconfigure i3                                        # i3
 ### Custom Installs ###
 cd ~
 
-# stew
-curl -s https://api.github.com/repos/marwanhawari/stew/releases/latest |
-  grep "browser_download_url.*linux-amd64.tar.gz" |
-  cut -d : -f 2,3 |
-  tr -d \" |
-  wget -qi -
-sudo mv stew* stew.tar.gz
-sudo tar -xf stew.tar.gz
-sudo chmod +x stew
-sudo cp stew /usr/local/bin
-testcmd stew
+# mise
+curl https://mise.run | sh
+testcmd mise
 
 # ttyd
 sudo snap install ttyd --classic
@@ -355,23 +340,29 @@ stow rofi
 stow silicon
 stow starship
 stow tmux
-stow stew
+stow mise
 cd ~
 breaker
+
+# Install Mise Binaries
+mise install
+testcmd snyk
+testcmd lazygit
+testcmd tailwindcss
+testcmd yq
+testcmd bat
+testcmd yamlfmt
+testcmd lazydocker
+testcmd eza
+testcmd zoxide
+testcmd fzf
+testcmd bacon
+testcmd nvim
+testcmd gh
 
 # Install Stew Binaries
 stew install $HOME/.config/stew/Stewfile.lock.json
 
-testcmd bat
-testcmd nvim
-testcmd eza
-testcmd lazygit
-testcmd lazydocker
-testcmd snyk
-testcmd tailwindcss
-testcmd yamlfmt
-testcmd yq
-testcmd zoxide
 
 # Install Fisher & Configure Fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish
