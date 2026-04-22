@@ -68,17 +68,16 @@ sudo apt update && sudo apt install gum
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd curl
 testcmd gum
-breaker
+# breaker
 
 addpkg apt-transport-https
 addcmd arandr
 addpkg pulseaudio-utils
 testcmd pactl
-breaker
+# breaker
 
 addpkg build-essential
 addpkg ca-certificates
-addcmd cargo
 addcmd cmake
 addcmd feh
 #breaker
@@ -112,17 +111,13 @@ addcmd picom
 #breaker
 
 addpkg pkg-config
-addcmd python3
-addpkg python3-pip
 addcmd rclone
 addcmd rclone-browser
 #breaker
 
-addpkg ripgrep
 addcmd rofi
 addpkg scdaemon
 addpkg software-properties-common
-addcmd stow
 #breaker
 
 addcmd vlc
@@ -135,18 +130,42 @@ addpkg lxpolkit
 addpkg pavucontrol
 breaker
 
+### Stow Dotfiles ###
+addcmd stow
+cd ~/.dotfiles
+stow alacritty
+stow arandr
+stow gh-dash
+stow ghostty
+stow git
+stow i3
+stow jetbrains
+stow lazygit
+stow lf
+stow mise
+stow neofetch
+stow nvim
+stow obs
+stow picom
+stow profile
+stow rofi
+stow silicon
+stow ssh
+stow starship
+stow tmux
+stow wezterm
+stow zellij
+cd ~
+
+# Install Mise Binaries
+mise install
+breaker
+
 ### Add Repos ###
 function addrepos() {
 
   # fish
   sudo add-apt-repository -y ppa:fish-shell/release-4
-
-  # node
-  sudo mkdir -p /etc/apt/keyrings
-  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-  # echo "after node"
-  # breaker
 
   # ghostty
   sudo add-apt-repository ppa:mkasberg/ghostty-ubuntu
@@ -163,15 +182,11 @@ function addrepos() {
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
-  # yarn
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
   # spotify
   curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
   echo "after spotify"
-  breaker
+  # breaker
 
   # inkscape
   sudo add-apt-repository -y ppa:inkscape.dev/stable
@@ -199,13 +214,6 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
 
   # yubikey
   sudo add-apt-repository -y ppa:yubico/stable
-
-  # kubectl
-  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-  # helm
-  curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg >/dev/null
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 }
 
 ### Install from New Repos ###
@@ -230,10 +238,8 @@ addpkg docker-compose-plugin
 addpkg spotify-client
 addcmd vhs
 addcmd glow
-addcmd yarn
 addpkg git-lfs
 addcmd kubectl
-addcmd helm
 testcmd ghostty
 #breaker
 
@@ -246,7 +252,11 @@ sudo dpkg-reconfigure i3                                        # i3
 cd ~
 
 # mise
-curl https://mise.run | sh
+sudo install -dm 755 /etc/apt/keyrings
+curl -fSs https://mise.jdx.dev/gpg-key.pub | sudo tee /etc/apt/keyrings/mise-archive-keyring.asc 1> /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.asc] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
+sudo apt update -y
+sudo apt install -y mise
 testcmd mise
 
 # ttyd
@@ -256,21 +266,10 @@ sudo snap install ttyd --classic
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 breaker
 
-# discord #TODO
+# discord
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 sudo apt install -qy ./discord.deb
 testcmd discord
-
-# slack TODO
-wget -O slack.deb "https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb"
-sudo apt install -qy ./slack.deb
-testcmd slack
-
-# alacritty #TODO
-cargo install alacritty
-sudo cp ~/.cargo/bin/alacritty /usr/local/bin
-testcmd alacritty
-breaker
 
 # Google Chrome #TODO
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -317,48 +316,6 @@ chmod +x tree-sitter-linux-x64
 mv tree-sitter-linux-x64 tree-sitter
 sudo mv tree-sitter /usr/local/bin
 testcmd tree-sitter
-
-### Stow Dotfiles ###
-cd ~/.dotfiles
-stow alacritty
-stow arandr
-stow gh-dash
-stow git
-stow jetbrains
-stow lazygit
-stow i3
-stow lf
-stow neofetch
-stow nvim
-stow picom
-stow profile
-stow rofi
-stow silicon
-stow starship
-stow tmux
-stow mise
-cd ~
-breaker
-
-# Install Mise Binaries
-mise install
-testcmd snyk
-testcmd lazygit
-testcmd tailwindcss
-testcmd yq
-testcmd bat
-testcmd yamlfmt
-testcmd lazydocker
-testcmd eza
-testcmd zoxide
-testcmd fzf
-testcmd bacon
-testcmd nvim
-testcmd gh
-
-# Install Stew Binaries
-stew install $HOME/.config/stew/Stewfile.lock.json
-
 
 # Install Fisher & Configure Fish
 sudo rm -rf $HOME/.dotfiles/fish/.config/fish/functions/fisher.fish

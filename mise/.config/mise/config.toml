@@ -9,7 +9,6 @@
   asset_pattern = "snyk-linux",
   bin = "snyk"
 }
-"aqua:mikefarah/yq" = "latest"
 "aqua:sharkdp/bat" = "latest"
 "aqua:google/yamlfmt" = "latest"
 "aqua:jesseduffield/lazydocker" = "latest"
@@ -18,4 +17,12 @@
 "aqua:junegunn/fzf" = "latest"
 "github:troykinsella/bacon" = "latest"
 "aqua:neovim/neovim" = "latest"
-"aqua:cli/cli" = "latest"
+bun = "latest"
+go = "latest"
+node = "24"
+rg = "latest"
+jq = "latest"
+python = "latest"
+gh = "latest"
+yq = "latest"
+rust = "latest"
