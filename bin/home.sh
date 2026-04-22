@@ -57,15 +57,6 @@ function testcmd() {
 ### Install Gum for UI ###
 sudo apt install -yq curl
 
-# mise
-# sudo add-apt-repository -y ppa:jdxcode/mise
-# sudo apt update -y
-# sudo apt install -y mise
-# eval "$(mise activate bash)"
-curl https://mise.run/bash | sh
-source ~/.bashrc
-breaker
-
 ### Stow Dotfiles ###
 addcmd stow
 cd ~/.dotfiles
@@ -83,7 +74,7 @@ stow neofetch
 stow nvim
 stow obs
 stow picom
-stow profile
+stow profile --adopt
 stow rofi
 stow silicon
 stow ssh
@@ -92,6 +83,15 @@ stow tmux
 stow wezterm
 stow zellij
 cd ~
+
+# mise
+# sudo add-apt-repository -y ppa:jdxcode/mise
+# sudo apt update -y
+# sudo apt install -y mise
+# eval "$(mise activate bash)"
+curl https://mise.run/bash | sh
+source ~/.bashrc
+breaker
 
 # Install Mise Binaries
 testcmd mise
