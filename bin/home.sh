@@ -58,10 +58,12 @@ function testcmd() {
 sudo apt install -yq curl
 
 # mise
-sudo add-apt-repository -y ppa:jdxcode/mise
-sudo apt update -y
-sudo apt install -y mise
-eval "$(mise activate bash)"
+# sudo add-apt-repository -y ppa:jdxcode/mise
+# sudo apt update -y
+# sudo apt install -y mise
+# eval "$(mise activate bash)"
+curl https://mise.run/bash | sh
+source ~/.bashrc
 breaker
 
 ### Stow Dotfiles ###
