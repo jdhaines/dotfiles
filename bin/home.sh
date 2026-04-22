@@ -56,12 +56,47 @@ function testcmd() {
 
 ### Install Gum for UI ###
 sudo apt install -yq curl
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
-echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
-sudo apt update && sudo apt install gum
 
-#breaker
+# mise
+sudo install -dm 755 /etc/apt/keyrings
+curl -fSs https://mise.jdx.dev/gpg-key.pub | sudo tee /etc/apt/keyrings/mise-archive-keyring.asc 1> /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.asc] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
+sudo apt update -y
+sudo apt install -y mise
+testcmd mise
+
+breaker
+
+### Stow Dotfiles ###
+addcmd stow
+cd ~/.dotfiles
+stow alacritty
+stow arandr
+stow gh-dash
+stow ghostty
+stow git
+stow i3
+stow jetbrains
+stow lazygit
+stow lf
+stow mise
+stow neofetch
+stow nvim
+stow obs
+stow picom
+stow profile
+stow rofi
+stow silicon
+stow ssh
+stow starship
+stow tmux
+stow wezterm
+stow zellij
+cd ~
+
+# Install Mise Binaries
+mise install
+breaker
 
 ### Run the Installs from apt ###
 #   addpkg - installs package, ensures it's installed
@@ -128,37 +163,6 @@ addcmd xcwd
 addpkg xdotool
 addpkg lxpolkit
 addpkg pavucontrol
-breaker
-
-### Stow Dotfiles ###
-addcmd stow
-cd ~/.dotfiles
-stow alacritty
-stow arandr
-stow gh-dash
-stow ghostty
-stow git
-stow i3
-stow jetbrains
-stow lazygit
-stow lf
-stow mise
-stow neofetch
-stow nvim
-stow obs
-stow picom
-stow profile
-stow rofi
-stow silicon
-stow ssh
-stow starship
-stow tmux
-stow wezterm
-stow zellij
-cd ~
-
-# Install Mise Binaries
-mise install
 breaker
 
 ### Add Repos ###
@@ -250,14 +254,6 @@ sudo dpkg-reconfigure i3                                        # i3
 
 ### Custom Installs ###
 cd ~
-
-# mise
-sudo install -dm 755 /etc/apt/keyrings
-curl -fSs https://mise.jdx.dev/gpg-key.pub | sudo tee /etc/apt/keyrings/mise-archive-keyring.asc 1> /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.asc] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
-sudo apt update -y
-sudo apt install -y mise
-testcmd mise
 
 # ttyd
 sudo snap install ttyd --classic
