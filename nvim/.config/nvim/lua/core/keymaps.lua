@@ -12,6 +12,9 @@ local opts = { noremap = true, silent = true }
 -- Make 'jj' work like esc
 vim.keymap.set('i', 'jj', '<Esc>', opts)
 
+-- Support GBP (£)
+vim.keymap.set('i', '<C-p>', '£', opts)
+
 -- Better new lines without comments
 vim.keymap.set('n', 'o', 'o<Esc>^Da', opts)
 vim.keymap.set('n', 'O', 'O<Esc>^Da', opts)

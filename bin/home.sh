@@ -56,15 +56,11 @@ function testcmd() {
 
 ### Install Gum for UI ###
 sudo apt install -yq curl
-curl -s https://api.github.com/repos/charmbracelet/gum/releases/latest |
-  grep "browser_download_url.*Linux_x86_64.tar.gz" |
-  cut -d : -f 2,3 |
-  tr -d \" |
-  wget -qi -
-sudo rm -rf *.sbom
-sudo mv gum* gum.tar.gz
-sudo tar -xf gum.tar.gz
-sudo cp ~/gum /usr/local/bin
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update && sudo apt install gum
+
 #breaker
 
 ### Run the Installs from apt ###
@@ -72,13 +68,13 @@ sudo cp ~/gum /usr/local/bin
 #   addcmd - installs package, ensures that command is avialable in the PATH
 testcmd curl
 testcmd gum
-#breaker
+breaker
 
 addpkg apt-transport-https
 addcmd arandr
 addpkg pulseaudio-utils
 testcmd pactl
-#breaker
+breaker
 
 addpkg build-essential
 addpkg ca-certificates
